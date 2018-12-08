@@ -100,6 +100,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/17/列表解析的效率问题/index.html">
 <meta property="og:site_name" content="天马的故乡">
 <meta property="og:description" content="列表解析，或者称作列表推导（list comprehension),是一种灵活高效的创建列表的方式，对于提高的代码可读性很有帮助，虽然for循环可以胜任很多的工作，但适当的使用列表解析式会让代码读起来简洁易懂（相对一层层的for循环而言）。  在列表，字典，集合中根据条件筛选数据 列表  filter 1filter(lambda x:x &amp;gt; 20,data)  列表解析     字典  字">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-10-18T06:58:09.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="列表解析的效率问题">
@@ -245,6 +246,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -445,7 +456,7 @@
 <li><p><strong>列表</strong></p>
 <ul>
 <li><p>filter</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">filter(<span class="keyword">lambda</span> x:x &gt; <span class="number">20</span>,data)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(<span class="keyword">lambda</span> x:x &gt; <span class="number">20</span>,data)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>列表解析 </p>
 </li>
@@ -453,13 +464,13 @@
 </li>
 <li><p><strong>字典</strong></p>
 <ul>
-<li>字典解析<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="keyword">for</span> k,v <span class="keyword">in</span> d.interitems() <span class="keyword">if</span> v &gt;= <span class="number">20</span>&#125;</div></pre></td></tr></table></figure>
+<li>字典解析<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="keyword">for</span> k,v <span class="keyword">in</span> d.interitems() <span class="keyword">if</span> v &gt;= <span class="number">20</span>&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p><strong>集合</strong></p>
 <ul>
-<li>集合解析<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>&#125;</div></pre></td></tr></table></figure>
+<li>集合解析<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
