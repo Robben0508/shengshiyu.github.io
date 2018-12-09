@@ -93,19 +93,19 @@
 
 
 
-<meta name="description" content="关于指针和数组 数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，">
+<meta name="description" content="数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可">
 <meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于指针和数组">
 <meta property="og:url" content="http://yoursite.com/2018/06/09/关于指针和数组/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="关于指针和数组 数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，">
+<meta property="og:description" content="数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/06/09/关于指针和数组/2.png">
-<meta property="og:updated_time" content="2018-12-09T03:16:56.409Z">
+<meta property="og:updated_time" content="2018-12-09T03:26:22.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于指针和数组">
-<meta name="twitter:description" content="关于指针和数组 数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，">
+<meta name="twitter:description" content="数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于a[2]这样的数组，其实就相当于*(a + 2)”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可">
 <meta name="twitter:image" content="http://yoursite.com/2018/06/09/关于指针和数组/2.png">
 
 
@@ -418,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,320
+                  1,313
                 </span>
               
 
@@ -452,11 +452,11 @@
       
 
       
-        <h2 id="关于指针和数组"><a href="#关于指针和数组" class="headerlink" title="关于指针和数组"></a>关于指针和数组</h2><blockquote>
+        <blockquote>
 <p>数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于<code>a[2]</code>这样的数组，其实就相当于<code>*(a + 2)</code>”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可以进行互换。</p>
 </blockquote>
-<h3 id="指针和数组的不同"><a href="#指针和数组的不同" class="headerlink" title="指针和数组的不同"></a>指针和数组的不同</h3><p>指针是用来保存数据的<strong>地址</strong>的变量，而数组则是用来<strong>保存数据</strong>；我们可以通过指针进行间接访问，取得里面的地址值，再通过那个地址值提取数据，如果p是一个指针，它有一个下标，例如<code>p[2]</code>,它就把指针里储存的地址值与2相加，再从这个新地址求值，而数组则是直接访问数据，<code>a[2]</code>只是简单的以<code>a + 2</code>的偏移量取得数据；指针通常指向<strong>匿名数据</strong>，而数组自身就是数据名，所以指针依赖于malloc(),free()这类函数来解决内存问题，而数组的话是隐式的分配和删除</p>
-<h3 id="什么情况下指针可以和数组互换"><a href="#什么情况下指针可以和数组互换" class="headerlink" title="什么情况下指针可以和数组互换"></a>什么情况下指针可以和数组互换</h3><p>首先<strong><em>表达式里的数组名被编译器当做一个指向该数组第一个元素的指针</em></strong>时，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*b,i = 2;</span><br></pre></td></tr></table></figure></p>
+<h2 id="指针和数组的不同"><a href="#指针和数组的不同" class="headerlink" title="指针和数组的不同"></a>指针和数组的不同</h2><p>指针是用来保存数据的<strong>地址</strong>的变量，而数组则是用来<strong>保存数据</strong>；我们可以通过指针进行间接访问，取得里面的地址值，再通过那个地址值提取数据，如果p是一个指针，它有一个下标，例如<code>p[2]</code>,它就把指针里储存的地址值与2相加，再从这个新地址求值，而数组则是直接访问数据，<code>a[2]</code>只是简单的以<code>a + 2</code>的偏移量取得数据；指针通常指向<strong>匿名数据</strong>，而数组自身就是数据名，所以指针依赖于malloc(),free()这类函数来解决内存问题，而数组的话是隐式的分配和删除</p>
+<h2 id="什么情况下指针可以和数组互换"><a href="#什么情况下指针可以和数组互换" class="headerlink" title="什么情况下指针可以和数组互换"></a>什么情况下指针可以和数组互换</h2><p>首先<strong><em>表达式里的数组名被编译器当做一个指向该数组第一个元素的指针</em></strong>时，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[5],*b,i = 2;</span><br></pre></td></tr></table></figure></p>
 <p>那么我们访问<code>a[i]</code>时，可以通过以下方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = a;</span><br><span class="line">b[i];</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = a;</span><br><span class="line">*(b+i);</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = a + i;</span><br><span class="line">*b;</span><br></pre></td></tr></table></figure>
@@ -469,7 +469,7 @@
 <p>还有一种情况数组名等于指针，那就是<strong><em>当一个数组作为函数参数时</em></strong>，因为编译器会把数组的形式改写为指向数组的第一个元素的指针的形式，他只像函数传递一个地址值，而不是整个数组的拷贝，这更多是出于效率考虑。例如<code>int (*abc())[10]</code>,abc是一个函数，他返回一个指向包含10个int元素的数组的指针</p>
 <p>在C语言中，严格来说，函数是不能直接返回函数和数组的，但可以让函数返回一个指向任何数据类型的指针，例如<code>int *a()</code>,它的返回值是一个指向整型的指针，而<code>int (*a)()</code>，左边的一对对括号迫使间接访问在函数调用之前进行，使a成为一个<strong>函数指针</strong>,它所指向的函数返回一个整型值。</p>
 <p>我们再来看下<code>int *(*a)()</code>,它所指向的函数的返回值是一个指向整型的指针。如果声明是<code>int (*a[])()</code>，可能有点复杂，但实质上它表示一个数组，数组的类型是指向函数的指针，它所指向的函数的返回值是一个整数，如果声明是<code>int *(*a[])()</code>，我们就知道，它表示一个数组，数组的类型是指向函数的指针，而它所指向的函数的返回值是一个指向整型的指针。</p>
-<h3 id="关于指针和多维数组"><a href="#关于指针和多维数组" class="headerlink" title="关于指针和多维数组"></a>关于指针和多维数组</h3><p>对于C语言而言，定义和引用一个多维数组的办法就是使用<strong>数组的数组</strong>，也就是数组的嵌套，例如<code>a[3][5]</code>，那么a是啥呢，我们可以把它看作是一个一维数组，它包含三个元素，每个元素包含五个整型值，所以a所指向的就是一个包含五个元素的数组<img src="/2018/06/09/关于指针和数组/2.png" alt="多维数组"><br>而a+1就相当于指向a的另一行数组，如果是<code>*(a+1)</code>则表示他指向那一行的第一个元素而<code>*（a+1)+1</code>，其实就相当于比原来的表达式向后移动了一个元素，如果对整个表达式进一步处理一下，<code>*(*（a+1)+1)</code>,那么它作为右值就相当于对那个位置的值间接引用，而作为左值，这个位置就代表那块空间，它可以被赋予新值。</p>
+<h2 id="关于指针和多维数组"><a href="#关于指针和多维数组" class="headerlink" title="关于指针和多维数组"></a>关于指针和多维数组</h2><p>对于C语言而言，定义和引用一个多维数组的办法就是使用<strong>数组的数组</strong>，也就是数组的嵌套，例如<code>a[3][5]</code>，那么a是啥呢，我们可以把它看作是一个一维数组，它包含三个元素，每个元素包含五个整型值，所以a所指向的就是一个包含五个元素的数组<img src="/2018/06/09/关于指针和数组/2.png" alt="多维数组"><br>而a+1就相当于指向a的另一行数组，如果是<code>*(a+1)</code>则表示他指向那一行的第一个元素而<code>*（a+1)+1</code>，其实就相当于比原来的表达式向后移动了一个元素，如果对整个表达式进一步处理一下，<code>*(*（a+1)+1)</code>,那么它作为右值就相当于对那个位置的值间接引用，而作为左值，这个位置就代表那块空间，它可以被赋予新值。</p>
 
       
     </div>
@@ -694,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于指针和数组"><span class="nav-number">1.</span> <span class="nav-text">关于指针和数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#指针和数组的不同"><span class="nav-number">1.1.</span> <span class="nav-text">指针和数组的不同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么情况下指针可以和数组互换"><span class="nav-number">1.2.</span> <span class="nav-text">什么情况下指针可以和数组互换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于指针和多维数组"><span class="nav-number">1.3.</span> <span class="nav-text">关于指针和多维数组</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#指针和数组的不同"><span class="nav-number">1.</span> <span class="nav-text">指针和数组的不同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么情况下指针可以和数组互换"><span class="nav-number">2.</span> <span class="nav-text">什么情况下指针可以和数组互换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于指针和多维数组"><span class="nav-number">3.</span> <span class="nav-text">关于指针和多维数组</span></a></li></ol></div>
             
 
           </div>
