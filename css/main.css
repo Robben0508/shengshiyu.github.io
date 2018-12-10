@@ -1687,7 +1687,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6fcf;
+  background: #01ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2560,7 +2560,7 @@ img:hover {
 }
 .site-description {
   letter-spacing: 5px;
-  font-family: Microsoft YaHei;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   font-size: 15px;
   font-weight: bold;
   margin-top: 15px;
