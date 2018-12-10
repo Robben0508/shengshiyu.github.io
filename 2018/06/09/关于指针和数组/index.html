@@ -434,7 +434,7 @@
       
 
       
-        <blockquote>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于<code>a[2]</code>这样的数组，其实就相当于<code>*(a + 2)</code>”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可以进行互换。</p>
 </blockquote>
 <h2 id="指针和数组的不同"><a href="#指针和数组的不同" class="headerlink" title="指针和数组的不同"></a>指针和数组的不同</h2><p>指针是用来保存数据的<strong>地址</strong>的变量，而数组则是用来<strong>保存数据</strong>；我们可以通过指针进行间接访问，取得里面的地址值，再通过那个地址值提取数据，如果p是一个指针，它有一个下标，例如<code>p[2]</code>,它就把指针里储存的地址值与2相加，再从这个新地址求值，而数组则是直接访问数据，<code>a[2]</code>只是简单的以<code>a + 2</code>的偏移量取得数据；指针通常指向<strong>匿名数据</strong>，而数组自身就是数据名，所以指针依赖于malloc(),free()这类函数来解决内存问题，而数组的话是隐式的分配和删除</p>
