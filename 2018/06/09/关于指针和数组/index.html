@@ -110,13 +110,13 @@
 <meta property="og:site_name" content="天马的故乡">
 <meta property="og:description" content="数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到“数组和指针是相同的，数组名就是一个指向数组首元素的指针，可以互换。”其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可以进行互换。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/19-1-11/71654301.jpg">
-<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/19-1-11/48151065.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8E%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%841.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8E%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%842.jpg">
 <meta property="og:updated_time" content="2018-06-09T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于指针和数组">
 <meta name="twitter:description" content="数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到“数组和指针是相同的，数组名就是一个指向数组首元素的指针，可以互换。”其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可以进行互换。">
-<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/19-1-11/71654301.jpg">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8E%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%841.jpg">
 
 
 
@@ -435,7 +435,7 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/19-1-11/71654301.jpg" alt="关于指针和数组1.jpg"></p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8E%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%841.jpg" alt="关于指针和数组1.jpg"></p>
 <blockquote>
 <p>数组和指针之间可以说是联系非常紧密，但我们要清楚的明白，数组和指针并不相同。虽然我们总能听到一种声音“数组和指针是相同的，数组名就是一个指向数组首元素的指针，对于<code>a[2]</code>这样的数组，其实就相当于<code>*(a + 2)</code>”，我们就自然而然地认为数组和指针看起来是一样的，可以互换，除非是在我们实际应用过程中发现了问题，我们才会在不断修正中明白，其实数组和指针并不同，只有在满足一些条件的情况下，数组和指针才可以进行互换。</p>
 </blockquote>
@@ -453,7 +453,7 @@
 <p>还有一种情况数组名等于指针，那就是<strong><em>当一个数组作为函数参数时</em></strong>，因为编译器会把数组的形式改写为指向数组的第一个元素的指针的形式，他只像函数传递一个地址值，而不是整个数组的拷贝，这更多是出于效率考虑。例如<code>int (*abc())[10]</code>,abc是一个函数，他返回一个指向包含10个int元素的数组的指针</p>
 <p>在C语言中，严格来说，函数是不能直接返回函数和数组的，但可以让函数返回一个指向任何数据类型的指针，例如<code>int *a()</code>,它的返回值是一个指向整型的指针，而<code>int (*a)()</code>，左边的一对对括号迫使间接访问在函数调用之前进行，使a成为一个<strong>函数指针</strong>,它所指向的函数返回一个整型值。</p>
 <p>我们再来看下<code>int *(*a)()</code>,它所指向的函数的返回值是一个指向整型的指针。如果声明是<code>int (*a[])()</code>，可能有点复杂，但实质上它表示一个数组，数组的类型是指向函数的指针，它所指向的函数的返回值是一个整数，如果声明是<code>int *(*a[])()</code>，我们就知道，它表示一个数组，数组的类型是指向函数的指针，而它所指向的函数的返回值是一个指向整型的指针。</p>
-<h2 id="关于指针和多维数组"><a href="#关于指针和多维数组" class="headerlink" title="关于指针和多维数组"></a>关于指针和多维数组</h2><p>对于C语言而言，定义和引用一个多维数组的办法就是使用<strong>数组的数组</strong>，也就是数组的嵌套，例如<code>a[3][5]</code>，那么a是啥呢，我们可以把它看作是一个一维数组，它包含三个元素，每个元素包含五个整型值，所以a所指向的就是一个包含五个元素的数组<img src="http://blog0508.oss-cn-beijing.aliyuncs.com/19-1-11/48151065.jpg" alt="关于指针和数组2"><br>而a+1就相当于指向a的另一行数组，如果是<code>*(a+1)</code>则表示他指向那一行的第一个元素而<code>*（a+1)+1</code>，其实就相当于比原来的表达式向后移动了一个元素，如果对整个表达式进一步处理一下，<code>*(*（a+1)+1)</code>,那么它作为右值就相当于对那个位置的值间接引用，而作为左值，这个位置就代表那块空间，它可以被赋予新值。</p>
+<h2 id="关于指针和多维数组"><a href="#关于指针和多维数组" class="headerlink" title="关于指针和多维数组"></a>关于指针和多维数组</h2><p>对于C语言而言，定义和引用一个多维数组的办法就是使用<strong>数组的数组</strong>，也就是数组的嵌套，例如<code>a[3][5]</code>，那么a是啥呢，我们可以把它看作是一个一维数组，它包含三个元素，每个元素包含五个整型值，所以a所指向的就是一个包含五个元素的数组<img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8E%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%842.jpg" alt="关于指针和数组2"><br>而a+1就相当于指向a的另一行数组，如果是<code>*(a+1)</code>则表示他指向那一行的第一个元素而<code>*（a+1)+1</code>，其实就相当于比原来的表达式向后移动了一个元素，如果对整个表达式进一步处理一下，<code>*(*（a+1)+1)</code>,那么它作为右值就相当于对那个位置的值间接引用，而作为左值，这个位置就代表那块空间，它可以被赋予新值。</p>
 
       
     </div>
