@@ -199,17 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于Javascript中的继承机制]]></title>
-    <url>%2F2018%2F08%2F21%2F%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[如何高效提问]]></title>
     <url>%2F2018%2F08%2F21%2F%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -221,8 +210,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[谈谈Javascript的”面向对象编程“]]></title>
-    <url>%2F2018%2F08%2F17%2FJavascript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
+    <title><![CDATA[关于Javascript中的继承机制]]></title>
+    <url>%2F2018%2F08%2F21%2F%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%2F</url>
     <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Technology</category>
@@ -240,6 +229,17 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[谈谈Javascript的”面向对象编程“]]></title>
+    <url>%2F2018%2F08%2F17%2FJavascript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -364,6 +364,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Linux常用命令总结]]></title>
+    <url>%2F2018%2F05%2F19%2FLinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[ls命令用来显示目标列表或者目录内容的，常用的可选参数有： -a 显示所有子目录和文件，包括隐藏文件 -l 显示文件的详细信息，可以把ls -l简写为ll cp/mv命令用来把一个文件或者多个文件复制/移动到目标目录 rm命令刪除一个目录中的一个或多个文件或目录，其中需要注意的参数有： -f 不需要确认删除多个文件，强制删除 -r 将文件的全部目录和子目录都删除 cat命令可以显示文件内容，也可以连接两个或者多个文件 which命令显示文件的所在路径 man命令用于查看Linux中的命令帮助信息，遇到不会的命名就man一下，它也有一些参数需要注意： -a 在所有的man帮助手册中搜索； -f 等价于whatis指令，显示给定关键字的简短描述信息； ps命令ps命令列出执行这个命令时刻时的那些进程，类似一个当前进程的快照，是最基本也是最强大的进程查看命令，需要注意的参数有： a 显示所有进程 -a 显示同一终端下的所有程序 -A 显示所有进程 c 显示进程的真实名称 e 显示环境变量 f 显示程序间的关系 -H 显示树状结构 -au 显示较为详细的信息 tar命令很常用的压缩&amp;&amp;解压命令了，但tar这个命令….参数是真的多，看到一种不错的记忆方法，只要记得参数是【必选+自选+f】即可，首先是必选参数，五选一： -c 意为 create，表示创建压缩包 -x 意为 extract，表示解压 -t 表示查看内容 -r 给压缩包追加文件 -u 意为 update，更新压缩包中的文件 然后是自选参数，必选的话只能选一个，而可以根据需要挑着选： -z 使用 gzip 属性 -j 使用 bz2 属性 -Z 使用 compress 属性 -v 意为 verbose，显示详细的操作过程 -O 将文件输出到标准输出 最后一个参数一定要是f，后面再跟上你要压缩或者解压的文件包名。 一般我们常用的解压方式就是： *.tar -&gt; tar -xf *.tar.gz -&gt; tar -xzf *.tar.bz2 -&gt; tar -xjf *.tar.Z -&gt; tar -xZf *.gz -&gt; gzip -d *.rar -&gt; `unrar e *.zip -&gt; unzip kill命令用于终止指定进程的运行，对于后台进程我们可以先通过ps/pidof/pstree/top等命令获取进程PID，然后用kill结束该进程。不过也可以使用killall命令，直接使用进程的名称结束进程，使用它可以结束一组同名进程，而不用先获取进程PID，killall相当于把这两个过程合二为一，是一个很好用的命令 head命令可以用来查看一个文件的前几行，可以配合其他命令使用，例如配合管道做grep tail命令tail命令和head相反，查看文件的最后几行。不过最常用的还是加上 “-f” 参数后和grep一起使用 grep命令一个极其强大的命令，常用来在很多数据中找到匹配某一模式的字段，可以是正则表达式，常用的几个参数有： -a 以文本文件方式搜索 -c 计算找到的符合行的次数 -i 忽略大小写 -n 顺便输出行号 -v 反向选择，查找没有搜索字符串的行 du命令du命令是对文件和目录磁盘使用空间的查看 top命令用于动态的显示进程的信息，不过也有可以自定义的形式，例如:top -u root可以用来查看某用户进程 find命令查找所需文件的命令，如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，常用的参数有： -type 只寻找符合指定的文件类型的文件,其后跟随指定文件类型参数，类型参数有 f 普通文件 l 符号连接 d 目录 c 字符设备 b 块设备 s 套接字 p FIFO -name 根据文件名查找 -size 根据文件的权限或者大小名字类型进行查找 -mtime 查找在指定时间曾被更改过的文件或目录，单位以24小时计算； -print 假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出 -exec 假设find指令的回传值为True，就执行其后跟着的指令 cmp命令用来比较两个文件的差异。如果两个文件完全一样，就不会显示任何信息。如果发现有差异，会标示出第一个不同之处的字符和列数编号。 touch命令修改文件的创建日期，或者以当前的系统日期创建一个空文件 date命令显示当前日期和时间的，可以通过一些参数进行日期的格式化： %Y year %m month (01~12) %d day of month %H hour (00~23) %I hour (01~12) %M minute (00~59) %S second (00~60)例如：1234date + &quot;%Y%m%d %H%M%S&quot;20180519 223856date + &quot;%Y-%m-%d %H:%M:%S&quot;2018-05-19 22:39:07 wc命令统计指定文件中的字节数、字数、行数，并将统计结果输出，需要了解的参数有： -c 统计字节数 -l 统计行数 -m 统计字符数，不能与-c参数一起使用 -w 统计字数 env/export命令env: 查看当前环境变量 类似于配置Python环境，在一台不熟悉的机器上，如果出现了配置问题，可以通过env命令查看shell下的所有环境配置，看一下路径是否正确。 export: 设置或显示环境变量 useradd命令useradd命令用于创建的新的系统用户。useradd可用来建立用户帐号。帐号建好之后，再用passwd设定帐号的密码．而可用userdel删除帐号。使用useradd指令所建立的帐号，实际上是保存在/etc/passwd文本文件中。其中有几个需要注意的参数： -e 指定帐号的有效期限 -g 指定用户所属的群组 -G 指定用户所属的附加群组 -r 建立系统帐号 -u 指定用户id，设定ID值时尽量要大于500，以免冲突 groupadd命令用于创建一个新的工作组，也可以用groupdel命令删除工作组，常用的参数有： -g 指定新建工作组的id -r 创建系统工作组，系统工作组的组ID小于500 curl/wget命令curl命令是一个利用URL规则在命令行下工作的文件传输工具,而wget命令用来从指定的URL下载文件。wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性，如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。 netstat命令用来显示网络系统的状态信息，可让你了解整个系统的网络情况，需要注意的参数有： -a 显示所有连线中的Socket -n 直接使用ip地址，而不通过域名服务器 -t 显示TCP传输协议的连线状况 -u 显示UDP传输协议的连线状况 -l 显示监控中的服务器的Socket -s 显示网络工作信息统计表 -n 直接使用ip地址，而不通过域名服务器 可以通过参数的组合实现不同的功能，例如1234567netstat -at #列出所有tcp端口netstat -au #列出所有udp端口netstat -lt #只列出所有监听 tcp 端口netstat -lu #只列出所有监听 udp 端口netstat -st #显示TCP端口的统计信息netstat -su #显示UDP端口的统计信息netstat -an | grep &apos;:80&apos; #找出运行在指定端口的进程]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[匠人的情怀]]></title>
     <url>%2F2018%2F05%2F11%2F%E5%8C%A0%E4%BA%BA%E7%9A%84%E6%83%85%E6%80%80%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -377,7 +388,7 @@
   <entry>
     <title><![CDATA[Google实用搜索技巧]]></title>
     <url>%2F2018%2F04%2F20%2FGoogle%E5%AE%9E%E7%94%A8%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[善用搜索引擎的都是信息时代的富翁，不懂搜索引擎的都是信息时代的负翁。 完整匹配在Google的搜索框里，所有的空格都被视为”+”号，可能对于用惯了百度的人很好理解，因为我们要搜啥时，肯定是搜索关键词，加了空格就相当于多个并列的关键词，那搜索结果就会把所有包含相关关键词的内容都全部罗列出来。 也可以搜索一个具体的问题，而这样的一句话，在中文里基本没空格的，但我们使用Google时更多是用英文，英文关键词是没问题的，当你使用英文描述一个具体问题时，就需要在搜索字段的前后加上引号，无论是全角字符(“或者”)还是半角字符(“)，Google都能正确处理，这就是完整匹配。 筛选过滤为了进一步筛选搜索结果，我们可以使用”-“操作符，如&quot;mysql connect error&quot; - &quot;nodejs&quot;就要求Google返回含有mysql connect error但不包括nodejs的文章。当然，中文搜索也是适用的。 也可以使用”+”操作符，因为Google会忽略和过滤一些常用的英文词汇，例如and，how之类的，使用”+”操作符可以让搜索引擎强制包括它们，也可以强制过滤掉关键词的一些特定时态形式。 通配符其实就是我们熟知的符号”“，举个例子，当我们搜索`”mysql connect error “`就会返回所有已知的关于MySQL连接错误的文章。 其他操作符我们熟知的常用的一些操作符，可以辅助完成一些特定搜索，也可以在Google里使用，例如： ~ 关键词前加上它，可以显示同义词 | 作用和OR一样 .. 用来限定数值的范围，例如2015..2018 站内搜索可以根据特定的网站搜索对应网站内所有相关内容，例如：&quot;mysql connect error&quot; site:stackoverflow.com就会返回Stackoverflow内所有关于MySQL连接错误的文章。 搜索指定文件格式我们可以搜索特定的文件格式，不过一些文件类型是不支持的，但日常那来搜索一些PDF资源或者搜索特定图片格式也是很方便的，只需要加上filetype: + 特定格式,就可以了,不过对于图片搜索还可以限定搜索的图片尺寸，加上imagesize:，例如：imagesize:500x500 搜索相似网页可以通过related:这个关键字搜索到相关相仿的网页或相关页面，例如：related:www.taobao.com 关闭安全搜索最直接简便的方式就是在搜索网址时附加一个参数：&amp;safe=off]]></content>
       <categories>
         <category>Technology</category>
       </categories>
@@ -410,7 +421,7 @@
   <entry>
     <title><![CDATA[Git小记]]></title>
     <url>%2F2018%2F03%2F16%2FGit%E5%B0%8F%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[常用命令设置和配置 git config12345678git config --global user.name &quot;xxx&quot; # 配置用户名git config --global user.email &quot;xxx@xxx.com&quot; # 配置邮件git config --global color.ui true # git status等命令自动着色git config --global color.status autogit config --global color.diff autogit config --global color.branch autogit config --global color.interactive autogit config --global --unset http.proxy # remove proxy configuration on git 创建和获取项目 git init初始化本地git仓库（创建新仓库） git cloneclone远程仓库 快照 git add 12git add xyz # 添加xyz文件至indexgit add . # 增加当前子目录下所有更改过的文件至index git commit 123git commit -m &apos;xxx&apos; # 提交git commit --amend -m &apos;xxx&apos; # 合并上一次提交（用于反复修改）git commit -am &apos;xxx&apos; # 将add和commit合为一步 git diff 123456git diff # 显示所有未添加至index的变更git diff --cached # 显示所有已添加index但还未commit的变更git diff HEAD^ # 比较与上一个版本的差异git diff HEAD -- ./lib # 比较与HEAD版本lib目录的差异git diff origin/master..master # 比较远程分支master上有本地分支master上没有的git diff origin/master..master --stat # 只显示差异的文件，不显示具体内容 git rm 12git rm xxx # 删除index中的文件git rm -r * # 递归删除 git mv 1git mv README README2 # 重命名文件README为README2 git status用来查看当前版本状态，查看是否进行了修改 分支与合并 git log 123456git log # 显示提交日志git log -1 # 显示1行日志 -n为n行git log --stat # 显示提交日志及相关变动文件git log -p -mgit log v1.0 # 显示v1.0的日志git log --pretty=format:&apos;%h %s&apos; --graph # 图示提交日志 git tag 12git tag # 显示已存在的taggit tag -a v1.0 -m &apos;xxx&apos; # 增加v1.0的tag git branch可以列出你所拥有的分支、创建的新分支、删除分支以及重命名分支 123456789git branch # 显示本地分支git branch --contains 50089 # 显示包含提交50089的分支git branch -a # 显示所有分支git branch -r # 显示所有原创分支git branch --merged # 显示所有已合并到当前分支的分支git branch --no-merged # 显示所有未合并到当前分支的分支git branch -m master master_copy # 本地分支改名git branch -d hotfixes/BJVEP933 # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）git branch -D hotfixes/BJVEP933 # 强制删除分支hotfixes/BJVEP933 git checkout用于切换分支并将内容检出到工作目录 1234567git checkout -b master_copy # 从当前分支创建新分支master_copy并检出git checkout -b master master_copy # 上面的完整版git checkout features/performance # 检出已存在的features/performance分支git checkout --track hotfixes/BJVEP933 # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支git checkout v1.0 # 检出版本v1.0git checkout -b devel origin/develop # 从远程分支develop创建新本地分支devel并检出git checkout -- README # 检出head版本的README文件（可用于修改错误回退） git merge用于将一个或多个分支合并，然后将合并的分支作为当前分支 1git merge origin/master # 合并远程master分支至当前分支 git stash 123git stash list # 查看所有暂存git stash show -p stash@&#123;0&#125; # 参考第一次暂存git stash apply stash@&#123;0&#125; # 应用第一次暂存 项目共享和更新 git remote可以用来管理远程仓库记录，将一段很冗杂的URL地址保存成一个简单的字符串句柄，比如origin，方便操作 1git remote add &lt;name&gt; &lt;url&gt; # 增加远程定义（用于push/pull/fetch） git push与其他仓库通信，确定本地内容和远程仓库异同，然后将差异推送到其他仓库 123git push origin master # 将当前分支push到远程master分支git push origin :hotfixes/BJVEP933 # 删除远程仓库的hotfixes/BJVEP933分支git push --tags # 把所有tag推送到远程仓库 git fetch 12git fetch # 获取所有远程分支（不更新本地分支，另需merge）git fetch --prune # 获取所有原创分支并清除服务器上已删掉的分支 git pull可以理解为git fetch和git merge的组合，先从远程仓库获取内容，再尝试合并进你所在分支 1git pull origin master # 获取远程分支master并merge到当前分支 git reset 1git reset --hard HEAD # 将当前版本重置为HEAD（通常用于merge失败回退） 检视和比较 git show能够以简单易读的形式显示Git对象，通常用来显示标签或提交的相关信息 12345678git show dfb02 # 可只用commitid的前几位git show HEAD # 显示HEAD提交日志git show HEAD^ # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本git show v1.0 # 显示v1.0的日志及详细内容git show HEAD@&#123;5&#125;git show master@&#123;yesterday&#125; # 显示master分支昨天的状态git show HEAD~3git show -s --pretty=raw 2be7fcb476 git ls-files 1git ls-files # 列出git index包含的文件 git show-branch 12git show-branch # 图示当前分支历史git show-branch --all # 图示所有分支历史 调试 git grep可以帮助你在源代码的所有文件中找到任意字符串12git grep &quot;delete from&quot; # 文件中搜索文本“delete from”git grep -e &apos;#define&apos; --and -e SORT_DIRENT 打补丁 git cherry-pick 1git cherry-pick ff44785404a8e # 合并提交ff44785404a8e的修改 git rebase基本上就是一个自动化的git cherry-pick命令，它确定一系列提交，然后在别处以相同的顺序逐个对其挑拣。 git revert与git cherry-pick命令的效果恰好相反，将变更撤销或还原 1git revert dfb02e6e4f2f7b # 撤销提交dfb02e6e4f2f7b 管理 git reflog显示所有提交，包括孤立节点 git gc执行”垃圾回收“，删除无用文件，将余下的文件打包成一种更有效的形式 git fsck用于检查内部数据库存在的问题或不一致性]]></content>
       <categories>
         <category>Technology</category>
       </categories>
@@ -465,7 +476,7 @@
   <entry>
     <title><![CDATA[关于Python中\_\_str\_\_和\_\_repr\_\_的区别]]></title>
     <url>%2F2018%2F01%2F05%2F%E5%85%B3%E4%BA%8EPython%E4%B8%AD-str-%E5%92%8C-repr-%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[__repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法：12345678910111213class Hello(object): def __repr__(object): return &apos;hello&apos;&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就发现不管输出对象，调用__repr__和__str__方法，还是通过print()方法，打印的信息都是按我们repr方法中定义的格式进行显示的。现在我们重写一下__str__：12345678910111213class Hello(object): def __str__(object): return &apos;hello&apos;&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很明显了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。由于我们覆盖了先前的__repr__方法，可是即使没有提前覆盖__repr__方法，我们得出的结果也是一样的。总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员。 打印操作会首先尝试__str__和str内置函数(print运行的内部等价形式)，它通常应该返回一个友好的显示。 __repr__用于所有其他的环境中：用于交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str。它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示。]]></content>
+    <content type="text"><![CDATA[比较__repr__和__str____repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return &apos;hello&apos;&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就发现不管输出对象，调用__repr__和__str__方法，还是通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return &apos;hello&apos;&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很明显了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。由于我们覆盖了先前的__repr__方法，可是即使没有提前覆盖__repr__方法，我们得出的结果也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员。 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中：用于交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
       <categories>
         <category>Technology</category>
       </categories>

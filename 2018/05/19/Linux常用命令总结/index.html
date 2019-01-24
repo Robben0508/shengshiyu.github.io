@@ -84,7 +84,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="TCP," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -102,15 +102,20 @@
 
 
 
-<meta name="keywords" content="TCP">
+<meta name="description" content="总结了一些在使用Linux过程中常常遇到的命令">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP和UDP浅析">
-<meta property="og:url" content="https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/index.html">
+<meta property="og:title" content="Linux常用命令总结">
+<meta property="og:url" content="https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="总结了一些在使用Linux过程中常常遇到的命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-25T16:00:00.000Z">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg">
+<meta property="og:updated_time" content="2018-05-18T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP和UDP浅析">
+<meta name="twitter:title" content="Linux常用命令总结">
+<meta name="twitter:description" content="总结了一些在使用Linux过程中常常遇到的命令">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg">
 
 
 
@@ -138,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/"/>
+  <link rel="canonical" href="https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/"/>
 
 
 
 
 
-  <title>TCP和UDP浅析 | 天马的故乡</title>
+  <title>Linux常用命令总结 | 天马的故乡</title>
   
 
 
@@ -318,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沉默的超云星">
@@ -335,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TCP和UDP浅析</h1>
+          <h1 class="post-title" itemprop="name headline">Linux常用命令总结</h1>
         
 
         <div class="post-meta">
@@ -347,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T00:00:00+08:00">
-                2018-12-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-19T00:00:00+08:00">
+                2018-05-19
               </time>
             
 
@@ -403,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  2,061 字
                 </span>
               
 
@@ -413,6 +418,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  总结了一些在使用Linux过程中常常遇到的命令
+              </div>
           
 
         </div>
@@ -425,7 +434,145 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><br><br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg" alt="Linux常用命令总结"></p>
+<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><p>用来<strong>显示目标列表或者目录内容</strong>的，常用的可选参数有：</p>
+<ul>
+<li><code>-a</code> 显示所有子目录和文件，包括隐藏文件</li>
+<li><code>-l</code> 显示文件的详细信息，可以把<code>ls -l</code>简写为<code>ll</code></li>
+</ul>
+<h2 id="cp-mv命令"><a href="#cp-mv命令" class="headerlink" title="cp/mv命令"></a>cp/mv命令</h2><p>用来把一个文件或者多个文件<strong>复制</strong>/<strong>移动</strong>到目标目录</p>
+<h2 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h2><p><strong>刪除</strong>一个目录中的一个或多个文件或目录，其中需要注意的参数有：</p>
+<ul>
+<li><code>-f</code> 不需要确认删除多个文件，强制删除</li>
+<li><code>-r</code> 将文件的全部目录和子目录都删除</li>
+</ul>
+<h2 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h2><p>可以<strong>显示文件内容</strong>，也可以<strong>连接</strong>两个或者多个文件</p>
+<h2 id="which命令"><a href="#which命令" class="headerlink" title="which命令"></a>which命令</h2><p>显示文件的<strong>所在路径</strong></p>
+<h1 id="man命令"><a href="#man命令" class="headerlink" title="man命令"></a>man命令</h1><p>用于查看Linux中的命令<strong>帮助信息</strong>，遇到不会的命名就man一下，它也有一些参数需要注意：</p>
+<ul>
+<li><code>-a</code> 在所有的man帮助手册中搜索；</li>
+<li><code>-f</code> 等价于whatis指令，显示给定关键字的简短描述信息；</li>
+</ul>
+<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2><p>ps命令列出执行这个命令时刻时的那些进程，类似一个当前进程的快照，是最基本也是最强大的<strong>进程查看</strong>命令，需要注意的参数有：</p>
+<ul>
+<li><code>a</code> 显示所有进程</li>
+<li><code>-a</code> 显示同一终端下的所有程序</li>
+<li><code>-A</code> 显示所有进程</li>
+<li><code>c</code> 显示进程的真实名称</li>
+<li><code>e</code> 显示环境变量</li>
+<li><code>f</code> 显示程序间的关系</li>
+<li><code>-H</code> 显示树状结构</li>
+<li><code>-au</code> 显示较为详细的信息</li>
+</ul>
+<h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><p>很常用的<strong>压缩</strong>&amp;&amp;<strong>解压</strong>命令了，但<code>tar</code>这个命令….参数是真的多，看到一种不错的记忆方法，只要记得参数是【必选+自选+f】即可，首先是必选参数，五选一：</p>
+<ol>
+<li><code>-c</code> 意为 create，表示创建压缩包</li>
+<li><code>-x</code> 意为 extract，表示解压</li>
+<li><code>-t</code> 表示查看内容</li>
+<li><code>-r</code> 给压缩包追加文件</li>
+<li><code>-u</code> 意为 update，更新压缩包中的文件</li>
+</ol>
+<p>然后是自选参数，必选的话只能选一个，而可以根据需要挑着选：</p>
+<ul>
+<li><code>-z</code> 使用 gzip 属性</li>
+<li><code>-j</code> 使用 bz2 属性</li>
+<li><code>-Z</code> 使用 compress 属性</li>
+<li><code>-v</code> 意为 verbose，显示详细的操作过程</li>
+<li><code>-O</code> 将文件输出到标准输出</li>
+</ul>
+<p>最后一个参数一定要是<code>f</code>，后面再跟上你要压缩或者解压的文件包名。</p>
+<p>一般我们常用的解压方式就是：</p>
+<ul>
+<li><code>*.tar</code> -&gt; <code>tar -xf</code></li>
+<li><code>*.tar.gz</code> -&gt; <code>tar -xzf</code></li>
+<li><code>*.tar.bz2</code> -&gt; <code>tar -xjf</code></li>
+<li><code>*.tar.Z</code> -&gt; <code>tar -xZf</code></li>
+<li><code>*.gz</code> -&gt; <code>gzip -d</code></li>
+<li><code>*.rar</code> -&gt; `unrar e</li>
+<li><code>*.zip</code> -&gt; <code>unzip</code></li>
+</ul>
+<h2 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h2><p>用于<strong>终止指定进程</strong>的运行，对于后台进程我们可以先通过ps/pidof/pstree/top等命令获取进程PID，然后用kill结束该进程。不过也可以使用killall命令，直接使用进程的名称结束进程，使用它可以结束一组同名进程，而不用先获取进程PID，killall相当于把这两个过程合二为一，是一个很好用的命令</p>
+<h2 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h2><p>可以用来<strong>查看一个文件的前几行</strong>，可以配合其他命令使用，例如配合管道做grep</p>
+<h2 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h2><p>tail命令和head相反，<strong>查看文件的最后几行</strong>。不过最常用的还是加上 “-f” 参数后和grep一起使用</p>
+<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p>一个极其强大的命令，常用来在很多数据中<strong>找到匹配某一模式的字段</strong>，可以是正则表达式，常用的几个参数有：</p>
+<ul>
+<li><code>-a</code> 以文本文件方式搜索</li>
+<li><code>-c</code> 计算找到的符合行的次数</li>
+<li><code>-i</code> 忽略大小写</li>
+<li><code>-n</code> 顺便输出行号</li>
+<li><code>-v</code> 反向选择，查找没有搜索字符串的行</li>
+</ul>
+<h2 id="du命令"><a href="#du命令" class="headerlink" title="du命令"></a>du命令</h2><p>du命令是对<strong>文件和目录磁盘使用空间的查看</strong></p>
+<h2 id="top命令"><a href="#top命令" class="headerlink" title="top命令"></a>top命令</h2><p>用于<strong>动态的显示进程的信息</strong>，不过也有可以自定义的形式，例如:<br><code>top -u root</code>可以用来查看某用户进程</p>
+<h2 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h2><p><strong>查找所需文件</strong>的命令，如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，常用的参数有：</p>
+<ul>
+<li><code>-type</code> 只寻找符合指定的文件类型的文件,其后跟随指定文件类型参数，类型参数有<ul>
+<li><code>f</code> 普通文件</li>
+<li><code>l</code> 符号连接</li>
+<li><code>d</code> 目录</li>
+<li><code>c</code> 字符设备</li>
+<li><code>b</code> 块设备</li>
+<li><code>s</code> 套接字</li>
+<li><code>p</code> FIFO</li>
+</ul>
+</li>
+<li><code>-name</code> 根据文件名查找</li>
+<li><code>-size</code> 根据文件的权限或者大小名字类型进行查找</li>
+<li><code>-mtime</code> 查找在指定时间曾被更改过的文件或目录，单位以24小时计算；</li>
+<li><code>-print</code> 假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出</li>
+<li><code>-exec</code> 假设find指令的回传值为True，就执行其后跟着的指令</li>
+</ul>
+<h2 id="cmp命令"><a href="#cmp命令" class="headerlink" title="cmp命令"></a>cmp命令</h2><p>用来<strong>比较两个文件的差异</strong>。如果两个文件完全一样，就不会显示任何信息。如果发现有差异，会标示出第一个不同之处的字符和列数编号。</p>
+<h2 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h2><p><strong>修改</strong>文件的创建日期，或者以当前的系统日期<strong>创建</strong>一个空文件</p>
+<h2 id="date命令"><a href="#date命令" class="headerlink" title="date命令"></a>date命令</h2><p>显示<strong>当前日期和时间</strong>的，可以通过一些参数进行日期的格式化：</p>
+<ul>
+<li><code>%Y</code> year</li>
+<li><code>%m</code> month (01~12)</li>
+<li><code>%d</code> day of month</li>
+<li><code>%H</code> hour (00~23)</li>
+<li><code>%I</code> hour (01~12)</li>
+<li><code>%M</code> minute (00~59)</li>
+<li><code>%S</code> second (00~60)<br>例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">date + &quot;%Y%m%d %H%M%S&quot;</span><br><span class="line">20180519 223856</span><br><span class="line">date + &quot;%Y-%m-%d %H:%M:%S&quot;</span><br><span class="line">2018-05-19 22:39:07</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="wc命令"><a href="#wc命令" class="headerlink" title="wc命令"></a>wc命令</h2><p><strong>统计指定文件中的字节数、字数、行数</strong>，并将统计结果输出，需要了解的参数有：</p>
+<ul>
+<li><code>-c</code> 统计字节数</li>
+<li><code>-l</code> 统计行数</li>
+<li><code>-m</code> 统计字符数，不能与<code>-c</code>参数一起使用</li>
+<li><code>-w</code> 统计字数</li>
+</ul>
+<h2 id="env-export命令"><a href="#env-export命令" class="headerlink" title="env/export命令"></a>env/export命令</h2><p><code>env</code>: <strong>查看当前环境变量</strong></p>
+<blockquote>
+<p>类似于配置Python环境，在一台不熟悉的机器上，如果出现了配置问题，可以通过env命令查看shell下的所有环境配置，看一下路径是否正确。</p>
+</blockquote>
+<p><code>export</code>:  <strong>设置或显示环境变量</strong></p>
+<h2 id="useradd命令"><a href="#useradd命令" class="headerlink" title="useradd命令"></a>useradd命令</h2><p>useradd命令用于<strong>创建的新的系统用户</strong>。useradd可用来建立用户帐号。帐号建好之后，再用passwd设定帐号的密码．而可用<strong>userdel删除帐号</strong>。使用useradd指令所建立的帐号，实际上是保存在/etc/passwd文本文件中。其中有几个需要注意的参数：</p>
+<ul>
+<li><code>-e</code> 指定帐号的有效期限</li>
+<li><code>-g</code> 指定用户所属的群组</li>
+<li><code>-G</code> 指定用户所属的附加群组</li>
+<li><code>-r</code> 建立系统帐号</li>
+<li><code>-u</code> 指定用户id，设定ID值时尽量要大于500，以免冲突</li>
+</ul>
+<h2 id="groupadd命令"><a href="#groupadd命令" class="headerlink" title="groupadd命令"></a>groupadd命令</h2><p>用于<strong>创建一个新的工作组</strong>，也可以用<strong>groupdel命令删除工作组</strong>，常用的参数有：</p>
+<ul>
+<li><code>-g</code> 指定新建工作组的id</li>
+<li><code>-r</code> 创建系统工作组，系统工作组的组ID小于500</li>
+</ul>
+<h2 id="curl-wget命令"><a href="#curl-wget命令" class="headerlink" title="curl/wget命令"></a>curl/wget命令</h2><p>curl命令是一个利用URL规则在命令行下工作的<strong>文件传输工具</strong>,而wget命令用来从指定的URL<strong>下载文件</strong>。wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性，如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。</p>
+<h2 id="netstat命令"><a href="#netstat命令" class="headerlink" title="netstat命令"></a>netstat命令</h2><p>用来<strong>显示网络系统的状态信息</strong>，可让你了解整个系统的网络情况，需要注意的参数有：</p>
+<ul>
+<li><code>-a</code> 显示所有连线中的Socket</li>
+<li><code>-n</code> 直接使用ip地址，而不通过域名服务器</li>
+<li><code>-t</code> 显示TCP传输协议的连线状况</li>
+<li><code>-u</code> 显示UDP传输协议的连线状况</li>
+<li><code>-l</code> 显示监控中的服务器的Socket</li>
+<li><code>-s</code> 显示网络工作信息统计表</li>
+<li><code>-n</code> 直接使用ip地址，而不通过域名服务器</li>
+</ul>
+<p>可以通过参数的组合实现不同的功能，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">netstat -at    #列出所有tcp端口</span><br><span class="line">netstat -au    #列出所有udp端口</span><br><span class="line">netstat -lt    #只列出所有监听 tcp 端口</span><br><span class="line">netstat -lu    #只列出所有监听 udp 端口</span><br><span class="line">netstat -st    #显示TCP端口的统计信息</span><br><span class="line">netstat -su    #显示UDP端口的统计信息</span><br><span class="line">netstat -an | grep &apos;:80&apos;  #找出运行在指定端口的进程</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -463,7 +610,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/" title="TCP和UDP浅析">https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/</a>
+      <a href="https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/" title="Linux常用命令总结">https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -479,7 +626,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TCP/" rel="tag"><i class="fa fa-tag"></i> TCP</a>
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
           
         </div>
       
@@ -492,8 +639,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/13/谈谈大众传媒/" rel="next" title="谈谈大众传媒">
-                <i class="fa fa-chevron-left"></i> 谈谈大众传媒
+              <a href="/2018/05/11/匠人的情怀/" rel="next" title="匠人的情怀">
+                <i class="fa fa-chevron-left"></i> 匠人的情怀
               </a>
             
           </div>
@@ -502,8 +649,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/02/浅谈Spring Bean的生命周期和作用域/" rel="prev" title="浅谈Spring Bean的生命周期和作用域">
-                浅谈Spring Bean的生命周期和作用域 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/29/论摄影与摄像/" rel="prev" title="论摄影与摄像">
+                论摄影与摄像 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -557,8 +704,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +812,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ls命令"><span class="nav-number">1.</span> <span class="nav-text">ls命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp-mv命令"><span class="nav-number">2.</span> <span class="nav-text">cp/mv命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rm命令"><span class="nav-number">3.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cat命令"><span class="nav-number">4.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#which命令"><span class="nav-number">5.</span> <span class="nav-text">which命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#man命令"><span class="nav-number"></span> <span class="nav-text">man命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ps命令"><span class="nav-number">1.</span> <span class="nav-text">ps命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tar命令"><span class="nav-number">2.</span> <span class="nav-text">tar命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kill命令"><span class="nav-number">3.</span> <span class="nav-text">kill命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#head命令"><span class="nav-number">4.</span> <span class="nav-text">head命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tail命令"><span class="nav-number">5.</span> <span class="nav-text">tail命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep命令"><span class="nav-number">6.</span> <span class="nav-text">grep命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#du命令"><span class="nav-number">7.</span> <span class="nav-text">du命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top命令"><span class="nav-number">8.</span> <span class="nav-text">top命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find命令"><span class="nav-number">9.</span> <span class="nav-text">find命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cmp命令"><span class="nav-number">10.</span> <span class="nav-text">cmp命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch命令"><span class="nav-number">11.</span> <span class="nav-text">touch命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#date命令"><span class="nav-number">12.</span> <span class="nav-text">date命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wc命令"><span class="nav-number">13.</span> <span class="nav-text">wc命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#env-export命令"><span class="nav-number">14.</span> <span class="nav-text">env/export命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useradd命令"><span class="nav-number">15.</span> <span class="nav-text">useradd命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#groupadd命令"><span class="nav-number">16.</span> <span class="nav-text">groupadd命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#curl-wget命令"><span class="nav-number">17.</span> <span class="nav-text">curl/wget命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#netstat命令"><span class="nav-number">18.</span> <span class="nav-text">netstat命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

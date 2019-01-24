@@ -102,18 +102,18 @@
 
 
 
-<meta name="description" content="__repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;lt;__main__.Hello o">
+<meta name="description" content="比较__repr__和__str____repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。 123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Python中\_\_str\_\_和\_\_repr\_\_的区别">
 <meta property="og:url" content="https://www.shengshiyu.com/2018/01/05/关于Python中-str-和-repr-的区别/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="__repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;lt;__main__.Hello o">
+<meta property="og:description" content="比较__repr__和__str____repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。 123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-04T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Python中\_\_str\_\_和\_\_repr\_\_的区别">
-<meta name="twitter:description" content="__repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;lt;__main__.Hello o">
+<meta name="twitter:description" content="比较__repr__和__str____repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。 123456789101112class Hello(object):    pass&amp;gt;&amp;gt;&amp;gt; a = Hello()&amp;gt;&amp;gt;&amp;gt; a&amp;">
 
 
 
@@ -406,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  553 字
+                  557 字
                 </span>
               
 
@@ -428,13 +428,19 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><code>__repr__</code>和<code>__str__</code>这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a = Hello()</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(a)</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(str(a))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(repr(a))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过<code>__repr__</code>或是<code>__str__</code>,结果都一样，下面我们重写一下这个类的<code>__repr__</code>方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    def __repr__(object):</span><br><span class="line">    	return &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; b = Hello()</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(b)</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(str(b))</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(repr(b))</span><br><span class="line">hello</span><br></pre></td></tr></table></figure></p>
-<p>然后我们就发现不管输出对象，调用<code>__repr__</code>和<code>__str__</code>方法，还是通过<code>print()</code>方法，打印的信息都是按我们<strong>repr</strong>方法中定义的格式进行显示的。现在我们重写一下<code>__str__</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    def __str__(object):</span><br><span class="line">    	return &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; c = Hello()</span><br><span class="line">&gt;&gt;&gt; c</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE00450CC0&gt;</span><br><span class="line">&gt;&gt;&gt; print(c)</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(str(c))</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(repr(c))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE00450CC0&gt;</span><br></pre></td></tr></table></figure></p>
-<p>现在就很明显了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。由于我们覆盖了先前的<code>__repr__</code>方法，可是即使没有提前覆盖<code>__repr__</code>方法，我们得出的结果也是一样的。<br>总结一下，<code>__repr__</code>和<code>__str__</code>这两个方法都是用于显示的，但<code>__str__</code>更适用于用户，而<code>__repr__</code>更适用于开发人员。</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="比较-repr-和-str"><a href="#比较-repr-和-str" class="headerlink" title="比较__repr__和__str__"></a>比较<code>__repr__</code>和<code>__str__</code></h1><p><code>__repr__</code>和<code>__str__</code>这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a = Hello()</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(a)</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(str(a))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br><span class="line">&gt;&gt;&gt; print(repr(a))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE0044AE48&gt;</span><br></pre></td></tr></table></figure>
+<p>这里我们想要打印类对象，但显示的确是<strong>对象的内存地址</strong>，而且无论通过<code>__repr__</code>或是<code>__str__</code>,结果都一样，下面我们重写一下这个类的<code>__repr__</code>方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    def __repr__(object):</span><br><span class="line">    	return &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; b = Hello()</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(b)</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(str(b))</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(repr(b))</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+<p>然后我们就发现不管输出对象，调用<code>__repr__</code>和<code>__str__</code>方法，还是通过<code>print()</code>方法，<strong>打印的信息都是按我们</strong><code>__repr__</code><strong>方法中定义的格式进行显示的</strong>。现在我们重写一下<code>__str__</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Hello(object):</span><br><span class="line">    def __str__(object):</span><br><span class="line">    	return &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; c = Hello()</span><br><span class="line">&gt;&gt;&gt; c</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE00450CC0&gt;</span><br><span class="line">&gt;&gt;&gt; print(c)</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(str(c))</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; print(repr(c))</span><br><span class="line">&lt;__main__.Hello object at 0x000001DE00450CC0&gt;</span><br></pre></td></tr></table></figure>
+<p>现在就很明显了，直接输出对象c时，显示出来的<strong>依旧是它的内存地址</strong>，而当我们调用print方法时，就会<strong>按我们定义的格式输出信息</strong>。由于我们覆盖了先前的<code>__repr__</code>方法，可是即使没有提前覆盖<code>__repr__</code>方法，我们得出的结果也是一样的。</p>
+<blockquote>
+<p><strong>总结一下，<code>__repr__</code>和<code>__str__</code>这两个方法都是用于显示的，但<code>__str__</code>更适用于用户，而<code>__repr__</code>更适用于开发人员</strong>。</p>
+</blockquote>
 <ul>
-<li>打印操作会首先尝试<code>__str__</code>和str内置函数(print运行的内部等价形式)，它通常应该返回一个友好的显示。</li>
-<li><code>__repr__</code>用于所有其他的环境中：用于交互模式下提示回应以及repr函数，如果没有使用<code>__str__</code>，会使用print和str。它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示。</li>
+<li><strong>打印操作会首先尝试</strong><code>__str__</code><strong>和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示</strong></li>
+<li><code>__repr__</code><strong>用于所有其他的环境中：用于交互模式下提示回应以及repr函数，如果没有使用</strong><code>__str__</code><strong>，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示</strong></li>
 </ul>
 
       
@@ -568,8 +574,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -584,7 +599,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -606,7 +621,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -667,6 +682,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#比较-repr-和-str"><span class="nav-number">1.</span> <span class="nav-text">比较__repr__和__str__</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
