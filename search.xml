@@ -199,17 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[如何高效提问]]></title>
-    <url>%2F2018%2F08%2F21%2F%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>Thinking</category>
-      </categories>
-      <tags>
-        <tag>思考</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[关于Javascript中的继承机制]]></title>
     <url>%2F2018%2F08%2F21%2F%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -218,6 +207,17 @@
       </categories>
       <tags>
         <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何高效提问]]></title>
+    <url>%2F2018%2F08%2F21%2F%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Thinking</category>
+      </categories>
+      <tags>
+        <tag>思考</tag>
       </tags>
   </entry>
   <entry>
@@ -471,17 +471,6 @@
       </categories>
       <tags>
         <tag>思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[关于Python中\_\_str\_\_和\_\_repr\_\_的区别]]></title>
-    <url>%2F2018%2F01%2F05%2F%E5%85%B3%E4%BA%8EPython%E4%B8%AD-str-%E5%92%8C-repr-%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[比较__repr__和__str____repr__和__str__这两个方法都是用于显示的，在学习Python的过程中，往往会产生疑惑，似乎他们表面上看都是差不多的，但实际却存在许多差异，我们可以通过一个例子来比较一下它们之间不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return &apos;hello&apos;&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就发现不管输出对象，调用__repr__和__str__方法，还是通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return &apos;hello&apos;&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很明显了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。由于我们覆盖了先前的__repr__方法，可是即使没有提前覆盖__repr__方法，我们得出的结果也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员。 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中：用于交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
