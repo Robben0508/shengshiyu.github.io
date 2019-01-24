@@ -111,6 +111,10 @@
 <meta property="og:description" content="记录了一些常用的Git命令，还有Git的工作流">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B0.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B02.png">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B03.png">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B04.png">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B05.png">
 <meta property="og:updated_time" content="2018-03-15T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git小记">
@@ -408,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,528 字
+                  2,688 字
                 </span>
               
 
@@ -472,10 +476,10 @@
 <li><p><strong><code>git tag</code></strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag                          # 显示已存在的tag</span><br><span class="line">git tag -a v1.0 -m &apos;xxx&apos;         # 增加v1.0的tag</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong><code>git branch</code></strong><br>可以列出你所拥有的分支、创建的新分支、删除分支以及重命名分支</p>
+<li><p><strong><code>git branch</code></strong><br>列出你所拥有的分支、创建的新分支、删除分支以及重命名分支</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git branch                        # 显示本地分支</span><br><span class="line">git branch --contains 50089       # 显示包含提交50089的分支</span><br><span class="line">git branch -a                     # 显示所有分支</span><br><span class="line">git branch -r                     # 显示所有原创分支</span><br><span class="line">git branch --merged               # 显示所有已合并到当前分支的分支</span><br><span class="line">git branch --no-merged            # 显示所有未合并到当前分支的分支</span><br><span class="line">git branch -m master master_copy  # 本地分支改名</span><br><span class="line">git branch -d hotfixes/BJVEP933   # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</span><br><span class="line">git branch -D hotfixes/BJVEP933   # 强制删除分支hotfixes/BJVEP933</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong><code>git checkout</code></strong><br>用于切换分支并将内容检出到工作目录</p>
+<li><p><strong><code>git checkout</code></strong><br>切换分支并将内容检出到工作目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b master_copy               # 从当前分支创建新分支master_copy并检出</span><br><span class="line">git checkout -b master master_copy        # 上面的完整版</span><br><span class="line">git checkout features/performance         # 检出已存在的features/performance分支</span><br><span class="line">git checkout --track hotfixes/BJVEP933    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</span><br><span class="line">git checkout v1.0                         # 检出版本v1.0</span><br><span class="line">git checkout -b devel origin/develop      # 从远程分支develop创建新本地分支devel并检出</span><br><span class="line">git checkout -- README                    # 检出head版本的README文件（可用于修改错误回退）</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong><code>git merge</code></strong><br>用于将一个或多个分支合并，然后将合并的分支作为当前分支</p>
@@ -532,6 +536,36 @@
 <li><strong><code>git gc</code></strong><br>执行”垃圾回收“，删除无用文件，将余下的文件打包成一种更有效的形式</li>
 <li><strong><code>git fsck</code></strong><br>用于检查内部数据库存在的问题或不一致性</li>
 </ul>
+<h1 id="Git使用规范流程"><a href="#Git使用规范流程" class="headerlink" title="Git使用规范流程"></a>Git使用规范流程</h1><blockquote>
+<p>在团队开发中，遵循一个合理、清晰的规范是很重要的，例如Git,如果每个人都很随意的提交一堆commit，项目很快就会变得难以维护和管理了，所以需要规范化这个流程。</p>
+</blockquote>
+<h2 id="1-新建分支"><a href="#1-新建分支" class="headerlink" title="1.新建分支"></a>1.新建分支</h2><p>每次开发一个新的功能，我们都应该新建一个单独的分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 获取最新代码</span><br><span class="line">git checkout master</span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"># 新建一个开发分支</span><br><span class="line">git checkout mybranch</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-提交分支"><a href="#2-提交分支" class="headerlink" title="2.提交分支"></a>2.提交分支</h2><p>分支修改后，就可以提交了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git status</span><br><span class="line">git commit</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-撰写提交信息"><a href="#3-撰写提交信息" class="headerlink" title="3.撰写提交信息"></a>3.撰写提交信息</h2><p>提交commit时，必须要简洁明了的叙述提交的信息，可以参考这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">不超过50个字符的提要</span><br><span class="line"></span><br><span class="line">* 改动原因</span><br><span class="line">* 主要变动</span><br><span class="line">* 需要注意的问题，以上均不超过70个字符</span><br><span class="line"></span><br><span class="line">提供一个对应的网址</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-与主分支同步"><a href="#4-与主分支同步" class="headerlink" title="4.与主分支同步"></a>4.与主分支同步</h2><p>开发的过程中要时常与主分支保持同步<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br><span class="line">git rebase origin/master</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-合并"><a href="#5-合并" class="headerlink" title="5.合并"></a>5.合并</h2><p>开发完成后，我们需要把一堆commit合并到主分支<br>关于合并多个commit,可以看这篇文章：<a href="https://www.jianshu.com/p/964de879904a" target="_blank" rel="noopener">「Git」合并多个 Commit</a><br>不过也有一种简洁的合并方式,就是先撤销过去5个commit，然后再建一个新的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD~5</span><br><span class="line">git add .</span><br><span class="line">git commit -am &quot;Here&apos;s the bug fix that closes #28&quot;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-推送远程仓库"><a href="#6-推送远程仓库" class="headerlink" title="6.推送远程仓库"></a>6.推送远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force origin myfeature</span><br></pre></td></tr></table></figure>
+<p>之所以要加上 force 参数，是因为 rebase 后，分支历史改变引起的远程分支不兼容问题</p>
+<h2 id="7-发出Pull-Request"><a href="#7-发出Pull-Request" class="headerlink" title="7.发出Pull Request"></a>7.发出Pull Request</h2><p>提交完毕后，就可以发出 Pull Request 到 master 分支，然后请求别人进行代码 review ，确认是否可以合并到 master 分支。</p>
+<h1 id="Git工作流"><a href="#Git工作流" class="headerlink" title="Git工作流"></a>Git工作流</h1><h2 id="主流工作流"><a href="#主流工作流" class="headerlink" title="主流工作流"></a>主流工作流</h2><ul>
+<li>Git Flow</li>
+<li>GitHub Flow</li>
+<li>GitLab Flow</li>
+</ul>
+<h2 id="Git-Flow"><a href="#Git-Flow" class="headerlink" title="Git Flow"></a>Git Flow</h2><p>Git Flow 是最早诞生、并得到广泛采用的一种工作流程。 Git Flow 存在两个长期分支，分别是主分支 master 和开发分支 develop ，前者是对外发布的稳定版本，后者相当于测试开发版，用于日常开发使用。</p>
+<p>Git Flow还有三个协助分支，分别是功能分支（分模块功能开发）、补丁分支（线上的紧急 bug 修复）、和预发分支（版本发布的预发布），分别对应不同的业务需求，一旦开发完成，它们会先合并进开发分支，再合并进主分支，或者直接并入主分支。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B02.png" alt="Git小记2"></p>
+<p>Git Flow的优点在于直观明了，易于控制，但需要维护两个长期分支，需要频繁切换，而且这个模式更多基于“版本发布”的，对于一些“持续发布”的项目，两个长期分支的区别就不大，没必要都维护。</p>
+<h2 id="GitHub-Flow"><a href="#GitHub-Flow" class="headerlink" title="GitHub Flow"></a>GitHub Flow</h2><p>GitHub Flow 作为 Github 所使用的工作流，其目的也是专门为了配合“持续发布”的。它只有一个长期分支，就是我们所熟知的 master 分支，团队成员们的分支代码通过 Pull Request 来合并到 master 上。</p>
+<p>我们通过从 mater 上拉出新的分支，当开发完成时，就发起一个Pull Request，然后会审核你的代码，如果被接受就可以合并进 master 分支。</p>
+<p>不过由于它只有一个主分支，所以如果你的开发时间很长，主分支就会与你得分支版本不一致，而你不得不专门建一个分支跟踪线上的新版本。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B03.png" alt="Git小记3"></p>
+<h2 id="GitLab-Flow"><a href="#GitLab-Flow" class="headerlink" title="GitLab Flow"></a>GitLab Flow</h2><p>Gitlab flow 吸取了 Git flow 与 Github flow 的优点。既有适应不同开发环境的弹性，又有单一主分支的简单和便利。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B04.png" alt="Git小记4"></p>
+<p>对于”持续发布”的项目，建议在 master 分支以外，再建立不同的环境分支。比如，”开发环境”的分支是 master ，”预发环境”的分支是 pre-production ，”生产环境”的分支是 production 。</p>
+<p>开发分支是预发分支的”上游”，预发分支又是生产分支的”上游”。代码的变化，必须由”上游”向”下游”发展。只有上游没有问题，才能发布到下游，除非是紧急情况，才能直接合并到下游分支。</p>
+<p>对于”版本发布”的项目，都要从 master 分支拉出一个分支，比如1-3-stable、1-4-stable等等。发现问题，就从对应版本分支创建修复分支，完成之后，先合并到 master，才能再合并到 release 分支，只有修补bug，才允许将代码合并到这些分支，并且此时要更新小版本号。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Git%E5%B0%8F%E8%AE%B05.png" alt="Git小记5"></p>
 
       
     </div>
@@ -689,7 +723,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -782,7 +816,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置和配置"><span class="nav-number">1.1.</span> <span class="nav-text">设置和配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和获取项目"><span class="nav-number">1.2.</span> <span class="nav-text">创建和获取项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快照"><span class="nav-number">1.3.</span> <span class="nav-text">快照</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支与合并"><span class="nav-number">1.4.</span> <span class="nav-text">分支与合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目共享和更新"><span class="nav-number">1.5.</span> <span class="nav-text">项目共享和更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检视和比较"><span class="nav-number">1.6.</span> <span class="nav-text">检视和比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.7.</span> <span class="nav-text">调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打补丁"><span class="nav-number">1.8.</span> <span class="nav-text">打补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理"><span class="nav-number">1.9.</span> <span class="nav-text">管理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置和配置"><span class="nav-number">1.1.</span> <span class="nav-text">设置和配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和获取项目"><span class="nav-number">1.2.</span> <span class="nav-text">创建和获取项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快照"><span class="nav-number">1.3.</span> <span class="nav-text">快照</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支与合并"><span class="nav-number">1.4.</span> <span class="nav-text">分支与合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目共享和更新"><span class="nav-number">1.5.</span> <span class="nav-text">项目共享和更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检视和比较"><span class="nav-number">1.6.</span> <span class="nav-text">检视和比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.7.</span> <span class="nav-text">调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打补丁"><span class="nav-number">1.8.</span> <span class="nav-text">打补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理"><span class="nav-number">1.9.</span> <span class="nav-text">管理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git使用规范流程"><span class="nav-number">2.</span> <span class="nav-text">Git使用规范流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-新建分支"><span class="nav-number">2.1.</span> <span class="nav-text">1.新建分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-提交分支"><span class="nav-number">2.2.</span> <span class="nav-text">2.提交分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-撰写提交信息"><span class="nav-number">2.3.</span> <span class="nav-text">3.撰写提交信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-与主分支同步"><span class="nav-number">2.4.</span> <span class="nav-text">4.与主分支同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-合并"><span class="nav-number">2.5.</span> <span class="nav-text">5.合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-推送远程仓库"><span class="nav-number">2.6.</span> <span class="nav-text">6.推送远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-发出Pull-Request"><span class="nav-number">2.7.</span> <span class="nav-text">7.发出Pull Request</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git工作流"><span class="nav-number">3.</span> <span class="nav-text">Git工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主流工作流"><span class="nav-number">3.1.</span> <span class="nav-text">主流工作流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-Flow"><span class="nav-number">3.2.</span> <span class="nav-text">Git Flow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Flow"><span class="nav-number">3.3.</span> <span class="nav-text">GitHub Flow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitLab-Flow"><span class="nav-number">3.4.</span> <span class="nav-text">GitLab Flow</span></a></li></ol></li></ol></div>
             
 
           </div>

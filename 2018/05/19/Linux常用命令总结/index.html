@@ -102,19 +102,19 @@
 
 
 
-<meta name="description" content="总结了一些在使用Linux过程中常常遇到的命令">
+<meta name="description" content="总结了一些在使用Linux过程中常常遇到的命令，还有与它们相关的一些参数说明，利于复习和查阅">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令总结">
 <meta property="og:url" content="https://www.shengshiyu.com/2018/05/19/Linux常用命令总结/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="总结了一些在使用Linux过程中常常遇到的命令">
+<meta property="og:description" content="总结了一些在使用Linux过程中常常遇到的命令，还有与它们相关的一些参数说明，利于复习和查阅">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg">
 <meta property="og:updated_time" content="2018-05-18T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令总结">
-<meta name="twitter:description" content="总结了一些在使用Linux过程中常常遇到的命令">
+<meta name="twitter:description" content="总结了一些在使用Linux过程中常常遇到的命令，还有与它们相关的一些参数说明，利于复习和查阅">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg">
 
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,061 字
+                  2,060 字
                 </span>
               
 
@@ -420,7 +420,7 @@
 
           
               <div class="post-description">
-                  总结了一些在使用Linux过程中常常遇到的命令
+                  总结了一些在使用Linux过程中常常遇到的命令，还有与它们相关的一些参数说明，利于复习和查阅
               </div>
           
 
@@ -434,8 +434,9 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg" alt="Linux常用命令总结"></p>
-<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><p>用来<strong>显示目标列表或者目录内容</strong>的，常用的可选参数有：</p>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.jpg" alt="Linux常用命令总结"></p>
+<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><p>用来<strong>显示目标列表或者目录内容</strong>，常用的可选参数有：</p>
 <ul>
 <li><code>-a</code> 显示所有子目录和文件，包括隐藏文件</li>
 <li><code>-l</code> 显示文件的详细信息，可以把<code>ls -l</code>简写为<code>ll</code></li>
@@ -448,7 +449,7 @@
 </ul>
 <h2 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h2><p>可以<strong>显示文件内容</strong>，也可以<strong>连接</strong>两个或者多个文件</p>
 <h2 id="which命令"><a href="#which命令" class="headerlink" title="which命令"></a>which命令</h2><p>显示文件的<strong>所在路径</strong></p>
-<h2 id="man命令"><a href="#man命令" class="headerlink" title="man命令"></a>man命令</h2><p>用于查看Linux中的命令<strong>帮助信息</strong>，遇到不会的命名就man一下，它也有一些参数需要注意：</p>
+<h2 id="man命令"><a href="#man命令" class="headerlink" title="man命令"></a>man命令</h2><p>用于查看Linux中的命令<strong>帮助信息</strong>，遇到不会的命令就man一下，它也有一些参数需要注意：</p>
 <ul>
 <li><code>-a</code> 在所有的man帮助手册中搜索；</li>
 <li><code>-f</code> 等价于whatis指令，显示给定关键字的简短描述信息；</li>
@@ -491,7 +492,7 @@
 <li><code>*.rar</code> -&gt; `unrar e</li>
 <li><code>*.zip</code> -&gt; <code>unzip</code></li>
 </ul>
-<h2 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h2><p>用于<strong>终止指定进程</strong>的运行，对于后台进程我们可以先通过ps/pidof/pstree/top等命令获取进程PID，然后用kill结束该进程。不过也可以使用killall命令，直接使用进程的名称结束进程，使用它可以结束一组同名进程，而不用先获取进程PID，killall相当于把这两个过程合二为一，是一个很好用的命令</p>
+<h2 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h2><p>用于<strong>终止指定进程</strong>的运行，对于后台进程我们可以先通过ps/pidof/pstree/top等命令获取进程PID，然后用kill结束该进程。不过也可以使用<strong>killall</strong>命令，直接使用进程的名称结束进程，使用它可以结束一组同名进程，而不用先获取进程PID，<strong>killall相当于把这两个过程合二为一</strong>，是一个很好用的命令</p>
 <h2 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h2><p>可以用来<strong>查看一个文件的前几行</strong>，可以配合其他命令使用，例如配合管道做grep</p>
 <h2 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h2><p>tail命令和head相反，<strong>查看文件的最后几行</strong>。不过最常用的还是加上 “-f” 参数后和grep一起使用</p>
 <h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><p>一个极其强大的命令，常用来在很多数据中<strong>找到匹配某一模式的字段</strong>，可以是正则表达式，常用的几个参数有：</p>
@@ -729,7 +730,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
