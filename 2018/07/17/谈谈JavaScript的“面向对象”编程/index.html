@@ -84,7 +84,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程, 思考" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -102,16 +102,20 @@
 
 
 
-<meta name="description" content="物有本末，事有终始，知所先后，则近道矣">
-<meta property="og:type" content="website">
-<meta property="og:title" content="天马的故乡">
-<meta property="og:url" content="https://www.shengshiyu.com/categories/Technology/index.html">
+<meta name="description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈JavaScript的“面向对象”编程">
+<meta property="og:url" content="https://www.shengshiyu.com/2018/07/17/谈谈JavaScript的“面向对象”编程/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="物有本末，事有终始，知所先后，则近道矣">
+<meta property="og:description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg">
+<meta property="og:updated_time" content="2018-07-16T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="天马的故乡">
-<meta name="twitter:description" content="物有本末，事有终始，知所先后，则近道矣">
+<meta name="twitter:title" content="谈谈JavaScript的“面向对象”编程">
+<meta name="twitter:description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg">
 
 
 
@@ -139,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/categories/Technology/"/>
+  <link rel="canonical" href="https://www.shengshiyu.com/2018/07/17/谈谈JavaScript的“面向对象”编程/"/>
 
 
 
 
 
-  <title>分类: Technology | 天马的故乡</title>
+  <title>谈谈JavaScript的“面向对象”编程 | 天马的故乡</title>
   
 
 
@@ -179,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <a href="https://github.com/Robben0508" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -309,217 +313,245 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>Technology<small>分类</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/02/浅谈Spring Bean的生命周期和作用域/" itemprop="url">
-              
-                <span itemprop="name">浅谈Spring Bean的生命周期和作用域</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-02T00:00:00+08:00"
-              content="2019-01-02" >
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/26/TCP和UDP浅析/" itemprop="url">
-              
-                <span itemprop="name">TCP和UDP浅析</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-26T00:00:00+08:00"
-              content="2018-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/22/PO、VO、BO、DTO、POJO、DAO之间的关系/" itemprop="url">
-              
-                <span itemprop="name">PO、VO、BO、DTO、POJO、DAO之间的关系</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-22T00:00:00+08:00"
-              content="2018-11-22" >
-          11-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/01/浅谈Java线程池/" itemprop="url">
-              
-                <span itemprop="name">浅谈Java线程池</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-01T00:00:00+08:00"
-              content="2018-11-01" >
-          11-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/24/HTTP指北/" itemprop="url">
-              
-                <span itemprop="name">HTTP指北</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-24T00:00:00+08:00"
-              content="2018-10-24" >
-          10-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/21/IOC与需求变化/" itemprop="url">
-              
-                <span itemprop="name">IOC与需求变化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-21T00:00:00+08:00"
-              content="2018-10-21" >
-          10-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/02/Vector、ArrayList、LinkedList的区别/" itemprop="url">
-              
-                <span itemprop="name">Vector、ArrayList、LinkedList的区别</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-02T00:00:00+08:00"
-              content="2018-10-02" >
-          10-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/categories/Technology/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/categories/Technology/page/5/">5</a><a class="extend next" rel="next" href="/categories/Technology/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/07/17/谈谈JavaScript的“面向对象”编程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="沉默的超云星">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天马的故乡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">谈谈JavaScript的“面向对象”编程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T00:00:00+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,479 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg" alt="谈谈JavaScript的”面向对象“编程"></p>
+<h1 id="初识JavaScript面向对象"><a href="#初识JavaScript面向对象" class="headerlink" title="初识JavaScript面向对象"></a>初识JavaScript面向对象</h1><p>相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。</p>
+<p>定义一个JavaScript对象很简单，我们可以：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>也可以用其他的方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function f() &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可能你会产生疑惑，这不应该是一个函数吗？咋就变成对象了，因为在JavaScript里函数也是对象，而且还是一等公民。而在很多传统语言中，例如Java、C/C++等，函数都是二等公民的身份。什么叫二等公民呢？你只能用语言的关键字声明一个函数然后调用它，如果需要把函数作为参数传给另一个函数，或是赋值给一个本地变量，又或是作为返回值，就需要通过函数指针、代理等特殊的方式周折一番。</p>
+<p>而在JavaScript里的函数，它不仅拥有一切传统函数的使用方式，而且可以做到像简单值一样赋值、传参、返回，而且JavaScript中的函数还可以充当“类”的构造函数，同时又是一个Function类的实例，这样的多重身份让JavaScript里的函数变得极其重要，它更像是 Scheme 。</p>
+<p>JavaScript提供了一个构造函数模式来在创建对象时初始化对象，而构造函数也只是一个普通的函数，只不过它内部使用<code>this</code>，使用<code>new</code>生成实例，在这一点上很像传统的面向对象语言。而this总是指向当前对象，无论是添加属性还是方法，都只在当前对象添加，实例化一个新对象时，就会在内存里复制一份，但过多的新对象不可避免会造成大量的内存浪费。</p>
+<p>为了解决这一问题，于是有了原型prototype的形式，在JavaScript里，每一个构造函数都有一个prototype属性，指向另一个对象，这个对象的所有实例和方法都会被构造函数的实例继承，对于不变的属性和方法，可以直接添加在类的prototype对象上。功能上来看，很像Java里接口的概念，尤其是Java8引入了接口的默认方法，二者在功能上看上去更为接近了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Dog(name,color)&#123;</span><br><span class="line">　　　　this.name = name;</span><br><span class="line">　　　　this.color = color;</span><br><span class="line">　　&#125;</span><br><span class="line">　　Dog.prototype.type = &quot;宠物&quot;;</span><br><span class="line">　　Dog.prototype.eat = function()&#123;alert(&quot;吃狗粮&quot;)&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当我们生成实例时，实例里的属性和方法其实都在同一个内存地址，指向prototype对象，避免了不必要的内存浪费。但也会因为改动一个对象的属性而可能影响到其他相关的对象，而利用构造函数的形式则没有这样的弊端。</p>
+<p>传统的面向对象语言里，例如Java，会有相应的访问控制功能，借助于<code>public</code>、<code>protected</code>、<code>private</code>这三个关键字，而JavaScript里则没有类似的关键字，但为了实现类似的功能，例如属性和方法的私有，就可以借助于函数块级作用域的特性。</p>
+<h1 id="Javascript里的类（class）"><a href="#Javascript里的类（class）" class="headerlink" title="Javascript里的类（class）"></a>Javascript里的类（class）</h1><p>JavaScript里没有“子类”和“父类”的区分，也没有“类”和”实例“的区别，我们可以模拟出传统面向对象语言里类的特点，那么继承又该怎么做？JavaScript主要依靠继承链实现继承。传统情况下，我们在JavaScript生成一个实例的方法都是通过构造函数，类似于这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Point(x, y) &#123;</span><br><span class="line">  this.x = x;</span><br><span class="line">  this.y = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype.toString = function () &#123;</span><br><span class="line">  return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var p = new Point(1, 2);</span><br></pre></td></tr></table></figure></p>
+<p>而在其他传统面向对象语言里，一般情况下，都是生成一个class，然后再通过类的构造器来生成相应的实例对象，所以JavaScript显得很特别，所以在ES6里引入了“class”的概念和关键字，通过这个关键字，可以定义一个“类”。可以像这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x = x;</span><br><span class="line">    this.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">    return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样的形式就不容易使人困惑了，ES5里的Point构造方法就是ES6里Point“类”里的构造方法,而且toString方法也定义在了“类”里，而在“类”里的方法是不需要function关键字的。</p>
+<p>某种意义上ES6里的“类”就是一个语法糖而已。。。实际上基本可以看作传统构造函数的一种简便写法。因为类里的所有方法实际上还是定义在prototype属性上面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//等同于</span><br><span class="line">Point.prototype = &#123;</span><br><span class="line">  constructor() &#123;&#125;,</span><br><span class="line">  toString() &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>而在“类”的实例上调用方法，其实就是在调用原型上的方法。不过也有一些差别，在“类”的内部所有定义的方法都是不可枚举的。</p>
+<p>在JavaScript里，定义函数的方式有两种，一种是函数声明，一种是函数表达式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//函数声明</span><br><span class="line">function functionName(arg)&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//等同于函数表达式</span><br><span class="line">var functionName = function(arg)&#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>对于类来说一样也可以通过表达式定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const MyClass = class Point &#123;</span><br><span class="line">  getClassName() &#123;</span><br><span class="line">    return Point.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>只不过这个类的名字不再是Point，而是MyClass，Point只在class的内部使用，指代当前类。</p>
+<p>JavaScript里的函数声明具有函数声明提升的特征，即使放在相关调用语句之后，也会在执行代码之前先读取函数声明，而类不存在这样的提升特性。因为ES6里的“类”，只是之前的构造函数的一层包装罢了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">END</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      沉默的超云星
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.shengshiyu.com/2018/07/17/谈谈JavaScript的“面向对象”编程/" title="谈谈JavaScript的“面向对象”编程">https://www.shengshiyu.com/2018/07/17/谈谈JavaScript的“面向对象”编程/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
 
 
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/03/正则表达式小记/" rel="next" title="正则表达式小记">
+                <i class="fa fa-chevron-left"></i> 正则表达式小记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/30/中医与程序员/" rel="prev" title="中医与程序员">
+                中医与程序员 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -527,6 +559,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -546,8 +582,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -645,6 +690,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初识JavaScript面向对象"><span class="nav-number">1.</span> <span class="nav-text">初识JavaScript面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript里的类（class）"><span class="nav-number">2.</span> <span class="nav-text">Javascript里的类（class）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -761,10 +822,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
