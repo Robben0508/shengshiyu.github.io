@@ -102,15 +102,20 @@
 
 
 
+<meta name="description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈Javascript的”面向对象编程“">
-<meta property="og:url" content="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象编程“/index.html">
+<meta property="og:title" content="谈谈JavaScript的“面向对象”编程">
+<meta property="og:url" content="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象“编程/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg">
 <meta property="og:updated_time" content="2018-07-24T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谈谈Javascript的”面向对象编程“">
+<meta name="twitter:title" content="谈谈JavaScript的“面向对象”编程">
+<meta name="twitter:description" content="初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &amp;#123;&amp;#125;; 也可以用其他的方式：12function">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg">
 
 
 
@@ -138,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象编程“/"/>
+  <link rel="canonical" href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象“编程/"/>
 
 
 
 
 
-  <title>谈谈Javascript的”面向对象编程“ | 天马的故乡</title>
+  <title>谈谈JavaScript的“面向对象”编程 | 天马的故乡</title>
   
 
 
@@ -318,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象编程“/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象“编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沉默的超云星">
@@ -335,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">谈谈Javascript的”面向对象编程“</h1>
+          <h1 class="post-title" itemprop="name headline">谈谈JavaScript的“面向对象”编程</h1>
         
 
         <div class="post-meta">
@@ -403,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  1,479 字
                 </span>
               
 
@@ -425,7 +430,27 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88JavaScript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E2%80%9C%E7%BC%96%E7%A8%8B.jpg" alt="谈谈JavaScript的”面向对象“编程"></p>
+<h1 id="初识JavaScript面向对象"><a href="#初识JavaScript面向对象" class="headerlink" title="初识JavaScript面向对象"></a>初识JavaScript面向对象</h1><p>相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。</p>
+<p>定义一个JavaScript对象很简单，我们可以：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>也可以用其他的方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function f() &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可能你会产生疑惑，这不应该是一个函数吗？咋就变成对象了，因为在JavaScript里函数也是对象，而且还是一等公民。而在很多传统语言中，例如Java、C/C++等，函数都是二等公民的身份。什么叫二等公民呢？你只能用语言的关键字声明一个函数然后调用它，如果需要把函数作为参数传给另一个函数，或是赋值给一个本地变量，又或是作为返回值，就需要通过函数指针、代理等特殊的方式周折一番。</p>
+<p>而在JavaScript里的函数，它不仅拥有一切传统函数的使用方式，而且可以做到像简单值一样赋值、传参、返回，而且JavaScript中的函数还可以充当“类”的构造函数，同时又是一个Function类的实例，这样的多重身份让JavaScript里的函数变得极其重要，它更像是 Scheme 。</p>
+<p>JavaScript提供了一个构造函数模式来在创建对象时初始化对象，而构造函数也只是一个普通的函数，只不过它内部使用<code>this</code>，使用<code>new</code>生成实例，在这一点上很像传统的面向对象语言。而this总是指向当前对象，无论是添加属性还是方法，都只在当前对象添加，实例化一个新对象时，就会在内存里复制一份，但过多的新对象不可避免会造成大量的内存浪费。</p>
+<p>为了解决这一问题，于是有了原型prototype的形式，在JavaScript里，每一个构造函数都有一个prototype属性，指向另一个对象，这个对象的所有实例和方法都会被构造函数的实例继承，对于不变的属性和方法，可以直接添加在类的prototype对象上。功能上来看，很像Java里接口的概念，尤其是Java8引入了接口的默认方法，二者在功能上看上去更为接近了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Dog(name,color)&#123;</span><br><span class="line">　　　　this.name = name;</span><br><span class="line">　　　　this.color = color;</span><br><span class="line">　　&#125;</span><br><span class="line">　　Dog.prototype.type = &quot;宠物&quot;;</span><br><span class="line">　　Dog.prototype.eat = function()&#123;alert(&quot;吃狗粮&quot;)&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当我们生成实例时，实例里的属性和方法其实都在同一个内存地址，指向prototype对象，避免了不必要的内存浪费。但也会因为改动一个对象的属性而可能影响到其他相关的对象，而利用构造函数的形式则没有这样的弊端。</p>
+<p>传统的面向对象语言里，例如Java，会有相应的访问控制功能，借助于<code>public</code>、<code>protected</code>、<code>private</code>这三个关键字，而JavaScript里则没有类似的关键字，但为了实现类似的功能，例如属性和方法的私有，就可以借助于函数块级作用域的特性。</p>
+<h1 id="Javascript里的类（class）"><a href="#Javascript里的类（class）" class="headerlink" title="Javascript里的类（class）"></a>Javascript里的类（class）</h1><p>JavaScript里没有“子类”和“父类”的区分，也没有“类”和”实例“的区别，我们可以模拟出传统面向对象语言里类的特点，那么继承又该怎么做？JavaScript主要依靠继承链实现继承。传统情况下，我们在JavaScript生成一个实例的方法都是通过构造函数，类似于这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Point(x, y) &#123;</span><br><span class="line">  this.x = x;</span><br><span class="line">  this.y = y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Point.prototype.toString = function () &#123;</span><br><span class="line">  return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var p = new Point(1, 2);</span><br></pre></td></tr></table></figure></p>
+<p>而在其他传统面向对象语言里，一般情况下，都是生成一个class，然后再通过类的构造器来生成相应的实例对象，所以JavaScript显得很特别，所以在ES6里引入了“class”的概念和关键字，通过这个关键字，可以定义一个“类”。可以像这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor(x, y) &#123;</span><br><span class="line">    this.x = x;</span><br><span class="line">    this.y = y;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">    return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样的形式就不容易使人困惑了，ES5里的Point构造方法就是ES6里Point“类”里的构造方法,而且toString方法也定义在了“类”里，而在“类”里的方法是不需要function关键字的。</p>
+<p>某种意义上ES6里的“类”就是一个语法糖而已。。。实际上基本可以看作传统构造函数的一种简便写法。因为类里的所有方法实际上还是定义在prototype属性上面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  toString() &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//等同于</span><br><span class="line">Point.prototype = &#123;</span><br><span class="line">  constructor() &#123;&#125;,</span><br><span class="line">  toString() &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>而在“类”的实例上调用方法，其实就是在调用原型上的方法。不过也有一些差别，在“类”的内部所有定义的方法都是不可枚举的。</p>
+<p>在JavaScript里，定义函数的方式有两种，一种是函数声明，一种是函数表达式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//函数声明</span><br><span class="line">function functionName(arg)&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//等同于函数表达式</span><br><span class="line">var functionName = function(arg)&#123;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>对于类来说一样也可以通过表达式定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const MyClass = class Point &#123;</span><br><span class="line">  getClassName() &#123;</span><br><span class="line">    return Point.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>只不过这个类的名字不再是Point，而是MyClass，Point只在class的内部使用，指代当前类。</p>
+<p>JavaScript里的函数声明具有函数声明提升的特征，即使放在相关调用语句之后，也会在执行代码之前先读取函数声明，而类不存在这样的提升特性。因为ES6里的“类”，只是之前的构造函数的一层包装罢了。</p>
+
       
     </div>
 
@@ -463,7 +488,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象编程“/" title="谈谈Javascript的”面向对象编程“">https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象编程“/</a>
+      <a href="https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象“编程/" title="谈谈JavaScript的“面向对象”编程">https://www.shengshiyu.com/2018/07/25/谈谈Javascript的”面向对象“编程/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -557,8 +582,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -573,7 +607,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -656,6 +690,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初识JavaScript面向对象"><span class="nav-number">1.</span> <span class="nav-text">初识JavaScript面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript里的类（class）"><span class="nav-number">2.</span> <span class="nav-text">Javascript里的类（class）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

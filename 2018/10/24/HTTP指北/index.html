@@ -102,15 +102,23 @@
 
 
 
+<meta name="description" content="HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。">
 <meta name="keywords" content="HTTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Google实用搜索技巧">
+<meta property="og:title" content="HTTP指北">
 <meta property="og:url" content="https://www.shengshiyu.com/2018/10/24/HTTP指北/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%971.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%972.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%973.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTTP%E6%8C%87%E5%8C%974.png">
 <meta property="og:updated_time" content="2018-10-23T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Google实用搜索技巧">
+<meta name="twitter:title" content="HTTP指北">
+<meta name="twitter:description" content="HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%971.jpg">
 
 
 
@@ -144,7 +152,7 @@
 
 
 
-  <title>Google实用搜索技巧 | 天马的故乡</title>
+  <title>HTTP指北 | 天马的故乡</title>
   
 
 
@@ -335,7 +343,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Google实用搜索技巧</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP指北</h1>
         
 
         <div class="post-meta">
@@ -403,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  2,263 字
                 </span>
               
 
@@ -413,6 +421,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。
+              </div>
           
 
         </div>
@@ -425,7 +437,42 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%971.jpg" alt="HTTP指北1"></p>
+<h1 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h1><p>HTTP是应用层的协议，当我们打开一个网页时，例如：<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>,浏览器会将这个域名地址发送给DNS服务器，然后解析为具体的IP地址。</p>
+<p>建立好连接后，浏览器就可以发送HTTP的请求了，而一个完整的HTTP请求报文由三部分组成：<strong>请求行</strong>、<strong>请求头（首部）</strong>、<strong>请求体（实体）</strong>。每一行的末尾都有回车和换行，在请求体和请求头之间另起一行。其中请求行指定的是请求方法、请求URL、协议版本；请求头是以key:value这样的键值对的形式存在的，请求体就是要传输的数据。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%972.jpg" alt="HTTP指北2"></p>
+<p>HTTP里有很多请求方法，其中最常用的就那么几个，对于访问网页来说，使用的最多的就是<strong>GET</strong>方法，用来向服务器端获取一些资源，具体返回什么，由服务端来决定。</p>
+<p>另一个常用的请求方法类型是<strong>POST</strong>，它需要你主动告诉服务端一些信息，一般这些信息放在请求体里，与GET不同，POST更多是用来更新资源信息，GET提交请求的数据实体是放在URL后面，用?来分割，参数用&amp;连接，而且数据长度是有限制的，视具体的客户端而定，而POST没有限制，而且GET提交的数据是不安全的，因为相关参数会暴露在URL上。</p>
+<p>还有一种类型，叫做<strong>PUT</strong>，它的作用是向指定资源位置上传最新内容，类似于FTP协议，文件内容包含在请求体里，不过HTTP服务器一般是不允许上传文件的，所以PUT和POST就都变成了要传给服务器内容的方法。</p>
+<p>最后一种比较常见的方法就是<strong>DELETE</strong>，主要就是用来删除文件，是与PUT相反的方法，DELETE是要求返回URL指定的资源。</p>
+<p>请求行的下面就是请求头了，保存了一些很重要的字段，例如, <strong>Content-Type</strong> 是指正文格式，如果是JSON格式的，就要把值设为JSON，而类似 <strong>Accept-Charset</strong> 则表示客户端可以接受的字符集，避免不必要的乱码。首部字段有很多，其实通过名字我们就能大概它的用法的，用到的时候可以想了解细节再去查。</p>
+<p>当我们使用HTTP发送请求时，由于它是基于<strong>TCP</strong>协议，所以它使用面向连接的方式发送请求，在发送每段报文时，都需要对方回应一个ACK，确认已经到达，如果没有收到对方的回复，TCP就会重新进行传输，直到到达为止，而这个过程是TCP负责的，也就是说无论重新传输了几次，对于HTTP来说它只进行了一次传输，由TCP来完成这个送达的过程。</p>
+<p>TCP每发送一个报文都会加上自己本身所在的地址以及它想要到达的另一端的位置，将它们放在IP头里，然后交给IP层进行传输。IP层会查看目标地址和自己所在的地址是否同在一个局域网里，如果在的话就发送ARP协议，获取目标地址的MAC地址，然后把自己的MAC地址和目标MAC地址放到MAC头发送出去，由另一端来进行层层对比确认，然后发送一个ACK，确认到达。如果不在一个局域网里，就要经过网关，而MAC头里放的就是网关的地址，因为我们不知道目标的MAC地址，网关再根据路由协议来获取下一跳的路由器MAC地址，然后加入到目标MAC地址那，由于还不是真正的目标MAC地址，会不断重复这个“寻找”的过程，直到下一跳是目标所在，然后获取到目标的MAC地址。</p>
+<p>在TCP头里还有端口号，通过确认MAC地址，IP地址后，通过端口号，目标机器就会知道哪一个进程需要这个包，然后发送给那个进程，例如HTTP服务器，然后HTTP服务器就知道请求的资源是什么，然后把相关资源发送给客户端。</p>
+<p>HTTP的返回报文和响应报文类似，简单来说响应报文由<strong>状态行</strong>、<strong>响应头（首部）</strong>、<strong>响应体（实体）</strong>组成，其中第一行是状态行，包含HTTP版本，状态码和状态短语，在一个回车换行之后是响应头，也是以键值对的形式，之后是响应体，也就是要传输的数据。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%973.jpg" alt="HTTTP指北3"></p>
+<h1 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h1><ul>
+<li><strong>HTTP协议是无状态的</strong><br>什么是无状态，就是协议对于事务处理没有记忆能力，对于同一个URL请求没有上下文的联系，每一次的请求都是独立的，不会受前后结果的差异影响响应，但为了使它具有状态的特点，于是引入了 cookis 和 session 机制。</li>
+<li><strong>基于TCP协议</strong><br>HTTP协议属于应用层，它的目的是规定客户端和服务端数据传输的格式和数据交互行为，而数据传输的实现，它是基于传输层TCP协议实现的，它本身并不能进行数据传输。</li>
+</ul>
+<h1 id="HTTP的响应状态码"><a href="#HTTP的响应状态码" class="headerlink" title="HTTP的响应状态码"></a>HTTP的响应状态码</h1><p>状态码是用来告知客户端服务器端处理请求的结果。凭借状态码用户可以知道服务器是请求处理成功、失败或者是被转发；这样出现了错误也好定位。状态码是由3位数字加原因短语组成。3位数字中的第一位是用来指定状态的类别。共有五个类别。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTTP%E6%8C%87%E5%8C%974.png" alt="HTTTP指北3"><br>不过常用的也就16种，下面来详细介绍下：</p>
+<p><strong>1. 200：OK</strong><br>代表请求被正常的处理成功</p>
+<p><strong>2. 204：No Content</strong><br>请求处理成功，但是没有数据实体返回，也不允许有实体返回。比如说HEAD请求，可能就会返回204 No Content，因为HEAD就是只获取头信息。</p>
+<p><strong>3. 206：Partial Content</strong><br>这是客户端使用Content-Range指定了需要的实体数据的范围，然后服务端处理请求成功之后返回用户需要的这一部分数据而不是全部，执行的请求就是GET。返回码就是206：Partial Content。</p>
+<p><strong>4. 301： Moved Permanently</strong><br>代表永久性定向。该状态码表示请求的资源已经被分配了新的URL，以后应该使用资源现在指定的URL。也就是说如果已经把资源对应的URL保存为书签了，这是应该按照Location首部字段提示的URL重新保存。</p>
+<p><strong>5. 302：Found</strong><br>代表临时重定向。该状态码表示请求的资源已经被分配了新的URL，但是和301的区别是302代表的不是永久性的移动，只是临时的。就是说这个URL还可能会发生改变。如果保存成书签了也不会更新。</p>
+<p><strong>6. 303：See Other</strong><br>和302的区别是303明确规定客户端应当使用GET方法。</p>
+<p><strong>7. 304：Not Modified</strong><br>该状态码表示客户端发送附带条件请求时，服务器端允许请求访问资源，但是没有满足条件。304状态码返回时不包含任何数据实体。304虽然被划分在3XX中但是和重定向没有关系。</p>
+<p><strong>8. 307：Temporary Redirect</strong><br>临时重定向，与302 Found相同，但是302会把POST改成GET，而307就不会。</p>
+<p><strong>9.  400：Bad Request</strong><br>表示请求报文中存在语法错误。需要修改后再次发送。</p>
+<p><strong>10. 401：Unauthorized</strong><br>表示发送的请求需要有通过HTTP认证的认证信息。</p>
+<p><strong>11. 403：Forbidden</strong><br>表明请求访问的资源被拒绝了。没有获得服务器的访问权限，IP被禁止等。</p>
+<p><strong>12. 404：Not Found</strong><br>表明请求的资源在服务器上找不到。当然也可以在服务器拒绝请求且不想说明理由时使用。</p>
+<p><strong>13. 408：Request Timeout</strong><br>表示客户端请求超时，就是在客户端和服务器建立连接后服务器在一定时间内没有收到客户端的请求。</p>
+<p><strong>14. 500：Internal Server Error</strong><br>表明服务器端在执行请求时发生了错误，很有可能是服务端程序的Bug或者临时故障。</p>
+<p><strong>15. 503：Service Unavailable</strong><br>表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。如果事先得知解除以上状况需要的时间，最好写入Retry-After字段再返回给客户端。</p>
+<p><strong>16. 504：Getaway Timeout</strong><br>网关超时，是代理服务器等待应用服务器响应时的超时，和408 Request Timeout的却别就是504是服务器的原因而不是客户端的原因。</p>
+
       
     </div>
 
@@ -463,7 +510,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2018/10/24/HTTP指北/" title="Google实用搜索技巧">https://www.shengshiyu.com/2018/10/24/HTTP指北/</a>
+      <a href="https://www.shengshiyu.com/2018/10/24/HTTP指北/" title="HTTP指北">https://www.shengshiyu.com/2018/10/24/HTTP指北/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -557,8 +604,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -573,7 +629,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -656,6 +712,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP概述"><span class="nav-number">1.</span> <span class="nav-text">HTTP概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP协议的特点"><span class="nav-number">2.</span> <span class="nav-text">HTTP协议的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP的响应状态码"><span class="nav-number">3.</span> <span class="nav-text">HTTP的响应状态码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
