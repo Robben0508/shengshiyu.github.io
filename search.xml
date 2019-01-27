@@ -221,28 +221,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[谈谈Javascript的”面向对象编程“]]></title>
-    <url>%2F2018%2F08%2F17%2FJavascript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[谈谈Javascript的”面向对象编程“]]></title>
-    <url>%2F2018%2F08%2F17%2F%E8%B0%88%E8%B0%88Javascript%E7%9A%84%E2%80%9D%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E2%80%9C%2F</url>
-    <content type="text"><![CDATA[初识JavaScript面向对象相对于Java里的面向对象来说，JavaScript里的面向对象机制绝对可以称之为“另类”了，因为如果我们具有Java/C++这类传统面向对象语言的使用经验，以那样的思维来学习JavaScript的面向对象令你产生很多疑惑。 定义一个JavaScript对象很简单，我们可以：1var a = &#123;&#125;; 也可以用其他的方式：12function f() &#123;&#125; 可能你会产生疑惑，这不应该是一个函数吗？咋就变成对象了，因为在JavaScript里函数也是对象，而且还是一等公民。而在很多传统语言中，例如Java、C/C++等，函数都是二等公民的身份。什么叫二等公民呢？你只能用语言的关键字声明一个函数然后调用它，如果需要把函数作为参数传给另一个函数，或是赋值给一个本地变量，又或是作为返回值，就需要通过函数指针、代理等特殊的方式周折一番。 而在JavaScript里的函数，它不仅拥有一切传统函数的使用方式，而且可以做到像简单值一样赋值、传参、返回，而且JavaScript中的函数还可以充当“类”的构造函数，同时又是一个Function类的实例，这样的多重身份让JavaScript里的函数变得极其重要，它更像是 Scheme 。 JavaScript提供了一个构造函数模式来在创建对象时初始化对象，而构造函数也只是一个普通的函数，只不过它内部使用this，使用new生成实例，在这一点上很像传统的面向对象语言。而this总是指向当前对象，无论是添加属性还是方法，都只在当前对象添加，实例化一个新对象时，就会在内存里复制一份，但过多的新对象不可避免会造成大量的内存浪费。 为了解决这一问题，于是有了原型prototype的形式，在JavaScript里，每一个构造函数都有一个prototype属性，指向另一个对象，这个对象的所有实例和方法都会被构造函数的实例继承，对于不变的属性和方法，可以直接添加在类的prototype对象上。功能上来看，很像Java里接口的概念，尤其是Java8引入了接口的默认方法，二者在功能上看上去更为接近了。123456function Dog(name,color)&#123; this.name = name; this.color = color; &#125; Dog.prototype.type = &quot;宠物&quot;; Dog.prototype.eat = function()&#123;alert(&quot;吃狗粮&quot;)&#125;; 当我们生成实例时，实例里的属性和方法其实都在同一个内存地址，指向prototype对象，避免了不必要的内存浪费。但也会因为改动一个对象的属性而可能影响到其他相关的对象，而利用构造函数的形式则没有这样的弊端。 传统的面向对象语言里，例如Java，会有相应的访问控制功能，借助于public、protected、private这三个关键字，而JavaScript里则没有类似的关键字，但为了实现类似的功能，例如属性和方法的私有，就可以借助于函数块级作用域的特性。 Javascript里的类（class）JavaScript里没有“子类”和“父类”的区分，也没有“类”和”实例“的区别，我们可以模拟出传统面向对象语言里类的特点，那么继承又该怎么做？JavaScript主要依靠继承链实现继承。传统情况下，我们在JavaScript生成一个实例的方法都是通过构造函数，类似于这样：12345678910function Point(x, y) &#123; this.x = x; this.y = y;&#125;Point.prototype.toString = function () &#123; return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;&#125;;var p = new Point(1, 2); 而在其他传统面向对象语言里，一般情况下，都是生成一个class，然后再通过类的构造器来生成相应的实例对象，所以JavaScript显得很特别，所以在ES6里引入了“class”的概念和关键字，通过这个关键字，可以定义一个“类”。可以像这样：12345678910class Point &#123; constructor(x, y) &#123; this.x = x; this.y = y; &#125; toString() &#123; return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;; &#125;&#125; 这样的形式就不容易使人困惑了，ES5里的Point构造方法就是ES6里Point“类”里的构造方法,而且toString方法也定义在了“类”里，而在“类”里的方法是不需要function关键字的。 某种意义上ES6里的“类”就是一个语法糖而已。。。实际上基本可以看作传统构造函数的一种简便写法。因为类里的所有方法实际上还是定义在prototype属性上面。12345678910111213class Point &#123; constructor() &#123; &#125; toString() &#123; &#125;&#125;//等同于Point.prototype = &#123; constructor() &#123;&#125;, toString() &#123;&#125;,&#125;; 而在“类”的实例上调用方法，其实就是在调用原型上的方法。不过也有一些差别，在“类”的内部所有定义的方法都是不可枚举的。 在JavaScript里，定义函数的方式有两种，一种是函数声明，一种是函数表达式：1234567//函数声明function functionName(arg)&#123;&#125;//等同于函数表达式var functionName = function(arg)&#123;&#125;; 对于类来说一样也可以通过表达式定义12345const MyClass = class Point &#123; getClassName() &#123; return Point.name; &#125;&#125;; 只不过这个类的名字不再是Point，而是MyClass，Point只在class的内部使用，指代当前类。 JavaScript里的函数声明具有函数声明提升的特征，即使放在相关调用语句之后，也会在执行代码之前先读取函数声明，而类不存在这样的提升特性。因为ES6里的“类”，只是之前的构造函数的一层包装罢了。]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[final、finally、finalize的区别]]></title>
     <url>%2F2018%2F08%2F17%2Ffinal%E3%80%81finally%E3%80%81finalize%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -251,6 +229,17 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[谈谈Javascript的”面向对象编程“]]></title>
+    <url>%2F2018%2F08%2F17%2FJavascript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
