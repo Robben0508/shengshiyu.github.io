@@ -525,16 +525,16 @@
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS</p>
 <ul>
 <li><p>引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote&gt;***&lt;/blockquote&gt;</span><br><span class="line">/* 如果上下间距小，可以这样写 */</span><br><span class="line">&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span>***<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line">/* 如果上下间距小，可以这样写 */</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">blockquote</span>&gt;</span>***<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>居中和右对齐</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/* 居中 */</span><br><span class="line">&lt;center&gt;**&lt;/center&gt;</span><br><span class="line">/* 右对齐 */</span><br><span class="line">&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;</span><br><span class="line">/* 右对齐 */</span><br><span class="line">&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>字体大小和颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;font color=&quot;#xxxxxx&quot; size=&quot;number&quot;&gt;**&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"#xxxxxx"</span> <span class="attr">size</span>=<span class="string">"number"</span>&gt;</span>**<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>分割线和空行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr /&gt;</span><br><span class="line">&lt;br /&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <div class="note info"><p>关于Markdown的更多细节，可以参看：<a href="https://www.appinn.com/markdown/" target="_blank" rel="noopener">Markdown 语法说明 (简体中文版)</a>，对于Markdown的规范，可以看一下 ：<a href="https://github.com/google/styleguide/blob/gh-pages/docguide/style.md" target="_blank" rel="noopener">Google Markdown Style Guide</a> 或者 <a href="http://www.cirosantilli.com/markdown-style-guide/" target="_blank" rel="noopener">Markdown Style Guide</a></p></div>

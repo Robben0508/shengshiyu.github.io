@@ -102,15 +102,20 @@
 
 
 
+<meta name="description" content="JavaScript里的闭包是它的一个特色，这也是静态语言所不具备的一个特性，很多高级功能都依靠闭包来实现，理解闭包其实一点都不困难。 变量作用域理解闭包的前提是理解JavaScript的变量作用域，变量的作用域分为全局变量和局部变量， JavaScript具有基于函数的作用域，每声明一个函数都会为其自身创建一个自己的执行环境，而且在函数内部就可以直接访问全局变量。12345var a = 1">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于JavaScript的闭包">
 <meta property="og:url" content="https://www.shengshiyu.com/2018/08/05/关于Javascript的闭包/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="JavaScript里的闭包是它的一个特色，这也是静态语言所不具备的一个特性，很多高级功能都依靠闭包来实现，理解闭包其实一点都不困难。 变量作用域理解闭包的前提是理解JavaScript的变量作用域，变量的作用域分为全局变量和局部变量， JavaScript具有基于函数的作用域，每声明一个函数都会为其自身创建一个自己的执行环境，而且在函数内部就可以直接访问全局变量。12345var a = 1">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8EJavaScript%E7%9A%84%E9%97%AD%E5%8C%85.jpg">
 <meta property="og:updated_time" content="2018-08-04T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于JavaScript的闭包">
+<meta name="twitter:description" content="JavaScript里的闭包是它的一个特色，这也是静态语言所不具备的一个特性，很多高级功能都依靠闭包来实现，理解闭包其实一点都不困难。 变量作用域理解闭包的前提是理解JavaScript的变量作用域，变量的作用域分为全局变量和局部变量， JavaScript具有基于函数的作用域，每声明一个函数都会为其自身创建一个自己的执行环境，而且在函数内部就可以直接访问全局变量。12345var a = 1">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8EJavaScript%E7%9A%84%E9%97%AD%E5%8C%85.jpg">
 
 
 
@@ -403,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  808 字
                 </span>
               
 
@@ -425,7 +430,19 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8EJavaScript%E7%9A%84%E9%97%AD%E5%8C%85.jpg" alt="关于JavaScript的闭包"></p>
+<p>JavaScript里的闭包是它的一个特色，这也是静态语言所不具备的一个特性，很多高级功能都依靠闭包来实现，理解闭包其实一点都不困难。</p>
+<h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><p>理解闭包的前提是理解JavaScript的<strong>变量作用域</strong>，变量的作用域分为<strong>全局变量</strong>和<strong>局部变量</strong>， JavaScript具有基于<strong>函数的作用域</strong>，每声明一个函数都会为其自身创建一个自己的<strong>执行环境</strong>，而且在函数内部就可以直接访问全局变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line">func1(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p>
+<p>但是在函数外是无法访问函数内的局部变量的。不过如果不使用<code>var</code>关键字，就会在内部作用域声明一个全局变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// error</span></span><br></pre></td></tr></table></figure></p>
+<p>这里就涉及到一个问题，假如我们需要读取函数内部的变量怎么办？于是我们只能在函数的内部再定义一个函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> func2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> n = func1();</span><br><span class="line">n(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p>
+<p>此时，func1内的所有局部变量对于func2来说都是<strong>可见</strong>的，func1的返回值，也就是func2（），赋值给变量n，然后调用n(),<strong>实际只是通过不同的标识符来引用调用了内部的函数func2()</strong>.</p>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p>说了半天，那么闭包到底是啥，我的理解是：闭包就是函数的局部变量的集合，能够读取其他函数的局部变量，只有定义在函数内部的子函数才可以获取局部变量，<strong>当一个函数定义在另一个函数内，并且试图通过子函数获得局部变量，它就是闭包</strong>。</p>
+<p>闭包使得函数内部作用域和函数外部作用域的连接成为了可能，局部变量可以在函数返回后被访问，而且闭包里变量的值可以始终保持在内存中，我们可以通过一个例子来看：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> n=<span class="number">1</span>;</span><br><span class="line">	Add = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	n += <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">func2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(n);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> func2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> result = func1();</span><br><span class="line">result(); <span class="comment">// 1</span></span><br><span class="line">Add();</span><br><span class="line">result(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>可以看到局部变量n一直保存在内存中，不会随着函数调用的结束而被垃圾回收，func2是func1的子函数，但作为func1的返回值，却被赋值给了一个全局变量result，这就使得func2始终在内存中，因为func2的存在依赖于func1，所以func1也就跟着保存在了内存中。</p>
+<p>前面提到，如果不使用<code>var</code>关键字，会在内部声明一个全局变量，所以Add就是一个全局变量，但它可以在函数外部对内部的局部变量进行操作，实则它也是一个闭包。</p>
+<p>过渡的使用闭包，内存消耗会很大，但闭包的用处也很多，在定时器、事件监听器、Ajax 请求、跨窗口通信或者任何其他的异步或者同步任务中，只要使用了回调函数，实际上就是在使用闭包。</p>
+
       
     </div>
 
@@ -557,8 +574,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +682,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#变量作用域"><span class="nav-number">1.</span> <span class="nav-text">变量作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#闭包"><span class="nav-number">2.</span> <span class="nav-text">闭包</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

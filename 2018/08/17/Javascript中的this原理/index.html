@@ -102,15 +102,20 @@
 
 
 
+<meta name="description" content="this关键字是在学习JavaScript中无法避开的一个痛点，如果没有搞清楚this的用法，很容易陷入困惑。如何来判断this的指向呢？">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript中的this原理">
-<meta property="og:url" content="https://www.shengshiyu.com/2018/08/17/Javascript中的this原理/index.html">
+<meta property="og:title" content="JavaScript中的this原理">
+<meta property="og:url" content="https://www.shengshiyu.com/2018/08/17/JavaScript中的this原理/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="this关键字是在学习JavaScript中无法避开的一个痛点，如果没有搞清楚this的用法，很容易陷入困惑。如何来判断this的指向呢？">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/JavaScript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86.jpg">
 <meta property="og:updated_time" content="2018-08-16T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript中的this原理">
+<meta name="twitter:title" content="JavaScript中的this原理">
+<meta name="twitter:description" content="this关键字是在学习JavaScript中无法避开的一个痛点，如果没有搞清楚this的用法，很容易陷入困惑。如何来判断this的指向呢？">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/JavaScript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86.jpg">
 
 
 
@@ -138,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/2018/08/17/Javascript中的this原理/"/>
+  <link rel="canonical" href="https://www.shengshiyu.com/2018/08/17/JavaScript中的this原理/"/>
 
 
 
 
 
-  <title>Javascript中的this原理 | 天马的故乡</title>
+  <title>JavaScript中的this原理 | 天马的故乡</title>
   
 
 
@@ -318,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/08/17/Javascript中的this原理/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/08/17/JavaScript中的this原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沉默的超云星">
@@ -335,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Javascript中的this原理</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript中的this原理</h1>
         
 
         <div class="post-meta">
@@ -403,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  1,477 字
                 </span>
               
 
@@ -413,6 +418,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  this关键字是在学习JavaScript中无法避开的一个痛点，如果没有搞清楚this的用法，很容易陷入困惑。如何来判断this的指向呢？
+              </div>
           
 
         </div>
@@ -425,7 +434,31 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/JavaScript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86.jpg" alt="JavaScript中的this原理1"></p>
+<h1 id="关于this"><a href="#关于this" class="headerlink" title="关于this"></a>关于this</h1><p>为啥要有这个关键字呢？如果不使用this，我们在写代码时就需要显示的传入上下文对象。会很麻烦，随着代码量的增多，会使代码变得混乱，而this可以隐式“传递”一个对象的引用，利于代码复用，因为它会动态的判断上下文环境，然后引用合适的上下文对象。</p>
+<p>我们可能会在学习时产生片面的误解，一种是我们认为this指向函数自身，另一种是我们认为this指向函数的作用域。因为在一些情况下，它们是对的，但有时却是错误的，举例来说：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">this</span>.bar();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line">foo(); <span class="comment">// ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure></p>
+<p>如果按之间的观点，那这段代码应该能正确调用，但实则不能，可见this关键字不是我们之前想的那样。</p>
+<h2 id="this是什么"><a href="#this是什么" class="headerlink" title="this是什么"></a>this是什么</h2><blockquote>
+<p>当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。 this 就是记录的其中一个属性，会在函数执行的过程中用到。</p>
+</blockquote>
+<p>理解this的前提，我们需要知道什么叫做<strong>调用位置</strong>，调用位置就是函数在代码中被调用的位置，而不是声明的位置，通过调用位置我们才好判断this究竟引用的是什么。</p>
+<h2 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h2><p><strong>this永远指向最后调用它的那个对象</strong>，通过这句话就能很容易判断this的指向，因为调用位置就在当前正在执行的函数的前一个调用中。</p>
+<h3 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">foo(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>我们可以看到，最后调用<code>foo()</code>的地方，它的前面没有明显的调用对象，所以就是全局对象window，相当于<code>window.foo()</code>那么<code>this</code>的指向就是就是<code>window</code>这个全局对象，所以<code>window.a</code>的值就是1。这是默认的绑定情况。</p>
+<h3 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h3><p>我们有时候还要考虑调用位置是否具有上下文对象，可以看一个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">a: <span class="number">1</span>,</span><br><span class="line">foo: foo</span><br><span class="line">&#125;;</span><br><span class="line">obj.foo(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p>
+<p>这就简单了，因为this永远指向最后调用它的那个对象，最后调用它的是<code>obj</code>，所以就相当于<code>obj.a</code>，所以值为1，下面是另一种情况，可能我们调用时是在一个属性引用链上：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">a: <span class="number">2</span>,</span><br><span class="line">foo: foo</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">a: <span class="number">1</span>,</span><br><span class="line">obj2: obj2</span><br><span class="line">&#125;;</span><br><span class="line">obj1.obj2.foo(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>不用在意obj1，这里我们要强调“最后调用”，所以最后调用的是obj2，obj1先调用obj2，obj2再调用foo(),所以结果就是<code>obj2.a</code>，所以值为2。</p>
+<p>但假如我们给函数起了别名，可以通过一个例子看一下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">a: <span class="number">1</span>,</span><br><span class="line">foo: foo</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> bar = obj.foo; <span class="comment">// 函数别名！</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"hello"</span>; <span class="comment">// a 是全局对象的属性</span></span><br><span class="line">bar(); <span class="comment">// "hello"</span></span><br></pre></td></tr></table></figure></p>
+<p>虽然我们将 obj 对象的 foo 方法赋值给变量 bar 了，但是没有调用，所以<code>bar()</code>最后还是被全局对象window调用了，this的指向就是window，就相当于<code>window.a</code>，所以值为hello。</p>
+<p>不过我们需要尤为注意回调函数里的this的指向问题，因为回调函数里我们传入的函数，实际上它相当于给里面的形参取了一个别名。当我们分析this的指向时，它实际的指向会被误导，但实质上它还是指向最后调用它的那个对象。</p>
+<h3 id="显式绑定"><a href="#显式绑定" class="headerlink" title="显式绑定"></a>显式绑定</h3><p>如果我们想在某个对象上强制调用函数，可以直接指定this指向<br>的对象，什么意思呢，我们先看一个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">foo.call( obj ); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p>
+<p>我们通过call()函数，将obj的作用域传递进了foo中，因为JavaScript存在一个作用域链，相当于我们<code>window.obj.foo()</code>,所以最后调用的是obj对象，所以值为1。我们把foo的this绑定到了obj上。也可以通过<code>apply()</code>和<code>bind()</code>方法。</p>
+<h3 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.a = a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log( bar.a ); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>new</code>来调用<code>foo()</code>时，我们会构造一个新对象，这个新对象会绑定到foo()调用中的this上，所以<code>bar.a</code>的值就是1，和隐式绑定里的取别名是不一样的，它依然指向最后调用它的那个对象。</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>ES6里，我们可以使用箭头函数始终指向函数定义时的this，不用担心执行时改变，在箭头函数里也没有this绑定了，上面四条绑定原则也不存在了，要根据作用域链来决定它的值，箭头函数会继承外层函数调用的 this 绑定。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">var</span> ogj = &#123;</span><br><span class="line">    b : <span class="string">"hi"</span></span><br><span class="line">    func1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.b);</span><br><span class="line">    &#125;,</span><br><span class="line">    func2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        setTimeout( <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.func1()</span><br><span class="line">        &#125;,<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.func2()     <span class="comment">// hi</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总之，我们要记住”<strong>this永远指向最后调用它的那个对象</strong>“，具体绑定的方式，如果是由<code>new</code>调用，那它就绑定到了新创建的对象上，如果由<code>call()</code>、<code>apply()</code>、<code>bind()</code>调用，那么就是在绑定的那个对象上，如果包含上下文调用的隐式绑定，要注意上下文对象，如果包含回调函数，要格外小心。如果使用了箭头函数，注意根据作用域链来决定“this”的指向。</p>
+
       
     </div>
 
@@ -463,7 +496,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2018/08/17/Javascript中的this原理/" title="Javascript中的this原理">https://www.shengshiyu.com/2018/08/17/Javascript中的this原理/</a>
+      <a href="https://www.shengshiyu.com/2018/08/17/JavaScript中的this原理/" title="JavaScript中的this原理">https://www.shengshiyu.com/2018/08/17/JavaScript中的this原理/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -557,8 +590,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +698,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于this"><span class="nav-number">1.</span> <span class="nav-text">关于this</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#this是什么"><span class="nav-number">1.1.</span> <span class="nav-text">this是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this的指向"><span class="nav-number">1.2.</span> <span class="nav-text">this的指向</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认绑定"><span class="nav-number">1.2.1.</span> <span class="nav-text">默认绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式绑定"><span class="nav-number">1.2.2.</span> <span class="nav-text">隐式绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显式绑定"><span class="nav-number">1.2.3.</span> <span class="nav-text">显式绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new绑定"><span class="nav-number">1.2.4.</span> <span class="nav-text">new绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.2.5.</span> <span class="nav-text">箭头函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
