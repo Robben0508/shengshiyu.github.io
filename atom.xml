@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.shengshiyu.com/"/>
+  <link href="https://www.shengshiyu.cn/"/>
   <updated>2018-01-14T16:00:00.000Z</updated>
-  <id>https://www.shengshiyu.com/</id>
+  <id>https://www.shengshiyu.cn/</id>
   
   <author>
     <name>沉默的超云星</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>文化与媒介</title>
-    <link href="https://www.shengshiyu.com/2019/01/15/%E6%96%87%E5%8C%96%E4%B8%8E%E5%AA%92%E4%BB%8B/"/>
-    <id>https://www.shengshiyu.com/2019/01/15/文化与媒介/</id>
+    <link href="https://www.shengshiyu.cn/2019/01/15/%E6%96%87%E5%8C%96%E4%B8%8E%E5%AA%92%E4%BB%8B/"/>
+    <id>https://www.shengshiyu.cn/2019/01/15/文化与媒介/</id>
     <published>2019-01-14T16:00:00.000Z</published>
     <updated>2018-01-14T16:00:00.000Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>浅谈Spring Bean的生命周期和作用域</title>
-    <link href="https://www.shengshiyu.com/2019/01/02/%E6%B5%85%E8%B0%88Spring%20Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>https://www.shengshiyu.com/2019/01/02/浅谈Spring Bean的生命周期和作用域/</id>
+    <link href="https://www.shengshiyu.cn/2019/01/02/%E6%B5%85%E8%B0%88Spring%20Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>https://www.shengshiyu.cn/2019/01/02/浅谈Spring Bean的生命周期和作用域/</id>
     <published>2019-01-01T16:00:00.000Z</published>
     <updated>2019-01-01T16:00:00.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>TCP和UDP浅析</title>
-    <link href="https://www.shengshiyu.com/2018/12/26/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%90/"/>
-    <id>https://www.shengshiyu.com/2018/12/26/TCP和UDP浅析/</id>
+    <link href="https://www.shengshiyu.cn/2018/12/26/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%90/"/>
+    <id>https://www.shengshiyu.cn/2018/12/26/TCP和UDP浅析/</id>
     <published>2018-12-25T16:00:00.000Z</published>
     <updated>2018-12-25T16:00:00.000Z</updated>
     
@@ -81,17 +81,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="TCP" scheme="https://www.shengshiyu.com/tags/TCP/"/>
+      <category term="TCP" scheme="https://www.shengshiyu.cn/tags/TCP/"/>
     
   </entry>
   
   <entry>
     <title>谈谈大众传媒</title>
-    <link href="https://www.shengshiyu.com/2018/12/13/%E8%B0%88%E8%B0%88%E5%A4%A7%E4%BC%97%E4%BC%A0%E5%AA%92/"/>
-    <id>https://www.shengshiyu.com/2018/12/13/谈谈大众传媒/</id>
+    <link href="https://www.shengshiyu.cn/2018/12/13/%E8%B0%88%E8%B0%88%E5%A4%A7%E4%BC%97%E4%BC%A0%E5%AA%92/"/>
+    <id>https://www.shengshiyu.cn/2018/12/13/谈谈大众传媒/</id>
     <published>2018-12-12T16:00:00.000Z</published>
     <updated>2018-12-12T16:00:00.000Z</updated>
     
@@ -106,17 +106,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>新思想和旧思想</title>
-    <link href="https://www.shengshiyu.com/2018/12/03/%E6%96%B0%E6%80%9D%E6%83%B3%E5%92%8C%E6%97%A7%E6%80%9D%E6%83%B3/"/>
-    <id>https://www.shengshiyu.com/2018/12/03/新思想和旧思想/</id>
+    <link href="https://www.shengshiyu.cn/2018/12/03/%E6%96%B0%E6%80%9D%E6%83%B3%E5%92%8C%E6%97%A7%E6%80%9D%E6%83%B3/"/>
+    <id>https://www.shengshiyu.cn/2018/12/03/新思想和旧思想/</id>
     <published>2018-12-02T16:00:00.000Z</published>
     <updated>2018-12-02T16:00:00.000Z</updated>
     
@@ -131,17 +131,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>PO、VO、BO、DTO、POJO、DAO之间的关系</title>
-    <link href="https://www.shengshiyu.com/2018/11/22/PO%E3%80%81VO%E3%80%81BO%E3%80%81DTO%E3%80%81POJO%E3%80%81DAO%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
-    <id>https://www.shengshiyu.com/2018/11/22/PO、VO、BO、DTO、POJO、DAO之间的关系/</id>
+    <link href="https://www.shengshiyu.cn/2018/11/22/PO%E3%80%81VO%E3%80%81BO%E3%80%81DTO%E3%80%81POJO%E3%80%81DAO%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://www.shengshiyu.cn/2018/11/22/PO、VO、BO、DTO、POJO、DAO之间的关系/</id>
     <published>2018-11-21T16:00:00.000Z</published>
     <updated>2018-11-21T16:00:00.000Z</updated>
     
@@ -156,17 +156,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>谈谈产品需求分析</title>
-    <link href="https://www.shengshiyu.com/2018/11/07/%E8%B0%88%E8%B0%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
-    <id>https://www.shengshiyu.com/2018/11/07/谈谈产品需求分析/</id>
+    <link href="https://www.shengshiyu.cn/2018/11/07/%E8%B0%88%E8%B0%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
+    <id>https://www.shengshiyu.cn/2018/11/07/谈谈产品需求分析/</id>
     <published>2018-11-06T16:00:00.000Z</published>
     <updated>2018-11-06T16:00:00.000Z</updated>
     
@@ -181,17 +181,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>浅谈Java线程池</title>
-    <link href="https://www.shengshiyu.com/2018/11/01/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
-    <id>https://www.shengshiyu.com/2018/11/01/浅谈Java线程池/</id>
+    <link href="https://www.shengshiyu.cn/2018/11/01/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    <id>https://www.shengshiyu.cn/2018/11/01/浅谈Java线程池/</id>
     <published>2018-10-31T16:00:00.000Z</published>
     <updated>2018-10-31T16:00:00.000Z</updated>
     
@@ -206,17 +206,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>HTTP指北</title>
-    <link href="https://www.shengshiyu.com/2018/10/24/HTTP%E6%8C%87%E5%8C%97/"/>
-    <id>https://www.shengshiyu.com/2018/10/24/HTTP指北/</id>
+    <link href="https://www.shengshiyu.cn/2018/10/24/HTTP%E6%8C%87%E5%8C%97/"/>
+    <id>https://www.shengshiyu.cn/2018/10/24/HTTP指北/</id>
     <published>2018-10-23T16:00:00.000Z</published>
     <updated>2018-10-23T16:00:00.000Z</updated>
     
@@ -228,17 +228,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="HTTP" scheme="https://www.shengshiyu.com/tags/HTTP/"/>
+      <category term="HTTP" scheme="https://www.shengshiyu.cn/tags/HTTP/"/>
     
   </entry>
   
   <entry>
     <title>IOC与需求变化</title>
-    <link href="https://www.shengshiyu.com/2018/10/21/IOC%E4%B8%8E%E9%9C%80%E6%B1%82%E5%8F%98%E5%8C%96/"/>
-    <id>https://www.shengshiyu.com/2018/10/21/IOC与需求变化/</id>
+    <link href="https://www.shengshiyu.cn/2018/10/21/IOC%E4%B8%8E%E9%9C%80%E6%B1%82%E5%8F%98%E5%8C%96/"/>
+    <id>https://www.shengshiyu.cn/2018/10/21/IOC与需求变化/</id>
     <published>2018-10-20T16:00:00.000Z</published>
     <updated>2018-10-20T16:00:00.000Z</updated>
     
@@ -253,21 +253,21 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>声望的陷阱</title>
-    <link href="https://www.shengshiyu.com/2018/10/11/%E5%A3%B0%E6%9C%9B%E7%9A%84%E9%99%B7%E9%98%B1/"/>
-    <id>https://www.shengshiyu.com/2018/10/11/声望的陷阱/</id>
+    <link href="https://www.shengshiyu.cn/2018/10/11/%E5%A3%B0%E6%9C%9B%E7%9A%84%E9%99%B7%E9%98%B1/"/>
+    <id>https://www.shengshiyu.cn/2018/10/11/声望的陷阱/</id>
     <published>2018-10-10T16:00:00.000Z</published>
     <updated>2018-10-10T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A3%B0%E6%9C%9B%E7%9A%84%E9%99%B7%E9%98%B1.jpeg" alt="声望的陷阱"></p><p><br></p><blockquote><p>命运是解不开的谜团，声望是没有实际意义的云烟。</p></blockquote><p>什么是声望？一个官方的解释是：声望是众所仰望的名声。人生在世，我们总有为声望所累的时候，但我的阅历尚浅，对于“声望”不好妄作评判，仅仅只能按我的理解，谈谈在当前时代下的“声望”的影响。</p><p>个人具有声望，组织和团体也具有声望，声望是一种看不见的影响力，它不好量化，但它却能无形中影响很多东西，就像我们玩的游戏，会有所谓的声望值，当你具备不同声望值时，就有权限获得一些稀有物品一样。</p><p>但游戏终究和现实不同，现实世界充满着许许多多的不确定性。可能具有很高声望的人或事物，会对人们的判断施加一定的影响，因为我们辨别和判断一件事物的好坏需要经过深思熟虑，这个过程对很多人而言并不那么“友好”，而具有了高声望，就能在判断上给予一定的肯定，简化了“深思熟虑”这项工作的任务量，因为声望的积累是基于大量的评价和时间的考量的，更能使人确信“它”对自身是有益的，由于思维的“惯性”我们就会自然而然选择了相信。</p><p>如同品牌效应，大厂出品一定会因为它完善的工艺和流程，质量上一定比同类产品更好。但销量高并不一定代表质量好，它们之间并不存在绝对意义上的正相关。对外部具有很高声望事物的盲目肯定，终会使我们的判断受制于对方。</p><p>假如没有了声望对判断施加的影响，那么真正吸引我们的，又是对方的什么呢？就拿衣食住行来说，我们选购一件衣物的判断，究竟是基于对品牌所积累的声望的信任，认为它一定用了优质的物料，一流的设计，还是商品本身质量就很不错呢？毕竟我们的世界是变化的，同样的产品或是服务，终究会随着时间的流逝产生差异的变动，很难“始终如一”。</p><p>如果商品和服务是我们还能切身在短时间内能感受到变化的，比较容易减小声望对人判断的影响。那么人呢？评判和了解一个人或许是一件复杂度极高的任务，我们难以短时间真正了解一个人，我们所基于的判断，来源于那个人的过去经历，例如他的受教育水平，是否具有本科学历，进而又要细分是否是名牌一流大学，因为那些大学本身所具有的声望能证明很多东西。如果是在校时就看在校的比赛获奖情况，进而又要区别看比赛的规模和大小，因为一些比赛具备参考价值，它确实选拔出了许多出色的人才，随着时间的积累，这个比赛所积累的声望就成为了一种“隐性标志”，暗示只要我获奖了，那么代表了我和曾经获奖的那些名人也具备同样的素质和潜力，而名人的成功也间接为类似比赛的声望添砖加瓦。但事物是变化的，我们只能保证在那样一个时间段里，它确实具有参考价值，含金量十足，但随着时代的发展，事物的更迭，能时刻保持领先，并始终拥有与之匹配的声望的事物是何其稀少。</p><p>当前的时代是网络时代，处于这个时代背景下的我们无法避免声望对我们判断施加的影响，而且网络的虚拟化，谁又知道一切是真的，而非虚张声势搭建起来的声望呢？网上购物商城的一些评价可以通过刷单刷好评取得消费者的信任，而最近大火的抖音，我们可以搬运别人的创意，成为自己涨粉的途径，哪怕只是从一些科普常识上搬运一些看起来有价值的东西，加上一个相关行业的背景，却能带来巨大的流量，点赞量和粉丝量无形为其树立起了某种声望，因为这类开放平台的用户量太多了，聚集了不同层次的人，但点赞量和粉丝量却是“一视同仁”的。</p><p>在这样的时代里，最能直接影响声望变化的，或许就是建立于社交媒体之上的舆论导向的，通过巧妙刻意的包装，引起舆论的关注，随即带来巨大的流量，无论是提高声望还是影响竞争对手的声望，都是无形的，如果对方的公关不能应对得当，那么就会陷入舆论的漩涡，或许可以通过一些形式“洗白”，但也依然会产生一些无形的影响，而往往这些“看不见”的东西更具风险性。</p><p>不要因为“声望”影响了我们对真实世界的认知，它可以作为评判的依据和参考，但不能作为先入为主的第一选择，无论是对任何事物，亦或是任何人，我们要关注于那些真正决定其本身的东西，避免陷入声望的陷阱。</p>]]></content>
     
     <summary type="html">
     
@@ -278,17 +278,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>Vector、ArrayList、LinkedList的区别</title>
-    <link href="https://www.shengshiyu.com/2018/10/02/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>https://www.shengshiyu.com/2018/10/02/Vector、ArrayList、LinkedList的区别/</id>
+    <link href="https://www.shengshiyu.cn/2018/10/02/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://www.shengshiyu.cn/2018/10/02/Vector、ArrayList、LinkedList的区别/</id>
     <published>2018-10-01T16:00:00.000Z</published>
     <updated>2018-10-01T16:00:00.000Z</updated>
     
@@ -303,17 +303,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>我为何会选择技术之路</title>
-    <link href="https://www.shengshiyu.com/2018/09/28/%E6%88%91%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%80%89%E6%8B%A9%E6%8A%80%E6%9C%AF%E4%B9%8B%E8%B7%AF/"/>
-    <id>https://www.shengshiyu.com/2018/09/28/我为何会选择技术之路/</id>
+    <link href="https://www.shengshiyu.cn/2018/09/28/%E6%88%91%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%80%89%E6%8B%A9%E6%8A%80%E6%9C%AF%E4%B9%8B%E8%B7%AF/"/>
+    <id>https://www.shengshiyu.cn/2018/09/28/我为何会选择技术之路/</id>
     <published>2018-09-27T16:00:00.000Z</published>
     <updated>2018-09-27T16:00:00.000Z</updated>
     
@@ -328,42 +328,39 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>Tomcat学习总结</title>
-    <link href="https://www.shengshiyu.com/2018/09/23/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    <id>https://www.shengshiyu.com/2018/09/23/Tomcat学习总结/</id>
+    <link href="https://www.shengshiyu.cn/2018/09/23/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.shengshiyu.cn/2018/09/23/Tomcat学习总结/</id>
     <published>2018-09-22T16:00:00.000Z</published>
     <updated>2018-09-22T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p># </p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      Tomcat是一个免费的开源的Serlvet容器
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>浅析Java泛型</title>
-    <link href="https://www.shengshiyu.com/2018/09/19/%E6%B5%85%E6%9E%90Java%E6%B3%9B%E5%9E%8B/"/>
-    <id>https://www.shengshiyu.com/2018/09/19/浅析Java泛型/</id>
+    <link href="https://www.shengshiyu.cn/2018/09/19/%E6%B5%85%E6%9E%90Java%E6%B3%9B%E5%9E%8B/"/>
+    <id>https://www.shengshiyu.cn/2018/09/19/浅析Java泛型/</id>
     <published>2018-09-18T16:00:00.000Z</published>
     <updated>2018-09-18T16:00:00.000Z</updated>
     
@@ -378,17 +375,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>如何阅读一本技术类书籍</title>
-    <link href="https://www.shengshiyu.com/2018/09/17/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%B1%BB%E4%B9%A6%E7%B1%8D/"/>
-    <id>https://www.shengshiyu.com/2018/09/17/如何阅读一本技术类书籍/</id>
+    <link href="https://www.shengshiyu.cn/2018/09/17/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%B1%BB%E4%B9%A6%E7%B1%8D/"/>
+    <id>https://www.shengshiyu.cn/2018/09/17/如何阅读一本技术类书籍/</id>
     <published>2018-09-16T16:00:00.000Z</published>
     <updated>2018-09-16T16:00:00.000Z</updated>
     
@@ -403,17 +400,17 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
   <entry>
     <title>Java内部类的理解</title>
-    <link href="https://www.shengshiyu.com/2018/09/12/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>https://www.shengshiyu.com/2018/09/12/Java内部类的理解/</id>
+    <link href="https://www.shengshiyu.cn/2018/09/12/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>https://www.shengshiyu.cn/2018/09/12/Java内部类的理解/</id>
     <published>2018-09-11T16:00:00.000Z</published>
     <updated>2018-09-11T16:00:00.000Z</updated>
     
@@ -428,17 +425,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>String、StringBuffer、StringBuilder的区别浅析</title>
-    <link href="https://www.shengshiyu.com/2018/08/26/String%E3%80%81StringBuffer%E3%80%81StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB%E6%B5%85%E6%9E%90/"/>
-    <id>https://www.shengshiyu.com/2018/08/26/String、StringBuffer、StringBuilder的区别浅析/</id>
+    <link href="https://www.shengshiyu.cn/2018/08/26/String%E3%80%81StringBuffer%E3%80%81StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB%E6%B5%85%E6%9E%90/"/>
+    <id>https://www.shengshiyu.cn/2018/08/26/String、StringBuffer、StringBuilder的区别浅析/</id>
     <published>2018-08-25T16:00:00.000Z</published>
     <updated>2018-08-25T16:00:00.000Z</updated>
     
@@ -453,42 +450,17 @@
     
     </summary>
     
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="Java" scheme="https://www.shengshiyu.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于JavaScript中的继承机制</title>
-    <link href="https://www.shengshiyu.com/2018/08/21/%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6/"/>
-    <id>https://www.shengshiyu.com/2018/08/21/关于Javascript中的继承机制/</id>
-    <published>2018-08-20T16:00:00.000Z</published>
-    <updated>2018-08-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6.jpg" alt="关于Javascript中的继承机制"></p><h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><p>传统的面向对象语言里，基本都支持继承的两种方式：<strong>接口继承</strong>和<strong>实现继承</strong>。接口继承<strong>继承方法签名</strong>，而实现继承则<strong>继承实际的方法</strong>。至于JavaScript里的继承，由于函数没有签名，只能支持实现继承，而且主要通过<strong>原型链</strong>来实现的。每一个<strong>构造函数</strong>都有一个<strong>原型对象</strong>，原型对象都包含一个<strong>指向构造函数的指针</strong>，而实例又都包含一个<strong>指向原型对象的内部指针</strong>，通过使用原型，将方法添加在”父类“的原型里，然后”子类“的原型就是父类的一个实例化对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass() ;</span><br></pre></td></tr></table></figure></p><p>如此层层递进，就构成了<strong>实例与原型的链条</strong>，这就是原型链。但原型链也有问题，原先实例的属性会在这个继承的过程中顺理成章的成为其“子类”的原型属性。而且创建的”子类“的实例，无法在不影响所有对象实例的情况下，像”超类“的构造函数传递参数，于是有了构造函数继承。</p><h1 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h1><p>构造函数继承的核心思想就是<code>SuperClass.call(this)</code>,通过<code>call()</code>和<code>apply()</code>方法，<strong>在新创建的对象上执行构造函数，然后改变this的指向，使通过this创建的属性和方法在子类中复制一份，因为是单独复制的，所以各个实例化的子类互不影响。但是会造成内存浪费的问题</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">this</span>.colors = [<span class="string">"read"</span>,<span class="string">"blue"</span>,<span class="string">"yellow"</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClsss</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">SuperClass.call(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="组合式继承"><a href="#组合式继承" class="headerlink" title="组合式继承"></a>组合式继承</h1><p>组合式继承，也叫作伪经典继承，结合了前两者的特点，既不会使每个实例化的“子类”互相影响，也避免了内存的浪费。它<strong>使用原型链实现对原型属性和方法的继承，而通过构造函数来实现对实例属性的继承</strong>。既可以在原型上定义方法实现实现函数复用，又能保证每个实例都有它自己单独的属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">this</span>.name = name;</span><br><span class="line"><span class="keyword">this</span>.colors = [<span class="string">"read"</span>,<span class="string">"blue"</span>,<span class="string">"yellow"</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperClass.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">name, age</span>)</span>&#123;</span><br><span class="line"><span class="comment">//继承属性</span></span><br><span class="line">SuperClass.call(<span class="keyword">this</span>, name);</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//继承方法</span></span><br><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass</span><br><span class="line">SubClass.prototype.constructor = SubClass;</span><br><span class="line">SubClass.prototype.sayAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h1><p>寄生式继承的思路是<strong>创建一个仅用于封装继承过程的函数，该函数的内部以某种方式来增强对象，然后返回对象</strong>，就像所有都是它做的一样，很像工厂模式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params">original</span>)</span>&#123;</span><br><span class="line"><span class="comment">//通过调用函数创建一个新对象</span></span><br><span class="line">    <span class="keyword">var</span> clone = object(original);</span><br><span class="line">    clone.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">return</span> clone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>不过使用这种模式来为对象添加函数，会因为不能做到函数复用而降低效率，所以出现了寄生组合式继承。</p><h1 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h1><p>组合式继承的方法固然好，但是会导致一个问题，父类的构造函数会被创建两次（call()的时候一遍，new的时候又一遍），所以为了解决这个问题，又出现了寄生组合继承。集寄生式继承和组合继承的优点于一身，本质上就是<strong>使用寄生式继承来继承“超类”的原型，然后再将结果指定给“子类”的原型。</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inheritObject</span>(<span class="params">subClass,superClass</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//复制一份父类的原型保存在变量中</span></span><br><span class="line"><span class="keyword">var</span> p = inheritObject(superClass.prototype);</span><br><span class="line">    <span class="comment">//修正因为重写子类原型导致子类constructor属性被修改</span></span><br><span class="line">p.constructor = subClass;</span><br><span class="line">    <span class="comment">//设置子类的原型</span></span><br><span class="line">    subClass.prototype = p;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//定义父类</span></span><br><span class="line"><span class="keyword">var</span> SuperClass = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.books = [<span class="string">'javascript'</span>,<span class="string">'html'</span>,<span class="string">'css'</span>]</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="comment">//定义父类原型方法</span></span><br><span class="line">SuperClass.prototype.getBooks = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.books)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//定义子类</span></span><br><span class="line"><span class="keyword">var</span> SubClass = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    SuperClass.call(<span class="keyword">this</span>,name)</span><br><span class="line">&#125;</span><br><span class="line">inheritObject(SubClass,SuperClass);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> subclass1 = <span class="keyword">new</span> SubClass(<span class="string">'Java'</span>)</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Technology" scheme="https://www.shengshiyu.com/categories/Technology/"/>
-    
-    
-      <category term="JavaScript" scheme="https://www.shengshiyu.com/tags/JavaScript/"/>
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>如何高效提问</title>
-    <link href="https://www.shengshiyu.com/2018/08/21/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE/"/>
-    <id>https://www.shengshiyu.com/2018/08/21/如何高效提问/</id>
+    <link href="https://www.shengshiyu.cn/2018/08/21/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE/"/>
+    <id>https://www.shengshiyu.cn/2018/08/21/如何高效提问/</id>
     <published>2018-08-20T16:00:00.000Z</published>
     <updated>2018-08-20T16:00:00.000Z</updated>
     
@@ -503,10 +475,35 @@
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.com/categories/Thinking/"/>
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于JavaScript中的继承机制</title>
+    <link href="https://www.shengshiyu.cn/2018/08/21/%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6/"/>
+    <id>https://www.shengshiyu.cn/2018/08/21/关于Javascript中的继承机制/</id>
+    <published>2018-08-20T16:00:00.000Z</published>
+    <updated>2018-08-20T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6.jpg" alt="关于Javascript中的继承机制"></p><h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><p>传统的面向对象语言里，基本都支持继承的两种方式：<strong>接口继承</strong>和<strong>实现继承</strong>。接口继承<strong>继承方法签名</strong>，而实现继承则<strong>继承实际的方法</strong>。至于JavaScript里的继承，由于函数没有签名，只能支持实现继承，而且主要通过<strong>原型链</strong>来实现的。每一个<strong>构造函数</strong>都有一个<strong>原型对象</strong>，原型对象都包含一个<strong>指向构造函数的指针</strong>，而实例又都包含一个<strong>指向原型对象的内部指针</strong>，通过使用原型，将方法添加在”父类“的原型里，然后”子类“的原型就是父类的一个实例化对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass() ;</span><br></pre></td></tr></table></figure></p><p>如此层层递进，就构成了<strong>实例与原型的链条</strong>，这就是原型链。但原型链也有问题，原先实例的属性会在这个继承的过程中顺理成章的成为其“子类”的原型属性。而且创建的”子类“的实例，无法在不影响所有对象实例的情况下，像”超类“的构造函数传递参数，于是有了构造函数继承。</p><h1 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h1><p>构造函数继承的核心思想就是<code>SuperClass.call(this)</code>,通过<code>call()</code>和<code>apply()</code>方法，<strong>在新创建的对象上执行构造函数，然后改变this的指向，使通过this创建的属性和方法在子类中复制一份，因为是单独复制的，所以各个实例化的子类互不影响。但是会造成内存浪费的问题</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">this</span>.colors = [<span class="string">"read"</span>,<span class="string">"blue"</span>,<span class="string">"yellow"</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClsss</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">SuperClass.call(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="组合式继承"><a href="#组合式继承" class="headerlink" title="组合式继承"></a>组合式继承</h1><p>组合式继承，也叫作伪经典继承，结合了前两者的特点，既不会使每个实例化的“子类”互相影响，也避免了内存的浪费。它<strong>使用原型链实现对原型属性和方法的继承，而通过构造函数来实现对实例属性的继承</strong>。既可以在原型上定义方法实现实现函数复用，又能保证每个实例都有它自己单独的属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">this</span>.name = name;</span><br><span class="line"><span class="keyword">this</span>.colors = [<span class="string">"read"</span>,<span class="string">"blue"</span>,<span class="string">"yellow"</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperClass.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">name, age</span>)</span>&#123;</span><br><span class="line"><span class="comment">//继承属性</span></span><br><span class="line">SuperClass.call(<span class="keyword">this</span>, name);</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//继承方法</span></span><br><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass</span><br><span class="line">SubClass.prototype.constructor = SubClass;</span><br><span class="line">SubClass.prototype.sayAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h1><p>寄生式继承的思路是<strong>创建一个仅用于封装继承过程的函数，该函数的内部以某种方式来增强对象，然后返回对象</strong>，就像所有都是它做的一样，很像工厂模式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params">original</span>)</span>&#123;</span><br><span class="line"><span class="comment">//通过调用函数创建一个新对象</span></span><br><span class="line">    <span class="keyword">var</span> clone = object(original);</span><br><span class="line">    clone.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">return</span> clone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>不过使用这种模式来为对象添加函数，会因为不能做到函数复用而降低效率，所以出现了寄生组合式继承。</p><h1 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h1><p>组合式继承的方法固然好，但是会导致一个问题，父类的构造函数会被创建两次（call()的时候一遍，new的时候又一遍），所以为了解决这个问题，又出现了寄生组合继承。集寄生式继承和组合继承的优点于一身，本质上就是<strong>使用寄生式继承来继承“超类”的原型，然后再将结果指定给“子类”的原型。</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inheritObject</span>(<span class="params">subClass,superClass</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//复制一份父类的原型保存在变量中</span></span><br><span class="line"><span class="keyword">var</span> p = inheritObject(superClass.prototype);</span><br><span class="line">    <span class="comment">//修正因为重写子类原型导致子类constructor属性被修改</span></span><br><span class="line">p.constructor = subClass;</span><br><span class="line">    <span class="comment">//设置子类的原型</span></span><br><span class="line">    subClass.prototype = p;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//定义父类</span></span><br><span class="line"><span class="keyword">var</span> SuperClass = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.books = [<span class="string">'javascript'</span>,<span class="string">'html'</span>,<span class="string">'css'</span>]</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="comment">//定义父类原型方法</span></span><br><span class="line">SuperClass.prototype.getBooks = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.books)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//定义子类</span></span><br><span class="line"><span class="keyword">var</span> SubClass = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    SuperClass.call(<span class="keyword">this</span>,name)</span><br><span class="line">&#125;</span><br><span class="line">inheritObject(SubClass,SuperClass);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> subclass1 = <span class="keyword">new</span> SubClass(<span class="string">'Java'</span>)</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.shengshiyu.cn/tags/JavaScript/"/>
     
   </entry>
   

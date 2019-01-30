@@ -102,15 +102,18 @@
 
 
 
+<meta name="description" content="Python里的字符串拼接方式有好几种，我们最熟知的可能是利用加号连接或是通过join函数连接，其实在Python里还存在了一些字符串拼接的方法，使用得当，可以有效提高我们的效率，这里作一个小的总结。 利用加号拼接入门模式，利用+字符连接字符串，实现字符串的拼接，实则是操作符的重载。如果是数据量不大的字符串拼接，推荐使用它。1234&amp;gt;&amp;gt;&amp;gt; a = &quot;hello, &quot;&amp;gt;&amp;g">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中的字符串拼接技巧汇总">
-<meta property="og:url" content="https://www.shengshiyu.com/2018/01/24/Python中的字符串拼接技巧汇总/index.html">
+<meta property="og:url" content="https://www.shengshiyu.cn/2018/01/24/Python中的字符串拼接技巧汇总/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="Python里的字符串拼接方式有好几种，我们最熟知的可能是利用加号连接或是通过join函数连接，其实在Python里还存在了一些字符串拼接的方法，使用得当，可以有效提高我们的效率，这里作一个小的总结。 利用加号拼接入门模式，利用+字符连接字符串，实现字符串的拼接，实则是操作符的重载。如果是数据量不大的字符串拼接，推荐使用它。1234&amp;gt;&amp;gt;&amp;gt; a = &quot;hello, &quot;&amp;gt;&amp;g">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-23T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python中的字符串拼接技巧汇总">
+<meta name="twitter:description" content="Python里的字符串拼接方式有好几种，我们最熟知的可能是利用加号连接或是通过join函数连接，其实在Python里还存在了一些字符串拼接的方法，使用得当，可以有效提高我们的效率，这里作一个小的总结。 利用加号拼接入门模式，利用+字符连接字符串，实现字符串的拼接，实则是操作符的重载。如果是数据量不大的字符串拼接，推荐使用它。1234&amp;gt;&amp;gt;&amp;gt; a = &quot;hello, &quot;&amp;gt;&amp;g">
 
 
 
@@ -138,7 +141,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/2018/01/24/Python中的字符串拼接技巧汇总/"/>
+  <link rel="canonical" href="https://www.shengshiyu.cn/2018/01/24/Python中的字符串拼接技巧汇总/"/>
 
 
 
@@ -318,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2018/01/24/Python中的字符串拼接技巧汇总/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.cn/2018/01/24/Python中的字符串拼接技巧汇总/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沉默的超云星">
@@ -403,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  494 字
                 </span>
               
 
@@ -425,7 +428,17 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p>Python里的字符串拼接方式有好几种，我们最熟知的可能是利用加号连接或是通过join函数连接，其实在Python里还存在了一些字符串拼接的方法，使用得当，可以有效提高我们的效率，这里作一个小的总结。</p>
+<h1 id="利用加号拼接"><a href="#利用加号拼接" class="headerlink" title="利用加号拼接"></a>利用加号拼接</h1><p>入门模式，利用<code>+</code>字符连接字符串，实现字符串的拼接，实则是操作符的重载。如果是数据量不大的字符串拼接，推荐使用它。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">"hello, "</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="string">"world!"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a + b</span><br><span class="line"><span class="string">'hello, world!'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="利用join-拼接"><a href="#利用join-拼接" class="headerlink" title="利用join()拼接"></a>利用join()拼接</h1><p>字符串的内置方法里有一个<code>join()</code>，通过这个方法也可以实现字符串的拼接。但join的参数是数组或者元组之类的序列类型。如果要拼接大量字符串推荐使用它，而不是<code>+</code>。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">"*"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.join(b)</span><br><span class="line"><span class="string">'a*b*c'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="直接拼接"><a href="#直接拼接" class="headerlink" title="直接拼接"></a>直接拼接</h1><p>在Python中，连续的字符串会拼接为一个字符串<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">"hello, "</span> <span class="string">"world!"</span>)</span><br><span class="line">hello, world!</span><br></pre></td></tr></table></figure></p>
+<h1 id="利用逗号拼接"><a href="#利用逗号拼接" class="headerlink" title="利用逗号拼接"></a>利用逗号拼接</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">"hello, "</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="string">"world!"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a,b)</span><br><span class="line">hello,  world!</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(a,c)</span><br><span class="line">hello,  <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>逗号操作符可以把两个变量的值进行拼接，不过只能用于print打印里。</p>
+<h1 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h1><p>可以通过格式化字符串的方式，进行字符串的拼接，而格式化字符串可以通过<code>%</code>操作符，也可以通过<code>format()</code>函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%s %s'</span> % (<span class="string">'hello, '</span>, <span class="string">'world!'</span>))</span><br><span class="line">hello,  world!</span><br></pre></td></tr></table></figure></p>
+<p>format()方法可以非常方便地连接不同类型的变量或内容<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"&#123;&#125; &#123;&#125;"</span>.format(<span class="string">"hello, "</span>, <span class="string">"world!"</span>)</span><br><span class="line"><span class="string">'hello,  world!'</span></span><br></pre></td></tr></table></figure></p>
+<p>Python3.6中引入了字面量格式化字符串，简称f-string，用法和<code>%</code>、<code>format()</code>类似,但它的可读性比使用+号更好，当我们要拼接大量数据内容，例如像key:value类型的字段时，推荐使用f-string,它的性能也更好。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">"hello, "</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="string">"world!"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f"<span class="subst">&#123;a&#125;</span> <span class="subst">&#123;b&#125;</span>"</span></span><br><span class="line"><span class="string">'hello,  world!'</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -463,7 +476,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2018/01/24/Python中的字符串拼接技巧汇总/" title="Python中的字符串拼接技巧汇总">https://www.shengshiyu.com/2018/01/24/Python中的字符串拼接技巧汇总/</a>
+      <a href="https://www.shengshiyu.cn/2018/01/24/Python中的字符串拼接技巧汇总/" title="Python中的字符串拼接技巧汇总">https://www.shengshiyu.cn/2018/01/24/Python中的字符串拼接技巧汇总/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -557,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +678,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用加号拼接"><span class="nav-number">1.</span> <span class="nav-text">利用加号拼接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用join-拼接"><span class="nav-number">2.</span> <span class="nav-text">利用join()拼接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#直接拼接"><span class="nav-number">3.</span> <span class="nav-text">直接拼接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用逗号拼接"><span class="nav-number">4.</span> <span class="nav-text">利用逗号拼接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#格式化字符串"><span class="nav-number">5.</span> <span class="nav-text">格式化字符串</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -102,15 +102,18 @@
 
 
 
+<meta name="description" content="Python这门语言语法很简洁，如果具备其他语言的基础，学习它会很快，但我们可能写出的代码不那么Pythonic，尽管它也能运行，但我们没办法充分发挥这门语言的特性，简化很多不必要的操作，以提高自己的效率。 关于for循环我们使用for循环其实出发点可能是为了遍历一个序列然后提取有用的信息，又或者单纯为了循环一个操作，在其他语言里，我们达到类似的目的确实只能通过循环完成，例如 Java：1234">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使自己看起来更Pythonic">
-<meta property="og:url" content="https://www.shengshiyu.com/2017/12/21/如何使自己看起来更Pythonic/index.html">
+<meta property="og:url" content="https://www.shengshiyu.cn/2017/12/21/如何使自己看起来更Pythonic/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="Python这门语言语法很简洁，如果具备其他语言的基础，学习它会很快，但我们可能写出的代码不那么Pythonic，尽管它也能运行，但我们没办法充分发挥这门语言的特性，简化很多不必要的操作，以提高自己的效率。 关于for循环我们使用for循环其实出发点可能是为了遍历一个序列然后提取有用的信息，又或者单纯为了循环一个操作，在其他语言里，我们达到类似的目的确实只能通过循环完成，例如 Java：1234">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-20T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使自己看起来更Pythonic">
+<meta name="twitter:description" content="Python这门语言语法很简洁，如果具备其他语言的基础，学习它会很快，但我们可能写出的代码不那么Pythonic，尽管它也能运行，但我们没办法充分发挥这门语言的特性，简化很多不必要的操作，以提高自己的效率。 关于for循环我们使用for循环其实出发点可能是为了遍历一个序列然后提取有用的信息，又或者单纯为了循环一个操作，在其他语言里，我们达到类似的目的确实只能通过循环完成，例如 Java：1234">
 
 
 
@@ -138,7 +141,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengshiyu.com/2017/12/21/如何使自己看起来更Pythonic/"/>
+  <link rel="canonical" href="https://www.shengshiyu.cn/2017/12/21/如何使自己看起来更Pythonic/"/>
 
 
 
@@ -318,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.com/2017/12/21/如何使自己看起来更Pythonic/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.cn/2017/12/21/如何使自己看起来更Pythonic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沉默的超云星">
@@ -403,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  1,237 字
                 </span>
               
 
@@ -425,7 +428,24 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p>Python这门语言语法很简洁，如果具备其他语言的基础，学习它会很快，但我们可能写出的代码不那么Pythonic，尽管它也能运行，但我们没办法充分发挥这门语言的特性，简化很多不必要的操作，以提高自己的效率。</p>
+<h1 id="关于for循环"><a href="#关于for循环" class="headerlink" title="关于for循环"></a>关于for循环</h1><p>我们使用for循环其实出发点可能是为了遍历一个序列然后提取有用的信息，又或者单纯为了循环一个操作，在其他语言里，我们达到类似的目的确实只能通过循环完成，例如 Java：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">    	System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Python里自然也可以写出类似的代码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">	<span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">		print(i)</span><br></pre></td></tr></table></figure>
+<p>如果代码逻辑更为复杂些，里面可能就要嵌套一堆<code>if</code>/<code>else</code>的判断，如果再加上<code>try</code>/<code>catch</code>代码块，那代码会变得很长，而且阅读性很差，那么Pythonic的写法是什么呢：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print([i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> i%<span class="number">2</span>==<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
+<p>通过列表推导式，一行代码就解决了，而且逻辑很清晰。</p>
+<h1 id="变量交换"><a href="#变量交换" class="headerlink" title="变量交换"></a>变量交换</h1><p>在其他语言实现变量交换很麻烦，往往要通过引入第三方变量作为桥梁进行变量交换，像这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmp = a;</span><br><span class="line">a = b;</span><br><span class="line">b = tmp;</span><br></pre></td></tr></table></figure></p>
+<p>虽然Python也可以用这样的方式，但这很不Pythonic，我们可以这样，一行代码即可，很方便。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure></p>
+<h1 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h1><p>关于Python里的字符串拼接，可以看一下这篇总结： <a href="http://" target="_blank" rel="noopener">Python中的字符串拼接技巧汇总</a> ，很多都是Python里才有的方式，可以让你的代码看起来更加Pythonic。</p>
+<h1 id="文件资源管理"><a href="#文件资源管理" class="headerlink" title="文件资源管理"></a>文件资源管理</h1><p>关于文件资源的打开和关闭传统的方式是这样的：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'*.txt'</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    data = f.read()</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure></p>
+<p>Python提供了更为简便的操作，通过<code>with</code>关键字动态的打开关闭资源：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'*.txt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data = f.read()</span><br></pre></td></tr></table></figure></p>
+<h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><p>Python自带了许多很方便的容器类型，例如：元组，列表和字典，当我们要把容器中的值取出来赋值给变量，可能我们会想到通过遍历这些容器类型，调用相关的方法取出值，然后赋值给变量，但那很不Pythonic，就拿元组来说，我们可以通过<strong>元组拆包</strong>的形式，使用很简短的代码，来为变量赋值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>result = (<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a,b,c,d,e = result</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d</span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>e</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Python之禅"><a href="#Python之禅" class="headerlink" title="Python之禅"></a>Python之禅</h1><p>如果你看过Python之禅，就会理解这门语言的设计哲学，而Python的代码风格也应该向这个目标靠近。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">#优美胜过丑陋。</span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line"></span><br><span class="line">#显示胜过隐式。</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line"></span><br><span class="line">#简单胜过复杂。</span><br><span class="line">Simple is better than complex.</span><br><span class="line"></span><br><span class="line">#复杂胜过繁复。</span><br><span class="line">Complex is better than complicated.</span><br><span class="line"></span><br><span class="line">#串行胜过嵌套。</span><br><span class="line">Flat is better than nested.</span><br><span class="line"></span><br><span class="line">#稀疏胜过稠密。</span><br><span class="line">Sparse is better than dense.</span><br><span class="line"></span><br><span class="line">#可读性很重要。</span><br><span class="line">Readability counts.</span><br><span class="line"></span><br><span class="line">#虽然理想很丰满，现实很骨感，但是所谓特例并不足以打破上面的这些规则。</span><br><span class="line">Special cases aren&apos;t special enough to break the rules. Although practicality beats purity.</span><br><span class="line"></span><br><span class="line">#所有错误都不应该被直接忽略，除非能够被精确的捕获之后。</span><br><span class="line">Errors should never pass silently. Unless explicitly silenced.</span><br><span class="line"></span><br><span class="line">#当面对不明确的情况时，要拒绝去猜测的诱惑。应该有一种，最好是唯一一种，显而易见的解决方案。尽管起初，那种解决方案可能并不是那么显而易见，因为你不是Python之父——Dutch</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess. There should be one-- and preferably only one --obvious way to do it. Although that way may not be obvious at first unless you&apos;re Dutch.</span><br><span class="line"></span><br><span class="line">#现在行动胜过永不开始。尽管，永不开始经常好过冲动的开始。</span><br><span class="line">Now is better than never. Although never is often better than right now.</span><br><span class="line"></span><br><span class="line">#如果你的实现难于向别人解释，这往往不是个好主意。如果你的实现很容易向别人解释，这可能是个好主意。</span><br><span class="line">If the implementation is hard to explain, it&apos;s a bad idea. If the implementation is easy to explain, it may be a good idea.</span><br><span class="line"></span><br><span class="line">#命名空间是一个令人激动的伟大想法，让我们将它发扬光大。</span><br><span class="line">Namespaces are one honking great idea -- let&apos;s do more of those!</span><br></pre></td></tr></table></figure>
+<p>这里推荐两本书，如果你Python已经入门，希望进阶，并想写出更为Pythonic的代码，提高开发效率，可以看下<a href="https://book.douban.com/subject/27028517/" target="_blank" rel="noopener">《流畅的Python》</a> 、 <a href="https://book.douban.com/subject/26381341/" target="_blank" rel="noopener">《Python Cookbook》</a></p>
+<p>关于Python的代码风格可以看一下： <a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/" target="_blank" rel="noopener">Python 风格指南</a></p>
+
       
     </div>
 
@@ -463,7 +483,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.shengshiyu.com/2017/12/21/如何使自己看起来更Pythonic/" title="如何使自己看起来更Pythonic">https://www.shengshiyu.com/2017/12/21/如何使自己看起来更Pythonic/</a>
+      <a href="https://www.shengshiyu.cn/2017/12/21/如何使自己看起来更Pythonic/" title="如何使自己看起来更Pythonic">https://www.shengshiyu.cn/2017/12/21/如何使自己看起来更Pythonic/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -502,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/05/Markdown小记/" rel="prev" title="Markdown小记">
-                Markdown小记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/05/关于Python中-str-和-repr-的区别/" rel="prev" title="关于Python中__str__和__repr__的区别">
+                关于Python中__str__和__repr__的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -557,8 +577,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +685,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于for循环"><span class="nav-number">1.</span> <span class="nav-text">关于for循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量交换"><span class="nav-number">2.</span> <span class="nav-text">变量交换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串拼接"><span class="nav-number">3.</span> <span class="nav-text">字符串拼接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件资源管理"><span class="nav-number">4.</span> <span class="nav-text">文件资源管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#赋值"><span class="nav-number">5.</span> <span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python之禅"><span class="nav-number">6.</span> <span class="nav-text">Python之禅</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
