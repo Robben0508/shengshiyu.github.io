@@ -199,17 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于JavaScript中的继承机制]]></title>
-    <url>%2F2018%2F08%2F21%2F%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%2F</url>
-    <content type="text"><![CDATA[原型链传统的面向对象语言里，基本都支持继承的两种方式：接口继承和实现继承。接口继承继承方法签名，而实现继承则继承实际的方法。至于JavaScript里的继承，由于函数没有签名，只能支持实现继承，而且主要通过原型链来实现的。每一个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例又都包含一个指向原型对象的内部指针，通过使用原型，将方法添加在”父类“的原型里，然后”子类“的原型就是父类的一个实例化对象。1SubClass.prototype = new SuperClass() ; 如此层层递进，就构成了实例与原型的链条，这就是原型链。但原型链也有问题，原先实例的属性会在这个继承的过程中顺理成章的成为其“子类”的原型属性。而且创建的”子类“的实例，无法在不影响所有对象实例的情况下，像”超类“的构造函数传递参数，于是有了构造函数继承。 构造函数继承构造函数继承的核心思想就是SuperClass.call(this),通过call()和apply()方法，在新创建的对象上执行构造函数，然后改变this的指向，使通过this创建的属性和方法在子类中复制一份，因为是单独复制的，所以各个实例化的子类互不影响。但是会造成内存浪费的问题。123456function SuperClass()&#123; this.colors = ["read","blue","yellow"];&#125;function SubClsss()&#123; SuperClass.call(this);&#125; 组合式继承组合式继承，也叫作伪经典继承，结合了前两者的特点，既不会使每个实例化的“子类”互相影响，也避免了内存的浪费。它使用原型链实现对原型属性和方法的继承，而通过构造函数来实现对实例属性的继承。既可以在原型上定义方法实现实现函数复用，又能保证每个实例都有它自己单独的属性。123456789101112131415161718192021function SuperClass()&#123; this.name = name; this.colors = ["read","blue","yellow"];&#125;SuperClass.prototype.sayName = function()&#123; console.log(this.name);&#125;function SubClass(name, age)&#123; //继承属性 SuperClass.call(this, name); this.age = age&#125;//继承方法SubClass.prototype = new SuperClassSubClass.prototype.constructor = SubClass;SubClass.prototype.sayAge = function() &#123; console.log(this.age);&#125; 寄生式继承寄生式继承的思路是创建一个仅用于封装继承过程的函数，该函数的内部以某种方式来增强对象，然后返回对象，就像所有都是它做的一样，很像工厂模式。12345678function MyClass(original)&#123; //通过调用函数创建一个新对象 var clone = object(original); clone.sayHello = function() &#123; console.log("Hello"); &#125;; return clone;&#125; 不过使用这种模式来为对象添加函数，会因为不能做到函数复用而降低效率，所以出现了寄生组合式继承。 寄生组合式继承组合式继承的方法固然好，但是会导致一个问题，父类的构造函数会被创建两次（call()的时候一遍，new的时候又一遍），所以为了解决这个问题，又出现了寄生组合继承。集寄生式继承和组合继承的优点于一身，本质上就是使用寄生式继承来继承“超类”的原型，然后再将结果指定给“子类”的原型。123456789101112131415161718192021222324function inheritObject(subClass,superClass) &#123; //复制一份父类的原型保存在变量中 var p = inheritObject(superClass.prototype); //修正因为重写子类原型导致子类constructor属性被修改 p.constructor = subClass; //设置子类的原型 subClass.prototype = p; &#125; //定义父类var SuperClass = function (name) &#123; this.name = name; this.books = ['javascript','html','css'] &#125;;//定义父类原型方法SuperClass.prototype.getBooks = function () &#123; console.log(this.books)&#125;;//定义子类var SubClass = function (name) &#123; SuperClass.call(this,name)&#125;inheritObject(SubClass,SuperClass);var subclass1 = new SubClass('Java')]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[如何高效提问]]></title>
     <url>%2F2018%2F08%2F21%2F%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -221,14 +210,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[final、finally、finalize的区别]]></title>
-    <url>%2F2018%2F08%2F17%2Ffinal%E3%80%81finally%E3%80%81finalize%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <title><![CDATA[关于JavaScript中的继承机制]]></title>
+    <url>%2F2018%2F08%2F21%2F%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[原型链传统的面向对象语言里，基本都支持继承的两种方式：接口继承和实现继承。接口继承继承方法签名，而实现继承则继承实际的方法。至于JavaScript里的继承，由于函数没有签名，只能支持实现继承，而且主要通过原型链来实现的。每一个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例又都包含一个指向原型对象的内部指针，通过使用原型，将方法添加在”父类“的原型里，然后”子类“的原型就是父类的一个实例化对象。1SubClass.prototype = new SuperClass() ; 如此层层递进，就构成了实例与原型的链条，这就是原型链。但原型链也有问题，原先实例的属性会在这个继承的过程中顺理成章的成为其“子类”的原型属性。而且创建的”子类“的实例，无法在不影响所有对象实例的情况下，像”超类“的构造函数传递参数，于是有了构造函数继承。 构造函数继承构造函数继承的核心思想就是SuperClass.call(this),通过call()和apply()方法，在新创建的对象上执行构造函数，然后改变this的指向，使通过this创建的属性和方法在子类中复制一份，因为是单独复制的，所以各个实例化的子类互不影响。但是会造成内存浪费的问题。123456function SuperClass()&#123; this.colors = ["read","blue","yellow"];&#125;function SubClsss()&#123; SuperClass.call(this);&#125; 组合式继承组合式继承，也叫作伪经典继承，结合了前两者的特点，既不会使每个实例化的“子类”互相影响，也避免了内存的浪费。它使用原型链实现对原型属性和方法的继承，而通过构造函数来实现对实例属性的继承。既可以在原型上定义方法实现实现函数复用，又能保证每个实例都有它自己单独的属性。123456789101112131415161718192021function SuperClass()&#123; this.name = name; this.colors = ["read","blue","yellow"];&#125;SuperClass.prototype.sayName = function()&#123; console.log(this.name);&#125;function SubClass(name, age)&#123; //继承属性 SuperClass.call(this, name); this.age = age&#125;//继承方法SubClass.prototype = new SuperClassSubClass.prototype.constructor = SubClass;SubClass.prototype.sayAge = function() &#123; console.log(this.age);&#125; 寄生式继承寄生式继承的思路是创建一个仅用于封装继承过程的函数，该函数的内部以某种方式来增强对象，然后返回对象，就像所有都是它做的一样，很像工厂模式。12345678function MyClass(original)&#123; //通过调用函数创建一个新对象 var clone = object(original); clone.sayHello = function() &#123; console.log("Hello"); &#125;; return clone;&#125; 不过使用这种模式来为对象添加函数，会因为不能做到函数复用而降低效率，所以出现了寄生组合式继承。 寄生组合式继承组合式继承的方法固然好，但是会导致一个问题，父类的构造函数会被创建两次（call()的时候一遍，new的时候又一遍），所以为了解决这个问题，又出现了寄生组合继承。集寄生式继承和组合继承的优点于一身，本质上就是使用寄生式继承来继承“超类”的原型，然后再将结果指定给“子类”的原型。123456789101112131415161718192021222324function inheritObject(subClass,superClass) &#123; //复制一份父类的原型保存在变量中 var p = inheritObject(superClass.prototype); //修正因为重写子类原型导致子类constructor属性被修改 p.constructor = subClass; //设置子类的原型 subClass.prototype = p; &#125; //定义父类var SuperClass = function (name) &#123; this.name = name; this.books = ['javascript','html','css'] &#125;;//定义父类原型方法SuperClass.prototype.getBooks = function () &#123; console.log(this.books)&#125;;//定义子类var SubClass = function (name) &#123; SuperClass.call(this,name)&#125;inheritObject(SubClass,SuperClass);var subclass1 = new SubClass('Java')]]></content>
       <categories>
         <category>Technology</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -240,6 +229,17 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[final、finally、finalize的区别]]></title>
+    <url>%2F2018%2F08%2F17%2Ffinal%E3%80%81finally%E3%80%81finalize%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
