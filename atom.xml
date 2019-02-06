@@ -455,31 +455,6 @@
   </entry>
   
   <entry>
-    <title>如何高效提问</title>
-    <link href="https://www.shengshiyu.cn/2018/08/21/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE/"/>
-    <id>https://www.shengshiyu.cn/2018/08/21/如何高效提问/</id>
-    <published>2018-08-20T16:00:00.000Z</published>
-    <updated>2018-08-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE.jpg" alt="如何高效提问"></p><p>如何提问是一门学问，不会提问的人很难通过问问题解决问题，最终可能变成别人替你“代劳”解决了问题。不懂得如何正确提问，无论是对于你还是对于被问的人都是十分痛苦的，久而久之，别人也失去了帮你解决问题的耐心。所以，如何正确高效的提出一个问题，甚至使得被问的人也能有所收获，是一个很有必要学习的方法。</p><p>首先我们要明确我们要问的问题，它属于哪一个范畴，如果是技术类的问题，它又会具体的归为某一个模块，我们可以将问题的范畴逐步确定和缩小。当然，每一个人的能力和水平是不一样的，可能有的人看问题很有针对性，一针见血，他根据他的经验和判断能把问题立马缩减到一个具体的范畴里，而有的人可能只能有个大致的模糊认知。</p><p>然后我们要明确我们发问的“对象”，我们最终想要的不过是解决问题的办法，那么除了向其他人提问，是否有更好的方式和其他途径解决问题。例如，善用搜索引擎，我们基本上能解决我们所遇到的大部分问题，尤其是对于技术类的问题，像 stackoverflow 这样的社区，你基本能找到你想要答案，或是阅读相关的文档或是手册，都是不错的办法。而且这样一个搜索的过程，本身也是在不断试错中学习，能使我们对于整个问题的把握更为清晰，下一次遇到同类问题，将搜索关键词与你的问题及可能的解决方案联系起来，还有助于引导其他有类似问题的人，举一反三。</p><p>不过，不是每次我们都能顺利的找到解决问题的答案，就拿技术类的问题来说，可能由于不同的系统环境，过去能解决的问题的步骤，可能现在不适用了，我们只能不断寻找。这个过程可能会很枯燥漫长，浪费很多时间，虽然我觉得最后发现“蓦然回首，那人却在灯火阑珊处”很舒畅，但这意味着可能这段时间里我们都无法继续推进我们的项目进度，倘若时间又很紧，那么此时可能找正确的人或是正确的论坛发问会是一个不错的办法。</p><p>向陌生人发问是充满不确定性的，因为对方并不一定能根据我们对于问题的描述完美的解决我们的问题。如果我们问的问题还不够明确，简洁易懂，可能对方就懵了，所以我们需要：</p><ol><li>简单描述你需要完成什么样的需求，最终的目标是什么</li><li>简洁明了的叙述你的想法或思路</li><li>描述你具体的实现过程，其实就是你做了哪些尝试，最小化的重现问题的步骤</li><li>描述遇到的问题，例如报错信息，务必要让问题简单易读</li><li>如果是技术类问题，根据情况，再看是否需要给出具体某段实现代码</li></ol><p>切记不要问与主题无关的问题，如果是那种通过自己搜索就能很容易找到解决办法的问题，最好不要去问，这类问题在别人看来肤浅甚至觉得你是个不愿独立思考的“lazy boy”，只想依靠别人，浪费别人时间。也不要低声下气，觉得有求于人，要知道一个好的问题，可能会促进双方的共同进步，别人也会因为能帮人解决了一个“难题”而高兴，礼貌客气不代表卑微，反而会增加你得到有用回答的机会，当然前提你事先经过做足了功课，别人也会认为你很有经验，问的问题可能是独到巧妙的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
-    
-    
-      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于JavaScript中的继承机制</title>
     <link href="https://www.shengshiyu.cn/2018/08/21/%E5%85%B3%E4%BA%8EJavascript%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6/"/>
     <id>https://www.shengshiyu.cn/2018/08/21/关于Javascript中的继承机制/</id>
@@ -501,6 +476,31 @@
     
     
       <category term="JavaScript" scheme="https://www.shengshiyu.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何高效提问</title>
+    <link href="https://www.shengshiyu.cn/2018/08/21/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE/"/>
+    <id>https://www.shengshiyu.cn/2018/08/21/如何高效提问/</id>
+    <published>2018-08-20T16:00:00.000Z</published>
+    <updated>2018-08-20T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE.jpg" alt="如何高效提问"></p><p>如何提问是一门学问，不会提问的人很难通过问问题解决问题，最终可能变成别人替你“代劳”解决了问题。不懂得如何正确提问，无论是对于你还是对于被问的人都是十分痛苦的，久而久之，别人也失去了帮你解决问题的耐心。所以，如何正确高效的提出一个问题，甚至使得被问的人也能有所收获，是一个很有必要学习的方法。</p><p>首先我们要明确我们要问的问题，它属于哪一个范畴，如果是技术类的问题，它又会具体的归为某一个模块，我们可以将问题的范畴逐步确定和缩小。当然，每一个人的能力和水平是不一样的，可能有的人看问题很有针对性，一针见血，他根据他的经验和判断能把问题立马缩减到一个具体的范畴里，而有的人可能只能有个大致的模糊认知。</p><p>然后我们要明确我们发问的“对象”，我们最终想要的不过是解决问题的办法，那么除了向其他人提问，是否有更好的方式和其他途径解决问题。例如，善用搜索引擎，我们基本上能解决我们所遇到的大部分问题，尤其是对于技术类的问题，像 stackoverflow 这样的社区，你基本能找到你想要答案，或是阅读相关的文档或是手册，都是不错的办法。而且这样一个搜索的过程，本身也是在不断试错中学习，能使我们对于整个问题的把握更为清晰，下一次遇到同类问题，将搜索关键词与你的问题及可能的解决方案联系起来，还有助于引导其他有类似问题的人，举一反三。</p><p>不过，不是每次我们都能顺利的找到解决问题的答案，就拿技术类的问题来说，可能由于不同的系统环境，过去能解决的问题的步骤，可能现在不适用了，我们只能不断寻找。这个过程可能会很枯燥漫长，浪费很多时间，虽然我觉得最后发现“蓦然回首，那人却在灯火阑珊处”很舒畅，但这意味着可能这段时间里我们都无法继续推进我们的项目进度，倘若时间又很紧，那么此时可能找正确的人或是正确的论坛发问会是一个不错的办法。</p><p>向陌生人发问是充满不确定性的，因为对方并不一定能根据我们对于问题的描述完美的解决我们的问题。如果我们问的问题还不够明确，简洁易懂，可能对方就懵了，所以我们需要：</p><ol><li>简单描述你需要完成什么样的需求，最终的目标是什么</li><li>简洁明了的叙述你的想法或思路</li><li>描述你具体的实现过程，其实就是你做了哪些尝试，最小化的重现问题的步骤</li><li>描述遇到的问题，例如报错信息，务必要让问题简单易读</li><li>如果是技术类问题，根据情况，再看是否需要给出具体某段实现代码</li></ol><p>切记不要问与主题无关的问题，如果是那种通过自己搜索就能很容易找到解决办法的问题，最好不要去问，这类问题在别人看来肤浅甚至觉得你是个不愿独立思考的“lazy boy”，只想依靠别人，浪费别人时间。也不要低声下气，觉得有求于人，要知道一个好的问题，可能会促进双方的共同进步，别人也会因为能帮人解决了一个“难题”而高兴，礼貌客气不代表卑微，反而会增加你得到有用回答的机会，当然前提你事先经过做足了功课，别人也会认为你很有经验，问的问题可能是独到巧妙的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
+    
+    
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
