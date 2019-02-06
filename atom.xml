@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengshiyu.cn/"/>
-  <updated>2018-01-14T16:00:00.000Z</updated>
+  <updated>2019-02-05T14:51:00.044Z</updated>
   <id>https://www.shengshiyu.cn/</id>
   
   <author>
@@ -17,13 +17,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://www.shengshiyu.cn/2019/01/27/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.shengshiyu.cn/2019/01/27/Tomcat学习总结/</id>
+    <published>2019-01-27T15:30:06.168Z</published>
+    <updated>2019-02-05T14:51:00.044Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title: Tomcat学习总结<br>date: 2018-09-23<br>updated: 2018-09-23<br>categories: Technology<br>tags: Java</p><h2 id="description-Tomcat是一个免费的开源的Serlvet容器"><a href="#description-Tomcat是一个免费的开源的Serlvet容器" class="headerlink" title="description: Tomcat是一个免费的开源的Serlvet容器"></a>description: Tomcat是一个免费的开源的Serlvet容器</h2><h1 id="关于Tomcat"><a href="#关于Tomcat" class="headerlink" title="关于Tomcat"></a>关于Tomcat</h1><h1 id="Tomcat的目录结构"><a href="#Tomcat的目录结构" class="headerlink" title="Tomcat的目录结构"></a>Tomcat的目录结构</h1><p>#</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.shengshiyu.cn/2019/01/27/%E8%B0%88%E8%B0%88%E5%A4%A7%E4%BC%97%E4%BC%A0%E5%AA%92/"/>
+    <id>https://www.shengshiyu.cn/2019/01/27/谈谈大众传媒/</id>
+    <published>2019-01-27T15:30:06.085Z</published>
+    <updated>2019-02-05T07:00:55.538Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title: 谈谈大众传媒<br>date: 2018-12-13<br>updated: 2018-12-13<br>categories: Thinking<br>tags: 思考</p><h2 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h2><p><img src="http://" alt="谈谈大众传媒"></p><p>互联网时代，与其说是流量的争夺战，不如说是注意力的争夺战。传统的纸媒时代早期，纽约《太阳报》的创立开启了广告赚钱吸引眼球的新模式。在那之前，广告仅仅作为新闻的一种信息补充，《太阳报》专门把传统公告栏的那些小的信息变成了高大上的广告，因为之前是没有真正意义上的广告业的。商家并不知道这样的模式，当这样的新模式诞生后，商家因此尝到了甜头，很乐意出钱给传统纸媒作宣传，而这也成为了那个时期纸媒的一个重要的收入来源。</p><p>同时《太阳报》里也更注重受众的需求，它们刊登的新闻讯息都是平民百姓很感兴趣的内容，例如自杀新闻和家庭风波，成功吸引了它们的注意力，然后也间接促成了广告事业的成功。这一点和如今的一些新媒体行业有很多相似之处，用内容去吸引用户，用流量的增长推动广告的成功，不仅仅是免费，甚至还会返利，只要你使用这个产品的时间越多，滞留的时间越长，就可以获得收益，可以在积累到了一定的限额提现。</p><p>“科学”的推荐算法，使得推送的内容满足了绝大部分用户“个性化”的需求，但也因此使你所收到的信息更多在你了解和感兴趣的范畴内。就像在搜索引擎中搜索一样，你不会知道那些你不知道的东西，所以你最终所了解的东西更多还是停留在了那个层面。</p><p>这是一个碎片化阅读盛行的时代，如何有效的吸引用户的注意力成为了重中之重，而一些深度阅读，思想深刻的长篇大论，反倒不那么受人待见，除非它是一个“爆款”文章，潜意识的让人觉得读完后会受益匪浅，那么对于广大的普通受众来说，他才会考虑耐心去细细品读，当然这也和本身文章内容质量很高有关，它确实吸引人，观点新颖，但很多类似的好文章可能只有石沉大海的宿命。就像微信公众号里的文章，判断文章质量的评判标准更多会从是否是“十万+”出发，似乎这已经成为了“优秀”的一种标志。而一些观点深邃，逻辑更为严谨复杂的好文章，它对受众形成了一定的阅读门槛，可能它就失去了成为“十万+”的可能。</p><p>曾几何时《太阳报》的成功，推动了其他竞争对手的进步，但随着竞争的愈演愈烈，各家报纸都开始提供更low的新闻以博取大众眼球，艳俗新闻以及暴力死亡事件中对血腥场景的过度描述。再到后面一些纸媒开始报道假新闻，最终引起了绝大部分人的反感。甚至为了获取利益刊登一些虚假广告，对广告主的背景不作具体的了解，刊登广告的门槛越来越低，引起了诸多社会问题。最终没过几年，这样的乱象就消亡了。</p><p>这种形式和如今的一些互联网传媒行业是如此相似，只不过是从线下搬到了线上，而且由于技术不断的发展，基于新技术的新形式和新体验也成为了吸引用户注意力的重要手段之一。如今，每天都在产生着巨量的信息，过去所要担心的取材难题在当今时代基本不会成为重要的制约障碍。因为我们可取的素材遍地都是，更需要关注的是搜集后的整理和结合。因为如今每一个人都可以算是一个自媒体平台，能人辈出，即使单纯的模仿，对于一些人来说也会由于先入为主认为这是原创，从而有了成为“爆款”的可能，从而获得成为网红的机会。</p><p>其实在模式上，相比于曾经传统的纸媒行业，如今，媒体本身是可以不生产内容的，它们更多提供的是一个平台，每一个使用这个平台的自媒体人都够为它们创造流量。对于这些人来说，他们吸引了一大波粉丝的同时，也能从中为自己获取收益。因为某些时候，商家费劲花重金做的一个广告，产生的效益甚至不如请一个流量大V来做一次短视频宣传的价值。</p><p>网红就如同时代的浪潮，随着时间，一浪高过一浪，不断有新的原创模式竞相出现。就个人而言，受制于自身知识的和技能水平，也难免会有创造力枯竭的时候，因为用户的注意力来的快去的快。而对于企业而言，关注的更多可能就是哪些新的技术手段，运营模式能便于用户生产出质量更高的内容，能最大化的吸引用户的注意力。</p><p>由于平台本身对于内容质量把控是有限度的，如果把控质量要求过高势必会造成内容量大幅度减少，难以吸引更多用户，太低又会产生诸如假新闻等的一系列问题。用户本身就偏向追逐一些“快餐式”阅读体验，简单轻松，不会需要很高的阅读门槛，也喜欢“鸡汤”，产生心理上的及时反馈，毕竟看似无害的东西谁又知道它真的就有用呢？类似《太阳报》时代不同纸媒曾经用过的手段，如今依然能看到它们的影子，成为了吸引用户注意力，保持较高平台流量的重要手段。大众传媒从来就不是高雅的产物，某种意义上而言，它也可以是低俗的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>文化与媒介</title>
     <link href="https://www.shengshiyu.cn/2019/01/15/%E6%96%87%E5%8C%96%E4%B8%8E%E5%AA%92%E4%BB%8B/"/>
     <id>https://www.shengshiyu.cn/2019/01/15/文化与媒介/</id>
     <published>2019-01-14T16:00:00.000Z</published>
     <updated>2018-01-14T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我们不光要学习国外先进企业的研发能力，更要学习他们的职业文化。</p><p>为什么文化显得重要，或许文化是一种非物质化的媒介，它本身就能很好的传递一些东西，达成企业到员工之间的一种沟通桥梁。</p><p>若有更好的方式能实现“文化”所具有的作用，那么文化的作用便会被弱化，但文化本身证明是一个比文字效率更好的媒介</p>]]></content>
     
     <summary type="html">
     
@@ -89,38 +131,13 @@
   </entry>
   
   <entry>
-    <title>谈谈大众传媒</title>
-    <link href="https://www.shengshiyu.cn/2018/12/13/%E8%B0%88%E8%B0%88%E5%A4%A7%E4%BC%97%E4%BC%A0%E5%AA%92/"/>
-    <id>https://www.shengshiyu.cn/2018/12/13/谈谈大众传媒/</id>
-    <published>2018-12-12T16:00:00.000Z</published>
-    <updated>2018-12-12T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
-    
-    
-      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>新思想和旧思想</title>
     <link href="https://www.shengshiyu.cn/2018/12/03/%E6%96%B0%E6%80%9D%E6%83%B3%E5%92%8C%E6%97%A7%E6%80%9D%E6%83%B3/"/>
     <id>https://www.shengshiyu.cn/2018/12/03/新思想和旧思想/</id>
     <published>2018-12-02T16:00:00.000Z</published>
     <updated>2018-12-02T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%96%B0%E6%80%9D%E6%83%B3%E5%92%8C%E6%97%A7%E6%80%9D%E6%83%B3.jpeg" alt="新思想和旧思想"></p><p>新的“新思想”和旧的“新思想”，“新”不一定就代表了一种进步和对旧有事物的否定，旧的思想中可能蕴含着一些我们未充分认识的创新点，一旦机会成熟，旧有的思想就会成为一种潮流，至少在我看来，设计就是一个这样的过程，旧有的设计理念和一些“新思想”结合，却能成为一种潮流。</p><p>我们的认知观念里总认为旧有的东西就是落后的，就应该被淘汰的，因为有了继承于它的更好的方式，但那或许仅仅是继承原有的一个点，新旧本身并不应该作为衡量价值的标准。就像销量高的产品并不一定就代表质量好一样，人类总是倾向于接受和他们内心认知看法接近的事物，因为它们不必为此否定自身，就像我们的新闻一样，我们很难看到相悖的两种形式的新闻。</p><p>“主流”的思想将一些“异端”思想给排斥在外，但更多时候我们会发现，两种相悖的观点事实上它们都是正确的，不同的环境，不同的时代背景，不同的利用和转化方式，都可以作为我们评判一种思想是否具有价值的参考条件。</p><p>成长的过程，就是我们不断地发现过去家长、老师们教的某些东西开始具有了“片面性”，随着我们对其更深入全面的了解，随着我们阅历的加深，我们会衍生出自己的一套价值判断标准，但我们也会无意识地将与自身观点相悖的思想排斥在外，以维护我们自身观点的“正确性”，尤其是随着我们年龄的增长，我们更原意接受符合我们价值判断标准的事。</p><p>当我们摒弃了新旧思想之争，从全新的角度出发，去发现不同观点背后存在的可能性，勇于接受它们，判断哪一种更符合时代的发展的某种需要，哪一种更适合自身，去理解“变化”，避免使自己陷入思维的死角，找到在不同情境下最适宜的技巧。那么旧思想也可以成为”新的旧思想“，它也会有机会在如今的时代里绽放不一样的光芒。</p>]]></content>
     
     <summary type="html">
     
@@ -145,14 +162,11 @@
     <published>2018-11-21T16:00:00.000Z</published>
     <updated>2018-11-21T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><h1 id="PO（persistant-object持久对象）"><a href="#PO（persistant-object持久对象）" class="headerlink" title="PO（persistant object持久对象）"></a>PO（persistant object持久对象）</h1><p>PO就是数据库中的一条记录，只是把一条记录作为一个对象处理，可以方便的转化为其他对象。有时也被称为Data对象，对应数据库中的entity。PO中不应该包含任何对数据库的操作。PO是向数据库中添加新数据时创建，删除数据库中数据时削除的。并且它只能存活在一个数据库连接中，断开连接即被销毁。PO有状态的，每个属性代表其当前的状态。它是物理数据的对象表示。使用它，可以使我们的程序与物理数据解耦，并且可以简化对象数据与物理数据之间的转换。PO的属性是跟数据库表的字段一一对应的</p><h1 id="VO（value-object值对象-view-object表现层对象"><a href="#VO（value-object值对象-view-object表现层对象" class="headerlink" title="VO（value object值对象/view object表现层对象)"></a>VO（value object值对象/view object表现层对象)</h1><p>主要对应界面显示的数据对象,可以和表对应，也可以不，这根据业务的需要。VO是用new关键字创建，由GC回收。存活在业务层，是业务逻辑使用的，他存活的的目的就是为数据提供一个生存的地方。VO的属性是根据当前业务的不同而不同的，也就是说，它的每一个属性都一一对应当前业务逻辑所需要的数据的名称。</p><p>一个VO可以只是PO的部分，也可以是多个PO构成，同样也可以等同于一个PO（当然我是指他们的属性）。正因为这样，PO独立出来，数据持久层也就独立出来了，它不会受到任何业务的干涉。又正因为这样，业务逻辑层也独立开来，它不会受到数据持久层的影响，业务层关心的只是业务逻辑的处理，至于怎么存怎么读交给别人吧！不过，另外一点，如果我们没有使用数据持久层，那么PO和VO也可以是同一个东西，但这并不好。</p><h1 id="BO-business-object业务对象"><a href="#BO-business-object业务对象" class="headerlink" title="BO(business object业务对象)"></a>BO(business object业务对象)</h1><p>主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象，通常需要将BO转化成PO，才能进行数据的持久化，反之，从DB中得到的PO，需要转化成BO才能在业务层使用。它只包含业务对象的属性或是方法，或者二者都包含。</p><h1 id="DTO（Data-Transfer-Object数据传输对象）"><a href="#DTO（Data-Transfer-Object数据传输对象）" class="headerlink" title="DTO（Data Transfer Object数据传输对象）"></a>DTO（Data Transfer Object数据传输对象）</h1><p>主要用于远程调用等需要大量传输对象的地方</p><h1 id="POJO（plain-ordinary-java-object-简单Java对象）"><a href="#POJO（plain-ordinary-java-object-简单Java对象）" class="headerlink" title="POJO（plain ordinary java object 简单Java对象）"></a>POJO（plain ordinary java object 简单Java对象）</h1><p>一个最常见的的对象了，只有属性字段及setter和getter方法,属于一个中间对象，可以转化为PO、DTO、VO，一个POJO持久化之后就是PO；POJO在传输过程中，就会转化为DTP，这个传输过程就是DTO；POJO用作表示层就是VO</p><h1 id="DAO（data-access-object数据访问对象）"><a href="#DAO（data-access-object数据访问对象）" class="headerlink" title="DAO（data access object数据访问对象）"></a>DAO（data access object数据访问对象）</h1><p>学习数据库时遇到最多的对象了，它负责持久层的操作,主要用来封装对数据库的访问，提供数据库的CRUD操作.通过他可以把POJO持久化为PO，</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别
     
     </summary>
     
@@ -170,7 +184,7 @@
     <published>2018-11-06T16:00:00.000Z</published>
     <updated>2018-11-06T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://" alt=""></p><p>创新扩散理论里提到的认知特征，相对优越性，它相对于其他产品是否更优越，体现在什么方面，本质上是不是加快了信息传播的速度；兼容性，它和生活的融合度如何，是否能够在生活中有应用的可能；复杂性，它是否操作简单，利于人们上手直接操作；可实验性，它是否具有试用的机会，而且实验过后能把握用户的痛点，让用户能喜欢上；可观察性，新技术的显示度如何，是否能引起广泛的社会讨论，这个可能需要运营来促进这一过程的推进，提高技术曝光度。</p>]]></content>
     
     <summary type="html">
     
@@ -317,7 +331,7 @@
     <published>2018-09-27T16:00:00.000Z</published>
     <updated>2018-09-27T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%88%91%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%80%89%E6%8B%A9%E6%8A%80%E6%9C%AF%E4%B9%8B%E8%B7%AF.jpeg" alt="我为何会选择技术之路"></p><p>回顾往昔，当初我为何会选择技术这一条路，与接触新媒体息息相关，理解了媒介变化的本质，就理解了技术在其中所产生的作用。在这个时代，能推动信息流动的加快，那么这样的技术是富有潜力的。</p><p>传播速度的加快，在我看来，不仅仅是数据传输速度的加快，还包括处理的速度，也就是信息是否更容易被吸收和理解。不同媒介的传播速度是不一样的，文字作为人类文明承载信息的重要媒介之一，其本身并不是一个出色的媒介，通过文字所记录的信息，难免会在传递的过程中，由于个体的背景差异产生一些信息的失真。尤其我们在阅读一本晦涩难懂的书时，很难将作者所要表达的原意通过文字完完整整的解析出来，如果这本书还是翻译的版本，又会在翻译的过程中损失一部分信息，全靠译者来把关，如果译者水平有限。。。那就只能听天由命或者直接选择阅读原著了。</p><p>相对于文字来说，图像更利于传递和接收信息，人们更容易从图像中获取其中包含的信息，而图片和视频很好的在静态和动态的</p><p>通过某种方式依靠技术手段对信息进行加工，实现信息在传输和理解的“便利”化，一定程度上是可以推动信息的快速流动，然而一旦这样的形式出现了弊端，但在发展普及的过程中成为了主流，大众便失去了接受信息后对信息的“再处理”的能力，简化信息，使得用户不用思考便能吸收，真的好吗？抖音，今日头条，微信公众号，微博，它们通过不同的交互手段和信息呈现形式，不断地冲刷和改变着人们的意识流，我们的世界观似乎不再是由我们自己来主导，而是由这些新媒介，它们把控着我们对世界，对人和事物的认知。媒介的发展不应该如此，它发展的目的应该是使用户接受原有信息的速度加快，通过技术手段实现的多样化的表现形式，通过发掘触觉，听觉，视觉等等形式，根本上的重构信息的展现形式，毕竟文字并不是一个很好的用来表现思想的媒介，重新唤醒人们接受信息，处理信息的深度思考的能力，在我看来比起听书或是得到这样，将原有体系精炼肢解后，以人们最便于立刻理解的形式要更重要，因为他确实会促进人们的进步，使人们主动地去判断信息的价值。只要技术能实现和解决这些痛点，就是颠覆就有体系，创建新行业形式的开始，反之，技术仅仅侧重于去更深入得提高原有“错误形式”的影响力，那么技术始终只是技术。比起实现需求，分析需求背后所带来的价值比单纯的需求更为重要。我为何会选技术之路，因为我希望看到不同技术背后对社会和人的影响，如果他并不能带来积极的影响，促使人和社会的进步，我希望我能发现更好的形式取代他。因为本质上我想推动的是媒介的变革，只是这一切的基石是技术，需要靠它来实现，也只有自身更懂它才能更好的实现这一过程。只有这样，技术在我手里才具有了意义，而不再是单纯的程序员。分析一个技术项目的好坏和成功，或许就可以通过分析他在加快媒介变革中所起到的作用大小来进行分析，他处在那一个点，哪一个方面，最大的作用是啥，是否有更好的形式比他带来的作用要更好更进一步，而那些曾经夭折失败的项目和产品，它们是为何没有成功落地的，去思索和发现，便是寻找到路的前进方向的方法。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%88%91%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%80%89%E6%8B%A9%E6%8A%80%E6%9C%AF%E4%B9%8B%E8%B7%AF.jpeg" alt="我为何会选择技术之路"></p><p>回顾往昔，当初我为何会选择技术这一条路，与接触新媒体息息相关，理解了媒介变化的本质，就理解了技术在其中所产生的作用。在这个时代，能推动信息流动的加快，那么这样的技术是富有潜力的，而信息流动的加快在人类的发展中始终都是至关重要的。同样的信息，过去使用书信往来，现在使用微信互动，传播的速度也是大相径庭的。也因为信息流动的加快，使得人与人之间，组织与组织之间因为地理位置差异所造成的隔阂不断缩小，我们能更频繁的进行贸易的往来，文化的交流等等，媒介就像是催化剂，它不能对事物的变化起决定作用，但它可以推动这个变化的速度，加快频率，那我们就能在同样的时间单位里完成更多的事。</p><p>媒介的发展，亦即传播速度的加快，在我看来，不仅仅是数据传输速度的加快，还包括处理的速度，也就是信息背后所包含的思想是否更容易被吸收和理解。不同媒介的传播速度是不一样的，文字作为人类文明承载信息的重要媒介之一，其本身却不是一个出色的媒介，通过文字所记录的信息，难免会在传递的过程中，由于个体的背景差异产生一些信息的失真。尤其我们在阅读一本晦涩难懂的书时，很难将作者所要表达的原意通过文字完完整整的解析出来，如果这本书还是翻译的版本，又会在翻译的过程中不可避免的损失一部分信息，全靠译者来把关，如果译者水平有限。。。那就只能听天由命或者直接选择阅读原著了。</p><p>相对于文字来说，人们更容易接受从图像中获取信息，而文字最初的产生。如中国古代的象形文字，或是苏美尔人所创的楔形文字，它们雏形的诞生，都多为图像。这也说明我们了解世界最开始某种程度上来说是从图像开始的。如今我们获取信息的渠道更多了，承载信息的主要方式不再以文字记录为主，图片、视频、音频、VR技术等新的形式，它们更多都从视觉的接受度上出发，在传播的过程中更利于被人们接受。</p><p>通过某种方式对信息进行加工，实现信息在传输和理解的“便利”化，一定程度上是可以推动信息的流动，但取决于“加工”的形式。例如我们可以精炼出一本书的核心要义，将一本书最核心的观点进行总结和转述，用便于人们理解的简洁明了的方式进行传播，那么其他人就可以在很短的时间里完成了“阅读”一本书的任务。但这个方式更多依赖于那个所谓的“领读者”，他不一定能完整的按原作者的思路和逻辑进行转述，而原作者本身是希望你通过阅读他的那本书的过程来完成你和他之间的信息传递。</p><p>当然我们也可以通过更好的表述，将原作者希望表达真实意思再现，原本他需要用很多的文字和语言来作为表述他那个想法的载体，现在你可以用更少的文字和语言实现同样的想法，或是通过其他方式，例如音视频、图片等等，说不定比文字更好实现你想要表达的东西。但这样的方式要更困难。这也是为啥除了文字，还有绘画、音乐等形式也在历史的长河中熠熠生辉。它们本身也承载着各自不同的文化底蕴，也因为如此，容纳了很多信息在形式之中，需要我们以恰当的方式“解读”出来。</p><p>对原有信息的“精炼”，将信息量缩减这样的方式，一旦逐渐发展成为了主流，大众便逐渐失去了接受信息后对信息的“再处理”的能力，简化信息量，使得用户不用思考便能吸收理解，真的好吗？抖音，今日头条，微信公众号，微博，它们通过不同的交互手段和信息呈现形式，不断地冲刷和改变着人们的意识流。我们的世界观似乎不再是由我们自己来主导，而是由这些新媒介，它们逐渐把控着我们对世界，对人和事物的认知。新媒介的发展不应如此，它的本质应该是使用户接受原有信息的效率更高，通过技术手段实现多样化的表现形式，发掘触觉，听觉，视觉等等方面，因为媒介是“人的延伸”，根本上的重构信息的展现形式，毕竟文字并不是一个很好的用来表现思想的媒介，重新唤醒人们接受信息，处理信息的深度思考的能力。</p><p>在我看来，“每天听本书”这样类似的形式，将原有体系精炼肢解后，以人们最便于直接理解，最易获得及时反馈的形式并不应该成为主流，即使因为工作生活原因，挤不出更多时间阅读思考，也不应该将这个过程“外包”出去。过程本身对自身思维的训练比直接获得结果更为重要。</p><p>纠结于文字本身，何不将重心往其他媒介上靠拢试试呢？一旦有了一个更为恰当的方式，不以牺牲个人主动思考的能力为主，那么它确实具备了促进人类的进步的意义和价值，它的出现令人们主动地去判断信息的价值。而技术本身对于实现这样的“新媒介”是有重要意义的，因为不同技术本身也有各自的特性，适用于解决的问题也有所不同，没有最好的，只有最适合的。只要通过技术能实现和解决这些旧有痛点，就是颠覆的可能，创建新的行业形式。</p><p>反之，技术仅仅被用于去提高原有“错误形式”的影响力，那么技术始终只是技术。比起实现需求，分析需求背后所带来的价值比单纯的需求更为重要。我为何会选技术之路，因为我希望看到不同技术背后对社会和人的影响，如果它并不能带来积极的影响，促使人和社会的进步，我希望我能发现更好的形式。这一切的基石是技术，需要靠它来实现，也只有自身更懂技术才能更好的实现这一过程。只有这样，技术在我手中才具有了意义，不再限定于程序员本身。</p>]]></content>
     
     <summary type="html">
     
@@ -332,28 +346,6 @@
     
     
       <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat学习总结</title>
-    <link href="https://www.shengshiyu.cn/2018/09/23/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    <id>https://www.shengshiyu.cn/2018/09/23/Tomcat学习总结/</id>
-    <published>2018-09-22T16:00:00.000Z</published>
-    <updated>2018-09-22T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p># </p>]]></content>
-    
-    <summary type="html">
-    
-      Tomcat是一个免费的开源的Serlvet容器
-    
-    </summary>
-    
-      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
-    
-    
-      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
     
   </entry>
   
@@ -389,7 +381,7 @@
     <published>2018-09-16T16:00:00.000Z</published>
     <updated>2018-09-16T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E6%8A%80%E6%9C%AF%E7%B1%BB%E4%B9%A6%E7%B1%8D.jpeg" alt="如何阅读一本技术类书籍"></p><p>前不久重读了《如何阅读一本书》，这本书成书时并没有计算机相关的读物，在介绍阅读不同读物的方法时，我认为技术类的书籍可能更接近于它里面所提到的科学与数学，而且更多偏实用型而非理论型，并且计算机一类的阐述特定技术的书时新性很强，随着技术的更新换代，很多都会过时，这一点在其他一类的书上没那么明显，一旦过时，其实用性就会大大下降，这里结合我的认知，谈一下关于技术类书籍应该如何阅读。</p><p>这里指的阅读，并非粗读或是泛读，虽然很多技术类的书也可以作为手册，需要的时候再进行查阅即可，但也不乏很多经典，它们需要我们细细品读，结合实践会不断提高我们的技术水平。这里总结了一些值得参考的书：<a href="https://www.douban.com/doulist/110527931/" target="_blank" rel="noopener">每一个程序员都值得读的经典</a></p><p>首先我们明确它是否属于论说类的书籍，其次我们要分析这本书是否属于理论性的，类似《算法导论》一类的书，还是属于实用性的，类似《effective java》这样的书。</p><p>然后我们可以用几句话简单的叙述一下这本书主要讲了啥，将书里面重要的章节列举出来，说明它是如何根据某种逻辑来组成一个相应体系的，进而能够用来解决实际问题。关注作者希望通过这本书来为我们解决一个什么样的具体问题，这个问题属于哪一类别。因为计算机体系的模块化，抽象化和层次化，所以不同的书针对的方向和层次也是不一样的。</p><p>然后我们要关注一些重要的名词，看是否在翻译的版本中所要表达的东西是你印象里熟悉的那一个概念，然后我们要关注一些核心重要的部分，因为技术类的书具有很完整的逻辑，我们要对这些重要且难以理解的部分去理顺逻辑，看作者是如何逐步叙述他所要表达的内容的。如果是因为欠缺了某一部分的内容，造成了阅读过程中理解的困难，如果你觉得跳过，并不影响后续阅读，而且它并不属于这本书的核心内容，或是所描述的技术类别已经过时了，那么你可以先跳过。反之，我们可能需要花一些时间去了解一下那些与此相关的我们所不懂的概念，然后再尝试回过头阅读，看逻辑是否通畅，是否能继续读下去。当然这个过程最好的方式就是多实践，将其中的一些能够实现的东西，自己尝试做一下，可能很多不理解的东西就理解了。</p><p>在你对作者的一些实践方法作出评价之前，你最好已经明白了它的所有细节，你知道作者想要以此解决的问题，并且你也亲自实现过，然后你才可以对所谓的“最佳实践”作出判断；因为有的“最佳实践”所针对的只是那个特定的历史时期。然后你就可以通过类比得出适合自己的技术实践方式，不断地去更新这些“最佳实践”，可以使你的开发效率和代码质量不断提高。</p><p>尊重书中作者和你个人观点的不同，通过实践来证明，是否作者是针对某一特定的环境，而不是普遍的情况，寻找各自的理论基础作为支撑，另外技术类的书更新换代很快，我们在看一些经典“老书”时，要学会判断哪些观点和看法是过时了的，哪些是真知灼见，去吸收那些依然有用的思想洞见。</p>]]></content>
     
     <summary type="html">
     
@@ -464,7 +456,7 @@
     <published>2018-08-20T16:00:00.000Z</published>
     <updated>2018-08-20T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE.jpeg" alt="如何高效提问"></p><p>如何提问是一门学问，不会提问的人很难通过问问题解决问题，最终可能变成别人替你“代劳”解决了问题。不懂得如何正确提问，无论是对于你还是对于被问的人都是十分痛苦的，久而久之，别人也失去了帮你解决问题的耐心。所以，如何正确高效的提出一个问题，甚至使得被问的人也能有所收获，是一个很有必要学习的方法。</p><p>首先我们要明确我们要问的问题，它属于哪一个范畴，如果是技术类的问题，它又会具体的归为某一个模块，我们可以将问题的范畴逐步确定和缩小。当然，每一个人的能力和水平是不一样的，可能有的人看问题很有针对性，一针见血，他根据他的经验和判断能把问题立马缩减到一个具体的范畴里，而有的人可能只能有个大致的模糊认知。</p><p>然后我们要明确我们发问的“对象”，我们最终想要的不过是解决问题的办法，那么除了向其他人提问，是否有更好的方式和其他途径解决问题。例如，善用搜索引擎，我们基本上能解决我们所遇到的大部分问题，尤其是对于技术类的问题，像 stackoverflow 这样的社区，你基本能找到你想要答案，或是阅读相关的文档或是手册，都是不错的办法。而且这样一个搜索的过程，本身也是在不断试错中学习，能使我们对于整个问题的把握更为清晰，下一次遇到同类问题，将搜索关键词与你的问题及可能的解决方案联系起来，还有助于引导其他有类似问题的人，举一反三。</p><p>不过，不是每次我们都能顺利的找到解决问题的答案，就拿技术类的问题来说，可能由于不同的系统环境，过去能解决的问题的步骤，可能现在不适用了，我们只能不断寻找。这个过程可能会很枯燥漫长，浪费很多时间，虽然我觉得最后发现“蓦然回首，那人却在灯火阑珊处”很舒畅，但这意味着可能这段时间里我们都无法继续推进我们的项目进度，倘若时间又很紧，那么此时可能找正确的人或是正确的论坛发问会是一个不错的办法。</p><p>向陌生人发问是充满不确定性的，因为对方并不一定能根据我们对于问题的描述完美的解决我们的问题。如果我们问的问题还不够明确，简洁易懂，可能对方就懵了，所以我们需要：</p><ol><li>简单描述你需要完成什么样的需求，最终的目标是什么</li><li>简洁明了的叙述你的想法或思路</li><li>描述你具体的实现过程，其实就是你做了哪些尝试，最小化的重现问题的步骤</li><li>描述遇到的问题，例如报错信息，务必要让问题简单易读</li><li>如果是技术类问题，根据情况，再看是否需要给出具体某段实现代码</li></ol><p>切记不要问与主题无关的问题，如果是那种通过自己搜索就能很容易找到解决办法的问题，最好不要去问，这类问题在别人看来肤浅甚至觉得你是个不愿独立思考的“lazy boy”，只想依靠别人，浪费别人时间。也不要低声下气，觉得有求于人，要知道一个好的问题，可能会促进双方的共同进步，别人也会因为能帮人解决了一个“难题”而高兴，礼貌客气不代表卑微，反而会增加你得到有用回答的机会，当然前提你事先经过做足了功课，别人也会认为你很有经验，问的问题可能是独到巧妙的。</p>]]></content>
     
     <summary type="html">
     

@@ -102,15 +102,18 @@
 
 
 
+<meta name="description" content="关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PO、VO、BO、DTO、POJO、DAO之间的关系">
 <meta property="og:url" content="https://www.shengshiyu.cn/2018/11/22/PO、VO、BO、DTO、POJO、DAO之间的关系/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-11-21T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PO、VO、BO、DTO、POJO、DAO之间的关系">
+<meta name="twitter:description" content="关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别">
 
 
 
@@ -403,7 +406,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  810 字
                 </span>
               
 
@@ -413,6 +416,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别
+              </div>
           
 
         </div>
@@ -425,7 +432,15 @@
       
 
       
-        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<h1 id="PO（persistant-object持久对象）"><a href="#PO（persistant-object持久对象）" class="headerlink" title="PO（persistant object持久对象）"></a>PO（persistant object持久对象）</h1><p>PO就是数据库中的一条记录，只是把一条记录作为一个对象处理，可以方便的转化为其他对象。有时也被称为Data对象，对应数据库中的entity。PO中不应该包含任何对数据库的操作。PO是向数据库中添加新数据时创建，删除数据库中数据时削除的。并且它只能存活在一个数据库连接中，断开连接即被销毁。PO有状态的，每个属性代表其当前的状态。它是物理数据的对象表示。使用它，可以使我们的程序与物理数据解耦，并且可以简化对象数据与物理数据之间的转换。PO的属性是跟数据库表的字段一一对应的</p>
+<h1 id="VO（value-object值对象-view-object表现层对象"><a href="#VO（value-object值对象-view-object表现层对象" class="headerlink" title="VO（value object值对象/view object表现层对象)"></a>VO（value object值对象/view object表现层对象)</h1><p>主要对应界面显示的数据对象,可以和表对应，也可以不，这根据业务的需要。VO是用new关键字创建，由GC回收。存活在业务层，是业务逻辑使用的，他存活的的目的就是为数据提供一个生存的地方。VO的属性是根据当前业务的不同而不同的，也就是说，它的每一个属性都一一对应当前业务逻辑所需要的数据的名称。</p>
+<p>一个VO可以只是PO的部分，也可以是多个PO构成，同样也可以等同于一个PO（当然我是指他们的属性）。正因为这样，PO独立出来，数据持久层也就独立出来了，它不会受到任何业务的干涉。又正因为这样，业务逻辑层也独立开来，它不会受到数据持久层的影响，业务层关心的只是业务逻辑的处理，至于怎么存怎么读交给别人吧！不过，另外一点，如果我们没有使用数据持久层，那么PO和VO也可以是同一个东西，但这并不好。</p>
+<h1 id="BO-business-object业务对象"><a href="#BO-business-object业务对象" class="headerlink" title="BO(business object业务对象)"></a>BO(business object业务对象)</h1><p>主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象，通常需要将BO转化成PO，才能进行数据的持久化，反之，从DB中得到的PO，需要转化成BO才能在业务层使用。它只包含业务对象的属性或是方法，或者二者都包含。</p>
+<h1 id="DTO（Data-Transfer-Object数据传输对象）"><a href="#DTO（Data-Transfer-Object数据传输对象）" class="headerlink" title="DTO（Data Transfer Object数据传输对象）"></a>DTO（Data Transfer Object数据传输对象）</h1><p>主要用于远程调用等需要大量传输对象的地方</p>
+<h1 id="POJO（plain-ordinary-java-object-简单Java对象）"><a href="#POJO（plain-ordinary-java-object-简单Java对象）" class="headerlink" title="POJO（plain ordinary java object 简单Java对象）"></a>POJO（plain ordinary java object 简单Java对象）</h1><p>一个最常见的的对象了，只有属性字段及setter和getter方法,属于一个中间对象，可以转化为PO、DTO、VO，一个POJO持久化之后就是PO；POJO在传输过程中，就会转化为DTP，这个传输过程就是DTO；POJO用作表示层就是VO</p>
+<h1 id="DAO（data-access-object数据访问对象）"><a href="#DAO（data-access-object数据访问对象）" class="headerlink" title="DAO（data access object数据访问对象）"></a>DAO（data access object数据访问对象）</h1><p>学习数据库时遇到最多的对象了，它负责持久层的操作,主要用来封装对数据库的访问，提供数据库的CRUD操作.通过他可以把POJO持久化为PO，</p>
+
       
     </div>
 
@@ -557,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -656,6 +680,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PO（persistant-object持久对象）"><span class="nav-number">1.</span> <span class="nav-text">PO（persistant object持久对象）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VO（value-object值对象-view-object表现层对象"><span class="nav-number">2.</span> <span class="nav-text">VO（value object值对象/view object表现层对象)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BO-business-object业务对象"><span class="nav-number">3.</span> <span class="nav-text">BO(business object业务对象)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DTO（Data-Transfer-Object数据传输对象）"><span class="nav-number">4.</span> <span class="nav-text">DTO（Data Transfer Object数据传输对象）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#POJO（plain-ordinary-java-object-简单Java对象）"><span class="nav-number">5.</span> <span class="nav-text">POJO（plain ordinary java object 简单Java对象）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DAO（data-access-object数据访问对象）"><span class="nav-number">6.</span> <span class="nav-text">DAO（data access object数据访问对象）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
