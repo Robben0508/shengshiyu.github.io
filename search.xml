@@ -80,7 +80,7 @@
   <entry>
     <title><![CDATA[谈谈产品需求分析]]></title>
     <url>%2F2018%2F11%2F07%2F%E8%B0%88%E8%B0%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%2F</url>
-    <content type="text"><![CDATA[创新扩散理论里提到的认知特征，相对优越性，它相对于其他产品是否更优越，体现在什么方面，本质上是不是加快了信息传播的速度；兼容性，它和生活的融合度如何，是否能够在生活中有应用的可能；复杂性，它是否操作简单，利于人们上手直接操作；可实验性，它是否具有试用的机会，而且实验过后能把握用户的痛点，让用户能喜欢上；可观察性，新技术的显示度如何，是否能引起广泛的社会讨论，这个可能需要运营来促进这一过程的推进，提高技术曝光度。 对于一个好的产品而言，我们要确立标准，培养用户对于产品的习惯性的认知，它的外观是不是很具有标志性，我们能在众多的产品中很容易识别出来，不用花费很多心力，它的哪几个功能很有特色，是它所独有的，又或者它做的就是比一般的同类产品好，在易用性上取胜，而且在功能上应该比外观上更为重要，因为用户选择我们的产品，仅仅是为了更好的解决他们手头的任务。]]></content>
+    <content type="text"><![CDATA[对于一个好的产品而言，我们要确立标准，培养用户对于产品的习惯性的认知，它的外观是不是很具有标志性，我们能在众多的产品中很容易识别出来，不用花费很多心力。就像苹果公司的产品，它的工艺设计就是它最明显的标志，哪怕外形做到和它接近的同类产品，我们也能一眼识别出哪一个是苹果公司的产品。 其次，好的产品它的哪几个功能具有特色，并且是它所独有的，它完成同样的任务就是比一般的同类产品好。因为用户选择我们的产品，仅仅是为了更好的解决他们手头的任务。功能上应该比外观上更为重要。而且这些功能要易于使用，它的用户群体可以不用面对很高的门槛就能轻松使用。 就像创新扩散理论里提到的认知特征的几个方面： 相对优越性，它相对于其他同类产品是否更优越，体现在什么方面 兼容性，它和生活的融合度如何，是否能够在生活中有应用的可能性 复杂性，它是否操作简单，利于人们上手直接操作，门槛低 可实验性，它是否具有试用的机会，而且实验过后能否把握用户的痛点，让用户能喜欢上 可观察性，新技术的显示度如何，是否能引起广泛的社会讨论，这个可能需要运营来促进这一过程的推进，提高技术曝光度。]]></content>
       <categories>
         <category>Thinking</category>
       </categories>
@@ -232,17 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript中的this原理]]></title>
-    <url>%2F2018%2F08%2F17%2FJavaScript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
-    <content type="text"><![CDATA[关于this为啥要有这个关键字呢？如果不使用this，我们在写代码时就需要显示的传入上下文对象。会很麻烦，随着代码量的增多，会使代码变得混乱，而this可以隐式“传递”一个对象的引用，利于代码复用，因为它会动态的判断上下文环境，然后引用合适的上下文对象。 我们可能会在学习时产生片面的误解，一种是我们认为this指向函数自身，另一种是我们认为this指向函数的作用域。因为在一些情况下，它们是对的，但有时却是错误的，举例来说：12345678function foo() &#123;var a = 2;this.bar();&#125;function bar() &#123;console.log( this.a );&#125;foo(); // ReferenceError: a is not defined 如果按之间的观点，那这段代码应该能正确调用，但实则不能，可见this关键字不是我们之前想的那样。 this是什么 当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。 this 就是记录的其中一个属性，会在函数执行的过程中用到。 理解this的前提，我们需要知道什么叫做调用位置，调用位置就是函数在代码中被调用的位置，而不是声明的位置，通过调用位置我们才好判断this究竟引用的是什么。 this的指向this永远指向最后调用它的那个对象，通过这句话就能很容易判断this的指向，因为调用位置就在当前正在执行的函数的前一个调用中。 默认绑定12345function foo() &#123;console.log( this.a );&#125;var a = 1;foo(); // 1 我们可以看到，最后调用foo()的地方，它的前面没有明显的调用对象，所以就是全局对象window，相当于window.foo()那么this的指向就是就是window这个全局对象，所以window.a的值就是1。这是默认的绑定情况。 隐式绑定我们有时候还要考虑调用位置是否具有上下文对象，可以看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;obj.foo(); // 1 这就简单了，因为this永远指向最后调用它的那个对象，最后调用它的是obj，所以就相当于obj.a，所以值为1，下面是另一种情况，可能我们调用时是在一个属性引用链上：123456789101112function foo() &#123;console.log( this.a );&#125;var obj2 = &#123;a: 2,foo: foo&#125;;var obj1 = &#123;a: 1,obj2: obj2&#125;;obj1.obj2.foo(); // 2 不用在意obj1，这里我们要强调“最后调用”，所以最后调用的是obj2，obj1先调用obj2，obj2再调用foo(),所以结果就是obj2.a，所以值为2。 但假如我们给函数起了别名，可以通过一个例子看一下：12345678910function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;var bar = obj.foo; // 函数别名！var a = "hello"; // a 是全局对象的属性bar(); // "hello" 虽然我们将 obj 对象的 foo 方法赋值给变量 bar 了，但是没有调用，所以bar()最后还是被全局对象window调用了，this的指向就是window，就相当于window.a，所以值为hello。 不过我们需要尤为注意回调函数里的this的指向问题，因为回调函数里我们传入的函数，实际上它相当于给里面的形参取了一个别名。当我们分析this的指向时，它实际的指向会被误导，但实质上它还是指向最后调用它的那个对象。 显式绑定如果我们想在某个对象上强制调用函数，可以直接指定this指向的对象，什么意思呢，我们先看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a:1&#125;;var a = 2;foo.call( obj ); // 1 我们通过call()函数，将obj的作用域传递进了foo中，因为JavaScript存在一个作用域链，相当于我们window.obj.foo(),所以最后调用的是obj对象，所以值为1。我们把foo的this绑定到了obj上。也可以通过apply()和bind()方法。 new绑定12345function foo(a) &#123;this.a = a;&#125;var bar = new foo(1);console.log( bar.a ); // 1 使用new来调用foo()时，我们会构造一个新对象，这个新对象会绑定到foo()调用中的this上，所以bar.a的值就是1，和隐式绑定里的取别名是不一样的，它依然指向最后调用它的那个对象。 箭头函数ES6里，我们可以使用箭头函数始终指向函数定义时的this，不用担心执行时改变，在箭头函数里也没有this绑定了，上面四条绑定原则也不存在了，要根据作用域链来决定它的值，箭头函数会继承外层函数调用的 this 绑定。12345678910111213var a = "hello";var ogj = &#123; b : "hi" func1: function () &#123; console.log(this.b); &#125;, func2: function () &#123; setTimeout( () =&gt; &#123; this.func1() &#125;,100); &#125;&#125;;obj.func2() // hi 总结总之，我们要记住”this永远指向最后调用它的那个对象“，具体绑定的方式，如果是由new调用，那它就绑定到了新创建的对象上，如果由call()、apply()、bind()调用，那么就是在绑定的那个对象上，如果包含上下文调用的隐式绑定，要注意上下文对象，如果包含回调函数，要格外小心。如果使用了箭头函数，注意根据作用域链来决定“this”的指向。]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[final、finally、finalize的区别]]></title>
     <url>%2F2018%2F08%2F17%2Ffinal%E3%80%81finally%E3%80%81finalize%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -251,6 +240,17 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript中的this原理]]></title>
+    <url>%2F2018%2F08%2F17%2FJavaScript%E4%B8%AD%E7%9A%84this%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[关于this为啥要有这个关键字呢？如果不使用this，我们在写代码时就需要显示的传入上下文对象。会很麻烦，随着代码量的增多，会使代码变得混乱，而this可以隐式“传递”一个对象的引用，利于代码复用，因为它会动态的判断上下文环境，然后引用合适的上下文对象。 我们可能会在学习时产生片面的误解，一种是我们认为this指向函数自身，另一种是我们认为this指向函数的作用域。因为在一些情况下，它们是对的，但有时却是错误的，举例来说：12345678function foo() &#123;var a = 2;this.bar();&#125;function bar() &#123;console.log( this.a );&#125;foo(); // ReferenceError: a is not defined 如果按之间的观点，那这段代码应该能正确调用，但实则不能，可见this关键字不是我们之前想的那样。 this是什么 当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。 this 就是记录的其中一个属性，会在函数执行的过程中用到。 理解this的前提，我们需要知道什么叫做调用位置，调用位置就是函数在代码中被调用的位置，而不是声明的位置，通过调用位置我们才好判断this究竟引用的是什么。 this的指向this永远指向最后调用它的那个对象，通过这句话就能很容易判断this的指向，因为调用位置就在当前正在执行的函数的前一个调用中。 默认绑定12345function foo() &#123;console.log( this.a );&#125;var a = 1;foo(); // 1 我们可以看到，最后调用foo()的地方，它的前面没有明显的调用对象，所以就是全局对象window，相当于window.foo()那么this的指向就是就是window这个全局对象，所以window.a的值就是1。这是默认的绑定情况。 隐式绑定我们有时候还要考虑调用位置是否具有上下文对象，可以看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;obj.foo(); // 1 这就简单了，因为this永远指向最后调用它的那个对象，最后调用它的是obj，所以就相当于obj.a，所以值为1，下面是另一种情况，可能我们调用时是在一个属性引用链上：123456789101112function foo() &#123;console.log( this.a );&#125;var obj2 = &#123;a: 2,foo: foo&#125;;var obj1 = &#123;a: 1,obj2: obj2&#125;;obj1.obj2.foo(); // 2 不用在意obj1，这里我们要强调“最后调用”，所以最后调用的是obj2，obj1先调用obj2，obj2再调用foo(),所以结果就是obj2.a，所以值为2。 但假如我们给函数起了别名，可以通过一个例子看一下：12345678910function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;var bar = obj.foo; // 函数别名！var a = "hello"; // a 是全局对象的属性bar(); // "hello" 虽然我们将 obj 对象的 foo 方法赋值给变量 bar 了，但是没有调用，所以bar()最后还是被全局对象window调用了，this的指向就是window，就相当于window.a，所以值为hello。 不过我们需要尤为注意回调函数里的this的指向问题，因为回调函数里我们传入的函数，实际上它相当于给里面的形参取了一个别名。当我们分析this的指向时，它实际的指向会被误导，但实质上它还是指向最后调用它的那个对象。 显式绑定如果我们想在某个对象上强制调用函数，可以直接指定this指向的对象，什么意思呢，我们先看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a:1&#125;;var a = 2;foo.call( obj ); // 1 我们通过call()函数，将obj的作用域传递进了foo中，因为JavaScript存在一个作用域链，相当于我们window.obj.foo(),所以最后调用的是obj对象，所以值为1。我们把foo的this绑定到了obj上。也可以通过apply()和bind()方法。 new绑定12345function foo(a) &#123;this.a = a;&#125;var bar = new foo(1);console.log( bar.a ); // 1 使用new来调用foo()时，我们会构造一个新对象，这个新对象会绑定到foo()调用中的this上，所以bar.a的值就是1，和隐式绑定里的取别名是不一样的，它依然指向最后调用它的那个对象。 箭头函数ES6里，我们可以使用箭头函数始终指向函数定义时的this，不用担心执行时改变，在箭头函数里也没有this绑定了，上面四条绑定原则也不存在了，要根据作用域链来决定它的值，箭头函数会继承外层函数调用的 this 绑定。12345678910111213var a = "hello";var ogj = &#123; b : "hi" func1: function () &#123; console.log(this.b); &#125;, func2: function () &#123; setTimeout( () =&gt; &#123; this.func1() &#125;,100); &#125;&#125;;obj.func2() // hi 总结总之，我们要记住”this永远指向最后调用它的那个对象“，具体绑定的方式，如果是由new调用，那它就绑定到了新创建的对象上，如果由call()、apply()、bind()调用，那么就是在绑定的那个对象上，如果包含上下文调用的隐式绑定，要注意上下文对象，如果包含回调函数，要格外小心。如果使用了箭头函数，注意根据作用域链来决定“this”的指向。]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -364,17 +364,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[论摄影与摄像]]></title>
-    <url>%2F2018%2F05%2F29%2F%E8%AE%BA%E6%91%84%E5%BD%B1%E4%B8%8E%E6%91%84%E5%83%8F%2F</url>
-    <content type="text"><![CDATA[摄影和摄像这样的方式是一种很不错的媒介，可以表达简单的内容，也可以表达丰富的内涵，使它包含的信息量进一步增加，但也增加了理解的门槛，而不同的摄像摄像手法，我认为本质上是你是否将他们作为你表达信息的一种手段，可能有些更有利于表达你的想法，所以你会选取这样的手法，或者进行组合，当然你也可以选择创新新的形势，使得你要表达的想法（信息）更有效率的传播出去，而你的作品的主要受众是哪些，决定了你需要取舍不同的“方式“，使得他们能理解你的“信息”，从而达到情绪上的共鸣。]]></content>
-      <categories>
-        <category>Art</category>
-      </categories>
-      <tags>
-        <tag>摄影</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Linux常用命令总结]]></title>
     <url>%2F2018%2F05%2F19%2FLinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[ls命令用来显示目标列表或者目录内容，常用的可选参数有： -a 显示所有子目录和文件，包括隐藏文件 -l 显示文件的详细信息，可以把ls -l简写为ll cp/mv命令用来把一个文件或者多个文件复制/移动到目标目录 rm命令刪除一个目录中的一个或多个文件或目录，其中需要注意的参数有： -f 不需要确认删除多个文件，强制删除 -r 将文件的全部目录和子目录都删除 cat命令可以显示文件内容，也可以连接两个或者多个文件 which命令显示文件的所在路径 man命令用于查看Linux中的命令帮助信息，遇到不会的命令就man一下，它也有一些参数需要注意： -a 在所有的man帮助手册中搜索； -f 等价于whatis指令，显示给定关键字的简短描述信息； ps命令ps命令列出执行这个命令时刻时的那些进程，类似一个当前进程的快照，是最基本也是最强大的进程查看命令，需要注意的参数有： a 显示所有进程 -a 显示同一终端下的所有程序 -A 显示所有进程 c 显示进程的真实名称 e 显示环境变量 f 显示程序间的关系 -H 显示树状结构 -au 显示较为详细的信息 tar命令很常用的压缩&amp;&amp;解压命令了，但tar这个命令….参数是真的多，看到一种不错的记忆方法，只要记得参数是【必选+自选+f】即可，首先是必选参数，五选一： -c 意为 create，表示创建压缩包 -x 意为 extract，表示解压 -t 表示查看内容 -r 给压缩包追加文件 -u 意为 update，更新压缩包中的文件 然后是自选参数，必选的话只能选一个，而可以根据需要挑着选： -z 使用 gzip 属性 -j 使用 bz2 属性 -Z 使用 compress 属性 -v 意为 verbose，显示详细的操作过程 -O 将文件输出到标准输出 最后一个参数一定要是f，后面再跟上你要压缩或者解压的文件包名。 一般我们常用的解压方式就是： *.tar -&gt; tar -xf *.tar.gz -&gt; tar -xzf *.tar.bz2 -&gt; tar -xjf *.tar.Z -&gt; tar -xZf *.gz -&gt; gzip -d *.rar -&gt; `unrar e *.zip -&gt; unzip kill命令用于终止指定进程的运行，对于后台进程我们可以先通过ps/pidof/pstree/top等命令获取进程PID，然后用kill结束该进程。不过也可以使用killall命令，直接使用进程的名称结束进程，使用它可以结束一组同名进程，而不用先获取进程PID，killall相当于把这两个过程合二为一，是一个很好用的命令 head命令可以用来查看一个文件的前几行，可以配合其他命令使用，例如配合管道做grep tail命令tail命令和head相反，查看文件的最后几行。不过最常用的还是加上 “-f” 参数后和grep一起使用 grep命令一个极其强大的命令，常用来在很多数据中找到匹配某一模式的字段，可以是正则表达式，常用的几个参数有： -a 以文本文件方式搜索 -c 计算找到的符合行的次数 -i 忽略大小写 -n 顺便输出行号 -v 反向选择，查找没有搜索字符串的行 du命令du命令是对文件和目录磁盘使用空间的查看 top命令用于动态的显示进程的信息，不过也有可以自定义的形式，例如:top -u root可以用来查看某用户进程 find命令查找所需文件的命令，如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，常用的参数有： -type 只寻找符合指定的文件类型的文件,其后跟随指定文件类型参数，类型参数有 f 普通文件 l 符号连接 d 目录 c 字符设备 b 块设备 s 套接字 p FIFO -name 根据文件名查找 -size 根据文件的权限或者大小名字类型进行查找 -mtime 查找在指定时间曾被更改过的文件或目录，单位以24小时计算； -print 假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出 -exec 假设find指令的回传值为True，就执行其后跟着的指令 cmp命令用来比较两个文件的差异。如果两个文件完全一样，就不会显示任何信息。如果发现有差异，会标示出第一个不同之处的字符和列数编号。 touch命令修改文件的创建日期，或者以当前的系统日期创建一个空文件 date命令显示当前日期和时间的，可以通过一些参数进行日期的格式化： %Y year %m month (01~12) %d day of month %H hour (00~23) %I hour (01~12) %M minute (00~59) %S second (00~60)例如：1234date + &quot;%Y%m%d %H%M%S&quot;20180519 223856date + &quot;%Y-%m-%d %H:%M:%S&quot;2018-05-19 22:39:07 wc命令统计指定文件中的字节数、字数、行数，并将统计结果输出，需要了解的参数有： -c 统计字节数 -l 统计行数 -m 统计字符数，不能与-c参数一起使用 -w 统计字数 env/export命令env: 查看当前环境变量 类似于配置Python环境，在一台不熟悉的机器上，如果出现了配置问题，可以通过env命令查看shell下的所有环境配置，看一下路径是否正确。 export: 设置或显示环境变量 useradd命令useradd命令用于创建的新的系统用户。useradd可用来建立用户帐号。帐号建好之后，再用passwd设定帐号的密码．而可用userdel删除帐号。使用useradd指令所建立的帐号，实际上是保存在/etc/passwd文本文件中。其中有几个需要注意的参数： -e 指定帐号的有效期限 -g 指定用户所属的群组 -G 指定用户所属的附加群组 -r 建立系统帐号 -u 指定用户id，设定ID值时尽量要大于500，以免冲突 groupadd命令用于创建一个新的工作组，也可以用groupdel命令删除工作组，常用的参数有： -g 指定新建工作组的id -r 创建系统工作组，系统工作组的组ID小于500 curl/wget命令curl命令是一个利用URL规则在命令行下工作的文件传输工具,而wget命令用来从指定的URL下载文件。wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性，如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。 netstat命令用来显示网络系统的状态信息，可让你了解整个系统的网络情况，需要注意的参数有： -a 显示所有连线中的Socket -n 直接使用ip地址，而不通过域名服务器 -t 显示TCP传输协议的连线状况 -u 显示UDP传输协议的连线状况 -l 显示监控中的服务器的Socket -s 显示网络工作信息统计表 -n 直接使用ip地址，而不通过域名服务器 可以通过参数的组合实现不同的功能，例如1234567netstat -at #列出所有tcp端口netstat -au #列出所有udp端口netstat -lt #只列出所有监听 tcp 端口netstat -lu #只列出所有监听 udp 端口netstat -st #显示TCP端口的统计信息netstat -su #显示UDP端口的统计信息netstat -an | grep &apos;:80&apos; #找出运行在指定端口的进程]]></content>
@@ -410,7 +399,7 @@
   <entry>
     <title><![CDATA[剪辑的艺术]]></title>
     <url>%2F2018%2F04%2F11%2F%E5%89%AA%E8%BE%91%E7%9A%84%E8%89%BA%E6%9C%AF%2F</url>
-    <content type="text"><![CDATA[电影剪辑是直觉和经验的整合，同时伴随着无数次的实验。 蒙太奇：观念的连接 你若要做出一个优秀的剪辑就必须先了解短片的概念和想法 节奏，角色，反应镜头 “当你剪辑声音时，你要思考让什么为画面服务以及如何操控观众的情绪。我很喜欢将音乐和音效融合在一起，创造一种很有氛围的“汤”这样你就无法区分开音乐和音效了。” 观看第一个镜头，凭借直觉找出你认为开始切入的地方。然后按播放键，在你认为合适的地方按暂停，反复进行这一操作。你会发现每次都会选到同一帧，你就可以做出这个剪辑。 剪辑是为了推动故事发展而剪辑的 忘掉理论，每部电影都是一个不同的案例。 如果观众非常欣赏故事，却没有留意到镜头的并置时，剪辑师就成功了。 任何时候只要有可能，就要寻找运动画面进行剪辑。 更为重要的是知道什么是不该剪辑的。这对于任何一个刚入门的年轻剪辑师都是最困难的事情，我也曾如此。 一直以来，我的剪辑风格由故事驱动，而非剪辑风格。 剪辑的艺术只有当两个或更多的镜头结合起来产生另一个水平的意义时——兴奋，洞察，震惊或顿悟——才会出现。 剪辑不是组合，而是探索路径。 拍摄如同市场买菜，在剪辑台上工作才是真正的烹饪。]]></content>
+    <content type="text"><![CDATA[“当你剪辑声音时，你要思考让什么为画面服务以及如何操控观众的情绪。我很喜欢将音乐和音效融合在一起，创造一种很有氛围的“汤”,这样你就无法区分开音乐和音效了。” 不同于视频拍摄，视频剪辑看似简单，但却是一个一部电影或是短片的重要流程之一。拍摄如同市场买菜，在剪辑台上工作才是真正的烹饪。 剪辑前我认为我们应该站在观众的角度来思考，当他看到整体画面以及故事时会是怎样的感觉，定下整个电影的基调。剪辑不是组合，而是探索路径。它是直觉和经验的整合，同时伴随着无数次的实验。 电影的初衷是为了“讲故事”，而剪辑是为了推动故事发展而剪辑的，如果过于死板的依赖于计划，不懂得灵活变通，电影就会变得死板平淡，因为你的故事无法打动关注，例如蒙太奇手法没能正确的讲故事，什么是蒙太奇呢？当不同的镜头组接在一起时，往往会产生各个镜头单独存在时所不具有的含义，这就是蒙太奇，更可以看作是一种“观念的连接”。 每当我们进行剪辑时，面对诸多的素材，我们可能会变得难以取舍，犹豫不决。但经验告诉我们，不要想太多，放胆剪下去就是了。忘掉理论，每一部电影都是不同的，观看第一个镜头，凭借直觉找出你认为开始切入的地方。然后按播放键，在你认为合适的地方按暂停，反复进行这一操作。你会发现每次都会选到同一帧，那么这或许就是你最想要的剪辑效果了。当然，更为重要的是知道什么是不该剪辑的，这也是一个漫长的学习过程，伴随着不断地实验。 节奏，角色，反应镜头在剪辑中是我们需要时常留意的元素，如果观众非常欣赏故事，却没有留意到镜头的并置时，剪辑师就成功了，它令一部电影变得深入人心，充满了吸引力。 剪辑的艺术只有当两个或更多的镜头结合起来产生另一个水平的意义时，我们才会在其中感到兴奋和震惊，我们会感叹剪辑是如此的神奇，通过组合，产生了 1 + 1 &gt; 2 的效果。但我们也要知道，剪辑的风格由故事驱动，是故事让我们的剪辑变得更有意义，而非剪辑风格驱动一个故事的发展。]]></content>
       <categories>
         <category>Art</category>
       </categories>
@@ -463,17 +452,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于Python中__str__和__repr__的区别]]></title>
-    <url>%2F2018%2F01%2F05%2F%E5%85%B3%E4%BA%8EPython%E4%B8%AD-str-%E5%92%8C-repr-%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[__repr__和__str__这两个方法都是用于显示的，但实际却存在一些细微的差异，具体我们可以通过一个简单例子来比较一下它们之间有何不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return 'hello'&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就会发现无论输出对象，还是调用__repr__和__str__方法，甚至通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return 'hello'&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很直观了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。因为我们覆盖了先前的__repr__方法，即使没有提前覆盖__repr__方法，我们得出的结果依然也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中，例如交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Markdown小记]]></title>
     <url>%2F2018%2F01%2F05%2FMarkdown%E5%B0%8F%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[标题 如果你需要插入标题，可以在行首插入1到6个#，对应标题的1到6级,最高可以到六级标题，最好在#后加一个空格，例如:# 这是一级标题## 这是二级标题####### 这是六级标题 也可以使用=====表示高级标题，使用------表示次级标题，大于两个=,-都可以用来表示标题 引用如果你需要一个引用，那么你可以使用&gt;符号放在文字开头，例如:&gt;这是一个引用引用是可以嵌套的，同时引用的区块内部也可以使用其他的Markdown语法，例如 这是一个引用 这是一个嵌套引用 这是二级标题 列表项 列表项 列表如果你需要一个列表，在Markdown里，你可以选择有序列表和无序列表两种形式，列表本身也是可以嵌套，例如 列表项 列表项 列表项 嵌套列表 嵌套列表 无序列表可以使用*、+、-这三个符号中的任意一种作为列表标记，也可以和引用标记进行嵌套 列表项 列表项 列表项 这是一个嵌套的引用 可以进一步嵌套 字体 粗体: 通常用**或者__表示粗体 斜体: 通常用*或者_表示斜体 斜粗体：通常用***或者___表示斜粗体 链接如果你需要链接文字，可以使用[](link)表示一个链接，其中[]内是需要添加链接的文字，()内是链接的地址 代码 使用一对```表示代码块，可以根据你所使用的Markdown编辑器,选择在第一个```后添加代码的language，产生高亮效果，例如： 123public static void main(String[] args) &#123; System.out.println("Hello"); &#125; 使用一对 可以表示一个行内代码，例如： 这是一个Java`代码 图片如果你需要插入一张图片，可以使用![Text](path)，其中Text表示图片无法加载时显示的文字，path为图片所在的路径，也可以是网上的图片链接地址 分割线如果你需要一条分割线，可以使用--- 或者***表示水平分割线，只要-,*大于三个就可以表示水平分割线，使用---作分割线时需要前后都空一行，防止被当成标题的标记方式 删除线如果你需要一条删除线,可以使用一对~~表示删除线，但切记和文字之间不能有空格 表格可以使用以下的格式添加表格,注意表格和文字间空一行：12345| name | age | gender | money ||-------|:---:|-----------|-------:|| rhio | 384 | robot | $3,000 || haroo | .3 | bird | $430 || jedi | ? | undefined | $0 | name age gender money rhio 384 robot $3,000 haroo .3 bird $430 jedi ? undefined $0 其他如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS 引用 123&lt;blockquote&gt;***&lt;/blockquote&gt;/* 如果上下间距小，可以这样写 */&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt; 居中和右对齐 123456/* 居中 */&lt;center&gt;**&lt;/center&gt;/* 右对齐 */&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;/* 右对齐 */&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt; 字体大小和颜色 1&lt;font color="#xxxxxx" size="number"&gt;**&lt;/font&gt; 分割线和空行 12&lt;hr /&gt;&lt;br /&gt; 关于Markdown的更多细节，可以参看：Markdown 语法说明 (简体中文版)，对于Markdown的规范，可以看一下 ：Google Markdown Style Guide 或者 Markdown Style Guide]]></content>
@@ -482,6 +460,17 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于Python中__str__和__repr__的区别]]></title>
+    <url>%2F2018%2F01%2F05%2F%E5%85%B3%E4%BA%8EPython%E4%B8%AD-str-%E5%92%8C-repr-%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[__repr__和__str__这两个方法都是用于显示的，但实际却存在一些细微的差异，具体我们可以通过一个简单例子来比较一下它们之间有何不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return 'hello'&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就会发现无论输出对象，还是调用__repr__和__str__方法，甚至通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return 'hello'&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很直观了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。因为我们覆盖了先前的__repr__方法，即使没有提前覆盖__repr__方法，我们得出的结果依然也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中，例如交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
