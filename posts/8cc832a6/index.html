@@ -1,0 +1,1219 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="TCP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="天马的故乡" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="传输层里比较重要的两个协议，一个是TCP，一个就是UDP了，而且这两个协议往往放在一起来讲，那么它们之间具体的区别又是啥，又有什么联系呢？TCP的状态机又是什么？">
+<meta name="keywords" content="TCP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCP和UDP浅析">
+<meta property="og:url" content="https://www.shengshiyu.cn/posts/8cc832a6/index.html">
+<meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="传输层里比较重要的两个协议，一个是TCP，一个就是UDP了，而且这两个协议往往放在一起来讲，那么它们之间具体的区别又是啥，又有什么联系呢？TCP的状态机又是什么？">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%90.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%901.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%902.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%903.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%904.jpg">
+<meta property="og:updated_time" content="2018-12-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TCP和UDP浅析">
+<meta name="twitter:description" content="传输层里比较重要的两个协议，一个是TCP，一个就是UDP了，而且这两个协议往往放在一起来讲，那么它们之间具体的区别又是啥，又有什么联系呢？TCP的状态机又是什么？">
+<meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%90.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.shengshiyu.cn/posts/8cc832a6/"/>
+
+
+
+
+
+  <title>TCP和UDP浅析 | 天马的故乡</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-102036861-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <a href="https://github.com/Robben0508" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">天马的故乡</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-rainbow">
+          <a href="/rainbow" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            彩虹汗珠
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/something" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            清欢杂记
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://www.shengshiyu.cn/posts/8cc832a6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="沉默的超云星">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天马的故乡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">TCP和UDP浅析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T00:00:00+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,309 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  传输层里比较重要的两个协议，一个是TCP，一个就是UDP了，而且这两个协议往往放在一起来讲，那么它们之间具体的区别又是啥，又有什么联系呢？TCP的状态机又是什么？
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%90.jpg" alt="TCP和UDP浅析"></p>
+<h1 id="关于UDP你需要知道"><a href="#关于UDP你需要知道" class="headerlink" title="关于UDP你需要知道"></a>关于UDP你需要知道</h1><p>UDP继承了IP包的特性，不保证不丢失，不保证顺序到达，它只管发出去，打个比方，它就像懵懂无知的小孩，它认为只要是发出去的东西，很容易就能送达，不会丢包。而且它<strong>不会建立连接，它也不会进行拥塞控制</strong>，只管往外发就行，一根筋。</p>
+<p>虽然UDP报文<strong>没有可靠性保证</strong>、<strong>顺序保证和拥塞控制</strong>，<strong>可靠性较差</strong>。但也正因为如此，UDP协议的控制选项较少，在数据传输过程中<strong>延迟小</strong>、<strong>数据传输效率高</strong>，适合对可靠性要求不高的应用程序，需要处理速度快，时延低，可以容忍少数丢包，或者可以保障可靠性的应用程序，如DNS、TFTP、SNMP等。</p>
+<p>在网络质量很差的环境下，UDP协议数据包丢失会比较严重。但是由于它传输过程中资源消耗小，处理速度快，所以通常音频、视频和普通数据在传送时使用UDP较多，因为它们即使偶尔丢失一两个数据包，也不会对接收结果产生太大影响。</p>
+<p>我们经常使用“ping”命令来测试两台主机之间TCP/IP通信是否正常，其实“ping”命令的原理就是向对方主机发送UDP数据包，然后对方主机确认收到数据包，如果数据包到达的消息及时反馈回来，那么网络就是通的。在默认状态下，一次“ping”操作发送4个数据包，对方主机发回的确认收到的数据包也是4包，这充分说明了UDP协议是<strong>面向非连接</strong>的协议，没有建立连接的过程。</p>
+<p>UDP协议使用报头中的校验值来保证数据的安全。校验值首先在数据发送方通过特殊的算法计算得出，在传递到接收方之后，还需要再重新计算。如果某个数据包在传输过程中被篡改或者损坏，发送和接收方的校验计算值将不会相符，由此UDP协议可以检测出是否出错。</p>
+<h1 id="关于TCP你需要知道"><a href="#关于TCP你需要知道" class="headerlink" title="关于TCP你需要知道"></a>关于TCP你需要知道</h1><p>TCP是<strong>基于连接</strong>的协议，在正式收发数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“握手”才能建立起来，也因为多了这样一个过程，TCP要比UDP复杂很多，可以看一下TCP头的格式。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%901.jpg" alt="TCP和UDP浅析1"></p>
+<p>TCP的包是没有IP地址的，那是IP层上的事。可以对比看出，相对于UDP来说，TCP多了一个<strong>序号</strong>，这个序号的作用是为了给发送的包标号，<strong>防止乱序</strong>，这样我们好知道哪一个应该先来，哪一个后来，做到有理有序。</p>
+<p>其次，它还具有一个<strong>滑动窗口</strong>，我们可以理解为这就是一个管道的大小，越大自然水的流速流量可以更大，越小自然流速就会变小，流量变少，TCP也一样，窗口的大小就是为了能够控制流量的，通过标识窗口大小，就可以知道对方的处理能力，而不会发送过快了，造成拥塞问题，用于<strong>解决流控</strong>的。</p>
+<h2 id="TCP-三次握手"><a href="#TCP-三次握手" class="headerlink" title="TCP 三次握手"></a>TCP 三次握手</h2><p>TCP连接的建立，我们通常称为“三次握手”，打个比方，大概就是这样：<br><strong>A：你好，我是A，想和你连接<br>B：你好A，我是B，我收到你提出的连接请求了<br>A：好的B，收到了</strong></p>
+<p>为啥一定要是三次呢？不是两次或者四次，当A发起一个连接是，如果B没有回复，它又如何知道B收到了呢，它会以为包丢了，或者超时未达，又或者B压根不想和它连接，它会很懵逼，以至于可能再发。</p>
+<p>当B收到了请求包，就知道了A的存在，也知道A想和它连接，而且它要是不回复，A会继续重试“骚扰”它一阵子，直到A自己放弃，建立连接失败。如果B愿意连接，OK，立马发个应答包过去，告诉A，我同意和你连接了。</p>
+<p>但是，这个过程一样会遇到种种未知错误，比如这个应答包丢了。。。那A不知道啊，继续“骚扰”。。。所以B为了不受其烦，肯定要为了确保应答到达，不断尝试重发，只要一次到达，它就解脱了。至于怎么确认到达，当然是等A收到了应答包，然后欢呼雀跃的再发送一个应答包，表示”收到了，我们连接吧！“不过你可能会觉得，那我们也要确定A这个应答包到达B啊，不然B咋知道A收到他第二次握手发的包，难道不应该四次握手吗？<br>其实四次握手也是可以的，几十上百次都OK，但那也不能保证就真的可靠了，只要双方的消息都有去有回，就基本可以了。</p>
+<p>A当然可以建立连接后空闲着，就是不“搭理”B，对于B来说，对于A这种“占着茅坑不拉屎”的行为，自然可以选择主动关闭，从而把空出的资源给其他客户端使用。</p>
+<p>TCP里的序号在“三次握手”中，可以很有效的解决丢包问题，当它俩连接后，A发送了很多个有序排列的包，但中途可能由于种种未知原因，丢了一个，A不知道，但B知道A发的包的总数，它一数，好像差了一个，然后再告诉A。而且这个序号的起始序号是随时间变化的，不会重复，为了防止某些包绕路，等到了其实已经无用了，所以IP包头里有个TTL，也就是生存时间。</p>
+<p>这里有个<strong>时序图</strong>，可以看一下，而且TCP头里还有一些<strong>状态位</strong>，其中<strong>SYN</strong>表示发起一个连接，<strong>ACK</strong>表示回复，<strong>RST</strong>表示重新连接，<strong>FIN</strong>表示结束连接，这样这个时序图就好理解了。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%902.jpg" alt="TCP和UDP浅析2"></p>
+<h2 id="TCP-四次挥手"><a href="#TCP-四次挥手" class="headerlink" title="TCP 四次挥手"></a>TCP 四次挥手</h2><p>嗯，说散就散，说完了连接，该说下“四次挥手”了，它大概是这样的：<br><strong>A：我们分手吧<br>B: 哦，你想分了啊，那好吧，知道了。。。</strong></p>
+<p>这个时候，只是A想分手离开了，也就是A不再发送数据，那B能不能在ACK的时候直接选择关闭呢，反正A都要分了，自然是不行的，因为A可能是发完了最后的数据就准备分手了，但是B还没做完它的事情，还是可以发送数据的，处在一种半关闭状态，这个时候A可以选择不再接受数据，也可以选择最后再接受一段数据，等待B也主动关闭。于是就有了：<br><strong>B： OK，那我不陪你了，再见<br>A： 嗯，再见</strong></p>
+<p>然后整个连接就关闭了，但是上面是一种理想情况下的分手，可能会遇到很多异常情况，例如，A说完分手后，直接走了，B不知道，B发的回复A就收不到了，B会陷入不知所措。也有可能是B说完分手后，他倒是处于半关闭的还在着，B直接生气走了，A也会陷入两难抉择，究竟B是还有事没处理完，还是一会就关闭了，针对这一系列问题，我们来看断开连接时候的时序图。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%903.jpg" alt="TCP和UDP浅析3"></p>
+<p>从图中我们可以看到，当A说分手了，就进入<strong>FIN_WAIT_1</strong>的状态，可以理解为等待结束第一阶段，而B回复完A后也相应进入<strong>CLOSE_WAIT</strong>状态，理解为等待关闭。A收到B的回复，就进入了<strong>FIN_WAIT_2</strong>状态，如果此时B直接离开了，那A就一直保持在这个状态。如果B没有离开，主动地又说“再见”，然后它就进入了<strong>LSAT_ASK</strong>状态，然后A收到了B说得“再见”他也发送响应，“嗯，再见”然后进入了<strong>TIME_WAIT</strong>状态，当B收到A的ASK就会关闭了。而假如这个ASK没有到达，因为只有到达B才会进入关闭，但A已经进入关闭倒计时了，它会保持在这个状态一段时间，然后自动的关闭了，所以这段时间里，B会不断地发送“再见”，直到收到一条A的ASK为止。</p>
+<p>假如B在A的最后这段“停留期”，还是没有等来一个回复，虽然它还是会发，当A收到这个后，就会直接回复一个<strong>RST</strong>，B就知道A跑了，就不再发“再见”了。</p>
+<h2 id="TCP-状态机"><a href="#TCP-状态机" class="headerlink" title="TCP 状态机"></a>TCP 状态机</h2><p>其实就是将TCP连接和分手的两个时序图结合起来，就是表面看起来高大上的<strong>TCP状态机</strong>了。网络上的传输是没有连接的，包括TCP也是一样的，所谓的连接不过是通讯的双方维护的一个“<strong>连接状态</strong>”<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%904.jpg" alt="TCP和UDP浅析4"></p>
+
+      
+    </div>
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">END</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      沉默的超云星
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.shengshiyu.cn/posts/8cc832a6/" title="TCP和UDP浅析">https://www.shengshiyu.cn/posts/8cc832a6/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/TCP/" rel="tag"><i class="fa fa-tag"></i> TCP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/62359f54/" rel="next" title="谈谈大众传媒">
+                <i class="fa fa-chevron-left"></i> 谈谈大众传媒
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/fbb6f1be/" rel="prev" title="浅谈Spring Bean的生命周期和作用域">
+                浅谈Spring Bean的生命周期和作用域 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="沉默的超云星" />
+          <p class="site-author-name" itemprop="name">沉默的超云星</p>
+           
+              <p class="site-description motion-element" itemprop="description">物有本末，事有终始，知所先后，则近道矣</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">45</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Robben0508" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-heartbeat"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-spinner"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于UDP你需要知道"><span class="nav-number">1.</span> <span class="nav-text">关于UDP你需要知道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于TCP你需要知道"><span class="nav-number">2.</span> <span class="nav-text">关于TCP你需要知道</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-三次握手"><span class="nav-number">2.1.</span> <span class="nav-text">TCP 三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-四次挥手"><span class="nav-number">2.2.</span> <span class="nav-text">TCP 四次挥手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-状态机"><span class="nav-number">2.3.</span> <span class="nav-text">TCP 状态机</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">沉默的超云星</span>
+</div>
+
+
+<!--div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+-->
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
