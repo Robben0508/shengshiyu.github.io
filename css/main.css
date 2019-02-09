@@ -1687,7 +1687,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0546d7;
+  background: #86ff9a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2629,8 +2629,11 @@ h5,
 h6 {
   color: #333;
 }
-a.somethings {
-  font-size: 20px;
+div.somethings > a {
+  font-size: 19px;
+}
+div.rainbow > a {
+  font-size: 17px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
