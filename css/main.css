@@ -1687,7 +1687,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffde24;
+  background: #ffff58;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2617,6 +2617,20 @@ blockquote {
 }
 .links-of-author a:before {
   background: #85ff00;
+}
+strong {
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+}
+a {
+  font-size: 20px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
