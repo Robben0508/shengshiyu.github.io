@@ -102,19 +102,20 @@
 
 
 
-<meta name="description" content="Tomcat是一个免费的开源的Serlvet容器">
+<meta name="description" content="Tomcat是一个免费的开源的Serlvet容器，Tomcat能够动态的生成资源并返回到客户端，简单的说就是一个运行JAVA的网络服务器，底层是Socket的一个程序。">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat学习总结">
 <meta property="og:url" content="https://www.shengshiyu.cn/posts/9b6e0dfb/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="Tomcat是一个免费的开源的Serlvet容器">
+<meta property="og:description" content="Tomcat是一个免费的开源的Serlvet容器，Tomcat能够动态的生成资源并返回到客户端，简单的说就是一个运行JAVA的网络服务器，底层是Socket的一个程序。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%931.jpg">
 <meta property="og:updated_time" content="2018-09-22T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat学习总结">
-<meta name="twitter:description" content="Tomcat是一个免费的开源的Serlvet容器">
+<meta name="twitter:description" content="Tomcat是一个免费的开源的Serlvet容器，Tomcat能够动态的生成资源并返回到客户端，简单的说就是一个运行JAVA的网络服务器，底层是Socket的一个程序。">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.jpg">
 
 
@@ -408,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  9 字
+                  882 字
                 </span>
               
 
@@ -420,7 +421,7 @@
 
           
               <div class="post-description">
-                  Tomcat是一个免费的开源的Serlvet容器
+                  Tomcat是一个免费的开源的Serlvet容器，Tomcat能够动态的生成资源并返回到客户端，简单的说就是一个运行JAVA的网络服务器，底层是Socket的一个程序。
               </div>
           
 
@@ -436,7 +437,53 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.jpg" alt="Tomcat学习总结"></p>
 <hr>
-<h1 id="关于Tomcat"><a href="#关于Tomcat" class="headerlink" title="关于Tomcat"></a>关于Tomcat</h1><h1 id="Tomcat的目录结构"><a href="#Tomcat的目录结构" class="headerlink" title="Tomcat的目录结构"></a>Tomcat的目录结构</h1>
+<h1 id="关于Tomcat"><a href="#关于Tomcat" class="headerlink" title="关于Tomcat"></a>关于Tomcat</h1><p>本质上Tomcat就是一个程序，由于我们用HTML，CSS写的页面只有我们自己可以访问，Tomcat就是提供了能让别人也可以访问我们页面的程序。</p>
+<p>Tomcat不是一个完整意义上的Jave EE服务器，它甚至都没有提供对哪怕是一个主要Java EE API的实现；但由于遵守apache开源协议，tomcat却又为众多的java应用程序服务器嵌入自己的产品中构建商业的java应用程序服务器，如JBoss和JOnAS。一些开源组件如Structs、Spring和Hibernate，Tomcat都能够对这些组件实现完美的支持。</p>
+<h1 id="Tomcat的目录结构"><a href="#Tomcat的目录结构" class="headerlink" title="Tomcat的目录结构"></a>Tomcat的目录结构</h1><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Tomcat%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%931.jpg" alt="Tomcat学习总结1"></p>
+<ul>
+<li><p><strong>backup</strong>: 保存了一些配置文件，是在第一次运行了Tomcat服务器以后产生的。它是对服务器进行简单的备份日志。和conf文件下的内容几乎一样。</p>
+</li>
+<li><p><strong>bin</strong>: 启动和关闭Tomcat脚本文件，很多环境变量也在此处设置。</p>
+</li>
+<li><p><strong>conf</strong>: Tomcat服务器的各种配置文件，其中Catalina子目录下可以设置默认加载的项目。Catalina文件可以设置tomcat服务器内存大小。context.xml可以用来配置数据源之类的东西。logging文件记录tomcat服务器运行的日志记录。server.xml可以设置域名、端口号、IP、请求的编码、默认加载的项目。web.xml可以设置tomcat服务器支持的文件类型。</p>
+</li>
+<li><p><strong>lib</strong>: Tomcat服务器所需要的所有Jar包。</p>
+</li>
+<li><p><strong>logs</strong>: Tomcat的日志文件。</p>
+</li>
+<li><p><strong>temp</strong>: Tomcat运行时的临时文件。</p>
+</li>
+<li><p><strong>webapps</strong>: Tomcat自带的两个web应用：admin和manager，用来管理Tomcat的Web服务。也是tomcat默认部署路径，目录用来存放应用程序，当Tomcat启动时会加载webapps目录下的应用程序。当然可以以war包、Jar包、普通文件夹三种形式发布应用。你也可以把应用程序存放在电脑磁盘的任意一个位置，但是在配置文件中要配置好，使其映射好。</p>
+</li>
+<li><p><strong>work</strong>: JSP经过Tomcat编译后生成的Servlet。</p>
+</li>
+<li><p><strong>wtpwebapps</strong>: 和webapps功能差不多，但是它是eclipse默认的部署路径。与webapps同时存在时，默认选择wtpwebapps。</p>
+</li>
+</ul>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Tomcat的配置文件在conf目录下，其中：</p>
+<ul>
+<li><p><strong>catalina.policy</strong>：Java相关的安全策略配置文件，在系统资源级别上提供访问控制的能力</p>
+</li>
+<li><p><strong>catalina.properties</strong>：Tomcat内部package的定义及访问相关的控制，也包括对通过类装载器装载的内容的控制</p>
+</li>
+<li><p><strong>context.xml</strong>：所有host的默认配置信息</p>
+</li>
+<li><p><strong>jaspic-providers.xml</strong>：tomcat 实现了 JASPIC 1.1   Maintenance Release B 标准，并通过这个配置文件集成第三方 JASPIC 身份验证</p>
+</li>
+<li><p><strong>jaspic-providers.xsd</strong>：定义了 jaspic-providers.xml 所使用到的标签</p>
+</li>
+<li><p><strong>logging.properties</strong>: 日志记录器相关的配置信息，可以用来定义日志记录的组件级别以及日志文件的存在位置等</p>
+</li>
+<li><p><strong>server.xml</strong>: Tomcat的主配置文件，包含Service, Connector, Engine, Realm, Valve, Hosts主组件的相关配置信息</p>
+</li>
+<li><p><strong>tomcat-user.xml</strong>：Realm认证时用到的相关角色、用户和密码等信息；Tomcat自带的manager默认情况下会用到此文件；在Tomcat中添加/删除用户，为用户指定角色等将通过编辑此文件实现</p>
+</li>
+<li><p><strong>tomcat-users.xsd</strong>：定义了 tomcat-users.xml 所使用到的标签</p>
+</li>
+<li><p><strong>web.xml</strong>：遵循Servlet规范标准的配置文件，用于配置servlet，并为所有的Web应用程序提供包括MIME映射等默认配置信息</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -686,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Tomcat"><span class="nav-number">1.</span> <span class="nav-text">关于Tomcat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat的目录结构"><span class="nav-number">2.</span> <span class="nav-text">Tomcat的目录结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Tomcat"><span class="nav-number">1.</span> <span class="nav-text">关于Tomcat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat的目录结构"><span class="nav-number">2.</span> <span class="nav-text">Tomcat的目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a></li></ol></div>
             
 
           </div>
