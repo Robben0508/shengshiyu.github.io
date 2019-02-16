@@ -102,16 +102,19 @@
 
 
 
+<meta name="description" content="线程使应用能够更加充分合理地协调利用 CPU、内存、网络、 1/0 等系统资源。结程的创建需要开辟虚拟机枪、本地方法枝、程序计数器等线程私有的内存空间。在线程销毁时需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源，增加并发编程风险。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程 ， 并实现类似主次线程">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈Java线程池">
 <meta property="og:url" content="https://www.shengshiyu.cn/posts/c158fcfc/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="线程使应用能够更加充分合理地协调利用 CPU、内存、网络、 1/0 等系统资源。结程的创建需要开辟虚拟机枪、本地方法枝、程序计数器等线程私有的内存空间。在线程销毁时需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源，增加并发编程风险。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程 ， 并实现类似主次线程">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg">
 <meta property="og:updated_time" content="2018-10-31T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈Java线程池">
+<meta name="twitter:description" content="线程使应用能够更加充分合理地协调利用 CPU、内存、网络、 1/0 等系统资源。结程的创建需要开辟虚拟机枪、本地方法枝、程序计数器等线程私有的内存空间。在线程销毁时需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源，增加并发编程风险。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程 ， 并实现类似主次线程">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg">
 
 
@@ -405,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  487 字
                 </span>
               
 
@@ -429,6 +432,8 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg" alt="浅谈Java线程池"></p>
+<p>线程使应用能够更加充分合理地协调利用 CPU、内存、网络、 1/0 等系统资源。<br>结程的创建需要开辟虚拟机枪、本地方法枝、程序计数器等线程私有的内存空间。在<br>线程销毁时需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源，<br>增加并发编程风险。另外，在服务器负载过大的时候，如何让新的线程等待或者友好<br>地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程 ， 并<br>实现类似主次线程隔离、定时执行、周期执行等任务。线程池的作用包括·<br>·利用线程池管理并复用线程、控制最大并发数等。<br>· 实现任务线程队列缓存策略和拒绝机制。<br>· 实现某些与时间相关的功能，如定时执行、周期执行等。<br>· 隔离线程环境。比如，交易服务和搜索服务在同一台服务器上，分别开启两<br>个线程池，交易线程的资源消耗明显要大；因此，通过配置独立的线程池 ，<br>将较慢的交易服务与搜索服务隔离开，避免各服务线程相互影响。</p>
+<p>使用<br>线程池要注意如下几点<br>（ ！ ）合土里以吕西叉参数 1 应根据实际业务场景来设 IT1于理 1内［作线梧数。<br>( 2 ）线捍资源必须油 dt支杠〉也提供，不允许在应用中 n1千显式创建线转。<br>( 3 ）创5扫射手现钱怦；1↑， fHlFJHljf’ 有冉义的吗科有机， j飞 ii¥ 出惜时间洲<br>线程池不允许使用 Executors ，而是通过 ThreadPoolExecutor 的方式创建 ，这样的<br>处理方式能更加明确线程池的运行规则，规避资源耗尽的风险。</p>
 
       
     </div>

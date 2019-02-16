@@ -102,16 +102,19 @@
 
 
 
+<meta name="description" content="Java中的static关键字和C/C++中的static关键字并不一样，Java中可以通过static关键字对数据、方法和类进行操控，进而影响初始化的执行顺序，这里对static关键字的用法进行简要总结。">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析Java的static关键字">
 <meta property="og:url" content="https://www.shengshiyu.cn/posts/b43f4028/index.html">
 <meta property="og:site_name" content="天马的故乡">
+<meta property="og:description" content="Java中的static关键字和C/C++中的static关键字并不一样，Java中可以通过static关键字对数据、方法和类进行操控，进而影响初始化的执行顺序，这里对static关键字的用法进行简要总结。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%A7%A3%E6%9E%90Java%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97.jpg">
 <meta property="og:updated_time" content="2018-08-12T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解析Java的static关键字">
+<meta name="twitter:description" content="Java中的static关键字和C/C++中的static关键字并不一样，Java中可以通过static关键字对数据、方法和类进行操控，进而影响初始化的执行顺序，这里对static关键字的用法进行简要总结。">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%A7%A3%E6%9E%90Java%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97.jpg">
 
 
@@ -405,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0 字
+                  1,496 字
                 </span>
               
 
@@ -415,6 +418,10 @@
             </div>
           
 
+          
+              <div class="post-description">
+                  Java中的static关键字和C/C++中的static关键字并不一样，Java中可以通过static关键字对数据、方法和类进行操控，进而影响初始化的执行顺序，这里对static关键字的用法进行简要总结。
+              </div>
           
 
         </div>
@@ -429,6 +436,33 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%A7%A3%E6%9E%90Java%E7%9A%84static%E5%85%B3%E9%94%AE%E5%AD%97.jpg" alt="解析Java的static关键字"></p>
+<h1 id="关于static关键字"><a href="#关于static关键字" class="headerlink" title="关于static关键字"></a>关于static关键字</h1><p>当我们创建一个对象时，相应的也会为对象分配一块数据存储空间，然后再调用对象的方法。但有时我们也需要一块独立的数据存储空间，而不用去纠结创建多少个对象，甚至不用创建对象，也能去调用方法。为此引入了static关键字。</p>
+<p>当声明一个方法或是域为static时，它就不会与包含它的那个类的任何对象实例关联在一起。即使从未创建对象，也可以调用其static方法或是访问static域，通过类名直接引用。而且仅占用固定的数据存储空间。</p>
+<h1 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h1><p>通过static修饰的方法称为静态方法，静态方法又称为类方法。本质其实就是没有this的方法，在没有任何对象的前提下，可以仅仅通过类本身来调用static方法，这一点上看有点全局方法的意味，但Java里是禁止使用全局方法的。如果具有其他语言基础，要注意Java里static关键字修饰的方法与全局方法的不同，并非等价，Java中的static关键字不会影响到变量或者方法的作用域。</p>
+<p>一个方法是静态的，它的行为也不会具有多态性。对于构造器来说，即使没有显式的使用static关键字修饰，但构造器实际也是静态方法，所以构造器并不具有多态性。</p>
+<p>使用静态方法需要注意：</p>
+<ul>
+<li>静态方法中不能使用实例成员交量和实例方法</li>
+<li>静态方法不能使用<code>super</code>和<code>this</code>关键字</li>
+</ul>
+<p>通常静态方法用于定义工具类的方法等，静态方法如果使用了可修改的对象，那么在并发时会存在线程安全问题。所以，工具类的静态方法与单例通常是相伴而生的。</p>
+<h1 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h1><p>通过static修饰的变量称为静态变量，静态变量又称为类变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰，没有被静态修饰的内容，其实是属于对象的特殊描述。</p>
+<p>静态变量的生命周期和成员变量不同，成员变量随对象的创建而存在，随着对象回收而释放。而静态变量随着类的加载而产生，随着类的消失才消失。</p>
+<h1 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h1><p>静态代码块在类加载的时候就被调用，并且只执行一次。静态代码块是先于构造方法执行的特殊代码块。静态代码块不能存在于任何方法体内，包括类静态方法和属性变量。</p>
+<h1 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h1><p>在内部类里，通过static修饰的内部类就是静态内部类。如：<code>static class StaticInnerClass{}</code></p>
+<p>定义静态内部类的好处有：</p>
+<ul>
+<li>作用域不会扩散到包外</li>
+<li>外部可以通过<code>OutClass.StaticInnerClass</code>的方式直接访问</li>
+<li>内部类可以访问外部类中的所有静态属性和方法。</li>
+</ul>
+<h1 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h1><p>由于static关键字的存在，对于初始化顺序需要格外注意，静态初始化只在类首次加载的时候进行一次。单类初始化顺序，一般是按：静态变量 &gt; 静态代码块 &gt; 成员变量 &gt; 非静态代码块 &gt; 构造器<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String staticField = <span class="string">"静态变量"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String field = <span class="string">"成员变量"</span>;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"非静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ClassTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"构造器"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ClassTest a = <span class="keyword">new</span> ClassTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>程序输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">静态变量</span><br><span class="line">静态代码块</span><br><span class="line">成员变量</span><br><span class="line">非静态代码块</span><br><span class="line">构造器</span><br></pre></td></tr></table></figure></p>
+<p>对于静态变量和静态代码块而言，它们的初始化顺序是由在类中的顺序决定，而不是静态变量一定先于静态代码块进行初始化。只是相对于成员变量和非静态代码块，它们优先级更高。</p>
+<p>对于包含继承关系的父类和子类初始化顺序，也可以通过一个例子进行测试：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String parentStaticField = <span class="string">"父类-静态变量"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(parentStaticField);</span><br><span class="line">        System.out.println(<span class="string">"父类-静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String parentField = <span class="string">"父类-成员变量"</span>;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(parentField);</span><br><span class="line">        System.out.println(<span class="string">"父类-非静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Parent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"父类-构造器"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String childStaticField = <span class="string">"子类-静态变量"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(childStaticField);</span><br><span class="line">        System.out.println(<span class="string">"子类-静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String childField = <span class="string">"子类-成员变量"</span>;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(childField);</span><br><span class="line">        System.out.println(<span class="string">"子类-非静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Child</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"子类-构造器"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Child();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>程序输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">父类-静态变量</span><br><span class="line">父类-静态代码块</span><br><span class="line">子类-静态变量</span><br><span class="line">子类-静态代码块</span><br><span class="line">父类-成员变量</span><br><span class="line">父类-非静态代码块</span><br><span class="line">父类-构造器</span><br><span class="line">子类-成员变量</span><br><span class="line">子类-非静态代码块</span><br><span class="line">子类-构造器</span><br></pre></td></tr></table></figure></p>
+<p>可以得出一个结论：父类静态变量 &gt; 父类静态代码块 &gt; 子类静态变量 &gt; 子类静态代码块 &gt; 父类成员变量 &gt; 父类非静态代码块 &gt; 父类构造器 &gt; 子类成员变量 &gt; 子类非静态代码块 &gt; 子类构造器</p>
+<p>总体上，父类静态初始化先于子类静态初始化进行，而静态变量和静态代码块的执行顺序由类中具体的顺序决定，然后再依次从父类进行初始化再到子类。</p>
 
       
     </div>
@@ -506,8 +540,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/928edaac/" rel="prev" title="final、finally、finalize的区别">
-                final、finally、finalize的区别 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/cbb9bef1/" rel="prev" title="JavaScript中的this原理">
+                JavaScript中的this原理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -660,6 +703,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于static关键字"><span class="nav-number">1.</span> <span class="nav-text">关于static关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态方法"><span class="nav-number">2.</span> <span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态变量"><span class="nav-number">3.</span> <span class="nav-text">静态变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态代码块"><span class="nav-number">4.</span> <span class="nav-text">静态代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态内部类"><span class="nav-number">5.</span> <span class="nav-text">静态内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化顺序"><span class="nav-number">6.</span> <span class="nav-text">初始化顺序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
