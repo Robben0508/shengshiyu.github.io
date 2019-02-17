@@ -111,6 +111,7 @@
 <meta property="og:description" content="接口和抽象类是Java面向对象里的两种不同机制，尽管某些方面它们看起来相似，但却有本质的不同，定义类的过程就是抽象和封装的过程，而接口与抽象类则是对实体类进行更高层次的抽象，仅定义公共行为和特征。由于Java本身不支持多重继承，灵活使用这两种机制，才能使开发更高效。 抽象类抽象类是不能实例化的类，使用abstract关键字修饰，除了不能实例化和一般的Java类没什么大的区别，可以包含或者不包含">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB1.jpg">
 <meta property="og:updated_time" content="2018-08-08T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="接口和抽象类的区别">
@@ -408,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  979 字
+                  998 字
                 </span>
               
 
@@ -441,7 +442,8 @@
 <p>接口中，它允许我们创建方法名，参数列表和返回类型，但不包含任何具体的实现。由于Java中并不支持多重继承，通过interface可以使我们创建一个可以被向上转型为多种基类的类型，变相实现多重继承的行为特征。</p>
 <p>接口中所有的方法都是public的，所以即使我们不显式指定，它们也是public的。</p>
 <p>接口也是可以继承的，通过继承，可以很容易的在接口中添加新的方法声明，还可以通过继承在接口中组合多个接口，接口的继承仍然使用extends关键字，其继承的类型也是接口。不过要注意在不同的接口中使用相同的方法名会加大阅读代码的难度，尽量避免这种情况发生。</p>
-<h1 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h1><p>接口与抽象类的共同点是都不能被实例化，但可以定义引用变量指向实例对象。抽象类在被继承时体现的是 is-a 关系，接口在被实现时体现的是 can-do 关系。与接口相比，抽象类通常是对同类事物相对具体的抽象，通常包含抽象方法、实体方法、属性变量。如果一个抽象类只有一个抽象方法，那么它就等同于一个接口。</p>
+<h1 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h1><p>关于接口和抽象类的区别可以看一下这个表：<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB1.jpg" alt="接口和抽象类的区别1"></p>
+<p>接口与抽象类的共同点是都不能被实例化，但可以定义引用变量指向实例对象。抽象类在被继承时体现的是 is-a 关系，接口在被实现时体现的是 can-do 关系。与接口相比，抽象类通常是对同类事物相对具体的抽象，通常包含抽象方法、实体方法、属性变量。如果一个抽象类只有一个抽象方法，那么它就等同于一个接口。</p>
 <p>使用接口和抽象类是为了防止创建该类的对象，确保别人使用你所设计的类时，仅仅是建立一个API接口，</p>
 <p>如果我们要创建任何不带方法定义和成员变量的基类，那么我们就应该选择接口而不是抽象类。当纠结定义接口还是抽象类时，优先推荐定义为接口，遵循接口隔离原则，按某个维度划分成多个接口，然后再用抽象类去 implements 某些接口，这样做可方便后续的扩展和重构。</p>
 

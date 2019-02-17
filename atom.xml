@@ -48,7 +48,7 @@
     <published>2019-01-01T16:00:00.000Z</published>
     <updated>2019-01-01T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Spring%20Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F.jpg" alt="浅谈Spring Bean的生命周期和作用域"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Spring%20Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F.jpg" alt="浅谈Spring Bean的生命周期和作用域"></p><p>在Spring中，bean就是由IOC容器初始化、装配并管理的对象，它的生命周期由Spring控制，</p>]]></content>
     
     <summary type="html">
     
@@ -114,27 +114,24 @@
   </entry>
   
   <entry>
-    <title>文化与媒介</title>
-    <link href="https://www.shengshiyu.cn/posts/5af50fe0/"/>
-    <id>https://www.shengshiyu.cn/posts/5af50fe0/</id>
+    <title>HTTP指北</title>
+    <link href="https://www.shengshiyu.cn/posts/2111c3b6/"/>
+    <id>https://www.shengshiyu.cn/posts/2111c3b6/</id>
     <published>2018-12-02T16:00:00.000Z</published>
     <updated>2018-12-02T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%96%87%E5%8C%96%E4%B8%8E%E5%AA%92%E4%BB%8B.jpg" alt="文化与媒介"></p><blockquote><p>有人说文化可以用四句话表达：植根于内心的修养，无须提醒的自觉，以约束为前提的自由，为他人着想的善良。</p></blockquote><p>“文化”是一个很抽象的概念，它本身也具有很强的人文意味，因为文化本身就是“人文化成”的一个缩写。人文一词在我看来，它是把很多客观现实的存在经过我们人为的重组与再认知，概括为了一个抽象层次更高的概念，而它是客观世界原本不存在的，并且它可以成为我们的一种生活方式。</p><p>相对于其他物种而言，“文化”活动可以说是人类所独有的，对于人类而言，文化是不可或缺的。为什么文化显得重要，从其他角度来看，或许文化是一种非物质化的“媒介”，它抽象层次更高，依托于很多不同的实体，它本身就能很好的传递一些信息，但它也可以很抽象，令人难以理解。</p><p>作为媒介而言，它最重要的作用就是作为承载信息的桥梁，实现信息的交换，如果一个媒介在信息交换的速度上很快，那么它对整个社会的影响力也会不断提高。文化，无论是对社会，还是对国家，又或者对公司，乃至个人，在某些方便都可以算是一个很好的“媒介”。但它不像文字或是图片，具有固定的形式，文化是不同实体结合抽象后的统称。</p><p>一些思想的具体内容，可能以文字这类形式没法具体的传递给对方，例如，中国传统武术文化里，太极的思想，其实它是一个极为抽象的概念，可能通过文字的理解我们很难领悟其中的真谛，达到知行合一。但武术文化不同，它将这样的思想和具体的动作结合，当我们在演练时，我们可以通过具体的动作，将那种刚柔并济，圆润统一之意具体的外化表现出来，通过这样的形式加深我们对于“太极”的理解，乃至上升到哲学里的矛盾的对立与统一。这类复杂抽象的哲学思想，通过武术文化的具象表现形式，可以有效地传递给对方。</p><p>不同的地方有着不同的文化，它们所承载的东西也截然不同。就像在公司工作时，当一个公司刚起步，处于初创阶段，可能人才，资金，技术会很重要，但随着时间的推移，公司不断的发展壮大，就需要把这些有形资源变为具体的流程和价值标准来执行，当一个公司发展足够庞大，那么就需要企业拥有自己的文化，由文化价值观来驱动各项流程的顺利实施。所以我们不光要学习国外先进企业的研发能力，更要学习他们的职业文化，达成企业到员工之间的一种无形的沟通桥梁。</p><p>若有更好的方式能实现“文化”所发挥的作用，那么文化的作用便会被弱化，但在某些方面“文化”确实是一个出色的“媒介”。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%971.jpg" alt="HTTP指北1"></p><h1 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h1><p>HTTP是应用层的协议，当我们打开一个网页时，例如：<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>,浏览器会将这个域名地址发送给DNS服务器，然后解析为具体的IP地址。</p><p>建立好连接后，浏览器就可以发送HTTP的请求了，而一个完整的HTTP请求报文由三部分组成：<strong>请求行</strong>、<strong>请求头（首部）</strong>、<strong>请求体（实体）</strong>。每一行的末尾都有回车和换行，在请求体和请求头之间另起一行。其中请求行指定的是请求方法、请求URL、协议版本；请求头是以key:value这样的键值对的形式存在的，请求体就是要传输的数据。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%972.jpg" alt="HTTP指北2"></p><p>HTTP里有很多请求方法，其中最常用的就那么几个，对于访问网页来说，使用的最多的就是<strong>GET</strong>方法，用来向服务器端获取一些资源，具体返回什么，由服务端来决定。</p><p>另一个常用的请求方法类型是<strong>POST</strong>，它需要你主动告诉服务端一些信息，一般这些信息放在请求体里，与GET不同，POST更多是用来更新资源信息，GET提交请求的数据实体是放在URL后面，用?来分割，参数用&amp;连接，而且数据长度是有限制的，视具体的客户端而定，而POST没有限制，而且GET提交的数据是不安全的，因为相关参数会暴露在URL上。</p><p>还有一种类型，叫做<strong>PUT</strong>，它的作用是向指定资源位置上传最新内容，类似于FTP协议，文件内容包含在请求体里，不过HTTP服务器一般是不允许上传文件的，所以PUT和POST就都变成了要传给服务器内容的方法。</p><p>最后一种比较常见的方法就是<strong>DELETE</strong>，主要就是用来删除文件，是与PUT相反的方法，DELETE是要求返回URL指定的资源。</p><p>请求行的下面就是请求头了，保存了一些很重要的字段，例如, <strong>Content-Type</strong> 是指正文格式，如果是JSON格式的，就要把值设为JSON，而类似 <strong>Accept-Charset</strong> 则表示客户端可以接受的字符集，避免不必要的乱码。首部字段有很多，其实通过名字我们就能大概它的用法的，用到的时候可以想了解细节再去查。</p><p>当我们使用HTTP发送请求时，由于它是基于<strong>TCP</strong>协议，所以它使用面向连接的方式发送请求，在发送每段报文时，都需要对方回应一个ACK，确认已经到达，如果没有收到对方的回复，TCP就会重新进行传输，直到到达为止，而这个过程是TCP负责的，也就是说无论重新传输了几次，对于HTTP来说它只进行了一次传输，由TCP来完成这个送达的过程。</p><p>TCP每发送一个报文都会加上自己本身所在的地址以及它想要到达的另一端的位置，将它们放在IP头里，然后交给IP层进行传输。IP层会查看目标地址和自己所在的地址是否同在一个局域网里，如果在的话就发送ARP协议，获取目标地址的MAC地址，然后把自己的MAC地址和目标MAC地址放到MAC头发送出去，由另一端来进行层层对比确认，然后发送一个ACK，确认到达。如果不在一个局域网里，就要经过网关，而MAC头里放的就是网关的地址，因为我们不知道目标的MAC地址，网关再根据路由协议来获取下一跳的路由器MAC地址，然后加入到目标MAC地址那，由于还不是真正的目标MAC地址，会不断重复这个“寻找”的过程，直到下一跳是目标所在，然后获取到目标的MAC地址。</p><p>在TCP头里还有端口号，通过确认MAC地址，IP地址后，通过端口号，目标机器就会知道哪一个进程需要这个包，然后发送给那个进程，例如HTTP服务器，然后HTTP服务器就知道请求的资源是什么，然后把相关资源发送给客户端。</p><p>HTTP的返回报文和响应报文类似，简单来说响应报文由<strong>状态行</strong>、<strong>响应头（首部）</strong>、<strong>响应体（实体）</strong>组成，其中第一行是状态行，包含HTTP版本，状态码和状态短语，在一个回车换行之后是响应头，也是以键值对的形式，之后是响应体，也就是要传输的数据。</p><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%973.jpg" alt="HTTTP指北3"></p><h1 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h1><ul><li><strong>HTTP协议是无状态的</strong><br>什么是无状态，就是协议对于事务处理没有记忆能力，对于同一个URL请求没有上下文的联系，每一次的请求都是独立的，不会受前后结果的差异影响响应，但为了使它具有状态的特点，于是引入了 cookis 和 session 机制。</li><li><strong>基于TCP协议</strong><br>HTTP协议属于应用层，它的目的是规定客户端和服务端数据传输的格式和数据交互行为，而数据传输的实现，它是基于传输层TCP协议实现的，它本身并不能进行数据传输。</li></ul><h1 id="HTTP的响应状态码"><a href="#HTTP的响应状态码" class="headerlink" title="HTTP的响应状态码"></a>HTTP的响应状态码</h1><p>状态码是用来告知客户端服务器端处理请求的结果。凭借状态码用户可以知道服务器是请求处理成功、失败或者是被转发；这样出现了错误也好定位。状态码是由3位数字加原因短语组成。3位数字中的第一位是用来指定状态的类别。共有五个类别。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTTP%E6%8C%87%E5%8C%974.png" alt="HTTTP指北3"><br>不过常用的也就16种，下面来详细介绍下：</p><p><strong>1. 200：OK</strong><br>代表请求被正常的处理成功</p><p><strong>2. 204：No Content</strong><br>请求处理成功，但是没有数据实体返回，也不允许有实体返回。比如说HEAD请求，可能就会返回204 No Content，因为HEAD就是只获取头信息。</p><p><strong>3. 206：Partial Content</strong><br>这是客户端使用Content-Range指定了需要的实体数据的范围，然后服务端处理请求成功之后返回用户需要的这一部分数据而不是全部，执行的请求就是GET。返回码就是206：Partial Content。</p><p><strong>4. 301： Moved Permanently</strong><br>代表永久性定向。该状态码表示请求的资源已经被分配了新的URL，以后应该使用资源现在指定的URL。也就是说如果已经把资源对应的URL保存为书签了，这是应该按照Location首部字段提示的URL重新保存。</p><p><strong>5. 302：Found</strong><br>代表临时重定向。该状态码表示请求的资源已经被分配了新的URL，但是和301的区别是302代表的不是永久性的移动，只是临时的。就是说这个URL还可能会发生改变。如果保存成书签了也不会更新。</p><p><strong>6. 303：See Other</strong><br>和302的区别是303明确规定客户端应当使用GET方法。</p><p><strong>7. 304：Not Modified</strong><br>该状态码表示客户端发送附带条件请求时，服务器端允许请求访问资源，但是没有满足条件。304状态码返回时不包含任何数据实体。304虽然被划分在3XX中但是和重定向没有关系。</p><p><strong>8. 307：Temporary Redirect</strong><br>临时重定向，与302 Found相同，但是302会把POST改成GET，而307就不会。</p><p><strong>9.  400：Bad Request</strong><br>表示请求报文中存在语法错误。需要修改后再次发送。</p><p><strong>10. 401：Unauthorized</strong><br>表示发送的请求需要有通过HTTP认证的认证信息。</p><p><strong>11. 403：Forbidden</strong><br>表明请求访问的资源被拒绝了。没有获得服务器的访问权限，IP被禁止等。</p><p><strong>12. 404：Not Found</strong><br>表明请求的资源在服务器上找不到。当然也可以在服务器拒绝请求且不想说明理由时使用。</p><p><strong>13. 408：Request Timeout</strong><br>表示客户端请求超时，就是在客户端和服务器建立连接后服务器在一定时间内没有收到客户端的请求。</p><p><strong>14. 500：Internal Server Error</strong><br>表明服务器端在执行请求时发生了错误，很有可能是服务端程序的Bug或者临时故障。</p><p><strong>15. 503：Service Unavailable</strong><br>表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。如果事先得知解除以上状况需要的时间，最好写入Retry-After字段再返回给客户端。</p><p><strong>16. 504：Getaway Timeout</strong><br>网关超时，是代理服务器等待应用服务器响应时的超时，和408 Request Timeout的却别就是504是服务器的原因而不是客户端的原因。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。
     
     </summary>
     
-      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
     
     
-      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="HTTP" scheme="https://www.shengshiyu.cn/tags/HTTP/"/>
     
   </entry>
   
@@ -164,17 +161,20 @@
   </entry>
   
   <entry>
-    <title>PO、VO、BO、DTO、POJO、DAO之间的关系</title>
-    <link href="https://www.shengshiyu.cn/posts/a24ff975/"/>
-    <id>https://www.shengshiyu.cn/posts/a24ff975/</id>
-    <published>2018-11-21T16:00:00.000Z</published>
-    <updated>2018-11-21T16:00:00.000Z</updated>
+    <title>浅谈Java线程池</title>
+    <link href="https://www.shengshiyu.cn/posts/c158fcfc/"/>
+    <id>https://www.shengshiyu.cn/posts/c158fcfc/</id>
+    <published>2018-10-31T16:00:00.000Z</published>
+    <updated>2018-10-31T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><h1 id="PO（persistant-object持久对象）"><a href="#PO（persistant-object持久对象）" class="headerlink" title="PO（persistant object持久对象）"></a>PO（persistant object持久对象）</h1><p>PO就是数据库中的一条记录，只是把一条记录作为一个对象处理，可以方便的转化为其他对象。有时也被称为Data对象，对应数据库中的entity。PO中不应该包含任何对数据库的操作。PO是向数据库中添加新数据时创建，删除数据库中数据时削除的。并且它只能存活在一个数据库连接中，断开连接即被销毁。PO有状态的，每个属性代表其当前的状态。它是物理数据的对象表示。使用它，可以使我们的程序与物理数据解耦，并且可以简化对象数据与物理数据之间的转换。PO的属性是跟数据库表的字段一一对应的</p><h1 id="VO（value-object值对象-view-object表现层对象"><a href="#VO（value-object值对象-view-object表现层对象" class="headerlink" title="VO（value object值对象/view object表现层对象)"></a>VO（value object值对象/view object表现层对象)</h1><p>主要对应界面显示的数据对象,可以和表对应，也可以不，这根据业务的需要。VO是用new关键字创建，由GC回收。存活在业务层，是业务逻辑使用的，他存活的的目的就是为数据提供一个生存的地方。VO的属性是根据当前业务的不同而不同的，也就是说，它的每一个属性都一一对应当前业务逻辑所需要的数据的名称。</p><p>一个VO可以只是PO的部分，也可以是多个PO构成，同样也可以等同于一个PO（当然我是指他们的属性）。正因为这样，PO独立出来，数据持久层也就独立出来了，它不会受到任何业务的干涉。又正因为这样，业务逻辑层也独立开来，它不会受到数据持久层的影响，业务层关心的只是业务逻辑的处理，至于怎么存怎么读交给别人吧！不过，另外一点，如果我们没有使用数据持久层，那么PO和VO也可以是同一个东西，但这并不好。</p><h1 id="BO-business-object业务对象"><a href="#BO-business-object业务对象" class="headerlink" title="BO(business object业务对象)"></a>BO(business object业务对象)</h1><p>主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象，通常需要将BO转化成PO，才能进行数据的持久化，反之，从DB中得到的PO，需要转化成BO才能在业务层使用。它只包含业务对象的属性或是方法，或者二者都包含。</p><h1 id="DTO（Data-Transfer-Object数据传输对象）"><a href="#DTO（Data-Transfer-Object数据传输对象）" class="headerlink" title="DTO（Data Transfer Object数据传输对象）"></a>DTO（Data Transfer Object数据传输对象）</h1><p>主要用于远程调用等需要大量传输对象的地方</p><h1 id="POJO（plain-ordinary-java-object-简单Java对象）"><a href="#POJO（plain-ordinary-java-object-简单Java对象）" class="headerlink" title="POJO（plain ordinary java object 简单Java对象）"></a>POJO（plain ordinary java object 简单Java对象）</h1><p>一个最常见的的对象了，只有属性字段及setter和getter方法,属于一个中间对象，可以转化为PO、DTO、VO，一个POJO持久化之后就是PO；POJO在传输过程中，就会转化为DTP，这个传输过程就是DTO；POJO用作表示层就是VO</p><h1 id="DAO（data-access-object数据访问对象）"><a href="#DAO（data-access-object数据访问对象）" class="headerlink" title="DAO（data access object数据访问对象）"></a>DAO（data access object数据访问对象）</h1><p>学习数据库时遇到最多的对象了，它负责持久层的操作,主要用来封装对数据库的访问，提供数据库的CRUD操作.通过他可以把POJO持久化为PO，</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg" alt="浅谈Java线程池"></p><h1 id="关于线程池"><a href="#关于线程池" class="headerlink" title="关于线程池"></a>关于线程池</h1><p>线程池是Java并发中一个非常重要的概念，可以把它理解为一个线程的池子，里面包含了若干线程，可以继续复用执行新任务，避免了线程创建的开销。</p><p>线程池类似于我们排队办理业务，办理业务时可能提供了若干的窗口，我们根据自己的需要选择合适的窗口。其中办理业务的各个业务员就是线程池中的<em>工作者线程</em>，而我们排队的队列就是线程池中的<em>任务队列</em>。</p><p>线程使应用能够合理地协调利用CPU、内存、网络等系统资源。线程的创建需要消耗资源，同时线程的销毁需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程。</p><h1 id="使用线程池"><a href="#使用线程池" class="headerlink" title="使用线程池"></a>使用线程池</h1><p>线程池不建议使用Executors去创建，而是通过ThreadPoolExecutor的方式。在ThreadPoolExecutor提供了四个构造方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoolExecutor</span> <span class="keyword">extends</span> <span class="title">AbstractExecutorService</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>通过其源码，可以看到其中包含四个参数，它们分别表示：</p><ul><li>corePoolSize：核心池的大小</li><li>maximumPoolSize：线程池最大线程数</li><li>keepAliveTime：表示线程没有任务执行时最多保持多久时间会终止</li><li>unit：参数keepAliveTime的时间单位</li><li>workQueue：工作队列，本质是一个阻塞队列，用来存储等待执行的任务，一般阻塞队列有：ArrayBlockingQueue（有界阻塞队列，一旦创建容量不能改变）、LinkedBlockingQueue（无界队列，没有预先定义容量）、SynchronousQueue（直接传递）。</li><li>threadFactory：线程工厂，主要用来创建线程</li><li>handler：当线程的数量已经到了边界值，并且workQueue中任务也达到最大值，此时需要使用它拒绝多余的任务</li></ul><p>Java并发类库目前提供了五种不同的线程池创建配置，它们分别是：</p><ul><li>newCatchedThreadPool():用来处理大量短时间工作任务，它会尝试缓存线程并重用，当无线程可用时，就会创建新的工作线程。如果线程限制且时间超过60秒，就会被终止并移出缓存。</li><li>newFixedThreadPool():重用指定数目的线程，除非任务数量超过了工作线程，就会在工作队列等待空线程出现，如果有工作线程结束退出，就会创建新的工作线程，达到上限的指定数目。</li><li>newSingleThreadExector(): 工作线程数目限制为1，保证所有任务都是顺序执行。</li><li>newSingleThreadScheduledExector()/newScheduledThreadPool(int corePoolSize): 可以定时或者周期性的进行切换调整，区别在于单一工作线程还是多个工作线程</li><li>newWorkStealingPool():Java8引入，可以并行的处理任务，但不保证处理顺序</li></ul><p>如果需要较多等待任务，例如I/O操作，可以参考下这个计算方法：<br><code>线程数 = CPU 核数 × （1 + 平均等待时间 / 平均工作时间）</code></p><p>使用线程池要注意：</p><ul><li>合理设置各类参数，根据需要合理的设置线程数，避免过度扩展线程，可能引起线程泄漏</li><li>不要自行创建线程，线程资源通过线程池来创建，避免资源耗尽的风险</li><li>避免任务堆积，如果处理跟不上入队的速度，工作线程数量不足，就会占用大量内存空间</li><li>线程和线程池的名称最好易于直观理解，必要时增加注释</li></ul><h1 id="线程池的好处"><a href="#线程池的好处" class="headerlink" title="线程池的好处"></a>线程池的好处</h1><p>线程池可以实现类似主次线程隔离、定时执行、周期执行等任务。使用线程池的好处有：</p><ul><li>有效的管理并复用线程、控制最大并发数。</li><li>有利于实现某些与时间相关的功能，如定时执行、周期执行等。</li><li>有利于实现任务线程队列缓存策略和拒绝机制。</li><li>隔离线程环境，避免相互间线程的影响。</li></ul>]]></content>
     
     <summary type="html">
     
-      关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
     
     </summary>
     
@@ -186,13 +186,13 @@
   </entry>
   
   <entry>
-    <title>谈谈产品需求分析</title>
-    <link href="https://www.shengshiyu.cn/posts/e380f54d/"/>
-    <id>https://www.shengshiyu.cn/posts/e380f54d/</id>
-    <published>2018-11-06T16:00:00.000Z</published>
-    <updated>2018-11-06T16:00:00.000Z</updated>
+    <title>文化与媒介</title>
+    <link href="https://www.shengshiyu.cn/posts/5af50fe0/"/>
+    <id>https://www.shengshiyu.cn/posts/5af50fe0/</id>
+    <published>2018-10-23T16:00:00.000Z</published>
+    <updated>2018-10-23T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%B0%88%E8%B0%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90.jpg" alt="谈谈产品需求分析"></p><p>对于一个好的产品而言，我们要确立标准，培养用户对于产品的习惯性的认知，它的外观是不是很具有标志性，我们能在众多的产品中很容易识别出来，不用花费很多心力。就像苹果公司的产品，它的工艺设计就是它最明显的标志，哪怕外形做到和它接近的同类产品，我们也能一眼识别出哪一个是苹果公司的产品。</p><p>其次，好的产品它的哪几个功能具有特色，并且是它所独有的，它完成同样的任务就是比一般的同类产品好。因为用户选择我们的产品，仅仅是为了更好的解决他们手头的任务。功能上应该比外观上更为重要。而且这些功能要易于使用，它的用户群体可以不用面对很高的门槛就能轻松使用。</p><p>就像创新扩散理论里提到的认知特征的几个方面：</p><ul><li>相对优越性，它相对于其他同类产品是否更优越，体现在什么方面</li><li>兼容性，它和生活的融合度如何，是否能够在生活中有应用的可能性</li><li>复杂性，它是否操作简单，利于人们上手直接操作，门槛低</li><li>可实验性，它是否具有试用的机会，而且实验过后能否把握用户的痛点，让用户能喜欢上</li><li>可观察性，新技术的显示度如何，是否能引起广泛的社会讨论，这个可能需要运营来促进这一过程的推进，提高技术曝光度。</li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%96%87%E5%8C%96%E4%B8%8E%E5%AA%92%E4%BB%8B.jpg" alt="文化与媒介"></p><blockquote><p>有人说文化可以用四句话表达：植根于内心的修养，无须提醒的自觉，以约束为前提的自由，为他人着想的善良。</p></blockquote><p>“文化”是一个很抽象的概念，它本身也具有很强的人文意味，因为文化本身就是“人文化成”的一个缩写。人文一词在我看来，它是把很多客观现实的存在经过我们人为的重组与再认知，概括为了一个抽象层次更高的概念，而它是客观世界原本不存在的，并且它可以成为我们的一种生活方式。</p><p>相对于其他物种而言，“文化”活动可以说是人类所独有的，对于人类而言，文化是不可或缺的。为什么文化显得重要，从其他角度来看，或许文化是一种非物质化的“媒介”，它抽象层次更高，依托于很多不同的实体，它本身就能很好的传递一些信息，但它也可以很抽象，令人难以理解。</p><p>作为媒介而言，它最重要的作用就是作为承载信息的桥梁，实现信息的交换，如果一个媒介在信息交换的速度上很快，那么它对整个社会的影响力也会不断提高。文化，无论是对社会，还是对国家，又或者对公司，乃至个人，在某些方便都可以算是一个很好的“媒介”。但它不像文字或是图片，具有固定的形式，文化是不同实体结合抽象后的统称。</p><p>一些思想的具体内容，可能以文字这类形式没法具体的传递给对方，例如，中国传统武术文化里，太极的思想，其实它是一个极为抽象的概念，可能通过文字的理解我们很难领悟其中的真谛，达到知行合一。但武术文化不同，它将这样的思想和具体的动作结合，当我们在演练时，我们可以通过具体的动作，将那种刚柔并济，圆润统一之意具体的外化表现出来，通过这样的形式加深我们对于“太极”的理解，乃至上升到哲学里的矛盾的对立与统一。这类复杂抽象的哲学思想，通过武术文化的具象表现形式，可以有效地传递给对方。</p><p>不同的地方有着不同的文化，它们所承载的东西也截然不同。就像在公司工作时，当一个公司刚起步，处于初创阶段，可能人才，资金，技术会很重要，但随着时间的推移，公司不断的发展壮大，就需要把这些有形资源变为具体的流程和价值标准来执行，当一个公司发展足够庞大，那么就需要企业拥有自己的文化，由文化价值观来驱动各项流程的顺利实施。所以我们不光要学习国外先进企业的研发能力，更要学习他们的职业文化，达成企业到员工之间的一种无形的沟通桥梁。</p><p>若有更好的方式能实现“文化”所发挥的作用，那么文化的作用便会被弱化，但在某些方面“文化”确实是一个出色的“媒介”。</p>]]></content>
     
     <summary type="html">
     
@@ -207,53 +207,6 @@
     
     
       <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅谈Java线程池</title>
-    <link href="https://www.shengshiyu.cn/posts/c158fcfc/"/>
-    <id>https://www.shengshiyu.cn/posts/c158fcfc/</id>
-    <published>2018-10-31T16:00:00.000Z</published>
-    <updated>2018-10-31T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg" alt="浅谈Java线程池"></p><p>线程使应用能够更加充分合理地协调利用 CPU、内存、网络、 1/0 等系统资源。<br>结程的创建需要开辟虚拟机枪、本地方法枝、程序计数器等线程私有的内存空间。在<br>线程销毁时需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源，<br>增加并发编程风险。另外，在服务器负载过大的时候，如何让新的线程等待或者友好<br>地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程 ， 并<br>实现类似主次线程隔离、定时执行、周期执行等任务。线程池的作用包括·<br>·利用线程池管理并复用线程、控制最大并发数等。<br>· 实现任务线程队列缓存策略和拒绝机制。<br>· 实现某些与时间相关的功能，如定时执行、周期执行等。<br>· 隔离线程环境。比如，交易服务和搜索服务在同一台服务器上，分别开启两<br>个线程池，交易线程的资源消耗明显要大；因此，通过配置独立的线程池 ，<br>将较慢的交易服务与搜索服务隔离开，避免各服务线程相互影响。</p><p>使用<br>线程池要注意如下几点<br>（ ！ ）合土里以吕西叉参数 1 应根据实际业务场景来设 IT1于理 1内［作线梧数。<br>( 2 ）线捍资源必须油 dt支杠〉也提供，不允许在应用中 n1千显式创建线转。<br>( 3 ）创5扫射手现钱怦；1↑， fHlFJHljf’ 有冉义的吗科有机， j飞 ii¥ 出惜时间洲<br>线程池不允许使用 Executors ，而是通过 ThreadPoolExecutor 的方式创建 ，这样的<br>处理方式能更加明确线程池的运行规则，规避资源耗尽的风险。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
-    
-    
-      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP指北</title>
-    <link href="https://www.shengshiyu.cn/posts/2111c3b6/"/>
-    <id>https://www.shengshiyu.cn/posts/2111c3b6/</id>
-    <published>2018-10-23T16:00:00.000Z</published>
-    <updated>2018-10-23T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%971.jpg" alt="HTTP指北1"></p><h1 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h1><p>HTTP是应用层的协议，当我们打开一个网页时，例如：<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>,浏览器会将这个域名地址发送给DNS服务器，然后解析为具体的IP地址。</p><p>建立好连接后，浏览器就可以发送HTTP的请求了，而一个完整的HTTP请求报文由三部分组成：<strong>请求行</strong>、<strong>请求头（首部）</strong>、<strong>请求体（实体）</strong>。每一行的末尾都有回车和换行，在请求体和请求头之间另起一行。其中请求行指定的是请求方法、请求URL、协议版本；请求头是以key:value这样的键值对的形式存在的，请求体就是要传输的数据。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%972.jpg" alt="HTTP指北2"></p><p>HTTP里有很多请求方法，其中最常用的就那么几个，对于访问网页来说，使用的最多的就是<strong>GET</strong>方法，用来向服务器端获取一些资源，具体返回什么，由服务端来决定。</p><p>另一个常用的请求方法类型是<strong>POST</strong>，它需要你主动告诉服务端一些信息，一般这些信息放在请求体里，与GET不同，POST更多是用来更新资源信息，GET提交请求的数据实体是放在URL后面，用?来分割，参数用&amp;连接，而且数据长度是有限制的，视具体的客户端而定，而POST没有限制，而且GET提交的数据是不安全的，因为相关参数会暴露在URL上。</p><p>还有一种类型，叫做<strong>PUT</strong>，它的作用是向指定资源位置上传最新内容，类似于FTP协议，文件内容包含在请求体里，不过HTTP服务器一般是不允许上传文件的，所以PUT和POST就都变成了要传给服务器内容的方法。</p><p>最后一种比较常见的方法就是<strong>DELETE</strong>，主要就是用来删除文件，是与PUT相反的方法，DELETE是要求返回URL指定的资源。</p><p>请求行的下面就是请求头了，保存了一些很重要的字段，例如, <strong>Content-Type</strong> 是指正文格式，如果是JSON格式的，就要把值设为JSON，而类似 <strong>Accept-Charset</strong> 则表示客户端可以接受的字符集，避免不必要的乱码。首部字段有很多，其实通过名字我们就能大概它的用法的，用到的时候可以想了解细节再去查。</p><p>当我们使用HTTP发送请求时，由于它是基于<strong>TCP</strong>协议，所以它使用面向连接的方式发送请求，在发送每段报文时，都需要对方回应一个ACK，确认已经到达，如果没有收到对方的回复，TCP就会重新进行传输，直到到达为止，而这个过程是TCP负责的，也就是说无论重新传输了几次，对于HTTP来说它只进行了一次传输，由TCP来完成这个送达的过程。</p><p>TCP每发送一个报文都会加上自己本身所在的地址以及它想要到达的另一端的位置，将它们放在IP头里，然后交给IP层进行传输。IP层会查看目标地址和自己所在的地址是否同在一个局域网里，如果在的话就发送ARP协议，获取目标地址的MAC地址，然后把自己的MAC地址和目标MAC地址放到MAC头发送出去，由另一端来进行层层对比确认，然后发送一个ACK，确认到达。如果不在一个局域网里，就要经过网关，而MAC头里放的就是网关的地址，因为我们不知道目标的MAC地址，网关再根据路由协议来获取下一跳的路由器MAC地址，然后加入到目标MAC地址那，由于还不是真正的目标MAC地址，会不断重复这个“寻找”的过程，直到下一跳是目标所在，然后获取到目标的MAC地址。</p><p>在TCP头里还有端口号，通过确认MAC地址，IP地址后，通过端口号，目标机器就会知道哪一个进程需要这个包，然后发送给那个进程，例如HTTP服务器，然后HTTP服务器就知道请求的资源是什么，然后把相关资源发送给客户端。</p><p>HTTP的返回报文和响应报文类似，简单来说响应报文由<strong>状态行</strong>、<strong>响应头（首部）</strong>、<strong>响应体（实体）</strong>组成，其中第一行是状态行，包含HTTP版本，状态码和状态短语，在一个回车换行之后是响应头，也是以键值对的形式，之后是响应体，也就是要传输的数据。</p><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTP%E6%8C%87%E5%8C%973.jpg" alt="HTTTP指北3"></p><h1 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h1><ul><li><strong>HTTP协议是无状态的</strong><br>什么是无状态，就是协议对于事务处理没有记忆能力，对于同一个URL请求没有上下文的联系，每一次的请求都是独立的，不会受前后结果的差异影响响应，但为了使它具有状态的特点，于是引入了 cookis 和 session 机制。</li><li><strong>基于TCP协议</strong><br>HTTP协议属于应用层，它的目的是规定客户端和服务端数据传输的格式和数据交互行为，而数据传输的实现，它是基于传输层TCP协议实现的，它本身并不能进行数据传输。</li></ul><h1 id="HTTP的响应状态码"><a href="#HTTP的响应状态码" class="headerlink" title="HTTP的响应状态码"></a>HTTP的响应状态码</h1><p>状态码是用来告知客户端服务器端处理请求的结果。凭借状态码用户可以知道服务器是请求处理成功、失败或者是被转发；这样出现了错误也好定位。状态码是由3位数字加原因短语组成。3位数字中的第一位是用来指定状态的类别。共有五个类别。<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/HTTTP%E6%8C%87%E5%8C%974.png" alt="HTTTP指北3"><br>不过常用的也就16种，下面来详细介绍下：</p><p><strong>1. 200：OK</strong><br>代表请求被正常的处理成功</p><p><strong>2. 204：No Content</strong><br>请求处理成功，但是没有数据实体返回，也不允许有实体返回。比如说HEAD请求，可能就会返回204 No Content，因为HEAD就是只获取头信息。</p><p><strong>3. 206：Partial Content</strong><br>这是客户端使用Content-Range指定了需要的实体数据的范围，然后服务端处理请求成功之后返回用户需要的这一部分数据而不是全部，执行的请求就是GET。返回码就是206：Partial Content。</p><p><strong>4. 301： Moved Permanently</strong><br>代表永久性定向。该状态码表示请求的资源已经被分配了新的URL，以后应该使用资源现在指定的URL。也就是说如果已经把资源对应的URL保存为书签了，这是应该按照Location首部字段提示的URL重新保存。</p><p><strong>5. 302：Found</strong><br>代表临时重定向。该状态码表示请求的资源已经被分配了新的URL，但是和301的区别是302代表的不是永久性的移动，只是临时的。就是说这个URL还可能会发生改变。如果保存成书签了也不会更新。</p><p><strong>6. 303：See Other</strong><br>和302的区别是303明确规定客户端应当使用GET方法。</p><p><strong>7. 304：Not Modified</strong><br>该状态码表示客户端发送附带条件请求时，服务器端允许请求访问资源，但是没有满足条件。304状态码返回时不包含任何数据实体。304虽然被划分在3XX中但是和重定向没有关系。</p><p><strong>8. 307：Temporary Redirect</strong><br>临时重定向，与302 Found相同，但是302会把POST改成GET，而307就不会。</p><p><strong>9.  400：Bad Request</strong><br>表示请求报文中存在语法错误。需要修改后再次发送。</p><p><strong>10. 401：Unauthorized</strong><br>表示发送的请求需要有通过HTTP认证的认证信息。</p><p><strong>11. 403：Forbidden</strong><br>表明请求访问的资源被拒绝了。没有获得服务器的访问权限，IP被禁止等。</p><p><strong>12. 404：Not Found</strong><br>表明请求的资源在服务器上找不到。当然也可以在服务器拒绝请求且不想说明理由时使用。</p><p><strong>13. 408：Request Timeout</strong><br>表示客户端请求超时，就是在客户端和服务器建立连接后服务器在一定时间内没有收到客户端的请求。</p><p><strong>14. 500：Internal Server Error</strong><br>表明服务器端在执行请求时发生了错误，很有可能是服务端程序的Bug或者临时故障。</p><p><strong>15. 503：Service Unavailable</strong><br>表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。如果事先得知解除以上状况需要的时间，最好写入Retry-After字段再返回给客户端。</p><p><strong>16. 504：Getaway Timeout</strong><br>网关超时，是代理服务器等待应用服务器响应时的超时，和408 Request Timeout的却别就是504是服务器的原因而不是客户端的原因。</p>]]></content>
-    
-    <summary type="html">
-    
-      HTTP的重要性无需多言了，几乎是每一个人上网使用的第一个协议，尤其对于技术岗位来说理解掌握HTTP协议是必须的，这里记录了HTTP的基础知识以及一些常见的用法。
-    
-    </summary>
-    
-      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
-    
-    
-      <category term="HTTP" scheme="https://www.shengshiyu.cn/tags/HTTP/"/>
     
   </entry>
   
@@ -430,13 +383,35 @@
   </entry>
   
   <entry>
+    <title>PO、VO、BO、DTO、POJO、DAO之间的关系</title>
+    <link href="https://www.shengshiyu.cn/posts/a24ff975/"/>
+    <id>https://www.shengshiyu.cn/posts/a24ff975/</id>
+    <published>2018-09-14T16:00:00.000Z</published>
+    <updated>2018-09-14T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><h1 id="PO（persistant-object持久对象）"><a href="#PO（persistant-object持久对象）" class="headerlink" title="PO（persistant object持久对象）"></a>PO（persistant object持久对象）</h1><p>PO就是数据库中的一条记录，只是把一条记录作为一个对象处理，可以方便的转化为其他对象。有时也被称为Data对象，对应数据库中的entity。PO中不应该包含任何对数据库的操作。PO是向数据库中添加新数据时创建，删除数据库中数据时削除的。并且它只能存活在一个数据库连接中，断开连接即被销毁。PO有状态的，每个属性代表其当前的状态。它是物理数据的对象表示。使用它，可以使我们的程序与物理数据解耦，并且可以简化对象数据与物理数据之间的转换。PO的属性是跟数据库表的字段一一对应的</p><h1 id="VO（value-object值对象-view-object表现层对象"><a href="#VO（value-object值对象-view-object表现层对象" class="headerlink" title="VO（value object值对象/view object表现层对象)"></a>VO（value object值对象/view object表现层对象)</h1><p>主要对应界面显示的数据对象,可以和表对应，也可以不，这根据业务的需要。VO是用new关键字创建，由GC回收。存活在业务层，是业务逻辑使用的，他存活的的目的就是为数据提供一个生存的地方。VO的属性是根据当前业务的不同而不同的，也就是说，它的每一个属性都一一对应当前业务逻辑所需要的数据的名称。</p><p>一个VO可以只是PO的部分，也可以是多个PO构成，同样也可以等同于一个PO（当然我是指他们的属性）。正因为这样，PO独立出来，数据持久层也就独立出来了，它不会受到任何业务的干涉。又正因为这样，业务逻辑层也独立开来，它不会受到数据持久层的影响，业务层关心的只是业务逻辑的处理，至于怎么存怎么读交给别人吧！不过，另外一点，如果我们没有使用数据持久层，那么PO和VO也可以是同一个东西，但这并不好。</p><h1 id="BO-business-object业务对象"><a href="#BO-business-object业务对象" class="headerlink" title="BO(business object业务对象)"></a>BO(business object业务对象)</h1><p>主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象，通常需要将BO转化成PO，才能进行数据的持久化，反之，从DB中得到的PO，需要转化成BO才能在业务层使用。它只包含业务对象的属性或是方法，或者二者都包含。</p><h1 id="DTO（Data-Transfer-Object数据传输对象）"><a href="#DTO（Data-Transfer-Object数据传输对象）" class="headerlink" title="DTO（Data Transfer Object数据传输对象）"></a>DTO（Data Transfer Object数据传输对象）</h1><p>主要用于远程调用等需要大量传输对象的地方</p><h1 id="POJO（plain-ordinary-java-object-简单Java对象）"><a href="#POJO（plain-ordinary-java-object-简单Java对象）" class="headerlink" title="POJO（plain ordinary java object 简单Java对象）"></a>POJO（plain ordinary java object 简单Java对象）</h1><p>一个最常见的的对象了，只有属性字段及setter和getter方法,属于一个中间对象，可以转化为PO、DTO、VO，一个POJO持久化之后就是PO；POJO在传输过程中，就会转化为DTP，这个传输过程就是DTO；POJO用作表示层就是VO</p><h1 id="DAO（data-access-object数据访问对象）"><a href="#DAO（data-access-object数据访问对象）" class="headerlink" title="DAO（data access object数据访问对象）"></a>DAO（data access object数据访问对象）</h1><p>学习数据库时遇到最多的对象了，它负责持久层的操作,主要用来封装对数据库的访问，提供数据库的CRUD操作.通过他可以把POJO持久化为PO，</p>]]></content>
+    
+    <summary type="html">
+    
+      关于PO、VO、BO、DTO、POJO、DAO，这几个是我们在开发中经常遇到的专业术语缩略词，这里专门总结下它们各自之间所代表的意思以及区别
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
+    
+    
+      <category term="Java" scheme="https://www.shengshiyu.cn/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java内部类的理解</title>
     <link href="https://www.shengshiyu.cn/posts/f7cd9195/"/>
     <id>https://www.shengshiyu.cn/posts/f7cd9195/</id>
     <published>2018-09-11T16:00:00.000Z</published>
     <updated>2018-09-11T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3.jpg" alt="Java内部类的理解"></p><p>内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。</p><p>静态内部类，如 static class StaticinnerC!ass {} ;<br>成员内部类，如： private class InstancelnnerC!ass {} ;<br>局部内部类，定义在方法或者表达式内部，<br>匿名内部类，如： (new Thread(){} ).start（）。</p><p>定义包内可见静态内部<br>类的方式很常见，这样做的好处是<br>( I ）作用域不会扩散到包外。<br>( 2 ）可以通过”外部类 ． 内部类”的方式直接访问。<br>( 3 ）内部类可以访问外部类申的所有静态属性和方法。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3.jpg" alt="Java内部类的理解"></p><p>内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。</p><h1 id="内部类的本质"><a href="#内部类的本质" class="headerlink" title="内部类的本质"></a>内部类的本质</h1><p>对Java虚拟机而言，内部类只是Java编译器的概念，他并不知道内部类是什么，因为每个内部类最终都会被编译为一个独立的类。</p><p>没一个内部类都可以替换为一个独立的类，就单纯的技术实现而言。内部类可以方便的访问外部类的私有变量，也可以通过private或是protected关键字，将内部类的实现对外完全隐藏，而一般的类只具有public和默认包访问权限。</p><p>如果在内部类里要生成对外部对象的引用，可以使用“外部类.this”，当我们要创建内部类的对象时与平时创建新对线略有不同，需要这样创建：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OutClass oc = <span class="keyword">new</span> OutClass();</span><br><span class="line">OutClass.InnerClass oi = oc.new InnerClass();</span><br></pre></td></tr></table></figure></p><h1 id="内部类的划分"><a href="#内部类的划分" class="headerlink" title="内部类的划分"></a>内部类的划分</h1><p>根据位置和方式的不同，主要有四种内部类</p><ul><li>静态内部类</li><li>成员内部类</li><li>局部内部类</li><li>匿名内部类</li></ul><h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><p>静态内部类有时也被称作嵌套类，静态内部类和静态方法或者静态代码块一样，都需要static关键字修饰，一个典型的静态内部类是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    String name1 = <span class="string">"Tom"</span>;</span><br><span class="line">    Static String name2 = <span class="string">"King"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInner</span> </span>&#123;</span><br><span class="line">    Static String name3 = <span class="string">"Oliver"</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name2);</span><br><span class="line">        System.out.println(name3);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>非静态内部类是不能定义静态成员的，同时外部类的静态成员才可以直接使用静态内部类，对于静态内部类来说，也不能访问外部类的实例成员。</p><p>定义包内可见静态内部类的方式很常见，这样做的好处是</p><ul><li>作用域不会扩散到包外。</li><li>可以通过”外部类.内部类”的方式直接访问。</li><li>内部类可以访问外部类申的所有静态属性和方法。</li></ul><h2 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h2><p>成员内部类也叫实例内部类，它作为外部类的一个成员存在，与外部类的属性和方法并列，成员内部类持有外部类的引用,只不过这个引用是隐式保存的，指向创建它的外部对象，成员内部类也是最常见的内部类。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(a+b);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h2><p>局部内部类也叫作方法内部类，它定义在外部类的方法中，局部内部类只在该方法中才能使用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">MInner</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(a);</span><br><span class="line">                System.out.println(b);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>如果内部类对象仅仅为外部类的某个方法使用，使用局部内部类，但要注意不能使用private、protected、public权限修饰符，也不能包含静态成员。</p><h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><p>匿名内部类也就是没有名字的内部类，这是java为了方便我们编写程序而设计的一个机制，因为有时候有的内部类只需要创建一个它的对象就可以了，以后再不会用到这个类，这时候使用匿名内部类就比较合适。</p><p>匿名内部类使用<code>new</code>创建，没有具体位置，默认继承或实现new后面的类型。匿名内部类编译后生成的.class文件的命名方式是”外部类名称$编号.class”，编号为1，2，3…n，编号为x的文件对应的就是第x个匿名类。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> Contents <span class="title">contents</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Contents() &#123;</span><br><span class="line">        <span class="comment">//匿名内部类</span></span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>匿名内部类末位的分号，并不是表示内部类结束，而是表示表达式的结束，只不过这个表达式正好包含了匿名内部类。</p><p>如果你需要在匿名内部类中使用一个外部类定义的对象，那么它的参数需要有final修饰才能通过编译，因为没有名字，所以也没有显式的构造器可以创建使用。</p><p>匿名内部类可以扩展类也可以用来实现接口，但不能二者兼备，而且对于接口来说，也只能实现一个接口。</p>]]></content>
     
     <summary type="html">
     
@@ -501,6 +476,31 @@
     
     
       <category term="JavaScript" scheme="https://www.shengshiyu.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何高效提问</title>
+    <link href="https://www.shengshiyu.cn/posts/95c05072/"/>
+    <id>https://www.shengshiyu.cn/posts/95c05072/</id>
+    <published>2018-08-20T16:00:00.000Z</published>
+    <updated>2018-08-20T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE.jpg" alt="如何高效提问"></p><p>如何提问是一门学问，不会提问的人很难通过问问题解决问题，最终可能变成别人替你“代劳”解决了问题。不懂得如何正确提问，无论是对于你还是对于被问的人都是十分痛苦的，久而久之，别人也失去了帮你解决问题的耐心。所以，如何正确高效的提出一个问题，甚至使得被问的人也能有所收获，是一个很有必要学习的方法。</p><p>首先我们要明确我们要问的问题，它属于哪一个范畴，如果是技术类的问题，它又会具体的归为某一个模块，我们可以将问题的范畴逐步确定和缩小。当然，每一个人的能力和水平是不一样的，可能有的人看问题很有针对性，一针见血，他根据他的经验和判断能把问题立马缩减到一个具体的范畴里，而有的人可能只能有个大致的模糊认知。</p><p>然后我们要明确我们发问的“对象”，我们最终想要的不过是解决问题的办法，那么除了向其他人提问，是否有更好的方式和其他途径解决问题。例如，善用搜索引擎，我们基本上能解决我们所遇到的大部分问题，尤其是对于技术类的问题，像 stackoverflow 这样的社区，你基本能找到你想要答案，或是阅读相关的文档或是手册，都是不错的办法。而且这样一个搜索的过程，本身也是在不断试错中学习，能使我们对于整个问题的把握更为清晰，下一次遇到同类问题，将搜索关键词与你的问题及可能的解决方案联系起来，还有助于引导其他有类似问题的人，举一反三。</p><p>不过，不是每次我们都能顺利的找到解决问题的答案，就拿技术类的问题来说，可能由于不同的系统环境，过去能解决的问题的步骤，可能现在不适用了，我们只能不断寻找。这个过程可能会很枯燥漫长，浪费很多时间，虽然我觉得最后发现“蓦然回首，那人却在灯火阑珊处”很舒畅，但这意味着可能这段时间里我们都无法继续推进我们的项目进度，倘若时间又很紧，那么此时可能找正确的人或是正确的论坛发问会是一个不错的办法。</p><p>向陌生人发问是充满不确定性的，因为对方并不一定能根据我们对于问题的描述完美的解决我们的问题。如果我们问的问题还不够明确，简洁易懂，可能对方就懵了，所以我们需要：</p><ol><li>简单描述你需要完成什么样的需求，最终的目标是什么</li><li>简洁明了的叙述你的想法或思路</li><li>描述你具体的实现过程，其实就是你做了哪些尝试，最小化的重现问题的步骤</li><li>描述遇到的问题，例如报错信息，务必要让问题简单易读</li><li>如果是技术类问题，根据情况，再看是否需要给出具体某段实现代码</li></ol><p>切记不要问与主题无关的问题，如果是那种通过自己搜索就能很容易找到解决办法的问题，最好不要去问，这类问题在别人看来肤浅甚至觉得你是个不愿独立思考的“lazy boy”，只想依靠别人，浪费别人时间。也不要低声下气，觉得有求于人，要知道一个好的问题，可能会促进双方的共同进步，别人也会因为能帮人解决了一个“难题”而高兴，礼貌客气不代表卑微，反而会增加你得到有用回答的机会，当然前提你事先经过做足了功课，别人也会认为你很有经验，问的问题可能是独到巧妙的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Thinking" scheme="https://www.shengshiyu.cn/categories/Thinking/"/>
+    
+    
+      <category term="思考" scheme="https://www.shengshiyu.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   

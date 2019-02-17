@@ -102,19 +102,19 @@
 
 
 
-<meta name="description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 静态内部类，如 static class StaticinnerC!ass {} ;成员内部类，如： private class InstancelnnerC!ass {} ;局部内部类，定义在方法或者表达式内部，匿名内部类，如： (ne">
+<meta name="description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 内部类的本质对Java虚拟机而言，内部类只是Java编译器的概念，他并不知道内部类是什么，因为每个内部类最终都会被编译为一个独立的类。 没一个内部类都可以替换为一个独立的类，就单纯的技术实现而言。内部类可以方便的访问外部类的私有变量，也可">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java内部类的理解">
 <meta property="og:url" content="https://www.shengshiyu.cn/posts/f7cd9195/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 静态内部类，如 static class StaticinnerC!ass {} ;成员内部类，如： private class InstancelnnerC!ass {} ;局部内部类，定义在方法或者表达式内部，匿名内部类，如： (ne">
+<meta property="og:description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 内部类的本质对Java虚拟机而言，内部类只是Java编译器的概念，他并不知道内部类是什么，因为每个内部类最终都会被编译为一个独立的类。 没一个内部类都可以替换为一个独立的类，就单纯的技术实现而言。内部类可以方便的访问外部类的私有变量，也可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3.jpg">
 <meta property="og:updated_time" content="2018-09-11T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java内部类的理解">
-<meta name="twitter:description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 静态内部类，如 static class StaticinnerC!ass {} ;成员内部类，如： private class InstancelnnerC!ass {} ;局部内部类，定义在方法或者表达式内部，匿名内部类，如： (ne">
+<meta name="twitter:description" content="内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。 内部类的本质对Java虚拟机而言，内部类只是Java编译器的概念，他并不知道内部类是什么，因为每个内部类最终都会被编译为一个独立的类。 没一个内部类都可以替换为一个独立的类，就单纯的技术实现而言。内部类可以方便的访问外部类的私有变量，也可">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3.jpg">
 
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  194 字
+                  1,180 字
                 </span>
               
 
@@ -433,8 +433,33 @@
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Java%E5%86%85%E9%83%A8%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3.jpg" alt="Java内部类的理解"></p>
 <p>内部类是一个很实用的特性，可以将一个类定义在另一个类的内部，这就是内部类。内部类自动拥有对外部类成员的所有成员的访问权。可以将其看作一种有效的代码隐藏机制。</p>
-<p>静态内部类，如 static class StaticinnerC!ass {} ;<br>成员内部类，如： private class InstancelnnerC!ass {} ;<br>局部内部类，定义在方法或者表达式内部，<br>匿名内部类，如： (new Thread(){} ).start（）。</p>
-<p>定义包内可见静态内部<br>类的方式很常见，这样做的好处是<br>( I ）作用域不会扩散到包外。<br>( 2 ）可以通过”外部类 ． 内部类”的方式直接访问。<br>( 3 ）内部类可以访问外部类申的所有静态属性和方法。</p>
+<h1 id="内部类的本质"><a href="#内部类的本质" class="headerlink" title="内部类的本质"></a>内部类的本质</h1><p>对Java虚拟机而言，内部类只是Java编译器的概念，他并不知道内部类是什么，因为每个内部类最终都会被编译为一个独立的类。</p>
+<p>没一个内部类都可以替换为一个独立的类，就单纯的技术实现而言。内部类可以方便的访问外部类的私有变量，也可以通过private或是protected关键字，将内部类的实现对外完全隐藏，而一般的类只具有public和默认包访问权限。</p>
+<p>如果在内部类里要生成对外部对象的引用，可以使用“外部类.this”，当我们要创建内部类的对象时与平时创建新对线略有不同，需要这样创建：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OutClass oc = <span class="keyword">new</span> OutClass();</span><br><span class="line">OutClass.InnerClass oi = oc.new InnerClass();</span><br></pre></td></tr></table></figure></p>
+<h1 id="内部类的划分"><a href="#内部类的划分" class="headerlink" title="内部类的划分"></a>内部类的划分</h1><p>根据位置和方式的不同，主要有四种内部类</p>
+<ul>
+<li>静态内部类</li>
+<li>成员内部类</li>
+<li>局部内部类</li>
+<li>匿名内部类</li>
+</ul>
+<h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><p>静态内部类有时也被称作嵌套类，静态内部类和静态方法或者静态代码块一样，都需要static关键字修饰，一个典型的静态内部类是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    String name1 = <span class="string">"Tom"</span>;</span><br><span class="line">    Static String name2 = <span class="string">"King"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInner</span> </span>&#123;</span><br><span class="line">    	Static String name3 = <span class="string">"Oliver"</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        	System.out.println(name2);</span><br><span class="line">        	System.out.println(name3);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>非静态内部类是不能定义静态成员的，同时外部类的静态成员才可以直接使用静态内部类，对于静态内部类来说，也不能访问外部类的实例成员。</p>
+<p>定义包内可见静态内部类的方式很常见，这样做的好处是</p>
+<ul>
+<li>作用域不会扩散到包外。</li>
+<li>可以通过”外部类.内部类”的方式直接访问。</li>
+<li>内部类可以访问外部类申的所有静态属性和方法。</li>
+</ul>
+<h2 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h2><p>成员内部类也叫实例内部类，它作为外部类的一个成员存在，与外部类的属性和方法并列，成员内部类持有外部类的引用,只不过这个引用是隐式保存的，指向创建它的外部对象，成员内部类也是最常见的内部类。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        	System.out.println(a+b);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h2><p>局部内部类也叫作方法内部类，它定义在外部类的方法中，局部内部类只在该方法中才能使用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">MInner</span> </span>&#123;</span><br><span class="line">        	<span class="keyword">int</span> b = <span class="number">4</span>;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            	System.out.println(a);</span><br><span class="line">                System.out.println(b);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果内部类对象仅仅为外部类的某个方法使用，使用局部内部类，但要注意不能使用private、protected、public权限修饰符，也不能包含静态成员。</p>
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><p>匿名内部类也就是没有名字的内部类，这是java为了方便我们编写程序而设计的一个机制，因为有时候有的内部类只需要创建一个它的对象就可以了，以后再不会用到这个类，这时候使用匿名内部类就比较合适。</p>
+<p>匿名内部类使用<code>new</code>创建，没有具体位置，默认继承或实现new后面的类型。匿名内部类编译后生成的.class文件的命名方式是”外部类名称$编号.class”，编号为1，2，3…n，编号为x的文件对应的就是第x个匿名类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Contents <span class="title">contents</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">new</span> Contents() &#123;</span><br><span class="line">        	<span class="comment">//匿名内部类</span></span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            	<span class="keyword">return</span> a;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>匿名内部类末位的分号，并不是表示内部类结束，而是表示表达式的结束，只不过这个表达式正好包含了匿名内部类。</p>
+<p>如果你需要在匿名内部类中使用一个外部类定义的对象，那么它的参数需要有final修饰才能通过编译，因为没有名字，所以也没有显式的构造器可以创建使用。</p>
+<p>匿名内部类可以扩展类也可以用来实现接口，但不能二者兼备，而且对于接口来说，也只能实现一个接口。</p>
 
       
     </div>
@@ -512,8 +537,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/59cc6e2d/" rel="prev" title="如何阅读一本技术类书籍">
-                如何阅读一本技术类书籍 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a24ff975/" rel="prev" title="PO、VO、BO、DTO、POJO、DAO之间的关系">
+                PO、VO、BO、DTO、POJO、DAO之间的关系 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -567,8 +592,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -666,6 +700,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的本质"><span class="nav-number">1.</span> <span class="nav-text">内部类的本质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类的划分"><span class="nav-number">2.</span> <span class="nav-text">内部类的划分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态内部类"><span class="nav-number">2.1.</span> <span class="nav-text">静态内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成员内部类"><span class="nav-number">2.2.</span> <span class="nav-text">成员内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局部内部类"><span class="nav-number">2.3.</span> <span class="nav-text">局部内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名内部类"><span class="nav-number">2.4.</span> <span class="nav-text">匿名内部类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
