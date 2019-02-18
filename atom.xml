@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengshiyu.cn/"/>
-  <updated>2019-02-01T16:00:00.000Z</updated>
+  <updated>2019-01-14T16:00:00.000Z</updated>
   <id>https://www.shengshiyu.cn/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>设计模式之单例模式</title>
-    <link href="https://www.shengshiyu.cn/posts/1a4b62fe/"/>
-    <id>https://www.shengshiyu.cn/posts/1a4b62fe/</id>
-    <published>2019-02-01T16:00:00.000Z</published>
-    <updated>2019-02-01T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.jpg" alt="设计模式之单例模式"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
-    
-    
-      <category term="Design Pattern" scheme="https://www.shengshiyu.cn/tags/Design-Pattern/"/>
-    
-  </entry>
   
   <entry>
     <title>新思想和旧思想</title>
@@ -110,6 +85,28 @@
     
     
       <category term="TCP" scheme="https://www.shengshiyu.cn/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式之单例模式</title>
+    <link href="https://www.shengshiyu.cn/posts/1a4b62fe/"/>
+    <id>https://www.shengshiyu.cn/posts/1a4b62fe/</id>
+    <published>2018-12-19T16:00:00.000Z</published>
+    <updated>2019-12-19T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.jpg" alt="设计模式之单例模式"></p><h1 id="关于单例模式"><a href="#关于单例模式" class="headerlink" title="关于单例模式"></a>关于单例模式</h1><p>单例模式作为对象的创建模式之一，它确保一个类只有一个实例，而且自行实例化并向系统提供这个实例，而这个类也称为单例类。</p><p>在《Java编程思想》一书中，全书贯穿着各种设计模式，作者将代码的实例无形中融入了诸多设计模式的技巧，这也是它经典的原因之一。其中单例模式的出现频率很高，可见作者对单例模式的热衷。</p><p>单例模式的特点：</p><ul><li>单例类只有一个实例</li><li>单例类必须自己创建自己的唯一实例</li><li>单例类必须给所有对象提供这一实例</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      设计模式可以提高代码可重用性、代码的易读性、保证代码的可靠性。这是关于设计模式的第一篇文章，从常用的单例模式开始。
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://www.shengshiyu.cn/categories/Technology/"/>
+    
+    
+      <category term="Design Pattern" scheme="https://www.shengshiyu.cn/tags/Design-Pattern/"/>
     
   </entry>
   
