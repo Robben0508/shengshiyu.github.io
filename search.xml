@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[浅谈Spring Bean的生命周期和作用域]]></title>
     <url>%2Fposts%2Ffbb6f1be%2F</url>
-    <content type="text"><![CDATA[在Spring中，bean就是由IOC容器初始化、装配并管理的对象，它的生命周期由Spring控制，]]></content>
+    <content type="text"><![CDATA[在Spring中，bean就是由IOC容器初始化、装配并管理的对象，它的生命周期由Spring控制，这个过程称为Spring中Bean 对象的生命周期管理。]]></content>
       <categories>
         <category>Technology</category>
       </categories>
@@ -113,7 +113,7 @@
   <entry>
     <title><![CDATA[Vector、ArrayList、LinkedList的区别]]></title>
     <url>%2Fposts%2F73a15e6%2F</url>
-    <content type="text"><![CDATA[关于Vector、ArrayList、LinkedListJava提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位置进行定位，添加或是删除的操作，都提供了迭代器可以进行内容的遍历，但因为内部设计的差异，在行为、性能和多线程上又有差异。 ArrayList 是可以改变的线程不安全的集合类型。也因为它是线程不安全的所以它的性能要好很多。内部实现使用动态数组进行存储，集合扩容时会创建更大的数组空间，把原有数据复制到新数组中。 ArrayList 支持对元素的快速随机访问，但是插入与删除时速度通常很慢，因为这个过程很有可能需要移动其他元素。 Vector 是 Java 早期提供的线程安全的动态数组，它的内部使用对象数组保存数据，可以需要自动增加容量，当数组空间到达上限时，会创建新的数组，将原数据“复制——移动”到新数组。 Vector和ArrayList作为动态数组，它内部的元素都是顺序存储的，很适合需要随机访问的场合，除非我们是在尾部插入删除元素，不然对于随机插入删除元素，需要移动后续所有元素，性能会差很多。实际开发过程，要事先估计应用的操作更偏向插入删除还是随机访问， LinkedList其实就是双向链表。它也不用像Vector、ArrayList一样调整容量大小，它也不是线程安全的。与ArrayList相比，LinkedList进行节点插入和删除速度效率更高，但是随机访问速度很慢。 关于集合框架 在Java的集合类里，Collection 接口是所有集合的根。它也衍生出了三种类型的集合，分别是List、Set、Queue. List前面已经说了，它提随机访问以及插入删除的操作，在随机访问效率上更出色。而Set类型不允许出现重复的元素，保证元素的唯一性，很多场合也会需要用到它的这个特性。 Queue是Java提供的队列结构的实现类型，除了基本的增删改查操作，它还提供FIFO（先进先出）、LIFO（后进先出）的行为支持。 每一种具体的集合类型都会被抽象到相应的抽象类，如AbstractList、AbstractSet、AbstractQueue，它们又进一步抽象到AbstractCollection类中，实现了接口和实现的分离和结构化。]]></content>
+    <content type="text"><![CDATA[关于Vector、ArrayList、LinkedListJava提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位置进行定位，添加或是删除的操作，都提供了迭代器可以进行内容的遍历，但因为内部设计的差异，在行为、性能和多线程上又有差异。 ArrayList 是可以改变的线程不安全的集合类型。也因为它是线程不安全的所以它的性能要好很多。内部实现使用动态数组进行存储，集合扩容时会创建更大的数组空间，把原有数据复制到新数组中。 ArrayList 支持对元素的快速随机访问，但是插入与删除时速度通常很慢，因为这个过程很有可能需要移动其他元素。 Vector 是 Java 早期提供的线程安全的动态数组，它的内部使用对象数组保存数据，可以需要自动增加容量，当数组空间到达上限时，会创建新的数组，将原数据“复制——移动”到新数组。 Vector和ArrayList作为动态数组，它内部的元素都是顺序存储的，很适合需要随机访问的场合，除非我们是在尾部插入删除元素，不然对于随机插入删除元素，需要移动后续所有元素，性能会差很多。实际开发过程，要事先估计应用的操作更偏向插入删除还是随机访问， LinkedList其实就是双向链表，其中的每个对象包含数据的同时还包含指向链表中前一个和后一个元素的引用。它也不用像Vector、ArrayList一样调整容量大小，它也不是线程安全的。与ArrayList相比，LinkedList进行节点插入和删除速度效率更高，但是随机访问速度很慢。 关于集合框架 在Java的集合类里，Collection 接口是所有集合的根。它也衍生出了三种类型的集合，分别是List、Set、Queue. List前面已经说了，它提随机访问以及插入删除的操作，在随机访问效率上更出色。而Set类型不允许出现重复的元素，保证元素的唯一性，很多场合也会需要用到它的这个特性。 如果我们使用的是固定数量的元素，那么既可以选择使用List，也可以选择真正的数组，尽管通常来说首选的会是ArrayList，但这种弹性需要开销，而数组的效率要比ArrayList高。而且数组可以持有基本类型，而泛型之前的容器类型则不能。 Queue是Java提供的队列结构的实现类型，除了基本的增删改查操作，它还提供FIFO（先进先出）、LIFO（后进先出）的行为支持。 每一种具体的集合类型都会被抽象到相应的抽象类，如AbstractList、AbstractSet、AbstractQueue，它们又进一步抽象到AbstractCollection类中，实现了接口和实现的分离和结构化。]]></content>
       <categories>
         <category>Technology</category>
       </categories>
@@ -146,7 +146,7 @@
   <entry>
     <title><![CDATA[浅析Java泛型]]></title>
     <url>%2Fposts%2F7ca0722f%2F</url>
-    <content type="text"><![CDATA[泛型的本质是类型参数化，解决不确定具体对象类型的问题 泛型可以定义在类、接口、方法中，编译器通过识别尖括号和尖括号内的字母来解析泛型。在泛型定义肘，约定俗成的符号包括 E 代表 Element ，用于集合中的元素；T 代表 the Type of object ，表示某个类； K 代表 Key、 V 代表 Value ，用于键值对元素。 与 C＋＋根据模板类生成不同的类的方式不同， Java 使用的是类型擦除的方式。编译后 ， get（） 的参数是两个 0均ect ， 返回值也是 Object ， 尖括号里很多内容消失了 ， 参数中也没有 String和Alibaba 两个类型。数据返回给 Integer result 时 ， 进行了类型强制转化。因此 ， 泛型就是在编译期增加了一道检查而己 ， 目的是促使程序员在使用泛型时安全放置和使用数据。使用泛型的好处包括· 类型安全。放置的是什么 ， 取出来的自然是什么 ， 不用担心会抛出ClassCastException 异常。· 提升可读性。从编码阶段就显式地知道泛型集合、泛型方法等处理的对象类型是什么。· 代码重用。泛型合并了同类型的处理代码，使代码重用度变高。]]></content>
+    <content type="text"><![CDATA[泛型的本质是类型参数化，解决不确定具体对象类型的问题。泛型可以定义在类、接口、方法中，编译器通过识别尖括号和尖括号内的字母来解析泛型。 与C++根据模板类生成不同的类的方式不同，Java使用的是类型擦除的方式。不过了解C++模板有助于你理解Java泛型的机制，理解它的局限是什么以及Java泛型的边界。 关于泛型泛型是接口概念的延伸，我们通过泛型可以为类、接口、方法应用更为广泛的类型，使得操作的数据不再和代码绑定在一起，不仅可以复用代码、降低耦合度，还可以提高代码的可读性和安全性。 泛型类一个简单的泛型类是这样的：123456789public class Test&lt;T&gt; &#123; T first; public Test(T first)&#123; this.first = first; &#125; public T getFirst() &#123; return first; &#125;&#125; 相对于普通类而言，类名的后面多了一对尖括号，和一个字母T，这个T表示的就是类型参数，泛型就是类型参数化，处理的数据并不是固定的，而是可以作为参数传入。通过泛型可以完成对一组类的操作对外开放相同的接口。最典型的就是各种容器类，如：List、Set、Map。 在定义泛型时，一些常见的类型参数表示： E代表 Element ，用于集合中的元素 T代表the Type of object ，表示某个类 K 代表 Key、 V 代表 Value ，用于键值对元素 泛型方法方法也可以使用泛型，而且泛型方法并不需要其所在的类一定要是泛型类，一个简单的泛型方法大概是这样的：123public static &lt;T&gt; getData(T t) &#123; return t;&#125; 泛型方法使得该方法可以独立于类产生变化，如果使用泛型方法可以取代将整个类泛型化，那就应该使用泛型方法。 对于static方法而言，它无法访问泛型类的类型参数，除非把它定义为泛型方法，才可以具有使用泛型的能力。 泛型接口123public interface Test&lt;T&gt; &#123; public T next();&#125; 当实现泛型接口时：12345class FruitTest&lt;T&gt; implements Test&lt;T&gt;&#123; public T next() &#123; return null; &#125;&#125; 类型擦除编译器编译后，Java的源代码变为了.class文件，虚拟机再加载这个文件运行。对于泛型类，Java虚拟机会把泛型代码转化为非泛型的普通代码，将类型参数“擦除”，替换为Object，再进行必要的强制类型转化。泛型就是在编译期增加了一道检查而己，目的是促使程序员在使用泛型时安全放置和使用数据。 泛型的好处可能你会疑惑，既然泛型最后也会转化为普通的类，那我们使用泛型的目的是什么？其实泛型的好处包括 类型安全：放置的是什么，取出来的自然是什么，不用担心会抛出ClassCastException异常 提升可读性：从编码阶段就显式地知道泛型集合、泛型方法等处理的对象类型是什么 代码重用。泛型合并了同类型的处理代码，使代码重用度变高]]></content>
       <categories>
         <category>Technology</category>
       </categories>
@@ -221,6 +221,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[final、finally、finalize的区别]]></title>
+    <url>%2Fposts%2F928edaac%2F</url>
+    <content type="text"><![CDATA[final关键字使用到final的三种情况：变量、方法、类，分别具有不同意义。 final的变量是不可以修改的，一个既是static又是final的变量只占据一段不能改变的存储空间，是一个常量。 使用final修饰方法是为了把方法锁定，防止任何继承类修改它的含义，确保在继承中方法的行为不变，不会被覆盖重写。 类中所有用private修饰的方法隐式都是final的，但给它们再加上final关键字没有意义，因为private修饰的方法，本身局无法覆盖重写。 final修饰的类表示不可继承，不能拥有子类，而其中的方法默认隐式也都是final的，无法覆盖重写。 final并不等同于immutable，尽管看起来语义上某些地方final很像是immutable。 关于finallyfinally 则是Java保证重点代码一定要被执行的一种机制。搭配try-finally 或者 try-catch-final来进行类似关闭 JDBC 连接等的操作。不过更推荐在JDK7后添加的try-with-resources 语句，对于关闭连接等资源。 finally使得无论try块里发生了什么，内存总能得到释放，当要把除内存之外的资源恢复到它们的初试状态时，就要适用finally子句。 因为finally总是会执行，但如果在finally之前执行了System。exit(1);，finally里面的代码就不会被执行。 finalize方法finalize 是基础类 java.lang.Object的一个方法，是为了保证对象在被垃圾收集前完成特定资源的回收。在 JDK9 之后直接被标记为过时方法，并不推荐使用了。 我们无法保证finalize什么时候执行，是否符合预期，]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript中的this原理]]></title>
     <url>%2Fposts%2Fcbb9bef1%2F</url>
     <content type="text"><![CDATA[关于this为啥要有这个关键字呢？如果不使用this，我们在写代码时就需要显示的传入上下文对象。会很麻烦，随着代码量的增多，会使代码变得混乱，而this可以隐式“传递”一个对象的引用，利于代码复用，因为它会动态的判断上下文环境，然后引用合适的上下文对象。 我们可能会在学习时产生片面的误解，一种是我们认为this指向函数自身，另一种是我们认为this指向函数的作用域。因为在一些情况下，它们是对的，但有时却是错误的，举例来说：12345678function foo() &#123;var a = 2;this.bar();&#125;function bar() &#123;console.log( this.a );&#125;foo(); // ReferenceError: a is not defined 如果按之间的观点，那这段代码应该能正确调用，但实则不能，可见this关键字不是我们之前想的那样。 this是什么 当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。 this 就是记录的其中一个属性，会在函数执行的过程中用到。 理解this的前提，我们需要知道什么叫做调用位置，调用位置就是函数在代码中被调用的位置，而不是声明的位置，通过调用位置我们才好判断this究竟引用的是什么。 this的指向this永远指向最后调用它的那个对象，通过这句话就能很容易判断this的指向，因为调用位置就在当前正在执行的函数的前一个调用中。 默认绑定12345function foo() &#123;console.log( this.a );&#125;var a = 1;foo(); // 1 我们可以看到，最后调用foo()的地方，它的前面没有明显的调用对象，所以就是全局对象window，相当于window.foo()那么this的指向就是就是window这个全局对象，所以window.a的值就是1。这是默认的绑定情况。 隐式绑定我们有时候还要考虑调用位置是否具有上下文对象，可以看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;obj.foo(); // 1 这就简单了，因为this永远指向最后调用它的那个对象，最后调用它的是obj，所以就相当于obj.a，所以值为1，下面是另一种情况，可能我们调用时是在一个属性引用链上：123456789101112function foo() &#123;console.log( this.a );&#125;var obj2 = &#123;a: 2,foo: foo&#125;;var obj1 = &#123;a: 1,obj2: obj2&#125;;obj1.obj2.foo(); // 2 不用在意obj1，这里我们要强调“最后调用”，所以最后调用的是obj2，obj1先调用obj2，obj2再调用foo(),所以结果就是obj2.a，所以值为2。 但假如我们给函数起了别名，可以通过一个例子看一下：12345678910function foo() &#123;console.log( this.a );&#125;var obj = &#123;a: 1,foo: foo&#125;;var bar = obj.foo; // 函数别名！var a = "hello"; // a 是全局对象的属性bar(); // "hello" 虽然我们将 obj 对象的 foo 方法赋值给变量 bar 了，但是没有调用，所以bar()最后还是被全局对象window调用了，this的指向就是window，就相当于window.a，所以值为hello。 不过我们需要尤为注意回调函数里的this的指向问题，因为回调函数里我们传入的函数，实际上它相当于给里面的形参取了一个别名。当我们分析this的指向时，它实际的指向会被误导，但实质上它还是指向最后调用它的那个对象。 显式绑定如果我们想在某个对象上强制调用函数，可以直接指定this指向的对象，什么意思呢，我们先看一个例子：12345678function foo() &#123;console.log( this.a );&#125;var obj = &#123;a:1&#125;;var a = 2;foo.call( obj ); // 1 我们通过call()函数，将obj的作用域传递进了foo中，因为JavaScript存在一个作用域链，相当于我们window.obj.foo(),所以最后调用的是obj对象，所以值为1。我们把foo的this绑定到了obj上。也可以通过apply()和bind()方法。 new绑定12345function foo(a) &#123;this.a = a;&#125;var bar = new foo(1);console.log( bar.a ); // 1 使用new来调用foo()时，我们会构造一个新对象，这个新对象会绑定到foo()调用中的this上，所以bar.a的值就是1，和隐式绑定里的取别名是不一样的，它依然指向最后调用它的那个对象。 箭头函数ES6里，我们可以使用箭头函数始终指向函数定义时的this，不用担心执行时改变，在箭头函数里也没有this绑定了，上面四条绑定原则也不存在了，要根据作用域链来决定它的值，箭头函数会继承外层函数调用的 this 绑定。12345678910111213var a = "hello";var ogj = &#123; b : "hi" func1: function () &#123; console.log(this.b); &#125;, func2: function () &#123; setTimeout( () =&gt; &#123; this.func1() &#125;,100); &#125;&#125;;obj.func2() // hi 总结总之，我们要记住”this永远指向最后调用它的那个对象“，具体绑定的方式，如果是由new调用，那它就绑定到了新创建的对象上，如果由call()、apply()、bind()调用，那么就是在绑定的那个对象上，如果包含上下文调用的隐式绑定，要注意上下文对象，如果包含回调函数，要格外小心。如果使用了箭头函数，注意根据作用域链来决定“this”的指向。]]></content>
@@ -229,17 +240,6 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[final、finally、finalize的区别]]></title>
-    <url>%2Fposts%2F928edaac%2F</url>
-    <content type="text"><![CDATA[final关键字使用到final的三种情况：变量、方法、类，分别具有不同意义。 final的变量是不可以修改的，一个既是static又是final的变量只占据一段不能改变的存储空间，是一个常量。 使用final修饰方法是为了把方法锁定，防止任何继承类修改它的含义，确保在继承中方法的行为不变，不会被覆盖重写。 类中所有用private修饰的方法隐式都是final的，但给它们再加上final关键字没有意义，因为private修饰的方法，本身局无法覆盖重写。 final修饰的类表示不可继承，不能拥有子类，而其中的方法默认隐式也都是final的，无法覆盖重写。 final并不等同于immutable，尽管看起来语义上某些地方final很像是immutable。 关于finallyfinally 则是Java保证重点代码一定要被执行的一种机制。搭配try-finally 或者 try-catch-final来进行类似关闭 JDBC 连接等的操作。不过更推荐在JDK7后添加的try-with-resources 语句，对于关闭连接等资源。 但如果在finally之前执行了System。exit(1);，finally里面的代码就不会被执行。 finalize方法finalize 是基础类 java.lang.Object的一个方法，是为了保证对象在被垃圾收集前完成特定资源的回收。在 JDK9 之后直接被标记为过时方法，并不推荐使用了。 我们无法保证finalize什么时候执行，是否符合预期，]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -452,17 +452,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Markdown小记]]></title>
-    <url>%2Fposts%2Fd6b33154%2F</url>
-    <content type="text"><![CDATA[标题 如果你需要插入标题，可以在行首插入1到6个#，对应标题的1到6级,最高可以到六级标题，最好在#后加一个空格，例如:# 这是一级标题## 这是二级标题####### 这是六级标题 也可以使用=====表示高级标题，使用------表示次级标题，大于两个=,-都可以用来表示标题 引用如果你需要一个引用，那么你可以使用&gt;符号放在文字开头，例如:&gt;这是一个引用引用是可以嵌套的，同时引用的区块内部也可以使用其他的Markdown语法，例如 这是一个引用 这是一个嵌套引用 这是二级标题 列表项 列表项 列表如果你需要一个列表，在Markdown里，你可以选择有序列表和无序列表两种形式，列表本身也是可以嵌套，例如 列表项 列表项 列表项 嵌套列表 嵌套列表 无序列表可以使用*、+、-这三个符号中的任意一种作为列表标记，也可以和引用标记进行嵌套 列表项 列表项 列表项 这是一个嵌套的引用 可以进一步嵌套 字体 粗体: 通常用**或者__表示粗体 斜体: 通常用*或者_表示斜体 斜粗体：通常用***或者___表示斜粗体 链接如果你需要链接文字，可以使用[](link)表示一个链接，其中[]内是需要添加链接的文字，()内是链接的地址 代码 使用一对```表示代码块，可以根据你所使用的Markdown编辑器,选择在第一个```后添加代码的language，产生高亮效果，例如： 123public static void main(String[] args) &#123; System.out.println("Hello"); &#125; 使用一对 可以表示一个行内代码，例如： 这是一个Java`代码 图片如果你需要插入一张图片，可以使用![Text](path)，其中Text表示图片无法加载时显示的文字，path为图片所在的路径，也可以是网上的图片链接地址 分割线如果你需要一条分割线，可以使用--- 或者***表示水平分割线，只要-,*大于三个就可以表示水平分割线，使用---作分割线时需要前后都空一行，防止被当成标题的标记方式 删除线如果你需要一条删除线,可以使用一对~~表示删除线，但切记和文字之间不能有空格 表格可以使用以下的格式添加表格,注意表格和文字间空一行：12345| name | age | gender | money ||-------|:---:|-----------|-------:|| rhio | 384 | robot | $3,000 || haroo | .3 | bird | $430 || jedi | ? | undefined | $0 | name age gender money rhio 384 robot $3,000 haroo .3 bird $430 jedi ? undefined $0 其他如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS 引用 123&lt;blockquote&gt;***&lt;/blockquote&gt;/* 如果上下间距小，可以这样写 */&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt; 居中和右对齐 123456/* 居中 */&lt;center&gt;**&lt;/center&gt;/* 右对齐 */&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;/* 右对齐 */&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt; 字体大小和颜色 1&lt;font color="#xxxxxx" size="number"&gt;**&lt;/font&gt; 分割线和空行 12&lt;hr /&gt;&lt;br /&gt; 关于Markdown的更多细节，可以参看：Markdown 语法说明 (简体中文版)，对于Markdown的规范，可以看一下 ：Google Markdown Style Guide 或者 Markdown Style Guide]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[关于Python中__str__和__repr__的区别]]></title>
     <url>%2Fposts%2Fa292341e%2F</url>
     <content type="text"><![CDATA[__repr__和__str__这两个方法都是用于显示的，但实际却存在一些细微的差异，具体我们可以通过一个简单例子来比较一下它们之间有何不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return 'hello'&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就会发现无论输出对象，还是调用__repr__和__str__方法，甚至通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return 'hello'&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很直观了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。因为我们覆盖了先前的__repr__方法，即使没有提前覆盖__repr__方法，我们得出的结果依然也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中，例如交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
@@ -471,6 +460,17 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown小记]]></title>
+    <url>%2Fposts%2Fd6b33154%2F</url>
+    <content type="text"><![CDATA[标题 如果你需要插入标题，可以在行首插入1到6个#，对应标题的1到6级,最高可以到六级标题，最好在#后加一个空格，例如:# 这是一级标题## 这是二级标题####### 这是六级标题 也可以使用=====表示高级标题，使用------表示次级标题，大于两个=,-都可以用来表示标题 引用如果你需要一个引用，那么你可以使用&gt;符号放在文字开头，例如:&gt;这是一个引用引用是可以嵌套的，同时引用的区块内部也可以使用其他的Markdown语法，例如 这是一个引用 这是一个嵌套引用 这是二级标题 列表项 列表项 列表如果你需要一个列表，在Markdown里，你可以选择有序列表和无序列表两种形式，列表本身也是可以嵌套，例如 列表项 列表项 列表项 嵌套列表 嵌套列表 无序列表可以使用*、+、-这三个符号中的任意一种作为列表标记，也可以和引用标记进行嵌套 列表项 列表项 列表项 这是一个嵌套的引用 可以进一步嵌套 字体 粗体: 通常用**或者__表示粗体 斜体: 通常用*或者_表示斜体 斜粗体：通常用***或者___表示斜粗体 链接如果你需要链接文字，可以使用[](link)表示一个链接，其中[]内是需要添加链接的文字，()内是链接的地址 代码 使用一对```表示代码块，可以根据你所使用的Markdown编辑器,选择在第一个```后添加代码的language，产生高亮效果，例如： 123public static void main(String[] args) &#123; System.out.println("Hello"); &#125; 使用一对 可以表示一个行内代码，例如： 这是一个Java`代码 图片如果你需要插入一张图片，可以使用![Text](path)，其中Text表示图片无法加载时显示的文字，path为图片所在的路径，也可以是网上的图片链接地址 分割线如果你需要一条分割线，可以使用--- 或者***表示水平分割线，只要-,*大于三个就可以表示水平分割线，使用---作分割线时需要前后都空一行，防止被当成标题的标记方式 删除线如果你需要一条删除线,可以使用一对~~表示删除线，但切记和文字之间不能有空格 表格可以使用以下的格式添加表格,注意表格和文字间空一行：12345| name | age | gender | money ||-------|:---:|-----------|-------:|| rhio | 384 | robot | $3,000 || haroo | .3 | bird | $430 || jedi | ? | undefined | $0 | name age gender money rhio 384 robot $3,000 haroo .3 bird $430 jedi ? undefined $0 其他如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS 引用 123&lt;blockquote&gt;***&lt;/blockquote&gt;/* 如果上下间距小，可以这样写 */&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt; 居中和右对齐 123456/* 居中 */&lt;center&gt;**&lt;/center&gt;/* 右对齐 */&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;/* 右对齐 */&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt; 字体大小和颜色 1&lt;font color="#xxxxxx" size="number"&gt;**&lt;/font&gt; 分割线和空行 12&lt;hr /&gt;&lt;br /&gt; 关于Markdown的更多细节，可以参看：Markdown 语法说明 (简体中文版)，对于Markdown的规范，可以看一下 ：Google Markdown Style Guide 或者 Markdown Style Guide]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
