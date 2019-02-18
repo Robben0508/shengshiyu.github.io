@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[设计模式之单例模式]]></title>
+    <url>%2Fposts%2F1a4b62fe%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Design Pattern</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[新思想和旧思想]]></title>
     <url>%2Fposts%2F514198ec%2F</url>
     <content type="text"><![CDATA[知识的条条框框束缚住了你那想纷飞的思想翅膀，你的一切想法都将围绕着“我知道”“我很清楚”“社会原本就是这样的嘛！”打转。一旦这种“我什么都懂”的思想进驻到你的心里，那你就很有可能会失去了解事情真实面目的兴趣，而没有了这种兴趣，你就会丧失前进的动力，那么等待你的就只剩下百无聊赖的空虚日子了。 新的“新思想”和旧的“新思想”，“新”不一定就代表了一种进步和对旧有事物的否定，旧的思想中可能蕴含着一些我们未充分认识的创新点，一旦机会成熟，旧有的思想就会成为一种潮流，至少在我看来，设计就是一个这样的过程，旧有的设计理念和一些“新思想”结合，却能成为一种潮流。 我们的认知观念里总认为旧有的东西就是落后的，就应该被淘汰的，因为有了继承于它的更好的方式，但那或许仅仅是继承原有的一个点，新旧本身并不应该作为衡量价值的标准。就像销量高的产品并不一定就代表质量好一样，人类总是倾向于接受和他们内心认知看法接近的事物，因为它们不必为此否定自身，就像我们的新闻一样，我们很难看到相悖的两种形式的新闻。 “主流”的思想将一些“异端”思想给排斥在外，但更多时候我们会发现，两种相悖的观点事实上它们都是正确的，不同的环境，不同的时代背景，不同的利用和转化方式，都可以作为我们评判一种思想是否具有价值的参考条件。 成长的过程，就是我们不断地发现过去家长、老师们教的某些东西开始具有了“片面性”，随着我们对其更深入全面的了解，随着我们阅历的加深，我们会衍生出自己的一套价值判断标准，但我们也会无意识地将与自身观点相悖的思想排斥在外，以维护我们自身观点的“正确性”，尤其是随着我们年龄的增长，我们更原意接受符合我们价值判断标准的事。 当我们摒弃了新旧思想之争，从全新的角度出发，去发现不同观点背后存在的可能性，勇于接受它们，判断哪一种更符合时代的发展的某种需要，哪一种更适合自身，去理解“变化”，避免使自己陷入思维的死角，找到在不同情境下最适宜的技巧。那么旧思想也可以成为”新的旧思想“，它也会有机会在如今的时代里绽放不一样的光芒。]]></content>
@@ -452,17 +463,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Markdown小记]]></title>
-    <url>%2Fposts%2Fd6b33154%2F</url>
-    <content type="text"><![CDATA[标题 如果你需要插入标题，可以在行首插入1到6个#，对应标题的1到6级,最高可以到六级标题，最好在#后加一个空格，例如:# 这是一级标题## 这是二级标题####### 这是六级标题 也可以使用=====表示高级标题，使用------表示次级标题，大于两个=,-都可以用来表示标题 引用如果你需要一个引用，那么你可以使用&gt;符号放在文字开头，例如:&gt;这是一个引用引用是可以嵌套的，同时引用的区块内部也可以使用其他的Markdown语法，例如 这是一个引用 这是一个嵌套引用 这是二级标题 列表项 列表项 列表如果你需要一个列表，在Markdown里，你可以选择有序列表和无序列表两种形式，列表本身也是可以嵌套，例如 列表项 列表项 列表项 嵌套列表 嵌套列表 无序列表可以使用*、+、-这三个符号中的任意一种作为列表标记，也可以和引用标记进行嵌套 列表项 列表项 列表项 这是一个嵌套的引用 可以进一步嵌套 字体 粗体: 通常用**或者__表示粗体 斜体: 通常用*或者_表示斜体 斜粗体：通常用***或者___表示斜粗体 链接如果你需要链接文字，可以使用[](link)表示一个链接，其中[]内是需要添加链接的文字，()内是链接的地址 代码 使用一对```表示代码块，可以根据你所使用的Markdown编辑器,选择在第一个```后添加代码的language，产生高亮效果，例如： 123public static void main(String[] args) &#123; System.out.println("Hello"); &#125; 使用一对 可以表示一个行内代码，例如： 这是一个Java`代码 图片如果你需要插入一张图片，可以使用![Text](path)，其中Text表示图片无法加载时显示的文字，path为图片所在的路径，也可以是网上的图片链接地址 分割线如果你需要一条分割线，可以使用--- 或者***表示水平分割线，只要-,*大于三个就可以表示水平分割线，使用---作分割线时需要前后都空一行，防止被当成标题的标记方式 删除线如果你需要一条删除线,可以使用一对~~表示删除线，但切记和文字之间不能有空格 表格可以使用以下的格式添加表格,注意表格和文字间空一行：12345| name | age | gender | money ||-------|:---:|-----------|-------:|| rhio | 384 | robot | $3,000 || haroo | .3 | bird | $430 || jedi | ? | undefined | $0 | name age gender money rhio 384 robot $3,000 haroo .3 bird $430 jedi ? undefined $0 其他如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS 引用 123&lt;blockquote&gt;***&lt;/blockquote&gt;/* 如果上下间距小，可以这样写 */&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt; 居中和右对齐 123456/* 居中 */&lt;center&gt;**&lt;/center&gt;/* 右对齐 */&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;/* 右对齐 */&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt; 字体大小和颜色 1&lt;font color="#xxxxxx" size="number"&gt;**&lt;/font&gt; 分割线和空行 12&lt;hr /&gt;&lt;br /&gt; 关于Markdown的更多细节，可以参看：Markdown 语法说明 (简体中文版)，对于Markdown的规范，可以看一下 ：Google Markdown Style Guide 或者 Markdown Style Guide]]></content>
-      <categories>
-        <category>Technology</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[关于Python中__str__和__repr__的区别]]></title>
     <url>%2Fposts%2Fa292341e%2F</url>
     <content type="text"><![CDATA[__repr__和__str__这两个方法都是用于显示的，但实际却存在一些细微的差异，具体我们可以通过一个简单例子来比较一下它们之间有何不同。 123456789101112class Hello(object): pass&gt;&gt;&gt; a = Hello()&gt;&gt;&gt; a&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(a)&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(str(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt;&gt;&gt;&gt; print(repr(a))&lt;__main__.Hello object at 0x000001DE0044AE48&gt; 这里我们想要打印类对象，但显示的确是对象的内存地址，而且无论通过__repr__或是__str__,结果都一样，下面我们重写一下这个类的__repr__方法： 12345678910111213class Hello(object): def __repr__(object): return 'hello'&gt;&gt;&gt; b = Hello()&gt;&gt;&gt; bhello&gt;&gt;&gt; print(b)hello&gt;&gt;&gt; print(str(b))hello&gt;&gt;&gt; print(repr(b))hello 然后我们就会发现无论输出对象，还是调用__repr__和__str__方法，甚至通过print()方法，打印的信息都是按我们__repr__方法中定义的格式进行显示的。现在我们重写一下__str__： 12345678910111213class Hello(object): def __str__(object): return 'hello'&gt;&gt;&gt; c = Hello()&gt;&gt;&gt; c&lt;__main__.Hello object at 0x000001DE00450CC0&gt;&gt;&gt;&gt; print(c)hello&gt;&gt;&gt; print(str(c))hello&gt;&gt;&gt; print(repr(c))&lt;__main__.Hello object at 0x000001DE00450CC0&gt; 现在就很直观了，直接输出对象c时，显示出来的依旧是它的内存地址，而当我们调用print方法时，就会按我们定义的格式输出信息。因为我们覆盖了先前的__repr__方法，即使没有提前覆盖__repr__方法，我们得出的结果依然也是一样的。 总结一下，__repr__和__str__这两个方法都是用于显示的，但__str__更适用于用户，而__repr__更适用于开发人员 打印操作会首先尝试__str__和str内置函数（print运行的内部等价形式），它通常应该返回一个友好的显示 __repr__用于所有其他的环境中，例如交互模式下提示回应以及repr函数，如果没有使用__str__，会使用print和str，它通常应该返回一个编码字符串，可以用来重新创建对象，或者给开发者详细的显示]]></content>
@@ -471,6 +471,17 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown小记]]></title>
+    <url>%2Fposts%2Fd6b33154%2F</url>
+    <content type="text"><![CDATA[标题 如果你需要插入标题，可以在行首插入1到6个#，对应标题的1到6级,最高可以到六级标题，最好在#后加一个空格，例如:# 这是一级标题## 这是二级标题####### 这是六级标题 也可以使用=====表示高级标题，使用------表示次级标题，大于两个=,-都可以用来表示标题 引用如果你需要一个引用，那么你可以使用&gt;符号放在文字开头，例如:&gt;这是一个引用引用是可以嵌套的，同时引用的区块内部也可以使用其他的Markdown语法，例如 这是一个引用 这是一个嵌套引用 这是二级标题 列表项 列表项 列表如果你需要一个列表，在Markdown里，你可以选择有序列表和无序列表两种形式，列表本身也是可以嵌套，例如 列表项 列表项 列表项 嵌套列表 嵌套列表 无序列表可以使用*、+、-这三个符号中的任意一种作为列表标记，也可以和引用标记进行嵌套 列表项 列表项 列表项 这是一个嵌套的引用 可以进一步嵌套 字体 粗体: 通常用**或者__表示粗体 斜体: 通常用*或者_表示斜体 斜粗体：通常用***或者___表示斜粗体 链接如果你需要链接文字，可以使用[](link)表示一个链接，其中[]内是需要添加链接的文字，()内是链接的地址 代码 使用一对```表示代码块，可以根据你所使用的Markdown编辑器,选择在第一个```后添加代码的language，产生高亮效果，例如： 123public static void main(String[] args) &#123; System.out.println("Hello"); &#125; 使用一对 可以表示一个行内代码，例如： 这是一个Java`代码 图片如果你需要插入一张图片，可以使用![Text](path)，其中Text表示图片无法加载时显示的文字，path为图片所在的路径，也可以是网上的图片链接地址 分割线如果你需要一条分割线，可以使用--- 或者***表示水平分割线，只要-,*大于三个就可以表示水平分割线，使用---作分割线时需要前后都空一行，防止被当成标题的标记方式 删除线如果你需要一条删除线,可以使用一对~~表示删除线，但切记和文字之间不能有空格 表格可以使用以下的格式添加表格,注意表格和文字间空一行：12345| name | age | gender | money ||-------|:---:|-----------|-------:|| rhio | 384 | robot | $3,000 || haroo | .3 | bird | $430 || jedi | ? | undefined | $0 | name age gender money rhio 384 robot $3,000 haroo .3 bird $430 jedi ? undefined $0 其他如果 Markdwon 的语法达不到预期效果，或者一些地方的处理用 Markdwon 的格式无法实现，可以考虑用 HTML 和 CSS 引用 123&lt;blockquote&gt;***&lt;/blockquote&gt;/* 如果上下间距小，可以这样写 */&lt;p&gt;&lt;blockquote&gt;***&lt;/blockquote&gt;&lt;/p&gt; 居中和右对齐 123456/* 居中 */&lt;center&gt;**&lt;/center&gt;/* 右对齐 */&lt;p style=&quot;text-align:right&quot;&gt;**&lt;/p&gt;/* 右对齐 */&lt;p style=&quot;text-align:left&quot;&gt;**&lt;/p&gt; 字体大小和颜色 1&lt;font color="#xxxxxx" size="number"&gt;**&lt;/font&gt; 分割线和空行 12&lt;hr /&gt;&lt;br /&gt; 关于Markdown的更多细节，可以参看：Markdown 语法说明 (简体中文版)，对于Markdown的规范，可以看一下 ：Google Markdown Style Guide 或者 Markdown Style Guide]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
