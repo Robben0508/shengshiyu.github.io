@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,127 字
+                  1,128 字
                 </span>
               
 
@@ -432,42 +432,42 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E8%B0%88Java%E7%BA%BF%E7%A8%8B%E6%B1%A0.jpg" alt="浅谈Java线程池"></p>
-<h1 id="关于线程池"><a href="#关于线程池" class="headerlink" title="关于线程池"></a>关于线程池</h1><p>线程池是Java并发中一个非常重要的概念，可以把它理解为一个线程的池子，里面包含了若干线程，可以继续复用执行新任务，避免了线程创建的开销。</p>
-<p>线程池类似于我们排队办理业务，办理业务时可能提供了若干的窗口，我们根据自己的需要选择合适的窗口。其中办理业务的各个业务员就是线程池中的<em>工作者线程</em>，而我们排队的队列就是线程池中的<em>任务队列</em>。</p>
-<p>线程使应用能够合理地协调利用CPU、内存、网络等系统资源。线程的创建需要消耗资源，同时线程的销毁需要回收这些系统资源。频繁地创建和销毁线程会浪费大量的系统资源。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务？这些都是线程自身无法解决的。所以需要通过线程池协调多个线程。</p>
-<h1 id="使用线程池"><a href="#使用线程池" class="headerlink" title="使用线程池"></a>使用线程池</h1><p>线程池不建议使用Executors去创建，而是通过ThreadPoolExecutor的方式。在ThreadPoolExecutor提供了四个构造方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoolExecutor</span> <span class="keyword">extends</span> <span class="title">AbstractExecutorService</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="关于线程池"><a href="#关于线程池" class="headerlink" title="关于线程池"></a>关于线程池</h1><p>线程池是Java并发中一个非常重要的概念，可以把它理解为一个线程的池子，里面包含了若干线程，可以继续<strong>复用</strong>执行新任务，避免了线程创建的开销。</p>
+<p>线程池类似于我们排队办理业务，办理业务时可能提供了若干的窗口，我们根据自己的需要选择合适的窗口。其中办理业务的各个业务员就是线程池中的<strong>工作者线程</strong>，而我们排队的队列就是线程池中的<strong>任务队列</strong>。</p>
+<p>线程使应用能够合理地<strong>协调利用</strong>CPU、内存、网络等系统资源。线程的<strong>创建</strong>需要消耗资源，同时线程的<strong>销毁</strong>也需要回收这些系统资源。<strong>频繁地创建和销毁线程会浪费大量的系统资源</strong>。另外，在服务器负载过大的时候，如何让新的线程等待或者友好地拒绝服务，这些都是线程自身无法解决的。所以需要通过线程池协调多个线程。</p>
+<h1 id="使用线程池"><a href="#使用线程池" class="headerlink" title="使用线程池"></a>使用线程池</h1><p>线程池不建议使用 <strong>Executors</strong> 去创建，而是通过 <strong>ThreadPoolExecutor</strong> 的方式。在 ThreadPoolExecutor 提供了四个构造方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoolExecutor</span> <span class="keyword">extends</span> <span class="title">AbstractExecutorService</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,<span class="keyword">int</span> maximumPoolSize,<span class="keyword">long</span> keepAliveTime,TimeUnit unit,BlockingQueue&lt;Runnable&gt; workQueue,ThreadFactory threadFactory,RejectedExecutionHandler handler)</span></span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>通过其源码，可以看到其中包含四个参数，它们分别表示：</p>
 <ul>
-<li>corePoolSize：核心池的大小</li>
-<li>maximumPoolSize：线程池最大线程数</li>
-<li>keepAliveTime：表示线程没有任务执行时最多保持多久时间会终止</li>
-<li>unit：参数keepAliveTime的时间单位</li>
-<li>workQueue：工作队列，本质是一个阻塞队列，用来存储等待执行的任务，一般阻塞队列有：ArrayBlockingQueue（有界阻塞队列，一旦创建容量不能改变）、LinkedBlockingQueue（无界队列，没有预先定义容量）、SynchronousQueue（直接传递）。</li>
-<li>threadFactory：线程工厂，主要用来创建线程</li>
-<li>handler：当线程的数量已经到了边界值，并且workQueue中任务也达到最大值，此时需要使用它拒绝多余的任务</li>
+<li><strong>corePoolSize</strong>：核心池的大小</li>
+<li><strong>maximumPoolSize</strong>：线程池最大线程数</li>
+<li><strong>keepAliveTime</strong>：表示线程没有任务执行时最多保持多久时间会终止</li>
+<li><strong>unit</strong>：参数keepAliveTime的时间单位</li>
+<li><strong>workQueue</strong>：工作队列，本质是一个阻塞队列，用来存储等待执行的任务，一般阻塞队列有：ArrayBlockingQueue（有界阻塞队列，一旦创建容量不能改变）、LinkedBlockingQueue（无界队列，没有预先定义容量）、SynchronousQueue（直接传递）。</li>
+<li><strong>threadFactory</strong>：线程工厂，主要用来创建线程</li>
+<li><strong>handler</strong>：当线程的数量已经到了边界值，并且workQueue中任务也达到最大值，此时需要使用它拒绝多余的任务</li>
 </ul>
 <p>Java并发类库目前提供了五种不同的线程池创建配置，它们分别是：</p>
 <ul>
-<li>newCatchedThreadPool():用来处理大量短时间工作任务，它会尝试缓存线程并重用，当无线程可用时，就会创建新的工作线程。如果线程限制且时间超过60秒，就会被终止并移出缓存。</li>
-<li>newFixedThreadPool():重用指定数目的线程，除非任务数量超过了工作线程，就会在工作队列等待空线程出现，如果有工作线程结束退出，就会创建新的工作线程，达到上限的指定数目。</li>
-<li>newSingleThreadExector(): 工作线程数目限制为1，保证所有任务都是顺序执行。</li>
-<li>newSingleThreadScheduledExector()/newScheduledThreadPool(int corePoolSize): 可以定时或者周期性的进行切换调整，区别在于单一工作线程还是多个工作线程</li>
-<li>newWorkStealingPool():Java8引入，可以并行的处理任务，但不保证处理顺序</li>
+<li><strong>newCatchedThreadPool()</strong>:用来处理大量短时间工作任务，它会尝试缓存线程并重用，当无线程可用时，就会创建新的工作线程。如果线程限制且时间超过60秒，就会被终止并移出缓存。</li>
+<li><strong>newFixedThreadPool()</strong>:重用指定数目的线程，除非任务数量超过了工作线程，就会在工作队列等待空线程出现，如果有工作线程结束退出，就会创建新的工作线程，达到上限的指定数目。</li>
+<li><strong>newSingleThreadExector()</strong>: 工作线程数目限制为1，保证所有任务都是顺序执行。</li>
+<li><strong>newSingleThreadScheduledExector()/newScheduledThreadPool(int corePoolSize)</strong>: 可以定时或者周期性的进行切换调整，区别在于单一工作线程还是多个工作线程</li>
+<li><strong>newWorkStealingPool()</strong>:Java8引入，可以并行的处理任务，但不保证处理顺序</li>
 </ul>
 <p>如果需要较多等待任务，例如I/O操作，可以参考下这个计算方法：<br><code>线程数 = CPU 核数 × （1 + 平均等待时间 / 平均工作时间）</code></p>
 <p>使用线程池要注意：</p>
 <ul>
-<li>合理设置各类参数，根据需要合理的设置线程数，避免过度扩展线程，可能引起线程泄漏</li>
-<li>不要自行创建线程，线程资源通过线程池来创建，避免资源耗尽的风险</li>
-<li>避免任务堆积，如果处理跟不上入队的速度，工作线程数量不足，就会占用大量内存空间</li>
-<li>线程和线程池的名称最好易于直观理解，必要时增加注释</li>
+<li><strong>合理设置各类参数</strong>，根据需要合理的设置线程数，避免过度扩展线程，可能引起线程泄漏</li>
+<li><strong>不要自行创建线程</strong>，线程资源通过线程池来创建，避免资源耗尽的风险</li>
+<li><strong>避免任务堆积</strong>，如果处理跟不上入队的速度，工作线程数量不足，就会占用大量内存空间</li>
+<li>线程和线程池的<strong>名称最好直观易于理解</strong>，必要时增加注释</li>
 </ul>
 <h1 id="线程池的好处"><a href="#线程池的好处" class="headerlink" title="线程池的好处"></a>线程池的好处</h1><p>线程池可以实现类似主次线程隔离、定时执行、周期执行等任务。使用线程池的好处有：</p>
 <ul>
-<li>有效的管理并复用线程、控制最大并发数。</li>
-<li>有利于实现某些与时间相关的功能，如定时执行、周期执行等。</li>
-<li>有利于实现任务线程队列缓存策略和拒绝机制。</li>
-<li>隔离线程环境，避免相互间线程的影响。</li>
+<li><strong>有效的管理并复用线程、控制最大并发数</strong>。</li>
+<li><strong>有利于实现某些与时间相关的功能，如定时执行、周期执行等</strong>。</li>
+<li><strong>有利于实现任务线程队列缓存策略和拒绝机制</strong>。</li>
+<li><strong>隔离线程环境，避免相互间线程的影响</strong>。</li>
 </ul>
 
       
