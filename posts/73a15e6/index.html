@@ -102,20 +102,20 @@
 
 
 
-<meta name="description" content="关于Vector、ArrayList、LinkedListJava提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位">
+<meta name="description" content="关于Vector、ArrayList、LinkedListJava 提供了许多容器类型用以保存对象，合理使用它们可以大大提高开发效率。但不同的容器类型之间也存在着相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList 都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vector、ArrayList、LinkedList的区别">
 <meta property="og:url" content="https://www.shengshiyu.cn/posts/73a15e6/index.html">
 <meta property="og:site_name" content="天马的故乡">
-<meta property="og:description" content="关于Vector、ArrayList、LinkedListJava提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位">
+<meta property="og:description" content="关于Vector、ArrayList、LinkedListJava 提供了许多容器类型用以保存对象，合理使用它们可以大大提高开发效率。但不同的容器类型之间也存在着相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList 都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB.jpg">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB1.png">
 <meta property="og:updated_time" content="2018-09-01T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vector、ArrayList、LinkedList的区别">
-<meta name="twitter:description" content="关于Vector、ArrayList、LinkedListJava提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位">
+<meta name="twitter:description" content="关于Vector、ArrayList、LinkedListJava 提供了许多容器类型用以保存对象，合理使用它们可以大大提高开发效率。但不同的容器类型之间也存在着相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？ Vector、ArrayList、LinkedList 都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的">
 <meta name="twitter:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB.jpg">
 
 
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  861 字
+                  870 字
                 </span>
               
 
@@ -433,18 +433,18 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB.jpg" alt="Vector、ArrayList、LinkedList的区别"></p>
-<h1 id="关于Vector、ArrayList、LinkedList"><a href="#关于Vector、ArrayList、LinkedList" class="headerlink" title="关于Vector、ArrayList、LinkedList"></a>关于Vector、ArrayList、LinkedList</h1><p>Java提供了许多容器类型用以保存对象，合理使用可以大大提高开发者的生产能力。但不同的容器类型之间也存在相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？</p>
-<p>Vector、ArrayList、LinkedList都是通过集合框架的List实现的，所以在一些功能上十分相似，比如可以通过提供具体的位置进行定位，添加或是删除的操作，都提供了迭代器可以进行内容的遍历，但因为内部设计的差异，在行为、性能和多线程上又有差异。</p>
-<p>ArrayList 是可以改变的线程不安全的集合类型。也因为它是线程不安全的所以它的性能要好很多。内部实现使用动态数组进行存储，集合扩容时会创建更大的数组空间，把原有数据复制到新数组中。 ArrayList 支持对元素的快速随机访问，但是插入与删除时速度通常很慢，因为这个过程很有可能需要移动其他元素。</p>
-<p>Vector 是 Java 早期提供的线程安全的动态数组，它的内部使用对象数组保存数据，可以需要自动增加容量，当数组空间到达上限时，会创建新的数组，将原数据“复制——移动”到新数组。</p>
-<p>Vector和ArrayList作为动态数组，它内部的元素都是顺序存储的，很适合需要随机访问的场合，除非我们是在尾部插入删除元素，不然对于随机插入删除元素，需要移动后续所有元素，性能会差很多。实际开发过程，要事先估计应用的操作更偏向插入删除还是随机访问，</p>
-<p>LinkedList其实就是双向链表，其中的每个对象包含数据的同时还包含指向链表中前一个和后一个元素的引用。它也不用像Vector、ArrayList一样调整容量大小，它也不是线程安全的。与ArrayList相比，LinkedList进行节点插入和删除速度效率更高，但是随机访问速度很慢。</p>
+<h1 id="关于Vector、ArrayList、LinkedList"><a href="#关于Vector、ArrayList、LinkedList" class="headerlink" title="关于Vector、ArrayList、LinkedList"></a>关于Vector、ArrayList、LinkedList</h1><p>Java 提供了许多容器类型用以保存对象，合理使用它们可以大大提高开发效率。但不同的容器类型之间也存在着相似和不同，例如：Vector、ArrayList、LinkedList之间具体的区别是什么？</p>
+<p>Vector、ArrayList、LinkedList 都是通过集合框架的<strong>List</strong>实现的，所以在一些功能上十分相似，比如可以通过提供具体的位置进行定位，添加或是删除的操作，都提供了迭代器可以进行内容的遍历，但因为内部设计的差异，在行为、性能和多线程上又有差异。</p>
+<p>ArrayList 是可以改变的<strong>线程不安全</strong>的集合类型。也因为它是线程不安全的所以它的性能要好很多。内部存储使用的是<strong>动态数组</strong>进行存储，集合扩容时会自动创建更大的数组空间，把原有数据复制到新数组中。 ArrayList 支持对元素的<strong>快速随机访问</strong>，但是插入与删除时速度通常很慢，因为这个过程很有可能需要移动其他元素。</p>
+<p>Vector 是 Java 早期提供的<strong>线程安全</strong>的动态数组，它的内部使用对象数组保存数据，可以需要自动增加容量，当数组空间到达上限时，会创建新的数组，将原数据“复制——移动”到新数组。</p>
+<p>Vector和ArrayList作为动态数组，它内部的元素都是<strong>顺序存储的</strong>，很适合需要随机访问的场合，除非我们是在尾部插入删除元素，不然对于随机插入删除元素，需要移动后续所有元素，性能会差很多。实际开发过程，要事先估计应用的操作更偏向插入删除还是随机访问，</p>
+<p>LinkedList其实就是<strong>双向链表</strong>，其中的<strong>每个对象包含数据的同时还包含指向链表中前一个和后一个元素的引用</strong>。它也不用像Vector、ArrayList一样调整容量大小，它也不是线程安全的。与ArrayList相比，LinkedList进行节点<strong>插入和删除速度效率更高</strong>，但是随机访问速度很慢。</p>
 <h1 id="关于集合框架"><a href="#关于集合框架" class="headerlink" title="关于集合框架"></a>关于集合框架</h1><p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/Vector%E3%80%81ArrayList%E3%80%81LinkedList%E7%9A%84%E5%8C%BA%E5%88%AB1.png" alt="Vector、ArrayList、LinkedList的区别"></p>
-<p>在Java的集合类里，Collection 接口是所有集合的根。它也衍生出了三种类型的集合，分别是List、Set、Queue.</p>
-<p>List前面已经说了，它提随机访问以及插入删除的操作，在随机访问效率上更出色。而Set类型不允许出现重复的元素，保证元素的唯一性，很多场合也会需要用到它的这个特性。</p>
-<p>如果我们使用的是固定数量的元素，那么既可以选择使用List，也可以选择真正的数组，尽管通常来说首选的会是ArrayList，但这种弹性需要开销，而数组的效率要比ArrayList高。而且数组可以持有基本类型，而泛型之前的容器类型则不能。</p>
-<p>Queue是Java提供的队列结构的实现类型，除了基本的增删改查操作，它还提供FIFO（先进先出）、LIFO（后进先出）的行为支持。</p>
-<p>每一种具体的集合类型都会被抽象到相应的抽象类，如AbstractList、AbstractSet、AbstractQueue，它们又进一步抽象到AbstractCollection类中，实现了接口和实现的分离和结构化。</p>
+<p>在Java的集合类里，Collection 接口是所有集合的根节点。它也衍生出了三种类型的集合，分别是 List、Set、Queue。</p>
+<p>List 前面已经说了，它提供<strong>随机访问以及插入删除</strong>的操作，在随机访问效率上更出色。而Set类型不允许出现重复的元素，保证元素的唯一性，很多场合也会需要用到它的这个特性。</p>
+<p>如果我们使用的是<strong>固定数量</strong>的元素，那么既可以选择使用 List ，也可以选择真正的<strong>数组</strong>，尽管通常来说首选的会是ArrayList，但这种弹性需要开销，而数组的效率要比ArrayList高。而且数组可以持有基本类型，而泛型之前的容器类型则不能。</p>
+<p>Queue 是 Java 提供的队列结构的实现类型，除了基本的增删改查操作，它还提供 <strong>FIFO</strong> （先进先出）、<strong>LIFO</strong>（后进先出）的行为支持。</p>
+<p>每一种具体的集合类型都会被抽象到相应的抽象类中，如 AbstractList、AbstractSet、AbstractQueue ，它们又进一步抽象到 AbstractCollection 类中，实现了接口和实现的分离和结构化。</p>
 
       
     </div>

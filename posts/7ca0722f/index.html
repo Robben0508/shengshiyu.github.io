@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,063 字
+                  1,064 字
                 </span>
               
 
@@ -434,29 +434,29 @@
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/%E6%B5%85%E6%9E%90Java%E6%B3%9B%E5%9E%8B.jpg" alt="浅析Java泛型"></p>
 <p>泛型的本质是类型参数化，解决不确定具体对象类型的问题。泛型可以定义在类、接口、方法中，编译器通过识别尖括号和尖括号内的字母来解析泛型。</p>
 <p>与C++根据模板类生成不同的类的方式不同，Java使用的是类型擦除的方式。不过了解C++模板有助于你理解Java泛型的机制，理解它的局限是什么以及Java泛型的边界。</p>
-<h1 id="关于泛型"><a href="#关于泛型" class="headerlink" title="关于泛型"></a>关于泛型</h1><p>泛型是接口概念的延伸，我们通过泛型可以为类、接口、方法应用更为广泛的类型，使得操作的数据不再和代码绑定在一起，不仅可以复用代码、降低耦合度，还可以提高代码的可读性和安全性。</p>
+<h1 id="关于泛型"><a href="#关于泛型" class="headerlink" title="关于泛型"></a>关于泛型</h1><p>泛型是接口概念的延伸，我们通过泛型可以为<strong>类</strong>、<strong>接口</strong>、<strong>方法</strong>应用更为广泛的类型，使得操作的数据不再和代码绑定在一起，不仅可以<strong>复用代码、降低耦合度，还可以提高代码的可读性和安全性</strong>。</p>
 <h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><p>一个简单的泛型类是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">	T first;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">(T first)</span></span>&#123;</span><br><span class="line">    	<span class="keyword">this</span>.first = first;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> first;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>相对于普通类而言，类名的后面多了一对尖括号，和一个字母T，这个T表示的就是类型参数，泛型就是类型参数化，处理的数据并不是固定的，而是可以作为参数传入。通过泛型可以完成对一组类的操作对外开放相同的接口。最典型的就是各种容器类，如：List、Set、Map。</p>
+<p>相对于普通类而言，类名的后面多了一对尖括号，和一个字母<code>T</code>，这个<code>T</code>表示的就是<strong>类型参数</strong>，<strong>泛型就是类型参数化，处理的数据并不是固定的，而是可以作为参数传入</strong>。通过泛型可以完成对一组类的操作对外开放相同的接口。最典型的就是各种容器类，如：List、Set、Map。</p>
 <p>在定义泛型时，一些常见的类型参数表示：</p>
 <ul>
-<li>E代表 Element ，用于集合中的元素</li>
-<li>T代表the Type of object ，表示某个类</li>
-<li>K 代表 Key、 V 代表 Value ，用于键值对元素</li>
+<li><code>E</code>代表 Element ，用于集合中的元素</li>
+<li><code>T</code>代表 the Type of object ，表示某个类</li>
+<li><code>K</code>代表 Key、 <code>V</code>代表 Value ，用于键值对元素</li>
 </ul>
 <h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><p>方法也可以使用泛型，而且泛型方法并不需要其所在的类一定要是泛型类，一个简单的泛型方法大概是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; getData(T t) &#123;</span><br><span class="line">	<span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>泛型方法使得该方法可以独立于类产生变化，如果使用泛型方法可以取代将整个类泛型化，那就应该使用泛型方法。</p>
-<p>对于static方法而言，它无法访问泛型类的类型参数，除非把它定义为泛型方法，才可以具有使用泛型的能力。</p>
+<p>泛型方法使得该方法可以<strong>独立于类</strong>产生变化，如果使用泛型方法可以取代将整个类泛型化，那就应该使用泛型方法。</p>
+<p>对于 static 方法而言，它<strong>无法访问泛型类的类型参数</strong>，除非把它定义为泛型方法，才可以具有使用泛型的能力。</p>
 <h2 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h2><p>泛型接口与泛型类的定义及使用基本相同，举个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Test</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>当实现泛型接口时：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FruitTest</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Test</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h1><p>Java泛型是使用擦除来实现的，这意味着当你使用泛型时，任何具体的类型信息都要被擦除，你唯一知道的只是你在使用一个对象。擦除机制可以在不破坏现有类库的情况下，将泛型融入Java语言，使得非泛型的代码能够在不改变的情况下继续使用。</p>
+<h1 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h1><p>Java泛型是使用<strong>擦除</strong>来实现的，这意味着当你使用泛型时，任何具体的类型信息都要被擦除，你唯一知道的只是你在使用一个对象。擦除机制可以在不破坏现有类库的情况下，将泛型融入Java语言，使得非泛型的代码能够在不改变的情况下继续使用。</p>
 <p>编译器编译后，Java的源代码变为了.class文件，虚拟机再加载这个文件运行。对于泛型类，Java虚拟机会把泛型代码转化为非泛型的普通代码，将类型参数“擦除”，替换为Object，再进行必要的强制类型转化。泛型就是在编译期增加了一道检查而己，目的是促使程序员在使用泛型时安全放置和使用数据。</p>
-<p>不过要注意，擦除机制的存在会使重载方法产生相同的类型签名，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyList</span>&lt;<span class="title">W</span>,<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(List&lt;T&gt; v)</span> </span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(List&lt;W&gt; v)</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>所以，当擦除后因为参数问题导致相同的参数列表，要提供不同的方法名。</p>
-<h1 id="泛型的好处"><a href="#泛型的好处" class="headerlink" title="泛型的好处"></a>泛型的好处</h1><p>可能你会疑惑，既然泛型最后也会转化为普通的类，那我们使用泛型的目的是什么？其实泛型的好处包括</p>
+<p>不过要注意，擦除机制的存在会使<strong>重载</strong>方法产生相同的类型签名，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyList</span>&lt;<span class="title">W</span>,<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(List&lt;T&gt; v)</span> </span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(List&lt;W&gt; v)</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>所以，<strong>当擦除后因为参数问题导致相同的参数列表，要提供不同的方法名</strong>。</p>
+<h1 id="泛型的好处"><a href="#泛型的好处" class="headerlink" title="泛型的好处"></a>泛型的好处</h1><p>可能你会疑惑，既然泛型最后也会转化为普通的类，那我们使用泛型的目的是什么？其实泛型的好处包括：</p>
 <ul>
-<li>类型安全：放置的是什么，取出来的自然是什么，不用担心会抛出ClassCastException异常</li>
-<li>提升可读性：从编码阶段就显式地知道泛型集合、泛型方法等处理的对象类型是什么</li>
-<li>代码重用。泛型合并了同类型的处理代码，使代码重用度变高</li>
+<li><strong>类型安全</strong>：放置的是什么，取出来的自然是什么，不用担心会抛出 ClassCastException 异常</li>
+<li><strong>提升可读性</strong>：从编码阶段就显式地知道泛型集合、泛型方法等处理的对象类型是什么</li>
+<li><strong>代码复用</strong>：泛型合并了同类型的处理代码，使代码复用度变高</li>
 </ul>
 
       

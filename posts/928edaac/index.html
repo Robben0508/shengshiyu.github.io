@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  453 字
+                  486 字
                 </span>
               
 
@@ -436,16 +436,16 @@
       
         <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr>
 <p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/final%E3%80%81finally%E3%80%81finalize%E7%9A%84%E5%8C%BA%E5%88%AB.jpg" alt="final、finally、finalize的区别"></p>
-<h1 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h1><p>使用到final的三种情况：变量、方法、类，分别具有不同意义。</p>
-<p>final的变量是不可以修改的，一个既是static又是final的变量只占据一段不能改变的存储空间，是一个常量。</p>
-<p>使用final修饰方法是为了把方法锁定，防止任何继承类修改它的含义，确保在继承中方法的行为不变，不会被覆盖重写。</p>
-<p>类中所有用private修饰的方法隐式都是final的，但给它们再加上final关键字没有意义，因为private修饰的方法，本身局无法覆盖重写。</p>
-<p>final修饰的类表示不可继承，不能拥有子类，而其中的方法默认隐式也都是final的，无法覆盖重写。</p>
-<p>final并不等同于immutable，尽管看起来语义上某些地方final很像是immutable。</p>
-<h1 id="关于finally"><a href="#关于finally" class="headerlink" title="关于finally"></a>关于finally</h1><p>finally 则是Java保证重点代码一定要被执行的一种机制。搭配try-finally 或者 try-catch-final来进行类似关闭 JDBC 连接等的操作。不过更推荐在JDK7后添加的try-with-resources 语句，对于关闭连接等资源。</p>
-<p>finally使得无论try块里发生了什么，内存总能得到释放，当要把除内存之外的资源恢复到它们的初试状态时，就要适用finally子句。</p>
-<p>因为finally总是会执行，但如果在finally之前执行了<code>System。exit(1);</code>，finally里面的代码就不会被执行。</p>
-<h1 id="finalize方法"><a href="#finalize方法" class="headerlink" title="finalize方法"></a>finalize方法</h1><p>finalize 是基础类 java.lang.Object的一个方法，是为了保证对象在被垃圾收集前完成特定资源的回收。在 JDK9 之后直接被标记为过时方法，并不推荐使用了。</p>
+<h1 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h1><p>使用到final的三种情况：<strong>变量</strong>、<strong>方法</strong>、<strong>类</strong>，分别具有不同意义。</p>
+<p>final 的变量是不可以修改的，一个既是 <strong>static</strong> 又是 <strong>final</strong> 的变量<strong>只占据一段不能改变的存储空间</strong>，是一个<strong>常量</strong>。</p>
+<p>使用 final 修饰方法是为了把方法锁定，防止任何继承类修改它的含义，确保<strong>在继承中方法的行为不变</strong>，不会被覆盖重写。</p>
+<p>类中所有用 private 修饰的方法<strong>隐式都是final</strong>的，但给它们再加上 final 关键字没有意义，因为private修饰的方法，本身局无法覆盖重写。</p>
+<p>final 修饰的类表示<strong>不可继承</strong>，不能拥有子类，而其中的方法默认隐式也都是 final 的，无法覆盖重写。</p>
+<p>final并不等同于immutable ，尽管看起来语义上某些地方final很像是immutable。</p>
+<h1 id="关于finally"><a href="#关于finally" class="headerlink" title="关于finally"></a>关于finally</h1><p>finally 则是 Java 保证重点代码一定要被执行的一种机制。搭配 <strong>try-finally</strong> 或者 <strong>try-catch-final</strong> 来进行类似关闭 JDBC 连接等的操作。不过更推荐在JDK7后添加的 <strong>try-with-resources</strong> 语句，对于关闭连接等资源。</p>
+<p>finally 使得无论 try 块里发生了什么，内存总能得到释放，当要把除内存之外的资源恢复到它们的初试状态时，就要适用finally 子句。不过如果 finally 子句中包含了 return 语句，这个返回值就会<strong>覆盖</strong>原始的返回值。</p>
+<p>因为finally总是会执行，但如果在finally之前执行了<code>System。exit(1);</code>，finally里面的代码就<strong>不会被执行</strong>。</p>
+<h1 id="finalize方法"><a href="#finalize方法" class="headerlink" title="finalize方法"></a>finalize方法</h1><p>finalize 是基础类 java.lang.Object的一个方法，是为了<strong>保证对象在被垃圾收集前完成特定资源的回收</strong>。在 JDK9 之后直接被标记为<strong>过时</strong>方法，并不推荐使用了。</p>
 <p>我们无法保证finalize什么时候执行，是否符合预期，</p>
 
       
@@ -514,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/cbb9bef1/" rel="next" title="JavaScript中的this原理">
-                <i class="fa fa-chevron-left"></i> JavaScript中的this原理
+              <a href="/posts/e380f54d/" rel="next" title="谈谈产品需求分析">
+                <i class="fa fa-chevron-left"></i> 谈谈产品需求分析
               </a>
             
           </div>
@@ -524,8 +524,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/95c05072/" rel="prev" title="如何高效提问">
-                如何高效提问 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/cbb9bef1/" rel="prev" title="JavaScript中的this原理">
+                JavaScript中的this原理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
