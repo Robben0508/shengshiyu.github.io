@@ -114,6 +114,7 @@
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%901.jpg">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%902.jpg">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%903.jpg">
+<meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%905.jpg">
 <meta property="og:image" content="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%904.jpg">
 <meta property="og:updated_time" content="2018-12-25T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
@@ -445,8 +446,9 @@
 <p>在网络质量很差的环境下，UDP协议数据包丢失会比较严重。但是由于它传输过程中资源消耗小，处理速度快，所以通常音频、视频和普通数据在传送时使用UDP较多，因为它们即使偶尔丢失一两个数据包，也不会对接收结果产生太大影响。</p>
 <p>我们经常使用“ping”命令来测试两台主机之间TCP/IP通信是否正常，其实“ping”命令的原理就是向对方主机发送UDP数据包，然后对方主机确认收到数据包，如果数据包到达的消息及时反馈回来，那么网络就是通的。在默认状态下，一次“ping”操作发送4个数据包，对方主机发回的确认收到的数据包也是4包，这充分说明了UDP协议是<strong>面向非连接</strong>的协议，没有建立连接的过程。</p>
 <p>UDP协议使用报头中的校验值来保证数据的安全。校验值首先在数据发送方通过特殊的算法计算得出，在传递到接收方之后，还需要再重新计算。如果某个数据包在传输过程中被篡改或者损坏，发送和接收方的校验计算值将不会相符，由此UDP协议可以检测出是否出错。</p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%901.jpg" alt=""></p>
 <h1 id="关于TCP你需要知道"><a href="#关于TCP你需要知道" class="headerlink" title="关于TCP你需要知道"></a>关于TCP你需要知道</h1><p>TCP是<strong>基于连接</strong>的协议，在正式收发数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“握手”才能建立起来，也因为多了这样一个过程，TCP要比UDP复杂很多，可以看一下TCP头的格式。</p>
-<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%901.jpg" alt="TCP和UDP浅析1"></p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%902.jpg" alt="TCP和UDP浅析1"></p>
 <p>TCP的包是没有IP地址的，那是IP层上的事。可以对比看出，相对于UDP来说，TCP多了一个<strong>序号</strong>，这个序号的作用是为了给发送的包标号，<strong>防止乱序</strong>，这样我们好知道哪一个应该先来，哪一个后来，做到有理有序。</p>
 <p>其次，它还具有一个<strong>滑动窗口</strong>，我们可以理解为这就是一个管道的大小，越大自然水的流速流量可以更大，越小自然流速就会变小，流量变少，TCP也一样，窗口的大小就是为了能够控制流量的，通过标识窗口大小，就可以知道对方的处理能力，而不会发送过快了，造成拥塞问题，用于<strong>解决流控</strong>的。</p>
 <h2 id="TCP-三次握手"><a href="#TCP-三次握手" class="headerlink" title="TCP 三次握手"></a>TCP 三次握手</h2><p>TCP连接的建立，我们通常称为“三次握手”，打个比方，大概就是这样：<br><strong>A：你好，我是A，想和你连接<br>B：你好A，我是B，我收到你提出的连接请求了<br>A：好的B，收到了</strong></p>
@@ -456,11 +458,11 @@
 <p>A当然可以建立连接后空闲着，就是不“搭理”B，对于B来说，对于A这种“占着茅坑不拉屎”的行为，自然可以选择主动关闭，从而把空出的资源给其他客户端使用。</p>
 <p>TCP里的序号在“三次握手”中，可以很有效的解决丢包问题，当它俩连接后，A发送了很多个有序排列的包，但中途可能由于种种未知原因，丢了一个，A不知道，但B知道A发的包的总数，它一数，好像差了一个，然后再告诉A。而且这个序号的起始序号是随时间变化的，不会重复，为了防止某些包绕路，等到了其实已经无用了，所以IP包头里有个TTL，也就是生存时间。</p>
 <p>这里有个<strong>时序图</strong>，可以看一下，而且TCP头里还有一些<strong>状态位</strong>，其中<strong>SYN</strong>表示发起一个连接，<strong>ACK</strong>表示回复，<strong>RST</strong>表示重新连接，<strong>FIN</strong>表示结束连接，这样这个时序图就好理解了。</p>
-<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%902.jpg" alt="TCP和UDP浅析2"></p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%903.jpg" alt="TCP和UDP浅析2"></p>
 <h2 id="TCP-四次挥手"><a href="#TCP-四次挥手" class="headerlink" title="TCP 四次挥手"></a>TCP 四次挥手</h2><p>嗯，说散就散，说完了连接，该说下“四次挥手”了，它大概是这样的：<br><strong>A：我们分手吧<br>B: 哦，你想分了啊，那好吧，知道了。。。</strong></p>
 <p>这个时候，只是A想分手离开了，也就是A不再发送数据，那B能不能在ACK的时候直接选择关闭呢，反正A都要分了，自然是不行的，因为A可能是发完了最后的数据就准备分手了，但是B还没做完它的事情，还是可以发送数据的，处在一种半关闭状态，这个时候A可以选择不再接受数据，也可以选择最后再接受一段数据，等待B也主动关闭。于是就有了：<br><strong>B： OK，那我不陪你了，再见<br>A： 嗯，再见</strong></p>
 <p>然后整个连接就关闭了，但是上面是一种理想情况下的分手，可能会遇到很多异常情况，例如，A说完分手后，直接走了，B不知道，B发的回复A就收不到了，B会陷入不知所措。也有可能是B说完分手后，他倒是处于半关闭的还在着，B直接生气走了，A也会陷入两难抉择，究竟B是还有事没处理完，还是一会就关闭了，针对这一系列问题，我们来看断开连接时候的时序图。</p>
-<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%903.jpg" alt="TCP和UDP浅析3"></p>
+<p><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%905.jpg" alt="TCP和UDP浅析3"></p>
 <p>从图中我们可以看到，当A说分手了，就进入<strong>FIN_WAIT_1</strong>的状态，可以理解为等待结束第一阶段，而B回复完A后也相应进入<strong>CLOSE_WAIT</strong>状态，理解为等待关闭。A收到B的回复，就进入了<strong>FIN_WAIT_2</strong>状态，如果此时B直接离开了，那A就一直保持在这个状态。如果B没有离开，主动地又说“再见”，然后它就进入了<strong>LSAT_ASK</strong>状态，然后A收到了B说得“再见”他也发送响应，“嗯，再见”然后进入了<strong>TIME_WAIT</strong>状态，当B收到A的ASK就会关闭了。而假如这个ASK没有到达，因为只有到达B才会进入关闭，但A已经进入关闭倒计时了，它会保持在这个状态一段时间，然后自动的关闭了，所以这段时间里，B会不断地发送“再见”，直到收到一条A的ASK为止。</p>
 <p>假如B在A的最后这段“停留期”，还是没有等来一个回复，虽然它还是会发，当A收到这个后，就会直接回复一个<strong>RST</strong>，B就知道A跑了，就不再发“再见”了。</p>
 <h2 id="TCP-状态机"><a href="#TCP-状态机" class="headerlink" title="TCP 状态机"></a>TCP 状态机</h2><p>其实就是将TCP连接和分手的两个时序图结合起来，就是表面看起来高大上的<strong>TCP状态机</strong>了。网络上的传输是没有连接的，包括TCP也是一样的，所谓的连接不过是通讯的双方维护的一个“<strong>连接状态</strong>”<br><img src="http://blog0508.oss-cn-beijing.aliyuncs.com/image/TCP%E5%92%8CUDP%E6%B5%85%E6%9E%904.jpg" alt="TCP和UDP浅析4"></p>
