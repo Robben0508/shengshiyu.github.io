@@ -5,7 +5,7 @@ photo = {
   init: function () {
     var that = this;
     //这里设置的是刚才生成的 json 文件路径
-    $.getJSON("../../../../../source/photos/photoslist.json", function (data) {
+    $.getJSON("/photos/photoslist.json", function (data) {
       that.render(that.page, data);
       //that.scroll(data);
     });
